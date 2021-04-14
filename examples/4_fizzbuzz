@@ -1,0 +1,17 @@
+fn fizzbuzz (int num) {
+  loop i in 0 ..= num {
+    if i % 15 == 0 {
+      print('FizzBuzz')
+    } elif i % 3 == 0 {
+      print('Fizz')
+    } elif i % 5 == 0 {
+      print('Buzz')
+    } else {
+      print(i)
+    }
+  }
+}
+
+main {
+  fizzbuzz(100)
+}

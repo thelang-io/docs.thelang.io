@@ -1,0 +1,106 @@
+// import os somehow
+
+class CalculatorError extends Error {
+  pub int pos
+
+  constructor (str message, int pos) {
+    super(message)
+    this.pos = pos
+  }
+}
+
+union Expr = Literal | BinaryExpr | UnaryExpr
+
+obj Literal {
+  int end
+  int start
+  float | int val
+}
+
+obj BinaryExpr {
+  int end
+  Expr left
+  str operator
+  Expr right
+  int start
+}
+
+obj UnaryExpr {
+  Expr expr
+  int end
+  str operator
+  int start
+}
+
+obj Token {
+  int end
+  int start
+  TokenType type
+  str val
+}
+
+enum TokenType {
+  operand
+  operator
+}
+
+fn tokenize (str input) Token[] {
+  mut tokens := Token[]
+  mut start := 0
+  mut val := ''
+
+  loop i, ch in input {
+    if ch.digit || ch == '.' {
+      if val.empty {
+        start = i
+      }
+
+      val += ch
+
+      if i != input.length - 1 && (input[i + 1].digit || input[i + 1] == '.') {
+        continue
+      }
+
+      tokens.push({ end: i, start, type: .operand, val })
+      val = ''
+    } elif ['/', '*', '-', '+'].includes(ch) {
+      tokens.push({ end: i + 1, start: i, type: .operator, val: ch })
+    } elif ![' ', '\t'].includes(ch) {
+      throw new CalculatorError('Unexpected token', i)
+    }
+  }
+
+  return tokens
+}
+
+fn parse (Token[] tokens, Expr? expr, int pos = 0) Expr {
+  // TODO
+}
+
+fn evaluate (Expr expr) str {
+  // TODO
+}
+
+main {
+  loop {
+    print('> ')
+
+    line := os.stdin.readline().trim()
+
+    if line == 'exit' || line == '\\q' {
+      break
+    }
+
+    try {
+      tokens := tokenize(line)
+      expr := parse(tokens)
+      output := evaluate(expr)
+
+      if !output.empty {
+        print(output)
+      }
+    } catch CalculatorError err {
+      print(' '.times(err.pos) + '^ {err.message}')
+    }
+  }
+}
