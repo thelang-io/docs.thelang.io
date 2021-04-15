@@ -1,6 +1,4 @@
-TODO
-
-union
+# Union
 ```the
 union Animal = Cat | Dog
 
@@ -13,9 +11,9 @@ obj Dog {
 }
 
 main {
-  animal := Cat{} as Animal
-  
-  if animal is Cat {
+  animal := Cat{}
+
+  if animal is Animal {
     // body
   }
 }

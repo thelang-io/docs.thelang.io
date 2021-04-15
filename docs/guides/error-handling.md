@@ -4,5 +4,6 @@ TODO
 try {
   // body
 } catch Error err {
+  // handle error
 }
 ```

@@ -24,8 +24,8 @@ int i8 i16 i32 i64 u8 u16 u32 u64
 TODO
 
 ## String
-string initialization
 
+string initialization
 ```the
 s := ''
 ```
@@ -35,20 +35,13 @@ text := 'Some \n random \\ text'
 ```
 
 string escaping
-
 ```the
 text := 'Some \n random \\ text'
 ```
 
 string interpolation
-
 ```the
-name := 'World'
-greeting := 'Hello, ${name}!'
+greet := 'Hello'
+name := 'Your'
+greeting := '$greet, ${name + ' Name'}!'
 ```
-
-## Object
-TODO
-
-## Optional
-TODO

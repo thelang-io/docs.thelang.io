@@ -1,4 +1,5 @@
-abstract
+# Keywords
+```text
 as
 async
 await
@@ -9,7 +10,6 @@ elif
 else
 enum
 false
-finally
 fn
 if
 is
@@ -19,6 +19,7 @@ mut
 never
 nil
 obj
+override
 prot
 priv
 pub
@@ -28,3 +29,4 @@ super
 this
 true
 union
+```

@@ -1,7 +1,5 @@
 ```the
-obj StdIn {
-  fn readline () str
+class stdint {
+  static fn readline () str
 }
-
-stdin := StdIn{} // TODO Declare?
 ```
