@@ -3,9 +3,6 @@ The Programming Language is first language created to serve purpose of main prog
 The Programming Language is private programming language, it will become available very soon! \
 This repository serves as a place for language website, issues and discussions.
 
-> All PRs will be closed once opened, we don't have any agreement for now, once we get there we will allow external PRs. \
-> For now only our team is allowed to make edits to this repository.
-
 The Programming Language is high level programming language which will support terminal, desktop, mobile and console programming out of the box. \
 Since it's private it will be available only via cli, your project files will be sent to language servers, compiled and respond with binaries.
 

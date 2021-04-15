@@ -1,0 +1,10 @@
+# https://github.com/dessant/lock-threads-app
+
+lockLabel: false
+setLockReason: false
+
+issues:
+  daysUntilLock: 14
+
+pulls:
+  daysUntilLock: 30
