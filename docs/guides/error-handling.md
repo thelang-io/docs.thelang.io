@@ -1,9 +1,11 @@
 TODO
 
 ```the
-try {
-  // body
-} catch Error err {
-  // handle error
+main {
+  try {
+    // body
+  } catch Error err {
+    // handle error
+  }
 }
 ```

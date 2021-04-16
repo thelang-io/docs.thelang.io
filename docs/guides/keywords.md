@@ -16,7 +16,6 @@ is
 loop
 main
 mut
-never
 nil
 obj
 override

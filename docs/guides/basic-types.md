@@ -25,23 +25,31 @@ TODO
 
 ## String
 
-string initialization
+### Initialization
 ```the
-s := ''
+main {
+  s := ''
+}
 ```
 
 ```the
-text := 'Some \n random \\ text'
+main {
+  text := 'Some \n random \\ text'
+}
 ```
 
-string escaping
+### Escaping
 ```the
-text := 'Some \n random \\ text'
+main {
+  text := 'Some \n random \\ text'
+}
 ```
 
-string interpolation
+### Interpolation
 ```the
-greet := 'Hello'
-name := 'Your'
-greeting := '$greet, ${name + ' Name'}!'
+main {
+  greet := 'Hello'
+  name := 'Your'
+  greeting := '$greet, ${name + ' Name'}!'
+}
 ```

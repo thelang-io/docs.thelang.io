@@ -1,9 +1,11 @@
 # Type Checking
 ```the
-int? i
-j := 0
+main {
+  int? i
+  j := 0
 
-if i is int {
-  j = i
+  if i is int {
+    j = i
+  }
 }
 ```
