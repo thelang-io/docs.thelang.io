@@ -8,10 +8,13 @@ catch
 continue
 elif
 else
+export
 enum
 false
 fn
 if
+import
+in
 is
 loop
 main

@@ -37,7 +37,7 @@ main {
 ## Variadic parameters
 ```the
 fn myPrint (int a, int b, any... items) {
-  print(a + b, items) // TODO Spread operator
+  print(a + b, items)
 }
 
 main {

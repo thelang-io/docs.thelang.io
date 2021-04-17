@@ -36,7 +36,7 @@ class MyClass {
   priv privateMethod () {
   }
 
-  prot mut protectedMethod () {
+  prot protectedMethod () mut {
   }
 
   pub publicMethod () {
