@@ -30,7 +30,7 @@ class MyClass {
 class MyClass {
   pub str prop1
   priv mut str prop2
-  prot prop3
+  prot str prop3
   static prop4 := ''
 
   priv privateMethod () {
