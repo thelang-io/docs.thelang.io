@@ -17,7 +17,7 @@ main {
 ```the
 main {
   jewelry := 'expensive'
-  str? wealth
+  mut str? wealth
 
   switch jewelry {
     case 'expensive': {
