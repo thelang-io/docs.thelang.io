@@ -38,7 +38,7 @@ main {
 ## Array
 ```the
 fn add (int[] a, int[] b) int[] {
-  c := [] as int[]
+  int[] c
 
   for val in a {
     c.push(val)
@@ -53,6 +53,17 @@ fn add (int[] a, int[] b) int[] {
 
 main {
   arr := [1, 2, 3]
+}
+```
+
+## Optionals
+```the
+main {
+  mut int? a
+
+  if a is nil {
+    a = 2
+  }
 }
 ```
 
@@ -78,7 +89,7 @@ main {
 ```the
 main {
   int? i
-  j := 0
+  mut j := 0
 
   if i is int {
     j = i
@@ -89,7 +100,9 @@ main {
 ## Type inference
 ```the
 main {
-  i := 1
-  j := 2 as i64
+  a := 1
+  an := 1 as int
+  b := [1, 2, 3]
+  bn := [1, 2, 3] as int[]
 }
 ```
