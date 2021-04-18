@@ -6,11 +6,11 @@ enum ErrorType {
 }
 
 class MyError : Error {
-  ErrorType type
+  priv ErrorType _type
 
   init (str message, ErrorType type) {
     super(message)
-    this.type = type
+    this._type = type
   }
 }
 

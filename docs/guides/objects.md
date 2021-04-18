@@ -9,7 +9,7 @@ main {
   o := MyObject{
     prop1: 1,
     prop2: fn (int a) {
-      print('a + a =', a + a)
+      print('o.prop1 + a =', o.prop1 + a)
     }
   }
 }

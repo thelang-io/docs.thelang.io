@@ -19,8 +19,8 @@ obj SuperObject {
 }
 
 enum SuperEnum {
-  op_one,
-  op_two
+  one,
+  two
 }
 
 export SuperEnum, SuperObject
