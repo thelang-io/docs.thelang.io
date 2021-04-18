@@ -36,7 +36,7 @@ main {
 
 ## Variadic parameters
 ```the
-fn myPrint (int a, int b, any... items) {
+fn myPrint (int a, int b, str... items) {
   print(a + b, items)
 }
 
@@ -85,6 +85,5 @@ fn add<T> (T n1, T n2) T {
 main {
   a := add(1, 2)
   b := add<int>(3, 4)
-  a := add(a, b)
 }
 ```

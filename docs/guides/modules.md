@@ -15,6 +15,7 @@ import formatCurrency, formatTime from ../formatters/index
 ## Delayed export
 ```the
 obj SuperObject {
+  int field
 }
 
 enum SuperEnum {
