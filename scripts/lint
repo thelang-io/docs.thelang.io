@@ -47,11 +47,18 @@ def main():
 
         for idx, line in enumerate(lines):
             if not line.endswith('\n'):
-                msg = 'line terminator is other than \\n'
+                msg = 'line terminator should be LF'
                 errors.append(LintError(file=file, line=idx, msg=msg))
-            elif len(line) > 80:
-                msg = 'line length should be maximum of 80 characters'
+
+            if len(line) > 80:
+                msg = 'line length should not exceed 80 characters'
                 errors.append(LintError(file=file, line=idx, pos=80, msg=msg))
+
+            if len(line) > 1 and line[-2] in [' ', '\t']:
+                msg = 'line should not end with whitespace'
+                errors.append(
+                    LintError(file=file, line=idx, pos=len(line) - 1, msg=msg)
+                )
 
         if lines[-1] == '\n':
             msg = 'file end should have only one line break'
