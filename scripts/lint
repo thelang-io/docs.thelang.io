@@ -60,6 +60,18 @@ def main():
                     LintError(file=file, line=idx, pos=len(line) - 1, msg=msg)
                 )
 
+            if line[0] == ' ':
+                i = 1
+
+                while line[i] == ' ':
+                    i += 1
+
+                if i % 2 != 0:
+                    msg = 'line indentation should be 2 spaces'
+                    errors.append(
+                        LintError(file=file, line=idx, pos=0, msg=msg)
+                    )
+
         if lines[-1] == '\n':
             msg = 'file end should have only one line break'
             errors.append(LintError(file=file, line=len(lines), msg=msg))
