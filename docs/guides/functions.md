@@ -3,7 +3,7 @@
 ## Main
 ```the
 main {
-  // code
+  // body
 }
 ```
 

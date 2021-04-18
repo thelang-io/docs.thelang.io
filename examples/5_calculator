@@ -1,5 +1,3 @@
-// import os somehow
-
 class CalculatorError extends Error {
   pub int pos
 

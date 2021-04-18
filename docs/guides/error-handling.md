@@ -18,7 +18,7 @@ main {
   try {
     throw new MyError('Error message', .strange)
   } catch Error err {
-    // handle error
+    // handler
   }
 }
 ```
