@@ -19,12 +19,6 @@ main {
 }
 ```
 
-```the
-main {
-  text := 'Some \n random \\ text'
-}
-```
-
 ### Escaping
 ```the
 main {
