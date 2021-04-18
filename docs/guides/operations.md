@@ -1,5 +1,27 @@
 # Operations
 
+## Assignment
+```the
+main {
+  a1 := 1
+  s1 := ''
+
+  int? a2
+  str? s2
+}
+```
+
+## Reassignment
+```the
+main {
+  mut a1 := 1
+  mut s1 := ''
+
+  a1 = 2
+  s1 = 'test'
+}
+```
+
 ## Basic operations
 ```the
 main {
