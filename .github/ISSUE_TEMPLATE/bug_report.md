@@ -26,6 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Please complete the following information**
  - Device: [e.g. iPhone6 or MacBook Pro Mid-2018]
  - OS, OS Version, OS Word Size: [e.g. MacOS, 11.2.3, 64-bit]
+ - The Programming Language version: [e.g. 1.0.0]
 
 **Additional context**
 Add any other context about the problem here.
