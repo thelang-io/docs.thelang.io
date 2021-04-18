@@ -8,7 +8,7 @@ main {
 }
 ```
 
-## Range in for-in-loop
+## Iteration
 ```the
 main {
   for i in 0..10 {
