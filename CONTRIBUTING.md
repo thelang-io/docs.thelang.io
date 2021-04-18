@@ -3,6 +3,11 @@ We want to say "Welcome!" if you here at first and "We are glad to meet you
 again!" if you are our contributor yet. \
 We appreciate your help!
 
+First make sure to mount git hooks by:
+```sh
+$ scripts/mount-git-hooks
+```
+
 ## When want to ask a question
 - https://github.com/thelang-org/the/discussions/categories/q-a
 

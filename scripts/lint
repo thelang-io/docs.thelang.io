@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+import sys
+from pathlib import Path
+
+
+class LintError:
+    _file: str
+    _line: int
+    _msg: str
+    _pos: int
+
+    def __init__(self, file, msg, line=-1, pos=-1):
+        self._file = file
+        self._line = line
+        self._msg = msg
+        self._pos = pos
+
+    def __str__(self):
+        loc = f'{self._file}:'
+
+        if self._line != -1:
+            loc += f'{self._line + 1}:'
+
+        if self._pos != -1:
+            loc += f'{self._pos + 1}:'
+
+        return f'{loc} {self._msg}'
+
+
+def main():
+    files = [
+        *Path.cwd().glob('.github/**/*'),
+        *Path.cwd().glob('docs/**/*'),
+        *Path.cwd().glob('examples/**/*'),
+        *Path.cwd().glob('scripts/**/*'),
+        *Path.cwd().glob('*')
+    ]
+
+    errors = []
+
+    for file in files:
+        if not file.is_file():
+            continue
+
+        lines = open(file).readlines()
+
+        for idx, line in enumerate(lines):
+            if not line.endswith('\n'):
+                msg = 'line terminator is other than \\n'
+                errors.append(LintError(file=file, line=idx, msg=msg))
+            elif len(line) > 80:
+                msg = 'line length should be maximum of 80 characters'
+                errors.append(LintError(file=file, line=idx, pos=80, msg=msg))
+
+        if lines[-1] == '\n':
+            msg = 'file end should have only one line break'
+            errors.append(LintError(file=file, line=len(lines), msg=msg))
+
+    if errors:
+        for error in errors:
+            print(error)
+
+        sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()
