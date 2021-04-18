@@ -9,14 +9,14 @@ $ scripts/mount-git-hooks
 ```
 
 ## When want to ask a question
-- https://github.com/thelang-org/the/discussions/categories/q-a
+- https://github.com/lang-the/the/discussions/categories/q-a
 
 ## When opening an issue
-- [Search](https://github.com/thelang-org/the/issues?q=is%3Aissue) for
+- [Search](https://github.com/lang-the/the/issues?q=is%3Aissue) for
   duplicates
 
 ## When sending a pull request
-- [Search](https://github.com/thelang-org/the/pulls?q=is%3Apr) for duplicates
+- [Search](https://github.com/lang-the/the/pulls?q=is%3Apr) for duplicates
 - Use the same coding style as the rest of the codebase
 
 ## Code of Conduct

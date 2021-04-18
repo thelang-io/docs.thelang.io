@@ -1,10 +1,5 @@
 # The Programming Language
 This is the official repository of The Programming Language. \
-The Programming Language is first programming language created to serve purpose
-of main programming language developers should use in 21s century. \
-The Programming Language is private programming language, it will become
-available very soon!
-
 The Programming Language is a rapid, minimalistic, elegant, high-performance,
 high-level programming language.
 - **Unique:** The syntax was produced by a combination of best features of all
@@ -18,26 +13,77 @@ high-level programming language.
 - **Portable:** The Programming Language works on a large number of operating
   systems
 
-**Planned releases**
+## Explanation
+We strongly believe that in programming there should be only one programming
+language - The Programming Language and term "programming language" should
+directly refer to The Programming Language. \
+The reason for not having other programming languages is very simple: nowadays
+many languages compile to other language before being compiled to machine code
+(C programming language compiles to Assembly, Assembly compiles to object file,
+object file to machine code). It's not to say about languages such as Swift,
+Kotlin, JavaScript whom chain of compiled objects is very long. \
+The Programming Language, on the other hand, compiles directly to machine code
+removing dependencies like: `nasm`, `ld`, `clang`, `gcc`, etc \
+And now a question for you, reader, why would you use any other programming
+language if all features supported by modern programming languages are
+supported by The Programming Language which compiles directly to machine code
+without any delays and maintained by [Aaron Delasy](https://github.com/delasy),
+perfectionist, who won't let The Programming Language die or become a place for
+trash code?
 
-| version | support            |
-|:------- | ------------------ |
-| 1.0.0   | terminals desktops |
-| 2.0.0   | mobiles            |
-| 3.0.0   | consoles           |
+## How to contribute
+To contribute, please send us a [pull
+request](https://github.com/lang-the/the/compare) from your fork of this
+repository. \
+New developers may find notes in [CONTRIBUTING.md](CONTRIBUTING.md) file
+helpful to start contributing.
 
-Since it's private programming language it will be available only via cli, your
-project files will be sent to servers, compiled and respond with binaries.
+## Using
+In order to use The Programming Language please refer to
+[CLI](https://github.com/lang-the/cli).
 
-> Your project files are deleted once compiled and are not shared with any 3rd
-> party and nor by The Programming Language itself, this process is needed to
-> ensure safety of The Programming Language source code.
+## File extension
+The Programming Language don't have file extension, it's created to serve as
+main programming language. If your files don't have files extensions you have
+only 2 variants:
 
-The Programming Language written in C and till 1.0.0 will be able to compile
-itself. \
-Compiler of The Programming Language compiles directly to machine code, no
-dependencies used, nor external linkers or compilers. \
-Compiler of The Programming Language doesn't use LLVM or any other kind of such
-tools. \
-The Programming Language don't have file extension, it's why it's main
-programming language.
+1. shell script - The Programming Language can accomplish any task shell script
+  can, in future we expect to replace shell scripts
+2. binary files - nowadays most of the time binaries have file extensions
+  `.out`, `.app` or `.exe` which are visible too user. It's very rare to find
+  binary having no file extension on your Desktop
+
+It means that spot for having no file extension is reserved by The Programming
+Language starting from 2021-03-23.
+
+## Planned Releases
+| version | platform  |
+|:------- | --------- |
+| 1.0.0   | terminals |
+|         | desktops  |
+| 2.0.0   | mobiles   |
+| 3.0.0   | consoles  |
+
+## Supported Operating Systems
+Since the compiler is written in The Programming Language, it must be built by
+a precompiled previous version of itself. \
+The Programming Language is built and tested on the following operating
+systems:
+
+| Operating System | Version      | Architecture     | Support       |
+|:---------------- | ------------ | ---------------- | ------------- |
+| MacOS            | 10.10 - 11.3 | Intel x86-64     | Official      |
+| MacOS            | -            | Apple Silicon    | Not tested    |
+| Linux            | -            | -                | Not tested    |
+| Windows          | -            | -                | Not tested    |
+
+## The Author
+The Programming Language was designed and developed by [Aaron
+Delasy](https://github.com/delasy).
+
+## License
+The Programming Language is private programming language, available for use
+only via cli. \
+Project files are sent to servers, compiled and respond with binaries.
+> Project files are deleted once compiled and are not shared with any 3rd party
+> and nor used by The Programming Language itself.
