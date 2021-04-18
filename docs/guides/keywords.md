@@ -4,8 +4,10 @@ as
 async
 await
 break
+case
 catch
 continue
+default
 elif
 else
 export
