@@ -57,6 +57,22 @@ main {
 }
 ```
 
+## Closure parameters
+```the
+fn add (int a, int  b, fn (int) void cb) {
+  cb(a + b)
+}
+
+main {
+  a := 1
+  b := 2
+
+  add(a, b, fn (int c) {
+    print('Result of a + b =', c)
+  })
+}
+```
+
 # Multiple return values
 ```the
 fn myFunc (int a, int b, str c, str d) int, str {
