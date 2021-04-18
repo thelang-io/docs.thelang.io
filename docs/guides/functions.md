@@ -46,29 +46,21 @@ main {
 }
 ```
 
-## Closure
-```the
-main {
-  arr := [1, 2, 3]
-
-  arr.filter(fn (int it) bool {
-    return it > 2
-  })
-}
-```
-
-## Closure parameters
+## Closures
 ```the
 fn add (int a, int  b, fn (int) void cb) {
   cb(a + b)
 }
 
 main {
-  a := 1
-  b := 2
+  arr := [1, 2, 3]
 
-  add(a, b, fn (int c) {
-    print('Result of a + b =', c)
+  arr.filter(fn (int it) bool {
+    return it >= 2
+  })
+
+  add(arr[0], arr[1], fn (int c) {
+    print('Result of arr[0] + arr[1] =', c)
   })
 }
 ```
