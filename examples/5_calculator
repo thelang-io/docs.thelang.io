@@ -3,7 +3,7 @@
 class CalculatorError extends Error {
   pub int pos
 
-  constructor (str message, int pos) {
+  init (str message, int pos) {
     super(message)
     this.pos = pos
   }
