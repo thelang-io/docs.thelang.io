@@ -1,6 +1,6 @@
 # Mutability
 
-## In variables
+## Variables
 ```the
 main {
   mut a := 1
@@ -10,7 +10,7 @@ main {
 }
 ```
 
-## In functions
+## Functions
 ```the
 fn changeA (mut int a) {
   a = 2
@@ -22,7 +22,7 @@ main {
 }
 ```
 
-## In classes
+## Classes
 ```the
 class MyClass {
   priv mut int _a
