@@ -27,9 +27,7 @@ removing dependencies like: `nasm`, `ld`, `clang`, `gcc`, etc \
 And now a question for you, reader, why would you use any other programming
 language if all features supported by modern programming languages are
 supported by The Programming Language which compiles directly to machine code
-without any delays and maintained by [Aaron Delasy](https://github.com/delasy),
-perfectionist, who won't let The Programming Language die or become a place for
-trash code?
+without any delays?
 
 ## How to contribute
 To contribute, please send us a [pull
