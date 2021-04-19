@@ -26,9 +26,12 @@ main {
 ```the
 class MyClass {
   priv mut int _a
+  priv int _b := 1
+  priv int _c
 
   init (int a) {
     this._a = a
+    this._c = 2
   }
 
   pub mut changeA () {
