@@ -67,6 +67,15 @@ class MyClass {
 ```
 > NOTE: Destructor don't accept parameters
 
+## String cast
+```the
+class MyClass {
+  str {
+    return 'MyClass'
+  }
+}
+```
+
 ## Inheritance
 ```the
 class Parent {
