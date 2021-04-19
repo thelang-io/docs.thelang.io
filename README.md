@@ -43,24 +43,16 @@ In order to use The Programming Language please refer to
 ## File extension
 The Programming Language don't have file extension, it's created to serve as
 main programming language. If your files don't have files extensions you have
-only 2 variants:
+only 2 options:
 
 1. shell script - The Programming Language can accomplish any task shell script
   can, in future we expect to replace shell scripts
 2. binary files - nowadays most of the time binaries have file extensions
-  `.out`, `.app` or `.exe` which are visible too user. It's very rare to find
+  `.out`, `.app` or `.exe` which are visible to user. It's very rare to find
   binary having no file extension on your Desktop
 
 It means that spot for having no file extension is reserved by The Programming
 Language starting from 2021-03-23.
-
-## Planned Releases
-| version | platform  |
-|:------- | --------- |
-| 1.0.0   | terminals |
-|         | desktops  |
-| 2.0.0   | mobiles   |
-| 3.0.0   | consoles  |
 
 ## Supported Operating Systems
 Since the compiler is written in The Programming Language, it must be built by
@@ -71,7 +63,7 @@ systems:
 | Operating System | Version      | Architecture     | Support       |
 |:---------------- | ------------ | ---------------- | ------------- |
 | MacOS            | 10.10 - 11.3 | Intel x86-64     | Official      |
-| MacOS            | -            | Apple Silicon    | Not tested    |
+|                  | -            | Apple Silicon    | Not tested    |
 | Linux            | -            | -                | Not tested    |
 | Windows          | -            | -                | Not tested    |
 
