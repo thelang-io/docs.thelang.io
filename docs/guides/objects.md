@@ -1,16 +1,21 @@
 # Objects
 ```the
-obj MyObject {
-  int prop1
-  fn (int) void prop2
+obj Book {
+  mut str name
+  int year
+  fn (int) void sell
 }
 
 main {
-  o := MyObject{
-    prop1: 1,
-    prop2: fn (int a) {
-      print('o.prop1 + a =', o.prop1 + a)
+  book := Book{
+    name: 'Angels and Demons',
+    year: 2003,
+    sell: fn (int a) {
+      print('Book ${book.name} is for sale!')
     }
   }
+
+  book.name = 'Da Vinci Code'
+  book.sell()
 }
 ```
