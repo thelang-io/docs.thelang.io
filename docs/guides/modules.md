@@ -12,6 +12,12 @@ import Thing1, Thing2 from ./things
 import formatCurrency, formatTime from ../formatters/index
 ```
 
+## Wildcard Import
+```the
+import * from math
+import * from ./things
+```
+
 ## Delayed export
 ```the
 obj SuperObject {
