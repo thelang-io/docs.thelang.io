@@ -70,7 +70,7 @@ class MyClass {
 ## String cast
 ```the
 class MyClass {
-  str {
+  pub str () str {
     return 'MyClass'
   }
 }
