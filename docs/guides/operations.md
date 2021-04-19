@@ -6,8 +6,8 @@ main {
   a1 := 1
   s1 := ''
 
-  int? a2
-  str? s2
+  int? a2 := 0
+  str? s2 := ''
 }
 ```
 
