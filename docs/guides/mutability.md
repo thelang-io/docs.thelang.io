@@ -10,7 +10,7 @@ main {
 }
 ```
 
-## In function parameters
+## In functions
 ```the
 fn changeA (mut int a) {
   a = 2
@@ -22,7 +22,7 @@ main {
 }
 ```
 
-## In class methods
+## In classes
 ```the
 class MyClass {
   priv mut int _a
@@ -31,7 +31,7 @@ class MyClass {
     this._a = a
   }
 
-  pub changeA () mut {
+  pub mut changeA () {
     this._a = 2
   }
 }
