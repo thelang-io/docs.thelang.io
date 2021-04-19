@@ -6,6 +6,7 @@ await
 break
 case
 catch
+const
 continue
 default
 elif
