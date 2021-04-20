@@ -22,6 +22,7 @@ is
 loop
 main
 mut
+new
 nil
 obj
 override
@@ -31,7 +32,10 @@ pub
 return
 static
 super
+switch
 this
+throw
 true
+try
 union
 ```
