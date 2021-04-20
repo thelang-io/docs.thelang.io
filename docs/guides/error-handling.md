@@ -1,24 +1,28 @@
 # Error Handling
+
+## Definition
 ```the
-enum ErrorType {
-  strange,
-  weird
-}
-
-class MyError : Error {
-  priv ErrorType _type
-
-  init (str message, ErrorType type) {
-    super(message)
-    this._type = type
-  }
+fn report (Error err) {
+  print(err)
 }
 
 main {
   try {
-    throw new MyError('Error message', .strange)
+    throw new Error('Error message')
   } catch Error err {
-    // handler
+    report(err)
+  }
+}
+```
+
+## Inheritance
+```the
+class MyError : Error {
+  priv int _type
+
+  init (str message, int type) {
+    super(message)
+    this._type = type
   }
 }
 ```
