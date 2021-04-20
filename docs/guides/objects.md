@@ -1,17 +1,26 @@
 # Objects
 
-## Default values
+## Definition
 ```the
 obj Book {
   str name
-  int year := 2000
+  int year
+  fn sell (int) void
+}
+```
+
+## Default values
+```the
+obj Book {
+  name := ''
+  year := 2000
 }
 ```
 
 ## Optional properties
 ```the
 obj Book {
-  str name
+  str? name
   int? year
 }
 ```
@@ -20,18 +29,17 @@ obj Book {
 ```the
 obj Book {
   mut str name
-  int year
-  fn sell (int) void
+  mut int year
 }
 ```
 
 ## Inheritance
 ```the
-obj Obj1 {
-  // props
+obj Thing {
+  str id
 }
 
-obj Obj2 : Obj1 {
-  // props
+obj Book : Thing {
+  str name
 }
 ```
