@@ -1,6 +1,6 @@
 # Enumerations
 
-## Definition and Assignment
+## Definition and assignment
 ```the
 enum MovieSeries {
   fast_and_furious,
