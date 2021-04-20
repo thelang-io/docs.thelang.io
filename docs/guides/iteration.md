@@ -4,7 +4,6 @@
 ```the
 main {
   loop {
-    // body
   }
 }
 ```
@@ -13,7 +12,6 @@ main {
 ```the
 main {
   loop i := 0; i < 3; i++ {
-    // body
   }
 }
 ```
@@ -22,7 +20,6 @@ main {
 ```the
 main {
   loop i in 1..3 {
-    // body
   }
 }
 ```
@@ -33,18 +30,16 @@ main {
   s := 'Hello, World!'
 
   loop ch in s {
-    // body
   }
 }
 ```
 
-## For-in-style loop with string and index
+## For-in-style index loop with string
 ```the
 main {
   s := 'Hello, World!'
 
   loop i, ch in s {
-    // body
   }
 }
 ```
@@ -60,18 +55,6 @@ main {
   e := Example{}
 
   loop key, val in e {
-    // body
-  }
-}
-```
-
-## Iterator-style loop with string
-```the
-main {
-  s := 'Hello, World!'
-
-  loop it in s {
-    // body
   }
 }
 ```
