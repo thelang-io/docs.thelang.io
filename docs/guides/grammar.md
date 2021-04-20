@@ -27,7 +27,7 @@ COMMA ::= ','
 LPAR ::= '('
 RPAR ::= ')'
 
-ID ::= [a-zA-Z_$][a-zA-Z0-9_$]+
+ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 
 STRING_LITERAL ::= STRING_LITERAL_DQ | STRING_LITERAL_SQ
 STRING_LITERAL_DQ ::= '"' (ANY_CHAR - '"')* '"'
