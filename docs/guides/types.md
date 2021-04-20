@@ -12,13 +12,6 @@ void
 
 ## String
 
-### Initialization
-```the
-main {
-  s := ''
-}
-```
-
 ### Escaping
 ```the
 main {
@@ -52,7 +45,7 @@ fn add (int[] a, int[] b) int[] {
 }
 
 main {
-  arr := [1, 2, 3]
+  arr := add([1, 2, 3], [4, 5, 6])
 }
 ```
 
