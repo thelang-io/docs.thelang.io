@@ -6,13 +6,13 @@ import Math from math
 import Thing1, thing2 from my-module
 ```
 
-## Local file Import
+## Local file import
 ```the
 import AllThings from ./things
 import formatCurrency, formatTime from ../formatters/index
 ```
 
-## Wildcard Import
+## Wildcard import
 ```the
 import * from math
 import * from ./things
