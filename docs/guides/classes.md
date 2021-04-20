@@ -90,3 +90,29 @@ class Child : Parent {
   }
 }
 ```
+
+## Method overloading
+```the
+class MyClass {
+  prot mut _sum := 0
+
+  pub add (int x) MyClass {
+    this._sum += x
+    return this
+  }
+
+  pub add (i16 x) MyClass {
+    this._sum += x
+    return this
+  }
+}
+
+main {
+  int a := 1
+  i16 b := 2
+
+  new MyClass()
+    .add(a)
+    .add(b)
+}
+```
