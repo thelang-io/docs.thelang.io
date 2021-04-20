@@ -8,7 +8,7 @@ import Thing1, thing2 from my-module
 
 ## Local file Import
 ```the
-import Thing1, Thing2 from ./things
+import AllThings from ./things
 import formatCurrency, formatTime from ../formatters/index
 ```
 
@@ -18,10 +18,11 @@ import * from math
 import * from ./things
 ```
 
-## Delayed export
+## Export
 ```the
 obj SuperObject {
-  int field
+  int field1
+  str field2
 }
 
 enum SuperEnum {
@@ -29,14 +30,8 @@ enum SuperEnum {
   two
 }
 
+export class Thing {}
+export fn calc () {}
+
 export SuperEnum, SuperObject
-```
-
-## Instant export
-```the
-export class Thing {
-}
-
-export fn calc () {
-}
 ```
