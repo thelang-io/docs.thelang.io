@@ -1,10 +1,8 @@
 # Classes
 
-## Class
+## Definition
 ```the
-class MyClass {
-  // body
-}
+class MyClass {}
 ```
 
 ## Properties
@@ -12,67 +10,43 @@ class MyClass {
 class MyClass {
   pub int prop1
   pub prop2 := 0
-  pub mut str prop3
-  pub mut prop4 := ''
+  pub str prop3
+  pub prop4 := ''
 }
 ```
 
 ## Methods
 ```the
 class MyClass {
-  pub method () {
-  }
+  pub method () {}
+  pub mutMethod () mut {}
 }
 ```
 
 ## Visibility
 ```the
 class MyClass {
-  pub str prop1
-  priv mut prop2 := ''
-  prot str prop3
-  static prop4 := ''
+  static str staticProp
+  priv str privateProp
+  prot str protectedProp
+  pub str publicProp
 
-  priv privateMethod () {
-  }
-
-  prot mut protectedMethod () {
-  }
-
-  pub publicMethod () {
-  }
-
-  static staticMethod () {
-  }
-}
-```
-> NOTE: Static always stays public
-
-## Constructor
-```the
-class MyClass {
-  init () {
-    // body
-  }
+  static staticMethod () {}
+  priv privateMethod () {}
+  prot mut protectedMethod () {}
+  pub publicMethod () {}
 }
 ```
 
-## Destructor
+## Special methods
+1. Constructor `init`
+2. Destructor `deinit` (which doesn't accept parameters)
+3. String cast `str`
 ```the
 class MyClass {
-  deinit {
-    // body
-  }
-}
-```
-> NOTE: Destructor don't accept parameters
-
-## String cast
-```the
-class MyClass {
-  pub str () str {
-    return 'MyClass'
-  }
+  init () {}
+  deinit {}
+  pub str () str { return 'MyClass' }
 }
 ```
 
@@ -96,23 +70,23 @@ class Child : Parent {
     this._locaton = 'child'
   }
 }
-
-main {
-  parent := new Parent()
-  child := new Child()
-
-  parent.info()
-  child.info()
-}
 ```
 
 ## Overriding
 ```the
+class Parent {
+  prot _locaton := 'parent'
+
+  pub info () {
+    print('Inside ${this._locaton}')
+  }
+}
+
 class Child : Parent {
-  override prot str? _locaton
+  override prot _locaton := 'Not inside parent'
 
   override pub info () {
-    print('Not inside parent')
+    print(this._locaton)
   }
 }
 ```
