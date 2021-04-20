@@ -3,33 +3,34 @@
 ## If, Elif, Else
 ```the
 main {
-  if 1 > 2 {
-    // body
-  } elif 2 < 1 {
-    // body
+  statement := 1 < 2
+
+  if statement {
+  } elif statement {
   } else {
-    // body
   }
+}
+```
+
+## Ternary
+```the
+main {
+  statement := 1 < 2
+  a := statement ? 'positive body' : 'negative body'
 }
 ```
 
 ## Switch
 ```the
 main {
-  jewelry := 'expensive'
-  mut str? wealth
-
-  switch jewelry {
-    case 'expensive': {
-      wealth = 'rich'
+  switch statement {
+    case 'value1': {
       break
     }
-    case 'cheap':
-    case 'looks-expensive':
-      wealth = 'poor'
+    case 'value2':
+    case 'valu3':
       break
     default:
-      wealth = 'unknown'
       break
   }
 }
