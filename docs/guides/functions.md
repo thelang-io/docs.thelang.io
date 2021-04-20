@@ -2,9 +2,7 @@
 
 ## Main
 ```the
-main {
-  // body
-}
+main {}
 ```
 
 ## Default parameters
