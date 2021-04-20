@@ -1,8 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 cat > .git/hooks/pre-commit << EOF
-#!/usr/bin/env bash
-scripts/lint || exit \$?
+#!/bin/sh
+
+files=(\$(git diff --cached --name-only --diff-filter=ACMR))
+
+for i in "\${!files[@]}"; do
+  file="\${files[\$i]}"
+  files[\$i]="\$(cd "\$(dirname "\$file")"; pwd -P)/\$(basename "\$file")"
+done
+
+scripts/lint \${files[@]} || exit \$?
 EOF
 
 chmod +x .git/hooks/pre-commit

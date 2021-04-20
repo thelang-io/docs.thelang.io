@@ -28,19 +28,11 @@ class LintError:
         return f'{loc} {self._msg}'
 
 
-def main():
-    files = [
-        *Path.cwd().glob('.github/**/*'),
-        *Path.cwd().glob('docs/**/*'),
-        *Path.cwd().glob('examples/**/*'),
-        *Path.cwd().glob('scripts/**/*'),
-        *Path.cwd().glob('*')
-    ]
-
+def main(files):
     errors = []
 
     for file in files:
-        if not file.is_file():
+        if not Path(file).is_file():
             continue
 
         lines = open(file).readlines()
@@ -84,4 +76,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
