@@ -94,15 +94,3 @@ main {
   add(c, d)
 }
 ```
-
-# Generics
-```the
-fn add<T> (T n1, T n2) T {
-  return n1 + n2
-}
-
-main {
-  a := add(1, 2)
-  b := add<int>(3, 4)
-}
-```
