@@ -11,5 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get Changed Files
+        uses: jitterbit/get-changed-files@v1
+        id: files
+        with:
+          format: 'space-delimited'
       - name: Lint
-        run: scripts/lint
+        run: scripts/lint ${{ steps.files.outputs.added_modified }}
