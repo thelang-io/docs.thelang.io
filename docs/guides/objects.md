@@ -5,7 +5,7 @@
 obj Book {
   str name
   int year
-  fn sell (int) void
+  fn (int) void sell
 }
 ```
 
