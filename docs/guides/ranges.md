@@ -11,12 +11,7 @@ main {
 ## Iteration
 ```the
 main {
-  for i in 0..10 {
-    // body
-  }
-
-  for i in 0..=9 {
-    // body
-  }
+  for i in 0..10 {}
+  for i in 0..=9 {}
 }
 ```
