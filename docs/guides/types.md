@@ -60,7 +60,7 @@ main {
 }
 ```
 
-## Type Casting
+## Type casting
 
 ### Safe
 ```the
@@ -78,7 +78,7 @@ main {
 }
 ```
 
-## Type Checking
+## Type checking
 ```the
 main {
   int? i
