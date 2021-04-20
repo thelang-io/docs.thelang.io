@@ -19,7 +19,7 @@ class MyClass {
 ```the
 class MyClass {
   pub method () {}
-  pub mutMethod () mut {}
+  pub mut mutMethod () {}
 }
 ```
 
@@ -38,15 +38,11 @@ class MyClass {
 }
 ```
 
-## Special methods
-1. Constructor `init`
-2. Destructor `deinit` (which doesn't accept parameters)
-3. String cast `str`
+## Constructor and destructor
 ```the
 class MyClass {
   init () {}
   deinit {}
-  pub str () str { return 'MyClass' }
 }
 ```
 
@@ -94,25 +90,50 @@ class Child : Parent {
 ## Method overloading
 ```the
 class MyClass {
-  prot mut _sum := 0
+  prot mut float _sum
 
-  pub add (int x) MyClass {
+  pub mut add (int x) MyClass {
     this._sum += x
     return this
   }
 
-  pub add (i16 x) MyClass {
+  pub mut add (float x) MyClass {
+    this._sum += x
+    return this
+  }
+
+  pub mut add (float x) MyClass {
     this._sum += x
     return this
   }
 }
 
 main {
-  int a := 1
-  i16 b := 2
+  new MyClass().add(1).add(2.32)
+}
+```
 
-  new MyClass()
-    .add(a)
-    .add(b)
+## Operator overloading
+```the
+class MyClass {
+  prot mut float _sum
+
+  mut op + (int x) MyClass {
+    this._sum += x
+    return this
+  }
+
+  mut op + (float x) MyClass {
+    this._sum += x
+    return this
+  }
+
+  op str () str {
+    return 'Sum of MyClass: ${this._sum}'
+  }
+}
+
+main {
+  print(new MyClass() + 1 + 2.32)
 }
 ```

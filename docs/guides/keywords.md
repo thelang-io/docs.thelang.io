@@ -25,6 +25,7 @@ mut
 new
 nil
 obj
+op
 override
 prot
 priv
