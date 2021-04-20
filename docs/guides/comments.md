@@ -2,7 +2,7 @@
 
 ## Inline
 ```the
-// Comment
+// Inline comment
 ```
 
 ## Block
