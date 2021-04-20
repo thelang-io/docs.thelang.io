@@ -1,6 +1,6 @@
 # Control Flow
 
-## If, Elif, Else
+## If, elif, else
 ```the
 main {
   statement := 1 < 2
