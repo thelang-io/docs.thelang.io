@@ -72,7 +72,7 @@ def main():
                         LintError(file=file, line=idx, pos=0, msg=msg)
                     )
 
-        if lines[-1] == '\n':
+        if len(lines) > 0 and lines[-1] == '\n':
             msg = 'file end should have only one line break'
             errors.append(LintError(file=file, line=len(lines), msg=msg))
 
