@@ -59,6 +59,12 @@ class Map<T, U> {
   pub mut set (T key, U val) this
 }
 
+class Number {
+  op + (char rhs) str
+  op + (str rhs) str
+  op str () str
+}
+
 class Program {
   int argc
   str[] argv
