@@ -2,6 +2,6 @@
 
 ## Definition
 ```the
-const FPS := 1000 / 24
-export const PI := 3.14
+const FPS := 24
+export const FERFRESH_RARTE := 1000 / FPS
 ```
