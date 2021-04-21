@@ -79,10 +79,11 @@ class Parent {
 }
 
 class Child : Parent {
-  override prot _locaton := 'Not inside parent'
+  override _locaton := 'Not inside parent'
 
-  override pub info () {
+  override info () Child {
     print(this._locaton)
+    return this
   }
 }
 ```
