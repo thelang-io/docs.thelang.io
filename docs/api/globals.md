@@ -1,5 +1,7 @@
 # Globals
 ```the
+import * from stream
+
 class Array<T> {
   pub mut bool empty
   pub mut int len
@@ -20,4 +22,14 @@ class Array<T> {
   pub mut shift () T?
   pub mut unshift (T n) int
 }
+
+class Program {
+  int argc
+  str[] argv
+  str argv0
+  Stream stderr
+  Stream stdout
+}
+
+Program program
 ```
