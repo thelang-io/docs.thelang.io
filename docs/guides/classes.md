@@ -33,7 +33,7 @@ class MyClass {
 
   static staticMethod () {}
   priv privateMethod () {}
-  prot mut protectedMethod () {}
+  prot protectedMethod () {}
   pub publicMethod () {}
 }
 ```
