@@ -31,6 +31,25 @@ class Program {
   Stream stdout
 }
 
+class String {
+  pub mut bool empty
+  pub mut int len
+
+  op + (char rhs) String
+  op + (str rhs) String
+  op [] (int i) char?
+  mut op [] (int i) mut char?
+  op iter () Iterator<char>
+  mut op iter () Iterator<mut char>
+  op str () str
+
+  pub includes (char x) bool
+  pub includes (str x) bool
+  pub index (char x) int?
+  pub index (str x) int?
+  pub mut reverse () this
+}
+
 fn exit (int status) void
 
 fn print (
