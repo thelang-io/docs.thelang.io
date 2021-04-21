@@ -87,3 +87,20 @@ class Child : Parent {
   }
 }
 ```
+
+## Polymorphic `this`
+```the
+class MyClass {
+  pub method1 () this {
+    return this
+  }
+
+  pub method2 () this {
+    return this
+  }
+}
+
+main {
+  MyClass.method1().method2()
+}
+```
