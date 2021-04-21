@@ -31,5 +31,14 @@ class Program {
   Stream stdout
 }
 
+fn exit (int status) void
+
+fn print (
+  any... items,
+  Stream? stream,
+  str separator = ' ',
+  str terminator = '\n'
+) void
+
 Program program
 ```
