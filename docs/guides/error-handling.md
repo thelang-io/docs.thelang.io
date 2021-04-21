@@ -3,7 +3,7 @@
 ## Try/catch
 ```the
 fn report (Error err) {
-  print(err, stream: .err)
+  print(err, stream: program.stderr)
 }
 
 main {
