@@ -65,6 +65,10 @@ class Number {
   op str () str
 }
 
+class Object {
+  op str () str
+}
+
 class Program {
   int argc
   str[] argv
