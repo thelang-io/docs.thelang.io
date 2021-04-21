@@ -33,6 +33,10 @@ class Char {
   op str () str
 }
 
+class Function {
+  op str () str
+}
+
 class Program {
   int argc
   str[] argv
