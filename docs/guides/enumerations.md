@@ -15,3 +15,12 @@ main {
   MovieSeries film2 = .harry_potter
 }
 ```
+
+## Custom values
+```the
+enum Art {
+  black_square = 1,
+  mona_lisa = 10,
+  the_last_supper = 100
+}
+```
