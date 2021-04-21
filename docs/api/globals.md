@@ -3,8 +3,8 @@
 import * from stream
 
 class Array<T> {
-  pub mut bool empty
-  pub mut int len
+  pub bool empty
+  pub int len
 
   op + (T rhs) Array<T>
   op + (Array<T> rhs) Array<T>
@@ -23,6 +23,10 @@ class Array<T> {
   pub mut unshift (T n) int
 }
 
+class Boolean {
+  op str () str
+}
+
 class Char {
   op + (char rhs) str
   op + (str rhs) str
@@ -38,11 +42,11 @@ class Program {
 }
 
 class String {
-  pub mut bool empty
-  pub mut int len
+  pub bool empty
+  pub int len
 
-  op + (char rhs) String
-  op + (str rhs) String
+  op + (char rhs) str
+  op + (str rhs) str
   op [] (int i) char?
   mut op [] (int i) mut char?
   op iter () Iterator<char>
