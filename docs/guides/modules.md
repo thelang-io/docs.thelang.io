@@ -35,3 +35,8 @@ export fn calc () {}
 
 export SuperEnum, SuperObject
 ```
+
+## Wildcard export
+```the
+export * from ./things
+```
