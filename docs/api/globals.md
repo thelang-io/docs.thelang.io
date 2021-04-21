@@ -37,6 +37,14 @@ class Function {
   op str () str
 }
 
+class Iterator<T> {
+  pub int cursor
+
+  pub hasNext () bool
+  pub next () T
+  pub mut next () mut T
+}
+
 class Program {
   int argc
   str[] argv
