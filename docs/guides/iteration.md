@@ -4,6 +4,7 @@
 ```the
 main {
   loop {
+    print('I will run forever')
   }
 }
 ```
@@ -12,6 +13,7 @@ main {
 ```the
 main {
   loop i := 0; i < 3; i++ {
+    print('Number:', i)
   }
 }
 ```
@@ -20,6 +22,7 @@ main {
 ```the
 main {
   loop i in 1..3 {
+    print('Number:', i)
   }
 }
 ```
@@ -30,6 +33,7 @@ main {
   s := 'Hello, World!'
 
   loop ch in s {
+    print('Char:', ch)
   }
 }
 ```
@@ -40,6 +44,7 @@ main {
   s := 'Hello, World!'
 
   loop i, ch in s {
+    print('Char:', ch, ' Index:', i)
   }
 }
 ```
@@ -55,6 +60,7 @@ main {
   e := Example{}
 
   loop key, val in e {
+    print('Key: ', key, 'Value:', val)
   }
 }
 ```
