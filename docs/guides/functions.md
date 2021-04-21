@@ -73,24 +73,3 @@ main {
   e, f := myFunc(1, 2, 'Hello, ', 'World!')
 }
 ```
-
-# Overloading
-```the
-fn add (int a, int b) int {
-  return a + b
-}
-
-fn add (float a, float b) float {
-  return a + b
-}
-
-main {
-  int a := 1
-  int b := 2
-  float c := 1
-  float d := 2
-
-  add(a, b)
-  add(c, d)
-}
-```
