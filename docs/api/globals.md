@@ -73,6 +73,7 @@ class Program {
   int argc
   str[] argv
   str argv0
+  str cwd
   Stream stderr
   Stream stdout
 }
