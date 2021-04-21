@@ -30,10 +30,14 @@ class MyClass {
     this._sum += x
     return this
   }
+
+  pub str () str {
+    return 'Sum of MyClass: ${this._sum}'
+  }
 }
 
 main {
-  new MyClass().add(1).add(2.3)
+  print(new MyClass().add(1).add(2.3).str())
 }
 ```
 
