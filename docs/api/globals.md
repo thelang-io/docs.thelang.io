@@ -23,6 +23,12 @@ class Array<T> {
   pub mut unshift (T n) int
 }
 
+class Char {
+  op + (char rhs) str
+  op + (str rhs) str
+  op str () str
+}
+
 class Program {
   int argc
   str[] argv
@@ -50,14 +56,14 @@ class String {
   pub mut reverse () this
 }
 
-fn exit (int status) void
+export fn exit (int status) void
 
-fn print (
+export fn print (
   any... items,
   Stream? stream,
   str separator = ' ',
   str terminator = '\n'
 ) void
 
-Program program
+export Program program
 ```
