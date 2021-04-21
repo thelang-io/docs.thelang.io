@@ -15,8 +15,8 @@ main {
 ## Classes
 ```the
 class MyClass<T, U> {
-  T _t
-  T _u
+  priv T _t
+  priv T _u
 
   init (T t, U u) {
     this._t = t
@@ -25,21 +25,14 @@ class MyClass<T, U> {
 }
 ```
 
-## Argument deduction
+## Argument types
 ```the
-class MyClass<T = int> {
-  mut T _val
+class MyClass<T> {}
+class MyClassTwo<T : MyClass> {}
+```
 
-  init (T val) {
-    this._val = val
-  }
-
-  pub getVal () T {
-    return this._val
-  }
-
-  pub setVal (T val) MyClass {
-    this._val = val
-  }
-}
+## Default arguments
+```the
+class MyClass<T = int> {}
+class MyClassTwo<T : MyClass = MyClass> {}
 ```
