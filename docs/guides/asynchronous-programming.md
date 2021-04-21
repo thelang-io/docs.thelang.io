@@ -1,4 +1,6 @@
 # Asynchronous programming
+
+## Functions
 ```the
 fn myFunc () async {
   await sleep(1000)
@@ -6,5 +8,19 @@ fn myFunc () async {
 
 main {
   await myFunc()
+}
+```
+
+## Classes
+```the
+class MyClass {
+  pub sleep () async {
+    await sleep(1000)
+  }
+}
+
+main {
+  c := new MyClass()
+  await c.sleep()
 }
 ```
