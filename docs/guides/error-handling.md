@@ -1,9 +1,9 @@
 # Error Handling
 
-## Definition
+## Try/catch
 ```the
 fn report (Error err) {
-  print(err)
+  print(err, stream: .err)
 }
 
 main {
@@ -15,14 +15,11 @@ main {
 }
 ```
 
-## Inheritance
+## Custom error
 ```the
 class MyError : Error {
-  priv int _type
-
-  init (str message, int type) {
-    super(message)
-    this._type = type
+  init (str message, str type) {
+    super('${type}: $message')
   }
 }
 ```
