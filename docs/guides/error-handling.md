@@ -13,7 +13,7 @@ main {
 ```the
 class MyError : Error {
   init (str message, bool fatal) {
-    super('$prefix: $message')
+    super(message)
     this.name := fatal ? 'FatalError' : 'MyError'
   }
 }
