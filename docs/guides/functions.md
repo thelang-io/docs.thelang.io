@@ -28,19 +28,6 @@ main {
   myFunc(1)
   myFunc(2, c: 3)
   myFunc(4, b: 5)
-  print('Hello, World!', terminator: '')
-}
-```
-
-## Variadic parameters
-```the
-fn myPrint (int a, int b, str... items) {
-  print(a + b, items)
-}
-
-main {
-  myPrint(1, 2)
-  myPrint(3, 4, '- result of 3 + 4')
 }
 ```
 
