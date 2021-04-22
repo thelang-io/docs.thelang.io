@@ -5,21 +5,15 @@
 class MyClass {}
 ```
 
-## Properties
+## Properties and methods
 ```the
 class MyClass {
   pub int prop1
   pub prop2 := 0
   pub str prop3
   pub prop4 := ''
-}
-```
 
-## Methods
-```the
-class MyClass {
   pub method () {}
-  pub mut mutMethod () {}
 }
 ```
 
