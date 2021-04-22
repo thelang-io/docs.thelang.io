@@ -16,7 +16,13 @@ main {
 ## Ternary
 ```the
 main {
-  print(1 < 2 ? 'less' : 'greater equal')
+  print(
+    1 < 2
+      ? '1 is less than 2'
+      : 1 > 2
+        ? '1 is greater than 2'
+        : '1 is equal 2'
+  )
 }
 ```
 
