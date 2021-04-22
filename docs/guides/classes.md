@@ -1,6 +1,4 @@
 # Classes
-
-## Definition
 ```the
 class MyClass {}
 ```

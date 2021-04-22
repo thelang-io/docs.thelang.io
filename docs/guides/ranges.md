@@ -1,6 +1,4 @@
 # Ranges
-
-## Variants
 ```
 ..
 ..2

@@ -1,6 +1,4 @@
 # Error Handling
-
-## Try/catch
 ```the
 main {
   try {
