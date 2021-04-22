@@ -30,22 +30,8 @@ main {
 
 ## Array
 ```the
-fn add (int[] a, int[] b) int[] {
-  int[] c
-
-  for val in a {
-    c.push(val)
-  }
-
-  for val in b {
-    c.push(val)
-  }
-
-  return c
-}
-
 main {
-  arr := add([1, 2, 3], [4, 5, 6])
+  arr := [1, 2, 3]
 }
 ```
 
@@ -94,8 +80,8 @@ main {
 ```the
 main {
   a := 1
-  an := 1 as int
+  int an = 1
   b := [1, 2, 3]
-  bn := [1, 2, 3] as int[]
+  int[] bn = [1, 2, 3]
 }
 ```
