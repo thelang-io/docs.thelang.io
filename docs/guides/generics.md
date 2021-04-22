@@ -15,12 +15,16 @@ main {
 ## Classes
 ```the
 class MyClass<T, U> {
-  priv T _t
-  priv T _u
+  pub mut T _t
+  pub mut T _u
 
   init (T t, U u) {
     this._t = t
     this._u = u
+  }
+
+  pub castRead<V = T, W = U> () V, W {
+    return this._t as V, this._u as W
   }
 }
 ```
@@ -34,5 +38,5 @@ class MyClassTwo<T : MyClass> {}
 ## Default arguments
 ```the
 class MyClass<T = int> {}
-class MyClassTwo<T : MyClass = MyClass> {}
+class MyClassTwo<T : class = MyClass> {}
 ```
