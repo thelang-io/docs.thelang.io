@@ -35,17 +35,6 @@ main {
 }
 ```
 
-## Optionals
-```the
-main {
-  mut int? a
-
-  if a is nil {
-    a = 2
-  }
-}
-```
-
 ## Type casting
 
 ### Safe

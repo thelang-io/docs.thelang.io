@@ -20,11 +20,3 @@ obj Book {
   year := 2000
 }
 ```
-
-## Optional properties
-```the
-obj Book {
-  str? name
-  int? year
-}
-```
