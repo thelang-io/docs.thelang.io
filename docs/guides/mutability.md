@@ -34,3 +34,20 @@ class MyClass {
   }
 }
 ```
+
+## Objects
+```the
+obj MyObj {
+  mut str prop1
+  mut int prop2
+}
+```
+
+## Interfaces
+```the
+interface IName {
+  mut prop1: str
+  mut prop2: int
+  mut prop3: fn (int) void
+}
+```
