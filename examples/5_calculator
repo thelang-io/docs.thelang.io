@@ -1,7 +1,7 @@
-class CalculatorError extends Error {
-  pub int pos
+class CalcError : Error {
+  pub pos: int
 
-  init (str message, int pos) {
+  init (message: str, pos: int) {
     super(message)
     this.pos = pos
   }
@@ -10,40 +10,40 @@ class CalculatorError extends Error {
 union Expr = Literal | BinaryExpr | UnaryExpr
 
 obj Literal {
-  int end
-  int start
-  float | int val
+  end: int
+  start: int
+  val: float | int
 }
 
 obj BinaryExpr {
-  int end
-  Expr left
-  str operator
-  Expr right
-  int start
+  end: int
+  left: Expr
+  operator: str
+  right: Expr
+  start: int
 }
 
 obj UnaryExpr {
-  Expr expr
-  int end
-  str operator
-  int start
+  expr: Expr
+  end: int
+  operator: str
+  start: int
 }
 
 obj Token {
-  int end
-  int start
-  TokenType type
-  str val
+  end: int
+  start: int
+  type: TokenType
+  val: str
 }
 
 enum TokenType {
-  operand
+  operand,
   operator
 }
 
-fn tokenize (str input) Token[] {
-  mut tokens := Token[]
+fn tokenize (input: str) Token[] {
+  mut tokens: Token[]
   mut start := 0
   mut val := ''
 
@@ -64,26 +64,25 @@ fn tokenize (str input) Token[] {
     } elif ['/', '*', '-', '+'].includes(ch) {
       tokens.push({ end: i + 1, start: i, type: .operator, val: ch })
     } elif ![' ', '\t'].includes(ch) {
-      throw new CalculatorError('Unexpected token', i)
+      throw new CalcError('Unexpected token', i)
     }
   }
 
   return tokens
 }
 
-fn parse (Token[] tokens, Expr? expr, int pos = 0) Expr {
+fn parse (tokens: Token[], expr: Expr?, pos := 0) Expr {
   // TODO
 }
 
-fn evaluate (Expr expr) str {
+fn evaluate (expr: Expr) str {
   // TODO
 }
 
 main {
   loop {
     print('> ')
-
-    line := os.stdin.readline().trim()
+    line := program.stdin.readline().trim()
 
     if line == 'exit' || line == '\\q' {
       break
@@ -97,8 +96,8 @@ main {
       if !output.empty {
         print(output)
       }
-    } catch CalculatorError err {
-      print(' '.times(err.pos) + '^ {err.message}')
+    } catch CalcError err {
+      print(' '.times(err.pos) + "^ ${err.message}")
     }
   }
 }

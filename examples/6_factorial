@@ -1,4 +1,4 @@
-fn factorial (int num) int {
+fn factorial (num: int) int {
   return num <= 0 ? 0 : num + factorial(num - 1)
 }
 

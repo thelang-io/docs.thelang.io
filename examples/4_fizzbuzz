@@ -1,4 +1,4 @@
-fn fizzbuzz (int num) {
+fn fizzbuzz (num: int) {
   loop i in 0 ..= num {
     if i % 15 == 0 {
       print('FizzBuzz')
