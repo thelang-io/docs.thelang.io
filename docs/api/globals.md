@@ -33,6 +33,14 @@ class Char {
   op str () str
 }
 
+class Error {
+  pub str message
+  pub name := 'Error'
+
+  init (str? message)
+  op str () str
+}
+
 class Function {
   op str () str
 }
