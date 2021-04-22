@@ -17,7 +17,7 @@ main {
 }
 ```
 
-## Iterator
+## Iterator with numbers
 ```the
 main {
   for i in 0..10 {}
@@ -25,7 +25,7 @@ main {
 }
 ```
 
-## Using variables
+## Iterator with variables
 ```the
 main {
   a := 1
