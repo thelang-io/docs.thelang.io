@@ -15,11 +15,6 @@ main {
 fn changeA (mut int a) {
   a = 2
 }
-
-main {
-  mut a := 1
-  changeA(a)
-}
 ```
 
 ## Classes
@@ -37,10 +32,5 @@ class MyClass {
   pub mut changeA () {
     this._a = 2
   }
-}
-
-main {
-  cls := new MyClass(1)
-  cls.changeA()
 }
 ```
