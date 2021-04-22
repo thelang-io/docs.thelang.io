@@ -9,11 +9,6 @@ fn sum (int a, int b) int {
 fn sum (float a, float b) float {
   return a + b
 }
-
-main {
-  sum(1, 2)
-  sum(3.4, 5.6)
-}
 ```
 
 ## Classes
@@ -35,13 +30,22 @@ class MyClass {
     return 'Sum of MyClass: ${this._sum}'
   }
 }
-
-main {
-  print(new MyClass().add(1).add(2.3).str())
-}
 ```
 
 ## Operators
+
+### List
+```
+op + (any rhs) any
+op - (any rhs) any
+op / (any rhs) any
+op * (any rhs) any
+op % (any rhs) any
+op iter () Iterator<any>
+op str () str
+```
+
+### Example
 ```the
 class MyClass {
   priv mut float _sum
@@ -59,9 +63,5 @@ class MyClass {
   op str () str {
     return 'Sum of MyClass: ${this._sum}'
   }
-}
-
-main {
-  print(new MyClass() + 1 + 2.32)
 }
 ```
