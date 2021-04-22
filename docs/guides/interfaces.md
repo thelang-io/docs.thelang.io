@@ -16,7 +16,7 @@ class Book : INamed {
   pub name: str
   pub year: int
 
-  init (str name, int year) {
+  init (name: str, year: int) {
     this.name = name
     this.year = year
   }

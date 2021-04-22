@@ -1,8 +1,8 @@
 # Objects
 ```the
 obj Book {
-  str name
-  int year
+  name: str
+  year: int
 }
 
 main {

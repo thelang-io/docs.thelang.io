@@ -6,9 +6,9 @@ class MyClass {}
 ## Properties and methods
 ```the
 class MyClass {
-  pub int prop1
+  pub prop1: int = 0
   pub prop2 := 0
-  pub str prop3
+  pub prop3: str
   pub prop4 := ''
 
   pub method () {}
@@ -18,10 +18,10 @@ class MyClass {
 ## Visibility
 ```the
 class MyClass {
-  static str staticProp
-  priv str privateProp
-  prot str protectedProp
-  pub str publicProp
+  static staticProp: str
+  priv privateProp: str
+  prot protectedProp: str
+  pub publicProp: str
 
   static staticMethod () {}
   priv privateMethod () {}
@@ -41,7 +41,7 @@ class MyClass {
 ## Inheritance
 ```the
 class Parent {
-  prot str _locaton
+  prot _locaton: str
 
   init () {
     this._locaton = 'parent'

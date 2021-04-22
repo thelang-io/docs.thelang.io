@@ -18,6 +18,7 @@ fn
 if
 import
 in
+interface
 is
 loop
 main

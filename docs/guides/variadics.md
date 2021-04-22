@@ -2,7 +2,7 @@
 
 ## Functions
 ```the
-fn myPrint (int a, int b, str... items) {
+fn myPrint (a: int, b: int, ...items: str) {
   print(a + b, items)
 }
 
@@ -14,33 +14,27 @@ main {
 
 ## Classes
 ```the
-enum MyClassOperation {
-  .addition,
-  .subtraction
-}
+class MySum {
+  priv _result := 0
 
-class MyClass {
-  static operate (int... args, MyClassOperation operation = .addition) int {
-    if args.len == 0 {
-      return 0
-    } elif args.len == 1 {
-      return args[0]
+  init (...nums: int) {
+    if nums.empty {
+      return
+    } elif nums.len == 1 {
+      this._result = nums[0]
+      return
     }
 
-    int result = args[0]
-
-    loop 1 .. args.len {
-      result -= args[i]
+    loop num in nums {
+      this._result += num
     }
-
-    return result
   }
 }
 
 main {
-  MyClass.sum()
-  MyClass.sum(1)
-  MyClass.sum(2, 3)
-  MyClass.sum(4, 5)
+  new MyClass()
+  new MyClass(1)
+  new MyClass(2, 3)
+  new MyClass(4, 5, 6)
 }
 ```

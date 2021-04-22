@@ -10,7 +10,7 @@ enum MovieSeries {
 
 main {
   film1 := MovieSeries.fast_and_furious
-  MovieSeries film2 = .harry_potter
+  film2: MovieSeries = .harry_potter
 }
 ```
 

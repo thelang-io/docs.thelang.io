@@ -29,7 +29,7 @@ main {
 ## Switch
 ```the
 main {
-  val := 'value4'
+  val := 'value'
 
   switch val {
     case 'value1': {

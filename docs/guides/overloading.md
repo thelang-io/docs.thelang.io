@@ -2,11 +2,11 @@
 
 ## Functions
 ```the
-fn sum (int a, int b) int {
+fn sum (a: int, b: int) int {
   return a + b
 }
 
-fn sum (float a, float b) float {
+fn sum (a: float, b: float) float {
   return a + b
 }
 ```
@@ -14,14 +14,14 @@ fn sum (float a, float b) float {
 ## Classes
 ```the
 class MyClass {
-  priv mut float _sum
+  priv mut _sum: float
 
-  pub mut add (int x) MyClass {
+  pub mut add (x: int) this {
     this._sum += x
     return this
   }
 
-  pub mut add (float x) MyClass {
+  pub mut add (x: float) this {
     this._sum += x
     return this
   }
@@ -33,8 +33,6 @@ class MyClass {
 ```
 
 ## Operators
-
-### List
 ```
 op + (any rhs) any
 op - (any rhs) any
@@ -48,14 +46,14 @@ op str () str
 ### Example
 ```the
 class MyClass {
-  priv mut float _sum
+  priv mut _sum: float
 
-  mut op + (int x) MyClass {
+  mut op + (x: int) this {
     this._sum += x
     return this
   }
 
-  mut op + (float x) MyClass {
+  mut op + (x: float) this {
     this._sum += x
     return this
   }

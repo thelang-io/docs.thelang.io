@@ -7,7 +7,7 @@ main {}
 
 ## Default parameters
 ```the
-fn myFunc (int a = 0, int b = 1) int {
+fn myFunc (a: int = 0, b: int = 1) int {
   return a + b
 }
 
@@ -20,7 +20,7 @@ main {
 
 ## Named parameters
 ```the
-fn myFunc (int a, int b = 1, int c = 2) int {
+fn myFunc (a: int, b: int = 1, c: int = 2) int {
   return a + b + c
 }
 
@@ -33,18 +33,18 @@ main {
 
 ## Closures
 ```the
-fn add (int a, int  b, fn (int) void cb) {
+fn add (a: int, b: int, cb: fn (int) void) {
   cb(a + b)
 }
 
 main {
   arr := [1, 2, 3]
 
-  arr.filter(fn (int it) bool {
+  arr.filter(fn (it: int) bool {
     return it >= 2
   })
 
-  add(arr[0], arr[1], fn (int c) {
+  add(arr[0], arr[1], fn (c: int) {
     print('Result of arr[0] + arr[1] =', c)
   })
 }
@@ -52,7 +52,7 @@ main {
 
 # Multiple return values
 ```the
-fn myFunc (int a, int b, str c, str d) int, str {
+fn myFunc (a: int, b: int, c: str, d: str) int, str {
   return a + b, c + d
 }
 

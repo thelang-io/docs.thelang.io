@@ -2,7 +2,7 @@
 
 ## Functions
 ```the
-fn add<T> (T n1, T n2) T {
+fn add<T> (n1: T, n2: T) T {
   return n1 + n2
 }
 
@@ -15,10 +15,10 @@ main {
 ## Classes
 ```the
 class MyClass<T, U> {
-  pub T _t
-  pub T _u
+  pub _t: T
+  pub _u: U
 
-  init (T t, U u) {
+  init (t: T, u: U) {
     this._t = t
     this._u = u
   }

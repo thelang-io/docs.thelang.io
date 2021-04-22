@@ -12,7 +12,7 @@ main {
 
 ## Functions
 ```the
-fn changeA (mut int a) {
+fn changeA (mut a: int) {
   a = 2
 }
 ```
@@ -20,11 +20,11 @@ fn changeA (mut int a) {
 ## Classes
 ```the
 class MyClass {
-  priv mut int _a
-  priv int _b := 1
-  priv int _c
+  priv mut _a: int
+  priv _b := 1
+  priv _c: int
 
-  init (int a) {
+  init (a: int) {
     this._a = a
     this._c = 2
   }
@@ -38,8 +38,9 @@ class MyClass {
 ## Objects
 ```the
 obj MyObj {
-  mut str prop1
-  mut int prop2
+  mut prop1: str
+  mut prop2: int
+  mut prop3: fn (int) void
 }
 ```
 

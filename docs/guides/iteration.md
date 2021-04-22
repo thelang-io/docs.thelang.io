@@ -52,8 +52,8 @@ main {
 ## For-in-style loop with object
 ```the
 obj Example {
-  int a
-  str b
+  a: int
+  b: str
 }
 
 main {

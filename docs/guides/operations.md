@@ -8,7 +8,7 @@ main {
 }
 ```
 
-## Shorthand inferred assignment
+## Infer assignment
 ```the
 main {
   a1 := 1
@@ -67,11 +67,11 @@ main {
 ## Optional chaining
 ```the
 obj Inner {
-  int? val
+  val?: int
 }
 
 obj Outer {
-  Inner? inner
+  inner?: Inner
 }
 
 main {
@@ -83,7 +83,7 @@ main {
 ## Null coalescing
 ```the
 main {
-  int? a
+  a?: int
   b := ''
   c := 0
 

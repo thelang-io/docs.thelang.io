@@ -3,10 +3,10 @@
 union Animal = Cat | Snake
 
 obj Cat {
-  str breed
+  breed: str
 }
 
 obj Snake {
-  str kind
+  kind: str
 }
 ```

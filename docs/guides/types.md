@@ -56,7 +56,7 @@ main {
 ## Type checking
 ```the
 main {
-  int? i
+  i?: int
   mut j := 0
 
   if i is int {
@@ -69,8 +69,8 @@ main {
 ```the
 main {
   a := 1
-  int an = 1
+  an: int = 1
   b := [1, 2, 3]
-  int[] bn = [1, 2, 3]
+  bn: int[] = [1, 2, 3]
 }
 ```

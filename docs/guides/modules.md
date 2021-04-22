@@ -27,8 +27,8 @@ import * from ./things
 export const FPS := 24
 
 export obj SuperObject {
-  int field1
-  str field2
+  field1: int
+  field2: str
 }
 
 export enum SuperEnum {
@@ -45,8 +45,8 @@ export fn calc () {}
 const FPS := 24
 
 obj SuperObject {
-  int field1
-  str field2
+  field1: int
+  field2: str
 }
 
 enum SuperEnum {
