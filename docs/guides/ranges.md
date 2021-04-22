@@ -20,8 +20,13 @@ main {
 ## Iterator with numbers
 ```the
 main {
-  for i in 0..10 {}
-  for i in 0..=9 {}
+  loop i in 0..10 {
+    print(i)
+  }
+
+  loop i in 0..=9 {
+    print(i)
+  }
 }
 ```
 
@@ -31,7 +36,12 @@ main {
   a := 1
   b := 10
 
-  for i in 0 .. a + b {}
-  for i in a + b ..= (a + b) * 2 {}
+  loop i in 0 .. a + b {
+    print(i)
+  }
+
+  loop i in a + b ..= (a + b) * 2 {
+    print(i)
+  }
 }
 ```
