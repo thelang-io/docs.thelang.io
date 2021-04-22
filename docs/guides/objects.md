@@ -1,11 +1,15 @@
 # Objects
-
-## Definition
 ```the
 obj Book {
   str name
   int year
-  fn (int) void sell
+}
+
+main {
+  book := Book{
+    name: 'Harry Potter and the Sorcerer's Stone',
+    year: 1997
+  }
 }
 ```
 
@@ -22,24 +26,5 @@ obj Book {
 obj Book {
   str? name
   int? year
-}
-```
-
-## Mutable properties
-```the
-obj Book {
-  mut str name
-  mut int year
-}
-```
-
-## Inheritance
-```the
-obj Thing {
-  str id
-}
-
-obj Book : Thing {
-  str name
 }
 ```
