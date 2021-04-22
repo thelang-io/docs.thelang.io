@@ -86,6 +86,16 @@ class Program {
   Stream stdout
 }
 
+class Range<T> {
+  pub mut T end
+  pub mut T start
+
+  init (T start, T end)
+  op iter () Iterable<int, T>
+  mut op iter () Iterator<int, T>
+  op str () str
+}
+
 class String {
   pub bool empty
   pub int len
