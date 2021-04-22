@@ -1,6 +1,6 @@
 # Variadics
 
-## In functions
+## Functions
 ```the
 fn myPrint (int a, int b, str... items) {
   print(a + b, items)
@@ -12,7 +12,7 @@ main {
 }
 ```
 
-## In classes
+## Classes
 ```the
 enum MyClassOperation {
   .addition,
