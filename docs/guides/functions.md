@@ -7,7 +7,7 @@ main {}
 
 ## Default parameters
 ```the
-fn myFunc (a: int = 0, b: int = 1) int {
+fn myFunc (a := 0, b := 1) int {
   return a + b
 }
 
@@ -20,7 +20,7 @@ main {
 
 ## Named parameters
 ```the
-fn myFunc (a: int, b: int = 1, c: int = 2) int {
+fn myFunc (a: int, b := 1, c := 2) int {
   return a + b + c
 }
 

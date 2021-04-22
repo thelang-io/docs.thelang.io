@@ -64,13 +64,3 @@ main {
   }
 }
 ```
-
-## Type inference
-```the
-main {
-  a := 1
-  an: int = 1
-  b := [1, 2, 3]
-  bn: int[] = [1, 2, 3]
-}
-```

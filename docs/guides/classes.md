@@ -6,7 +6,7 @@ class MyClass {}
 ## Properties and methods
 ```the
 class MyClass {
-  pub prop1: int = 0
+  pub prop1: int
   pub prop2 := 0
   pub prop3: str
   pub prop4 := ''
