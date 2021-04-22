@@ -15,8 +15,8 @@ main {
 ## Classes
 ```the
 class MyClass<T, U> {
-  pub mut T _t
-  pub mut T _u
+  pub T _t
+  pub T _u
 
   init (T t, U u) {
     this._t = t
