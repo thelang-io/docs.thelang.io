@@ -81,7 +81,7 @@ class Parent {
 class Child : Parent {
   override _locaton := 'Not inside parent'
 
-  override info () Child {
+  override info () this {
     print(this._locaton)
     return this
   }
@@ -101,6 +101,6 @@ class MyClass {
 }
 
 main {
-  MyClass.method1().method2()
+  new MyClass().method1().method2()
 }
 ```
