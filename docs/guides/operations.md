@@ -3,11 +3,16 @@
 ## Assignment
 ```the
 main {
+  a1: int = 1
+  s1: str = ''
+}
+```
+
+## Shorthand inferred assignment
+```the
+main {
   a1 := 1
   s1 := ''
-
-  int? a2 := 0
-  str? s2 := ''
 }
 ```
 
