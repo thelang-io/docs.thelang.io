@@ -2,14 +2,14 @@
 ```the
 import * from stream
 
-class Array<T> {
+interface Array<T> {
   pub empty: bool
   pub len: int
 
   op + (rhs: T) Array<T>
   op + (rhs: Array<T>) Array<T>
-  op [] (i: int) T?
-  mut op [] (i: int) mut T?
+  op [] (i: int) T
+  mut op [] (i: int) mut T
   op iter () Iterator<int, T>
   mut op iter () Iterator<int, mut T>
   op str () str
@@ -17,17 +17,17 @@ class Array<T> {
   pub includes (x: T) bool
   pub index (x: T) int?
   pub mut pop () T?
-  pub mut push (n: T) int
+  pub mut push (n: T) this
   pub mut reverse () this
   pub mut shift () T?
-  pub mut unshift (n: T) int
+  pub mut unshift (n: T) this
 }
 
-class Boolean {
+interface Boolean {
   op str () str
 }
 
-class Char {
+interface Char {
   pub digit: bool
 
   op + (rhs: char) str
@@ -37,19 +37,19 @@ class Char {
   pub times (n: int) str
 }
 
-class Error {
+interface Error {
   pub message: str
   pub name := 'Error'
 
-  init (message: str?)
+  init (message: str)
   op str () str
 }
 
-class Function {
+interface Function {
   op str () str
 }
 
-class Iterator<T, U> {
+interface Iterator<T, U> {
   pub cursor: T
 
   pub hasNext () bool
@@ -57,7 +57,7 @@ class Iterator<T, U> {
   pub mut next () mut U
 }
 
-class Map<T, U> {
+interface Map<T, U> {
   pub size: int
 
   op iter () Iterator<T, U>
@@ -71,17 +71,17 @@ class Map<T, U> {
   pub mut set (key: T, val: U) this
 }
 
-class Number {
+interface Number {
   op + (rhs: char) str
   op + (rhs: str) str
   op str () str
 }
 
-class Object {
+interface Object {
   op str () str
 }
 
-class Program {
+obj Program {
   pub argc: int
   pub argv: str[]
   pub argv0: str
@@ -91,24 +91,24 @@ class Program {
   pub stdout: WritableStream
 }
 
-class Range<T> {
+interface Range<T> {
   pub mut end: T
   pub mut start: T
 
   init (start: T, end: T)
   op iter () Iterable<int, T>
-  mut op iter () Iterator<int, T>
+  mut op iter () Iterator<int, mut T>
   op str () str
 }
 
-class String {
+interface String {
   pub empty: bool
   pub len: int
 
   op + (rhs: char) str
   op + (rhs: str) str
-  op [] (i: int) char?
-  mut op [] (i: int) mut char?
+  op [] (i: int) char
+  mut op [] (i: int) mut char
   op iter () Iterator<int, char>
   mut op iter () Iterator<int, mut char>
   op str () str
@@ -130,5 +130,5 @@ export fn print (
   terminator := '\n'
 ) void
 
-export Program program
+export program: Program
 ```
