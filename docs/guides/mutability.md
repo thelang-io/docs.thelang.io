@@ -46,7 +46,7 @@ obj MyObj {
 
 ## Interfaces
 ```the
-interface IName {
+interface Mutable {
   mut prop1: str
   mut prop2: int
   mut prop3: fn (int) void

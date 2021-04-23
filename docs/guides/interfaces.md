@@ -1,6 +1,6 @@
 # Interfaces
 ```the
-interface IName {
+interface Propped {
   prop1: str
   prop2: fn (int) void
 }
@@ -8,11 +8,11 @@ interface IName {
 
 ## Implementing
 ```the
-interface INamed {
+interface Named {
   name: str
 }
 
-class Book : INamed {
+class Book : Named {
   pub name: str
   pub year: int
 
@@ -25,15 +25,15 @@ class Book : INamed {
 
 ## Inheritance
 ```the
-interface INamed {
+interface Named {
   name: str
 }
 
-interface IPerson : INamed {
+interface Person : Named {
   age: int
 }
 
-class Singer : IPerson {
+class Singer : Person {
   pub age: int
   pub name: str
 
