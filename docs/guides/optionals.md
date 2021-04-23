@@ -3,26 +3,35 @@
 ## Variables
 ```the
 main {
-  name?: str
-  year?: int
-  sell?: fn (int) void
+  name: str?
+  sell: (fn (int) void)?
+  year: int?
 }
 ```
 
 ## Objects
 ```the
 obj MyObj {
-  name?: str
-  year?: int
-  sell?: fn (int) void
+  name: str?
+  sell: (fn (int) void)?
+  year: int?
+}
+```
+
+## Classes
+```the
+class MyClass {
+  pub name: str?
+  pub sell: (fn (int) void)?
+  pub year: int?
 }
 ```
 
 ## Interfaces
 ```the
 interface Book {
-  sell?: fn (int) void
-  title?: str
-  year?: int
+  sell: (fn (int) void)?
+  title: str?
+  year: int?
 }
 ```

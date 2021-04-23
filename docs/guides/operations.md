@@ -88,7 +88,7 @@ main {
 ## Null coalescing
 ```the
 main {
-  a?: int
+  a: int?
   b := ''
   c := 0
 

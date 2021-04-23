@@ -56,7 +56,7 @@ main {
 ## Type checking
 ```the
 main {
-  i?: int
+  i: int?
   mut j := 0
 
   if i is int {

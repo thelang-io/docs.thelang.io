@@ -12,7 +12,7 @@ main {
 ## Custom error
 ```the
 class MyError : Error {
-  init (message: str, fatal: bool = false) {
+  init (message: str, fatal := false) {
     super(message)
     this.name = fatal ? 'FatalError' : 'MyError'
   }
