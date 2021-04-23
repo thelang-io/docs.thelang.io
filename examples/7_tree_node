@@ -7,7 +7,7 @@ obj Node {
 class Tree {
   priv mut _nodes: Node[]
 
-  init (...nodes: Node) {
+  init (nodes: Node...) {
     this._nodes = nodes
   }
 

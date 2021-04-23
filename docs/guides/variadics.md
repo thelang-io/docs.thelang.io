@@ -2,7 +2,7 @@
 
 ## Functions
 ```the
-fn myPrint (a: int, b: int, ...items: str) {
+fn myPrint (a: int, b: int, items: str...) {
   print(a + b, items)
 }
 
@@ -17,7 +17,7 @@ main {
 class MySum {
   priv _result := 0
 
-  init (...nums: int) {
+  init (nums: int...) {
     if nums.empty {
       return
     } elif nums.len == 1 {
