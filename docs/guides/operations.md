@@ -66,17 +66,22 @@ main {
 
 ## Optional chaining
 ```the
-obj Inner {
-  val?: int
-}
-
-obj Outer {
-  inner?: Inner
+obj Person {
+  age: int?
+  answers: bool[]?
+  mainAnswer: bool?
+  name: str?
+  getAge: (fn () int)?
 }
 
 main {
-  b := Outer{}
-  c := Inner{ val: b?.inner.val }
+  p1 := Person{}
+
+  p2 := Person{
+    age: p1.getAge?.(),
+    mainAnswer: p1.answers?.[1],
+    name: p1.brother?.name
+  }
 }
 ```
 
