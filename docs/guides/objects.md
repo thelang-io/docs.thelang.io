@@ -1,13 +1,13 @@
 # Objects
 ```the
 obj Book {
-  name: str
+  title: str
   year: int
 }
 
 main {
   book := Book{
-    name: 'Harry Potter and the Sorcerer's Stone',
+    title: 'Harry Potter and the Sorcerer's Stone',
     year: 1997
   }
 }
@@ -16,7 +16,21 @@ main {
 ## Default values
 ```the
 obj Book {
-  name := ''
+  title := ''
   year := 2000
+}
+```
+
+## Property shorthand
+```the
+obj Book {
+  title: str
+  year: int
+}
+
+main {
+  title := 'War and Peace'
+  year := 1869
+  book := Book{ title, year }
 }
 ```

@@ -21,8 +21,8 @@ obj MyObj {
 ## Interfaces
 ```the
 interface Book {
-  name?: str
-  year?: int
   sell?: fn (int) void
+  title?: str
+  year?: int
 }
 ```
