@@ -4,7 +4,7 @@
 ```the
 main {
   loop {
-    print('I will run forever')
+    print("I will run forever")
   }
 }
 ```
@@ -13,7 +13,7 @@ main {
 ```the
 main {
   loop i := 0; i < 3; i++ {
-    print('Number:', i)
+    print("Number:", i)
   }
 }
 ```
@@ -22,7 +22,7 @@ main {
 ```the
 main {
   loop i in 1..3 {
-    print('Number:', i)
+    print("Number:", i)
   }
 }
 ```
@@ -30,10 +30,10 @@ main {
 ## For-in-style loop with string
 ```the
 main {
-  s := 'Hello, World!'
+  s := "Hello, World!"
 
   loop ch in s {
-    print('Char:', ch)
+    print("Char:", ch)
   }
 }
 ```
@@ -41,10 +41,10 @@ main {
 ## For-in-style index loop with string
 ```the
 main {
-  s := 'Hello, World!'
+  s := "Hello, World!"
 
   loop i, ch in s {
-    print('Char:', ch, ' Index:', i)
+    print("Char:", ch, "Index:", i)
   }
 }
 ```
@@ -60,7 +60,7 @@ main {
   e := Example{}
 
   loop key, val in e {
-    print('Key: ', key, 'Value:', val)
+    print("Key:", key, "Value:", val)
   }
 }
 ```

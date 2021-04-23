@@ -2,7 +2,7 @@
 ```the
 main {
   try {
-    throw new Error('Error message')
+    throw new Error("Error message")
   } catch Error err {
     print(err, stream: program.stderr)
   }
@@ -14,7 +14,7 @@ main {
 class MyError : Error {
   init (message: str, fatal := false) {
     super(message)
-    this.name = fatal ? 'FatalError' : 'MyError'
+    this.name = fatal ? "FatalError" : "MyError"
   }
 }
 ```

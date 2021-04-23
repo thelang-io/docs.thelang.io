@@ -10,21 +10,37 @@ int i8 i16 i32 i64 u8 u16 u32 u64
 void
 ```
 
+## Char
+```the
+main {
+  ch := 'a'
+}
+```
+
 ## String
 
 ### Escaping
 ```the
 main {
-  text := 'Some \n random \\ text'
+  text := "Some \n random \" text"
 }
 ```
 
 ### Interpolation
 ```the
 main {
-  greet := 'Hello'
-  name := 'Your'
-  greeting := '$greet, ${name + ' Name'}!'
+  greet := "Hello"
+  name := "Your"
+  greeting := "$greet, ${name + " Name"}!"
+}
+```
+
+### Concatenation
+```the
+main {
+  greet := "Hello, "
+  name := "World"
+  greeting := greet + name + "!"
 }
 ```
 

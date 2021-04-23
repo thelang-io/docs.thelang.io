@@ -27,7 +27,7 @@ class MyClass {
   }
 
   pub str () str {
-    return 'Sum of MyClass: ${this._sum}'
+    return "Sum of MyClass: ${this._sum}"
   }
 }
 ```
@@ -59,7 +59,7 @@ class MyClass {
   }
 
   op str () str {
-    return 'Sum of MyClass: ${this._sum}'
+    return "Sum of MyClass: ${this._sum}"
   }
 }
 ```

@@ -39,7 +39,7 @@ interface Char {
 
 interface Error {
   pub message: str
-  pub name := 'Error'
+  pub name := "Error"
 
   init (message: str)
   op str () str
@@ -113,6 +113,7 @@ interface String {
   mut op iter () Iterator<int, mut char>
   op str () str
 
+  pub mut clear () this
   pub includes (x: char) bool
   pub includes (x: str) bool
   pub index (x: char) int?
@@ -126,8 +127,8 @@ export fn exit (status: int) void
 export fn print (
   items: any...,
   stream: Stream?,
-  separator := ' ',
-  terminator := '\n'
+  separator := " ",
+  terminator := "\n"
 ) void
 
 export program: Program

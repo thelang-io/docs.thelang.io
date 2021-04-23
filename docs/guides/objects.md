@@ -7,7 +7,7 @@ obj Book {
 
 main {
   book := Book{
-    title: 'Harry Potter and the Sorcerer's Stone',
+    title: "Harry Potter and the Sorcerer's Stone",
     year: 1997
   }
 }
@@ -16,7 +16,7 @@ main {
 ## Default values
 ```the
 obj Book {
-  title := ''
+  title := ""
   year := 2000
 }
 ```
@@ -29,7 +29,7 @@ obj Book {
 }
 
 main {
-  title := 'War and Peace'
+  title := "War and Peace"
   year := 1869
   book := Book{ title, year }
 }

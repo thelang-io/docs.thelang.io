@@ -9,7 +9,7 @@ class MyClass {
   pub prop1: int
   pub prop2 := 0
   pub prop3: str
-  pub prop4 := ''
+  pub prop4 := ""
 
   pub method () {}
 }
@@ -44,18 +44,18 @@ class Parent {
   prot _locaton: str
 
   init () {
-    this._locaton = 'parent'
+    this._locaton = "parent"
   }
 
   pub info () {
-    print('Inside ${this._locaton}')
+    print("Inside ${this._locaton}")
   }
 }
 
 class Child : Parent {
   init () {
     super()
-    this._locaton = 'child'
+    this._locaton = "child"
   }
 }
 ```
@@ -63,15 +63,15 @@ class Child : Parent {
 ## Overriding
 ```the
 class Parent {
-  prot _locaton := 'parent'
+  prot _locaton := "parent"
 
   pub info () {
-    print('Inside ${this._locaton}')
+    print("Inside ${this._locaton}")
   }
 }
 
 class Child : Parent {
-  override _locaton := 'Not inside parent'
+  override _locaton := "Not inside parent"
 
   override info () this {
     print(this._locaton)

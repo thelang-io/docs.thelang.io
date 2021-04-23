@@ -5,8 +5,8 @@
 main {
   mut a := 1
   a = 2
-  mut s := ''
-  s = 'test'
+  mut s := "Hello, "
+  s += "World!"
 }
 ```
 

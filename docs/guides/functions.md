@@ -45,7 +45,7 @@ main {
   })
 
   add(arr[0], arr[1], fn (c: int) {
-    print('Result of arr[0] + arr[1] =', c)
+    print("Result of arr[0] + arr[1] =", c)
   })
 }
 ```
@@ -57,6 +57,6 @@ fn myFunc (a: int, b: int, c: str, d: str) int, str {
 }
 
 main {
-  e, f := myFunc(1, 2, 'Hello, ', 'World!')
+  e, f := myFunc(1, 2, "Hello, ", "World!")
 }
 ```

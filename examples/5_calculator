@@ -45,7 +45,7 @@ enum TokenType {
 fn tokenize (input: str) Token[] {
   mut tokens: Token[]
   mut start := 0
-  mut val := ''
+  mut val := ""
 
   loop i, ch in input {
     if ch.digit || ch == '.' {
@@ -60,11 +60,11 @@ fn tokenize (input: str) Token[] {
       }
 
       tokens.push({ end: i, start, type: .operand, val })
-      val = ''
+      val.clear()
     } elif ['/', '*', '-', '+'].includes(ch) {
       tokens.push({ end: i + 1, start: i, type: .operator, val: ch })
     } elif ![' ', '\t'].includes(ch) {
-      throw new CalcError('Unexpected token', i)
+      throw new CalcError("Unexpected token", i)
     }
   }
 
@@ -81,10 +81,10 @@ fn evaluate (expr: Expr) str {
 
 main {
   loop {
-    print('> ')
+    print("> ")
     line := program.stdin.readline().trim()
 
-    if line == 'exit' || line == '\\q' {
+    if line == "exit" || line == "\\q" {
       break
     }
 

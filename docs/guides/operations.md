@@ -4,7 +4,7 @@
 ```the
 main {
   a1: int = 1
-  s1: str = ''
+  s1: str = ""
 }
 ```
 
@@ -12,7 +12,7 @@ main {
 ```the
 main {
   a1 := 1
-  s1 := ''
+  s1 := ""
 }
 ```
 
@@ -20,10 +20,10 @@ main {
 ```the
 main {
   mut a1 := 1
-  mut s1 := ''
+  mut s1 := "Hello, "
 
   a1 = 2
-  s1 = 'test'
+  s1 += "World!"
 }
 ```
 
@@ -89,11 +89,11 @@ main {
 ```the
 main {
   a: int?
-  b := ''
+  b := ""
   c := 0
 
   valA := a ?? 1
-  valB := b ?? ''
+  valB := b ?? ""
   valC := c ?? 1
 }
 ```
