@@ -3,24 +3,24 @@
 import * from stream
 
 class Array<T> {
-  pub bool empty
-  pub int len
+  pub empty: bool
+  pub len: int
 
-  op + (T rhs) Array<T>
-  op + (Array<T> rhs) Array<T>
-  op [] (int i) T?
-  mut op [] (int i) mut T?
+  op + (rhs: T) Array<T>
+  op + (rhs: Array<T>) Array<T>
+  op [] (i: int) T?
+  mut op [] (i: int) mut T?
   op iter () Iterator<int, T>
   mut op iter () Iterator<int, mut T>
   op str () str
 
-  pub includes (T x) bool
-  pub index (T x) int?
+  pub includes (x: T) bool
+  pub index (x: T) int?
   pub mut pop () T?
-  pub mut push (T n) int
+  pub mut push (n: T) int
   pub mut reverse () this
   pub mut shift () T?
-  pub mut unshift (T n) int
+  pub mut unshift (n: T) int
 }
 
 class Boolean {
@@ -28,16 +28,20 @@ class Boolean {
 }
 
 class Char {
-  op + (char rhs) str
-  op + (str rhs) str
+  pub digit: bool
+
+  op + (rhs: char) str
+  op + (rhs: str) str
   op str () str
+
+  pub times (n: int) str
 }
 
 class Error {
-  pub str message
+  pub message: str
   pub name := 'Error'
 
-  init (str? message)
+  init (message: str?)
   op str () str
 }
 
@@ -46,7 +50,7 @@ class Function {
 }
 
 class Iterator<T, U> {
-  pub T cursor
+  pub cursor: T
 
   pub hasNext () bool
   pub next () U
@@ -54,22 +58,22 @@ class Iterator<T, U> {
 }
 
 class Map<T, U> {
-  pub int size
+  pub size: int
 
   op iter () Iterator<T, U>
   mut op iter () Iterator<T, mut U>
   op str () str
 
-  pub mut delete (T key) this
-  pub get (T key) U?
-  pub mut get (T key) mut U?
-  pub has (T key) bool
-  pub mut set (T key, U val) this
+  pub mut delete (key: T) this
+  pub get (key: T) U?
+  pub mut get (key: T) mut U?
+  pub has (key: T) bool
+  pub mut set (key: T, val: U) this
 }
 
 class Number {
-  op + (char rhs) str
-  op + (str rhs) str
+  op + (rhs: char) str
+  op + (rhs: str) str
   op str () str
 }
 
@@ -78,50 +82,52 @@ class Object {
 }
 
 class Program {
-  int argc
-  str[] argv
-  str argv0
-  str cwd
-  Stream stderr
-  Stream stdout
+  pub argc: int
+  pub argv: str[]
+  pub argv0: str
+  pub cwd: str
+  pub stderr: WritableStream
+  pub stdin: ReadableStream
+  pub stdout: WritableStream
 }
 
 class Range<T> {
-  pub mut T end
-  pub mut T start
+  pub mut end: T
+  pub mut start: T
 
-  init (T start, T end)
+  init (start: T, end: T)
   op iter () Iterable<int, T>
   mut op iter () Iterator<int, T>
   op str () str
 }
 
 class String {
-  pub bool empty
-  pub int len
+  pub empty: bool
+  pub len: int
 
-  op + (char rhs) str
-  op + (str rhs) str
-  op [] (int i) char?
-  mut op [] (int i) mut char?
+  op + (rhs: char) str
+  op + (rhs: str) str
+  op [] (i: int) char?
+  mut op [] (i: int) mut char?
   op iter () Iterator<int, char>
   mut op iter () Iterator<int, mut char>
   op str () str
 
-  pub includes (char x) bool
-  pub includes (str x) bool
-  pub index (char x) int?
-  pub index (str x) int?
+  pub includes (x: char) bool
+  pub includes (x: str) bool
+  pub index (x: char) int?
+  pub index (x: str) int?
   pub mut reverse () this
+  pub times (n: int) str
 }
 
-export fn exit (int status) void
+export fn exit (status: int) void
 
 export fn print (
-  any... items,
-  Stream? stream,
-  str separator = ' ',
-  str terminator = '\n'
+  items: any...,
+  stream: Stream?,
+  separator := ' ',
+  terminator := '\n'
 ) void
 
 export Program program
