@@ -8,6 +8,7 @@ export enum AccessMode {
 }
 
 export class File {
+  pub eof: bool
   pub pos: int
 
   static open (str pathname, mode := FileMode.read) File
