@@ -82,13 +82,8 @@ interface Object {
 }
 
 obj Program {
-  pub argc: int
-  pub argv: str[]
-  pub argv0: str
+  pub args: str[]
   pub cwd: str
-  pub stderr: WritableStream
-  pub stdin: ReadableStream
-  pub stdout: WritableStream
 }
 
 interface Range<T> {
@@ -123,13 +118,7 @@ interface String {
 }
 
 export fn exit (status: int) void
-
-export fn print (
-  items: any...,
-  stream: Stream?,
-  separator := " ",
-  terminator := "\n"
-) void
+export fn print (items: any..., separator := " ", terminator := "\n") void
 
 export program: Program
 ```
