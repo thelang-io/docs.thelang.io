@@ -1,6 +1,6 @@
 obj Node {
-  left?: Tree
-  right?: Tree
+  left: Tree?
+  right: Tree?
   val: int
 }
 
