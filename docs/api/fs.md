@@ -13,9 +13,9 @@ export class File {
 
   static open (str pathname, mode := FileMode.read) File
   pub close () void
-  pub read () u8[]
+  pub read () byte[]
   pub seek (pos: int) this
-  pub write (data: u8[]) this
+  pub write (data: byte[]) this
 }
 
 export enum FileMode {
