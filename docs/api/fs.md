@@ -7,6 +7,12 @@ export enum AccessMode {
   write
 }
 
+export enum FileMode {
+  execute,
+  read,
+  write
+}
+
 export class File {
   pub eof: bool
   pub pos: int
@@ -16,12 +22,6 @@ export class File {
   pub read () byte[]
   pub seek (pos: int) this
   pub write (data: byte[]) this
-}
-
-export enum FileMode {
-  execute,
-  read,
-  write
 }
 
 export fn access (str pathname, AccessMode mode = .existance) int
