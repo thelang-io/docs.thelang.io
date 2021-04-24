@@ -17,5 +17,6 @@ export class Buffer {
   mut op [] (i: int) mut byte
 
   pub times (b: byte, x: int) this
+  pub toArray () byte[]
 }
 ```
