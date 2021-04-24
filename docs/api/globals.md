@@ -6,6 +6,8 @@ interface Array<T> {
   empty: bool
   len: int
 
+  op + (rhs: T) Array<T>
+  op + (rhs: Array<T>) Array<T>
   op [] (i: int) T
   mut op [] (i: int) mut T
   op iter () Iterator<int, T>
