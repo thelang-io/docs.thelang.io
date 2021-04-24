@@ -2,7 +2,11 @@
 ```the
 import * from stream
 
-interface Array<T> {
+interface Any {
+  op str () str
+}
+
+interface Array<T> : Any {
   empty: bool
   len: int
 
@@ -12,7 +16,6 @@ interface Array<T> {
   mut op [] (i: int) mut T
   op iter () Iterator<int, T>
   mut op iter () Iterator<int, mut T>
-  op str () str
 
   includes (x: T) bool
   index (x: T) int?
@@ -24,21 +27,18 @@ interface Array<T> {
   mut unshift (n: T) this
 }
 
-interface Boolean {
-  op str () str
+interface Boolean : Any {
 }
 
-interface Byte {
+interface Byte : Any {
   op + (rhs: byte) byte
-  op str () str
 }
 
-interface Char {
+interface Char : Any {
   digit: bool
 
   op + (rhs: char) str
   op + (rhs: str) str
-  op str () str
 
   times (n: int) str
 }
@@ -47,12 +47,10 @@ interface Error {
   message: str
   name: str
 
-  init (message: str) Error
-  op str () str
+  init (message: str) this
 }
 
-interface Function {
-  op str () str
+interface Function : Any {
 }
 
 interface Iterator<T, U> {
@@ -77,14 +75,12 @@ interface Map<T, U> {
   mut set (key: T, val: U) this
 }
 
-interface Number {
+interface Number : Any {
   op + (rhs: char) str
   op + (rhs: str) str
-  op str () str
 }
 
-interface Object {
-  op str () str
+interface Object : Any {
 }
 
 interface Program {
@@ -92,16 +88,15 @@ interface Program {
   cwd: str
 }
 
-interface Range<T> {
+interface Range<T> : Any {
   mut end: T
   mut start: T
 
   op iter () Iterable<int, T>
   mut op iter () Iterator<int, mut T>
-  op str () str
 }
 
-interface String {
+interface String : Any {
   empty: bool
   len: int
 
@@ -111,7 +106,6 @@ interface String {
   mut op [] (i: int) mut char
   op iter () Iterator<int, char>
   mut op iter () Iterator<int, mut char>
-  op str () str
 
   mut clear () this
   includes (x: char) bool
