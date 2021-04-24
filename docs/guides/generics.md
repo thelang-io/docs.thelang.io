@@ -32,11 +32,13 @@ class MyClass<T, U> {
 ## Argument types
 ```the
 class MyClass<T> {}
-class MyClassTwo<T : MyClass> {}
+class MyClassTwo<T[]> {}
+class MyClassThree<T : class> {}
 ```
 
 ## Default arguments
 ```the
 class MyClass<T = int> {}
+class MyClassTwo<T[] = int[]> {}
 class MyClassTwo<T : class = MyClass> {}
 ```
