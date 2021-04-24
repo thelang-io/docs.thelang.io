@@ -5,7 +5,7 @@ interface Propped {
   prop2: str
   prop3: fn (int) void
 
-  init (message: str, cb: fn (int) void) Propped
+  init (message: str, cb: fn (int) void) this
 
   method1 () void
   method2 (x: int) int
