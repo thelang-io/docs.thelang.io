@@ -5,9 +5,17 @@
 any
 bool
 byte char
-float f32 f64
-int i8 i16 i32 i64 u8 u16 u32 u64
+float
+int
 void
+```
+
+## Scientific types
+```txt
+i8  u8
+i16 u16
+i32 u32 f32
+i64 u64 f64
 ```
 
 ## Char
