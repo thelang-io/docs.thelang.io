@@ -15,6 +15,11 @@ class Tree {
     this._nodes.push(node)
     return this
   }
+
+  mut remove (at: int) this {
+    this._nodes.remove(at)
+    return this
+  }
 }
 
 main {
@@ -28,4 +33,6 @@ main {
 
   tree.add(node5)
   tree.add({ val: 6 })
+  tree.remove(1)
+  tree.remove(2)
 }
