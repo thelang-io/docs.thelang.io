@@ -6,8 +6,6 @@ interface Array<T> {
   empty: bool
   len: int
 
-  op + (rhs: T) Array<T>
-  op + (rhs: Array<T>) Array<T>
   op [] (i: int) T
   mut op [] (i: int) mut T
   op iter () Iterator<int, T>
@@ -18,6 +16,7 @@ interface Array<T> {
   index (x: T) int?
   mut pop () T?
   mut push (n: T) this
+  mut remove (at: int) T
   mut reverse () this
   mut shift () T?
   mut unshift (n: T) this
@@ -39,7 +38,7 @@ interface Char {
 
 interface Error {
   message: str
-  name := "Error"
+  name: str
 
   init (message: str) Error
   op str () str
