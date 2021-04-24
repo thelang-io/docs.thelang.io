@@ -32,7 +32,7 @@ def main(files):
     errors = []
 
     for file in files:
-        if not Path(file).is_file():
+        if not Path(file).is_file() or Path(file).name == 'LICENSE.md':
             continue
 
         lines = open(file).readlines()

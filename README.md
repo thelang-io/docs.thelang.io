@@ -72,8 +72,8 @@ The Programming Language was designed and developed by [Aaron
 Delasy](https://github.com/delasy).
 
 ## License
-The Programming Language is private programming language, available for use
-only via cli. \
-Project files are sent to servers, compiled and respond with binaries.
-> Project files are deleted once compiled and are not shared with any 3rd party
-> and nor used by The Programming Language itself.
+The Programming Language is private, and it's source code is not available
+publicly. \
+This repository is licensed under the
+[CC-BY-4.0 License](http://creativecommons.org/licenses/by/4.0/), see the
+[LICENSE.md](LICENSE.md) file.
