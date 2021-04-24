@@ -43,36 +43,7 @@ interface Char : Any {
   times (n: int) str
 }
 
-interface Error {
-  message: str
-  name: str
-
-  init (message: str) this
-}
-
 interface Function : Any {
-}
-
-interface Iterator<T, U> {
-  cursor: T
-
-  hasNext () bool
-  next () U
-  mut next () mut U
-}
-
-interface Map<T, U> {
-  size: int
-
-  op iter () Iterator<T, U>
-  mut op iter () Iterator<T, mut U>
-  op str () str
-
-  mut delete (key: T) this
-  get (key: T) U?
-  mut get (key: T) mut U?
-  has (key: T) bool
-  mut set (key: T, val: U) this
 }
 
 interface Number : Any {
@@ -114,6 +85,35 @@ interface String : Any {
   index (x: str) int?
   mut reverse () this
   times (n: int) str
+}
+
+export class Error {
+  pub message: str
+  pub name: str
+
+  init (message: str) this
+}
+
+export class Iterator<T, U> {
+  pub cursor: T
+
+  pub hasNext () bool
+  pub next () U
+  pub mut next () mut U
+}
+
+export class Map<T, U> {
+  pub size: int
+
+  op iter () Iterator<T, U>
+  mut op iter () Iterator<T, mut U>
+  op str () str
+
+  pub mut delete (key: T) this
+  pub get (key: T) U?
+  pub mut get (key: T) mut U?
+  pub has (key: T) bool
+  pub mut set (key: T, val: U) this
 }
 
 export fn exit (status: int) void
