@@ -4,19 +4,18 @@ export class Buffer {
   pub empty: bool
   pub len: int
 
-  op + (rhs: str) Buffer
+  op += (rhs: i8[]) Buffer
+  op += (rhs: i16[]) Buffer
+  op += (rhs: i32[]) Buffer
+  op += (rhs: i64[]) Buffer
+  op += (rhs: str) Buffer
+  op += (rhs: u8[]) Buffer
+  op += (rhs: u16[]) Buffer
+  op += (rhs: u32[]) Buffer
+  op += (rhs: u64[]) Buffer
   op [] (i: int) byte
   mut op [] (i: int) mut byte
 
-  pub append (data: i8...) this
-  pub append (data: i16...) this
-  pub append (data: i32...) this
-  pub append (data: i64...) this
-  pub append (data: u8...) this
-  pub append (data: u16...) this
-  pub append (data: u32...) this
-  pub append (data: u64...) this
-  pub getData () byte[]
   pub times (b: byte, x: int) this
 }
 ```
