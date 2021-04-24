@@ -28,6 +28,11 @@ interface Boolean {
   op str () str
 }
 
+interface Byte {
+  op + (rhs: byte) byte
+  op str () str
+}
+
 interface Char {
   digit: bool
 
