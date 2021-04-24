@@ -14,4 +14,5 @@ If you believe you have found a security vulnerability, we encourage you to let
 us know right away. We will investigate all legitimate reports and do our best
 to quickly fix the problem.
 
-Please disclose security vulnerabilities privately at `security@the-lang.org`.
+Please disclose security vulnerabilities privately at `security` `[at]`
+`the-lang` `[dot]` `io`.
