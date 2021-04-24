@@ -6,8 +6,8 @@ any
 bool
 byte
 char
-float
-int
+float = f64
+int = i32
 void
 ```
 
