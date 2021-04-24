@@ -3,8 +3,8 @@
 ## Basic types
 ```txt
 any
-byte char
 bool
+byte char
 float f32 f64
 int i8 i16 i32 i64 u8 u16 u32 u64
 void
