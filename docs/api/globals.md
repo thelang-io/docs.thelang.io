@@ -3,8 +3,8 @@
 import * from stream
 
 interface Array<T> {
-  pub empty: bool
-  pub len: int
+  empty: bool
+  len: int
 
   op + (rhs: T) Array<T>
   op + (rhs: Array<T>) Array<T>
@@ -14,13 +14,13 @@ interface Array<T> {
   mut op iter () Iterator<int, mut T>
   op str () str
 
-  pub includes (x: T) bool
-  pub index (x: T) int?
-  pub mut pop () T?
-  pub mut push (n: T) this
-  pub mut reverse () this
-  pub mut shift () T?
-  pub mut unshift (n: T) this
+  includes (x: T) bool
+  index (x: T) int?
+  mut pop () T?
+  mut push (n: T) this
+  mut reverse () this
+  mut shift () T?
+  mut unshift (n: T) this
 }
 
 interface Boolean {
@@ -28,20 +28,20 @@ interface Boolean {
 }
 
 interface Char {
-  pub digit: bool
+  digit: bool
 
   op + (rhs: char) str
   op + (rhs: str) str
   op str () str
 
-  pub times (n: int) str
+  times (n: int) str
 }
 
 interface Error {
-  pub message: str
-  pub name := "Error"
+  message: str
+  name := "Error"
 
-  init (message: str)
+  init (message: str) Error
   op str () str
 }
 
@@ -50,25 +50,25 @@ interface Function {
 }
 
 interface Iterator<T, U> {
-  pub cursor: T
+  cursor: T
 
-  pub hasNext () bool
-  pub next () U
-  pub mut next () mut U
+  hasNext () bool
+  next () U
+  mut next () mut U
 }
 
 interface Map<T, U> {
-  pub size: int
+  size: int
 
   op iter () Iterator<T, U>
   mut op iter () Iterator<T, mut U>
   op str () str
 
-  pub mut delete (key: T) this
-  pub get (key: T) U?
-  pub mut get (key: T) mut U?
-  pub has (key: T) bool
-  pub mut set (key: T, val: U) this
+  mut delete (key: T) this
+  get (key: T) U?
+  mut get (key: T) mut U?
+  has (key: T) bool
+  mut set (key: T, val: U) this
 }
 
 interface Number {
@@ -81,24 +81,23 @@ interface Object {
   op str () str
 }
 
-obj Program {
-  pub args: str[]
-  pub cwd: str
+interface Program {
+  args: str[]
+  cwd: str
 }
 
 interface Range<T> {
-  pub mut end: T
-  pub mut start: T
+  mut end: T
+  mut start: T
 
-  init (start: T, end: T)
   op iter () Iterable<int, T>
   mut op iter () Iterator<int, mut T>
   op str () str
 }
 
 interface String {
-  pub empty: bool
-  pub len: int
+  empty: bool
+  len: int
 
   op + (rhs: char) str
   op + (rhs: str) str
@@ -108,13 +107,13 @@ interface String {
   mut op iter () Iterator<int, mut char>
   op str () str
 
-  pub mut clear () this
-  pub includes (x: char) bool
-  pub includes (x: str) bool
-  pub index (x: char) int?
-  pub index (x: str) int?
-  pub mut reverse () this
-  pub times (n: int) str
+  mut clear () this
+  includes (x: char) bool
+  includes (x: str) bool
+  index (x: char) int?
+  index (x: str) int?
+  mut reverse () this
+  times (n: int) str
 }
 
 export fn exit (status: int) void
