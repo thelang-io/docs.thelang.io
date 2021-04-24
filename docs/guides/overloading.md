@@ -11,7 +11,7 @@ fn sum (a: float, b: float) float {
 }
 ```
 
-## Classes
+## Class methods
 ```the
 class MyClass {
   priv mut _sum: float
@@ -32,18 +32,30 @@ class MyClass {
 }
 ```
 
+## Interface methods
+```the
+interface MyInterface {
+  mut sum: float
+
+  mut add (x: int) this
+  mut add (x: float) this
+  str () str
+}
+```
+
 ## Operators
 ```
-op + (any rhs) any
-op - (any rhs) any
-op / (any rhs) any
-op * (any rhs) any
-op % (any rhs) any
+op + (rhs: any) any
+op - (rhs: any) any
+op / (rhs: any) any
+op * (rhs: any) any
+op % (rhs: any) any
+op [] (i: int) any
 op iter () Iterator<any>
 op str () str
 ```
 
-### Example
+### Classes
 ```the
 class MyClass {
   priv mut _sum: float
@@ -61,5 +73,16 @@ class MyClass {
   op str () str {
     return "Sum of MyClass: ${this._sum}"
   }
+}
+```
+
+### Interface
+```the
+interface MyInterface {
+  mut sum: float
+
+  mut op + (x: int) this
+  mut op + (x: float) this
+  op str () str
 }
 ```
