@@ -24,7 +24,7 @@ f32 f64
 ## Number promotion
 <table>
   <tr>
-    <th align="left">From</th>
+    <th></th>
     <th>i8</th>
     <th>i16</th>
     <th>i32</th>
@@ -37,7 +37,7 @@ f32 f64
     <th>f64</th>
   </tr>
   <tr>
-    <td align="left">i8</td>
+    <td align="left">From i8</td>
     <td>&#x2705;</td>
     <td>&#x2705;</td>
     <td>&#x2705;</td>
@@ -50,7 +50,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">i16</td>
+    <td align="left">From i16</td>
     <td>&#x274C;</td>
     <td>&#x2705;</td>
     <td>&#x2705;</td>
@@ -63,7 +63,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">i32</td>
+    <td align="left">From i32</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x2705;</td>
@@ -76,7 +76,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">i64</td>
+    <td align="left">From i64</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
@@ -89,7 +89,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">u8</td>
+    <td align="left">From u8</td>
     <td>&#x274C;</td>
     <td>&#x2705;</td>
     <td>&#x2705;</td>
@@ -102,7 +102,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">u16</td>
+    <td align="left">From u16</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x2705;</td>
@@ -115,7 +115,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">u32</td>
+    <td align="left">From u32</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
@@ -128,7 +128,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">u64</td>
+    <td align="left">From u64</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
@@ -141,7 +141,7 @@ f32 f64
     <td>&#x274C;</td>
   </tr>
   <tr>
-    <td align="left">f32</td>
+    <td align="left">From f32</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
@@ -154,7 +154,7 @@ f32 f64
     <td>&#x2705;</td>
   </tr>
   <tr>
-    <td align="left">f64</td>
+    <td align="left">From f64</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
     <td>&#x274C;</td>
