@@ -21,11 +21,6 @@ interface Named {
 class Book : Named {
   pub name: str
   pub year: int
-
-  init (name: str, year: int) {
-    this.name = name
-    this.year = year
-  }
 }
 ```
 
