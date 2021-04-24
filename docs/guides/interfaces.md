@@ -1,8 +1,14 @@
 # Interfaces
 ```the
 interface Propped {
-  prop1: str
-  prop2: fn (int) void
+  prop1: int
+  prop2: str
+  prop3: fn (int) void
+
+  init (message: str, cb: fn (int) void) Propped
+
+  method1 () void
+  method2 (x: int) int
 }
 ```
 
@@ -36,10 +42,5 @@ interface Person : Named {
 class Singer : Person {
   pub age: int
   pub name: str
-
-  init (name: str, age: int) {
-    this._age = age
-    this._name = name
-  }
 }
 ```
