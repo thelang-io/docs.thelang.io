@@ -4,7 +4,8 @@
 ```txt
 any
 bool
-byte char
+byte
+char
 float
 int
 void
