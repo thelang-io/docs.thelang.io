@@ -1,4 +1,4 @@
-import * from utils
+import swap from utils
 
 fn quicksort (mut arr: int[], begin := 0, end := arr.len) {
   if arr.len < 2 || begin >= end {
