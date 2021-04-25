@@ -1,12 +1,5 @@
 # Globals
 ```the
-obj Program {
-  args: str[]
-  cwd: str
-  env: Map<str, str>
-  pid: int
-}
-
 interface Any {
   op str () str
 }
@@ -111,6 +104,13 @@ interface String : Any {
   index (x: str) int?
   mut reverse () this
   times (n: int) str
+}
+
+obj Program {
+  args: str[]
+  cwd: str
+  env: Map<str, str>
+  pid: int
 }
 
 export class Error {
