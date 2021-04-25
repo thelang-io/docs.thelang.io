@@ -1,5 +1,5 @@
 fn factorial (num: int) int {
-  return num <= 0 ? 0 : num + factorial(num - 1)
+  return num < 2 ? 1 : factorial(num - 1) * num
 }
 
 main {
