@@ -1,4 +1,6 @@
 # Ranges
+
+## Slices
 ```
 ..
 ..2
@@ -7,7 +9,7 @@
 1..=2
 ```
 
-## Slice notation
+### Definition
 ```the
 main {
   arr1 := [1, 2, 3, 4, 5]
@@ -15,7 +17,13 @@ main {
 }
 ```
 
-## Iterator with numbers
+## Range
+```
+1..2
+1..=2
+```
+
+### Definition
 ```the
 main {
   loop i in 0..10 {
@@ -28,7 +36,7 @@ main {
 }
 ```
 
-## Iterator with variables
+## Computed ranges
 ```the
 main {
   a := 1
