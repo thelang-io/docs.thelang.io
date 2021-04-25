@@ -1,7 +1,7 @@
-fn fibonacci () int[] {
+fn fibonacci (max: int) int[] {
   mut result := [0, 1]
 
-  loop i in 2..=50 {
+  loop i in 2 ..= max {
     result.push(result[i - 2] + result[i - 1])
   }
 
