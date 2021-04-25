@@ -20,7 +20,7 @@ import * from math
 import * from ./things
 ```
 
-### Wildcard named import
+### Named wildcard import
 ```the
 import * as Math from math
 import * as Things from ./things
