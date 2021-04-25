@@ -1,17 +1,9 @@
 # Modules
 
 ## Import
-
-### Modules
 ```the
 import Math from math
-import Thing1, Thing2 from my-module
-```
-
-### Local files
-```the
-import Thing1 from ./things
-import formatCurrency, formatTime from ../utils/formatters
+import Thing1, Thing2 from ./things
 ```
 
 ### Wildcard import
