@@ -2,6 +2,13 @@
 ```the
 import * from stream
 
+obj Program {
+  args: str[]
+  cwd: str
+  env: Map<str, str>
+  pid: int
+}
+
 interface Any {
   op str () str
 }
@@ -108,11 +115,6 @@ interface I64 : Any {
 }
 
 interface Object : Any {
-}
-
-interface Program {
-  args: str[]
-  cwd: str
 }
 
 interface Range<T> : Any {
