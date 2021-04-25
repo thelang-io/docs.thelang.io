@@ -1,79 +1,99 @@
-#!/usr/bin/env python3
+#!/bin/sh
 
-import sys
-from pathlib import Path
+base_dir="$(dirname -- "$0")"
+errors=""
 
+log_error () {
+  loc="$1:"
 
-class LintError:
-    _file: str
-    _line: int
-    _msg: str
-    _pos: int
+  if [ "$#" -gt 2 ]; then
+    loc="$loc$(($3 + 1)):"
+  fi
 
-    def __init__(self, file, msg, line=-1, pos=-1):
-        self._file = file
-        self._line = line
-        self._msg = msg
-        self._pos = pos
+  error="$loc $2"
 
-    def __str__(self):
-        loc = f'{self._file}:'
+  if [ -z "$errors" ]; then
+    errors="$error"
+  else
+    errors="$errors\n$error"
+  fi
+}
 
-        if self._line != -1:
-            loc += f'{self._line + 1}:'
+process () {
+  filepath="$1"
+  last_line=""
+  i=0
 
-        if self._pos != -1:
-            loc += f'{self._pos + 1}:'
+  while IFS= read -r line || [ -n "$line" ]; do
+    line_len="${#line}"
 
-        return f'{loc} {self._msg}'
+    if [ "$line_len" -ge 80 ]; then
+      log_error "$filepath" "line length should not exceed 80 characters" $i
+    fi
 
+    if [ "$line_len" -ge 1 ]; then
+      first_char="$(printf "%d" "'${line%"${line#?}"}")"
+      last_char="$(printf "%d" "'${line#"${line%?}"}")"
 
-def main(files):
-    errors = []
+      if [ "$last_char" -eq 13 ]; then
+        log_error "$filepath" "line terminator should be LF" $i
+      fi
 
-    for file in files:
-        if not Path(file).is_file() or Path(file).name == 'LICENSE.md':
-            continue
+      if [ "$first_char" -eq 9 ]; then
+        log_error "$filepath" "line should not start with tab" $i
+      fi
 
-        lines = open(file).readlines()
+      if [ "$last_char" -eq 9 ] || [ "$last_char" -eq 32 ]; then
+        log_error "$filepath" "line should not end with whitespace" $i
+      fi
 
-        for idx, line in enumerate(lines):
-            if not line.endswith('\n'):
-                msg = 'line terminator should be LF'
-                errors.append(LintError(file=file, line=idx, msg=msg))
+      if [ "$first_char" -eq 32 ]; then
+        tmp="${line#?}"
+        j=1
 
-            if len(line) > 80:
-                msg = 'line length should not exceed 80 characters'
-                errors.append(LintError(file=file, line=idx, pos=80, msg=msg))
+        while [ -n "$tmp" ]; do
+          next_char="$(printf "%d" "'${tmp%"${tmp#?}"}")"
 
-            if len(line) > 1 and line[-2] in [' ', '\t']:
-                msg = 'line should not end with whitespace'
-                errors.append(
-                    LintError(file=file, line=idx, pos=len(line) - 1, msg=msg)
-                )
+          if [ "$next_char" -ne 32 ]; then
+            break
+          fi
 
-            if line[0] == ' ':
-                i = 1
+          tmp="${tmp#?}"
+          j=$((j + 1))
+        done
 
-                while line[i] == ' ':
-                    i += 1
+        if [ $((j % 2)) -ne 0 ]; then
+          log_error "$filepath" "line indentation should be 2 spaces" $i
+        fi
+      fi
+    fi
 
-                if i % 2 != 0:
-                    msg = 'line indentation should be 2 spaces'
-                    errors.append(
-                        LintError(file=file, line=idx, pos=0, msg=msg)
-                    )
+    last_line="$line"
+    i=$((i + 1))
+  done < "$1"
 
-        if len(lines) > 0 and lines[-1] == '\n':
-            msg = 'file end should have only one line break'
-            errors.append(LintError(file=file, line=len(lines), msg=msg))
+  if [ $i -ne 0 ] && [ "$last_line" = "" ]; then
+    log_error "$filepath" "file end should have only one line break" $i
+  fi
+}
 
-    if errors:
-        for error in errors:
-            print(error)
+process_dir () {
+  for entry in "$1"/*; do
+    if [ ! -f "$entry" ]; then
+      process_dir "$entry"
+      continue
+    elif [ "$(basename -- "$entry")" = "LICENSE.md" ]; then
+      continue
+    fi
 
-        sys.exit(1)
+    process "$entry"
+  done
+}
 
+process_dir "$(cd "$base_dir/.." && pwd -P)"
+process_dir "$(cd "$base_dir/../.github" && pwd -P)"
 
-if __name__ == '__main__':
-    main(sys.argv[1:])
+if [ -n "$errors" ]; then
+  echo "$errors"
+  exit 1
+fi
