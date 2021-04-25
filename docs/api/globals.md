@@ -125,7 +125,7 @@ interface Range<T> : Any {
   end: T
   start: T
 
-  op iter () Iterable<int, T>
+  op iter () Iterator<int, T>
   mut op iter () Iterator<int, mut T>
 }
 
