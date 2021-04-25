@@ -1,13 +1,13 @@
 fn fibonacci () int[] {
   mut result := [0, 1]
 
-  loop i in 2..=10 {
-    result[i] = result[i - 2] + result[i - 1]
+  loop i in 2..=50 {
+    result.push(result[i - 2] + result[i - 1])
   }
 
   return result
 }
 
 main {
-  fibonacci()
+  print(fibonacci())
 }
