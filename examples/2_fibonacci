@@ -9,5 +9,5 @@ fn fibonacci () int[] {
 }
 
 main {
-  print(fibonacci())
+  print('Fibonacci sequence:', fibonacci(50))
 }
