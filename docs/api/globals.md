@@ -56,65 +56,19 @@ interface Char : Any {
 interface Function : Any {
 }
 
-interface F32 : Any {
+interface Number : Any {
+  op + (rhs: Number) Number
   op + (rhs: char) str
-  op + (rhs: f32) str
-  op + (rhs: i8) str
-  op + (rhs: i16) str
-  op + (rhs: i32) str
   op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-}
-
-interface F64 : Any {
-  op + (rhs: char) str
-  op + (rhs: f32) str
-  op + (rhs: f64) str
-  op + (rhs: i8) str
-  op + (rhs: i16) str
-  op + (rhs: i32) str
-  op + (rhs: i64) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-  op + (rhs: u32) str
-}
-
-interface I8 : Any {
-  op + (rhs: char) str
-  op + (rhs: i8) str
-  op + (rhs: str) str
-}
-
-interface I16 : Any {
-  op + (rhs: char) str
-  op + (rhs: i8) str
-  op + (rhs: i16) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-}
-
-interface I32 : Any {
-  op + (rhs: char) str
-  op + (rhs: i8) str
-  op + (rhs: i16) str
-  op + (rhs: i32) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-}
-
-interface I64 : Any {
-  op + (rhs: char) str
-  op + (rhs: i8) str
-  op + (rhs: i16) str
-  op + (rhs: i32) str
-  op + (rhs: i64) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-  op + (rhs: u32) str
+  op - (rhs: Number) Number
+  op / (rhs: Number) Number
+  op * (rhs: Number) Number
+  op % (rhs: Number) Number
+  op += (rhs: Number) this
+  op -= (rhs: Number) this
+  op /= (rhs: Number) this
+  op *= (rhs: Number) this
+  op %= (rhs: Number) this
 }
 
 interface Object : Any {
@@ -159,36 +113,6 @@ interface String : Any {
   index (x: str) int?
   mut reverse () this
   times (n: int) str
-}
-
-interface U8 : Any {
-  op + (rhs: char) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-}
-
-interface U16 : Any {
-  op + (rhs: char) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-}
-
-interface U32 : Any {
-  op + (rhs: char) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-  op + (rhs: u32) str
-}
-
-interface U64 : Any {
-  op + (rhs: char) str
-  op + (rhs: str) str
-  op + (rhs: u8) str
-  op + (rhs: u16) str
-  op + (rhs: u32) str
-  op + (rhs: u64) str
 }
 
 export class Error {
