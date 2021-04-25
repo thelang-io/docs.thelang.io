@@ -19,6 +19,8 @@ interface Array<T> : Any {
 
   op + (rhs: T) Array<T>
   op + (rhs: Array<T>) Array<T>
+  mut op += (rhs: T) this
+  mut op += (rhs: Array<T>) this
   op [] (i: int) T
   mut op [] (i: int) mut T
   op [] (slice: Slice<int>) Array<T>
@@ -142,6 +144,8 @@ interface String : Any {
 
   op + (rhs: char) str
   op + (rhs: str) str
+  mut op += (rhs: char) this
+  mut op += (rhs: str) this
   op [] (i: int) char
   mut op [] (i: int) mut char
   op [] (slice: Slice<int>) str
