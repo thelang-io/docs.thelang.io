@@ -35,16 +35,13 @@ main {
   loop ch in s {
     print("Char:", ch)
   }
-}
-```
 
-## For-in-style index loop with string
-```the
-main {
-  s := "Hello, World!"
-
-  loop i, ch in s {
+  loop ch, i in s {
     print("Char:", ch, "Index:", i)
+  }
+
+  loop _, i in s {
+    print("Index:", i)
   }
 }
 ```
