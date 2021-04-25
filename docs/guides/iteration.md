@@ -6,6 +6,14 @@ main {
   loop {
     print("I will run forever")
   }
+
+  loop true {
+    print("I will run forever")
+  }
+
+  loop false {
+    print("I will never run")
+  }
 }
 ```
 
@@ -56,8 +64,16 @@ obj Example {
 main {
   e := Example{}
 
+  loop key in e {
+    print("Key:", key)
+  }
+
   loop key, val in e {
     print("Key:", key, "Value:", val)
+  }
+
+  loop _, val in e {
+    print("Value:", val)
   }
 }
 ```
