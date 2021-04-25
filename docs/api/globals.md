@@ -122,8 +122,8 @@ interface Optional<T> : Any {
 }
 
 interface Range<T> : Any {
-  mut end: T
-  mut start: T
+  end: T
+  start: T
 
   op iter () Iterable<int, T>
   mut op iter () Iterator<int, mut T>
