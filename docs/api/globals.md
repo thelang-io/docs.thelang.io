@@ -1,7 +1,5 @@
 # Globals
 ```the
-import * from stream
-
 obj Program {
   args: str[]
   cwd: str
