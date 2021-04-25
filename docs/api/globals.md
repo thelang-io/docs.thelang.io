@@ -203,6 +203,7 @@ export class Map<T, U> {
 }
 
 export fn exit (status: int) void
+export fn kill (pid: int, sig: int?) void
 export fn print (items: any..., separator := " ", terminator := "\n") void
 export fn sleep (ms: int) async void
 
