@@ -25,10 +25,6 @@ class MyClass {
     this._sum += x
     return this
   }
-
-  pub str () str {
-    return "Sum of MyClass: ${this._sum}"
-  }
 }
 ```
 
@@ -39,7 +35,6 @@ interface MyInterface {
 
   mut add (x: int) this
   mut add (x: float) this
-  str () str
 }
 ```
 
@@ -74,10 +69,6 @@ class MyClass {
     this._sum += x
     return this
   }
-
-  op str () str {
-    return "Sum of MyClass: ${this._sum}"
-  }
 }
 ```
 
@@ -88,6 +79,5 @@ interface MyInterface {
 
   mut op + (x: int) this
   mut op + (x: float) this
-  op str () str
 }
 ```
