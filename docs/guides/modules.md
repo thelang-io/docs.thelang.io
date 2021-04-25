@@ -5,12 +5,12 @@
 ### Modules
 ```the
 import Math from math
-import Class1, Class2 from my-module
+import Thing1, Thing2 from my-module
 ```
 
 ### Local files
 ```the
-import AllThings from ./things
+import Thing1 from ./things
 import formatCurrency, formatTime from ../utils/formatters
 ```
 
@@ -18,6 +18,12 @@ import formatCurrency, formatTime from ../utils/formatters
 ```the
 import * from math
 import * from ./things
+```
+
+### Wildcard named import
+```the
+import * as Math from math
+import * as Things from ./things
 ```
 
 ## Export
@@ -60,8 +66,20 @@ fn calc () {}
 export FPS, SuperEnum, SuperObject, Thing, calc
 ```
 
-### Wildcard export
+### Re-export
+```the
+export Math from math
+export Thing1, Thing2 from ./things
+```
+
+### Wildcard re-export
 ```the
 export * from math
 export * from ./things
+```
+
+### Named wildcard re-export
+```the
+export * as Math from math
+export * as Things from ./things
 ```
