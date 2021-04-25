@@ -117,6 +117,9 @@ interface I64 : Any {
 interface Object : Any {
 }
 
+interface Optional<T> : Any {
+}
+
 interface Range<T> : Any {
   mut end: T
   mut start: T
