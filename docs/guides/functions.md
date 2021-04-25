@@ -7,7 +7,7 @@ main {}
 
 ## Default parameters
 ```the
-fn myFunc (a := 0, b := 1) int {
+fn myFunc (a := 1, b := a) int {
   return a + b
 }
 
