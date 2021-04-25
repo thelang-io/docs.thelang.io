@@ -20,10 +20,10 @@ main {
 ```the
 main {
   mut a1 := 1
-  mut s1 := "Hello, "
+  mut s1 := "Hello, World!"
 
   a1 = 2
-  s1 += "World!"
+  s1 = "Hello, User!"
 }
 ```
 
