@@ -3,5 +3,5 @@ fn factorial (num: int) int {
 }
 
 main {
-  print('Factorial of 10:', factorial(5))
+  print('Factorial of 10:', factorial(10))
 }
