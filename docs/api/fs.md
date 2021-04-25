@@ -24,10 +24,10 @@ export class File {
   pub write (data: byte[]) this
 }
 
-export fn access (str pathname, AccessMode mode = .existance) int
-export fn chmod (str pathname, int mode) int
-export fn chown (str pathname, int uid, int gid) int
-export fn realpath (str pathname) str
-export fn rm (str pathname) int
-export fn rmdir (str pathname) int
+export fn accessSync (str pathname, AccessMode mode = .existance) int
+export fn chmodSync (str pathname, int mode) int
+export fn chownSync (str pathname, int uid, int gid) int
+export fn realpathSync (str pathname) str
+export fn rmSync (str pathname) int
+export fn rmdirSync (str pathname) int
 ```
