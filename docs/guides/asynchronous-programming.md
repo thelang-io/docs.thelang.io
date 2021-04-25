@@ -24,3 +24,17 @@ main {
   await c.sleep()
 }
 ```
+
+## Objects
+```the
+obj MyObj {
+  sleep: fn () async {
+    await sleep(1000)
+  }
+}
+
+main {
+  o := MyObj{}
+  await o.sleep()
+}
+```
