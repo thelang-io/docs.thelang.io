@@ -1,5 +1,41 @@
 # Globals
 ```the
+export enum Signal {
+  abrt,
+  alrm,
+  break,
+  bus,
+  chld,
+  cont,
+  fpe,
+  hup,
+  ill,
+  int,
+  io,
+  kill,
+  lost,
+  pipe,
+  prof,
+  pwr,
+  quit,
+  segv,
+  stkflt,
+  stop,
+  sys,
+  term,
+  trap,
+  tstp,
+  ttin,
+  ttou,
+  urg,
+  usr1,
+  usr2,
+  vtalrm,
+  winch,
+  xcpu,
+  xfsz
+}
+
 interface Any {
   op str () str
 }
@@ -142,8 +178,8 @@ export class Map<T, U> {
   pub mut set (key: T, val: U) this
 }
 
-export fn exit (status: int) void
-export fn kill (pid: int, sig: int?) void
+export fn exit (code: int) void
+export fn kill (pid: int, sig: Signal?) void
 export fn print (items: any..., separator := " ", terminator := "\n") void
 export fn sleep (ms: int) async void
 
