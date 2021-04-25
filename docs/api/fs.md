@@ -16,10 +16,12 @@ export enum FileMode {
 export class File {
   pub eof: bool
   pub pos: int
+  pub size: int
 
   static open (str pathname, mode := FileMode.read) File
-  pub close () void
+  pub close () this
   pub read () byte[]
+  pub read (n: int) byte[]
   pub seek (pos: int) this
   pub write (data: byte[]) this
 }
