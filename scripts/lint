@@ -24,8 +24,6 @@ process () {
   last_line=""
   i=0
 
-  echo "Linting: $filepath"
-
   while IFS= read -r line || [ -n "$line" ]; do
     line_len="${#line}"
 
