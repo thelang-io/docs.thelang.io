@@ -69,6 +69,7 @@ main {
 obj Person {
   age: int?
   answers: bool[]?
+  brother: Person?
   mainAnswer: bool?
   name: str?
   getAge: (fn () int)?
