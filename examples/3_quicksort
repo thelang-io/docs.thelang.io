@@ -21,5 +21,7 @@ fn quicksort (mut arr: int[], begin := 0, end := arr.len) {
 
 main {
   mut arr := [3, 4, 1, 8, 6, 7, 5, 10, 9, 2]
+  print("Array before sorting:", arr)
   quicksort(arr)
+  print("Array after sorting:", arr)
 }
