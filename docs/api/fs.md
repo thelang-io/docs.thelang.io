@@ -19,11 +19,11 @@ export class File {
   pub size: int
 
   static open (pathname: str, mode := FileMode.read) File
-  pub close () this
-  pub read () byte[]
-  pub read (n: int) byte[]
-  pub seek (pos: int) this
-  pub write (data: byte[]) this
+  pub mut close () this
+  pub mut read () byte[]
+  pub mut read (n: int) byte[]
+  pub mut seek (pos: int) this
+  pub mut write (data: byte[]) this
 }
 
 export fn accessSync (pathname: str, mode := AccessMode.existance) int
