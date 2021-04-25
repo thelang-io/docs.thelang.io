@@ -5,11 +5,6 @@
 fn add<T> (n1: T, n2: T) T {
   return n1 + n2
 }
-
-main {
-  a := add(1, 2)
-  b := add<int>(3, 4)
-}
 ```
 
 ## Classes
@@ -31,14 +26,15 @@ class MyClass<T, U> {
 
 ## Argument types
 ```the
-class MyClass<T> {}
+class MyClassOne<T> {}
 class MyClassTwo<T[]> {}
 class MyClassThree<T : class> {}
 ```
 
 ## Default arguments
 ```the
-class MyClass<T = int> {}
+class MyClass {}
+class MyClassOne<T = int> {}
 class MyClassTwo<T[] = int[]> {}
-class MyClassTwo<T : class = MyClass> {}
+class MyClassThree<T : class = MyClass> {}
 ```
