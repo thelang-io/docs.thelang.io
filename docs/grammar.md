@@ -33,11 +33,15 @@ RBRACE ::= '}'
 RBRACK ::= ']'
 RPAR ::= ')'
 
+DECIMAL_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
 LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
 LITINT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
 LITINT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
 LITINT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
 
+LITFLOAT ::= DIGIT_DECIMAL+ '.' DIGIT_DECIMAL* DECIMAL_EXP? |
+  '.' DIGIT_DECIMAL+ DECIMAL_EXP? |
+  DIGIT_DECIMAL+ DECIMAL_EXP
 LITINT ::= LITINT_BIN | LITINT_DEC | LITINT_HEX | LITINT_OCT
 LITSTR ::= '"' (ANY_CHAR - '"')* '"'
 
@@ -48,7 +52,7 @@ MAIN ::= "main"
 MUT ::= "mut"
 RETURN ::= "return"
 
-ID ::= ID_CHAR_START ID_CHAR*
+ID ::= [a-zA-Z_] [a-zA-Z0-9_]*
 ```
 
 ## Primitives
@@ -58,8 +62,6 @@ DIGIT_BINARY ::= [0-1]
 DIGIT_DECIMAL ::= [0-9]
 DIGIT_HEX ::= [0-9] | [A-F] | [a-f]
 DIGIT_OCTAL ::= [0-7]
-ID_CHAR ::= [a-zA-Z0-9_]
-ID_CHAR_START ::= [a-zA-Z_]
 CR ::= #x0D
 LF ::= #x0A
 SPACE ::= #x20
