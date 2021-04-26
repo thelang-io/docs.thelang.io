@@ -14,3 +14,18 @@ main {
   lastChar := arr1[-1]
 }
 ```
+
+## Computed
+```the
+main {
+  a := 1
+  b := 4
+  c := 2
+  d := -1
+
+  arr1 := [1, 2, 3, 4, 5]
+  arr2 := arr1[a:b]
+  arr3 := arr1[a:b:c]
+  lastChar := arr1[d]
+}
+```

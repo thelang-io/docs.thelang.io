@@ -17,7 +17,7 @@ main {
 }
 ```
 
-## Computed ranges
+## Computed
 ```the
 main {
   a := 1
