@@ -33,6 +33,8 @@ RPAR ::= ')'
 
 ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 
+MAIN ::= "main"
+
 STRING_LITERAL ::= '"' (ANY_CHAR - '"')* '"'
 
 WS ::= (CR | LF | SPACE | TAB)+
