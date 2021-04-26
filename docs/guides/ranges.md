@@ -1,29 +1,10 @@
 # Ranges
-
-## Slices
 ```
-..
-..2
-1..
-1..2
-1..=2
+start..end
+start..=inclusive end
 ```
 
-### Definition
-```the
-main {
-  arr1 := [1, 2, 3, 4, 5]
-  arr3 := arr1[..2]
-}
-```
-
-## Range
-```
-1..2
-1..=2
-```
-
-### Definition
+## Definition
 ```the
 main {
   loop i in 0..10 {
