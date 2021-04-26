@@ -1,5 +1,9 @@
 #!/bin/sh
 
+CR="$(printf "\r")"
+SPACE="$(printf " ")"
+TAB="$(printf "\t")"
+
 base_dir="$(dirname -- "$0")"
 errors=""
 
@@ -32,29 +36,29 @@ process () {
     fi
 
     if [ "$line_len" -ge 1 ]; then
-      first_char="$(printf "%d" "'${line%"${line#?}"}")"
-      last_char="$(printf "%d" "'${line#"${line%?}"}")"
+      first_char="${line%"${line#?}"}"
+      last_char="${line#"${line%?}"}"
 
-      if [ "$last_char" -eq 13 ]; then
+      if [ "$last_char" = "$CR" ]; then
         log_error "$filepath" "line terminator should be LF" $i
       fi
 
-      if [ "$first_char" -eq 9 ]; then
+      if [ "$first_char" = "$TAB" ]; then
         log_error "$filepath" "line should not start with tab" $i
       fi
 
-      if [ "$last_char" -eq 9 ] || [ "$last_char" -eq 32 ]; then
+      if [ "$last_char" = "$TAB" ] || [ "$last_char" = "$SPACE" ]; then
         log_error "$filepath" "line should not end with whitespace" $i
       fi
 
-      if [ "$first_char" -eq 32 ]; then
+      if [ "$first_char" = "$SPACE" ]; then
         tmp="${line#?}"
         j=1
 
         while [ -n "$tmp" ]; do
-          next_char="$(printf "%d" "'${tmp%"${tmp#?}"}")"
+          next_char="${tmp%"${tmp#?}"}"
 
-          if [ "$next_char" -ne 32 ]; then
+          if [ "$next_char" != "$SPACE" ]; then
             break
           fi
 
