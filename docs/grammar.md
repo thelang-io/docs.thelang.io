@@ -29,9 +29,7 @@ RPAR ::= ')'
 
 ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 
-STRING_LITERAL ::= STRING_LITERAL_DQ | STRING_LITERAL_SQ
-STRING_LITERAL_DQ ::= '"' (ANY_CHAR - '"')* '"'
-STRING_LITERAL_SQ ::= '\'' (ANY_CHAR - '\'')* '\''
+STRING_LITERAL ::= '"' (ANY_CHAR - '"')* '"'
 
 WS ::= (CR | LF | SPACE | TAB)+
 ```
