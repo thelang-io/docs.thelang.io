@@ -13,7 +13,6 @@ elif
 else
 export
 enum
-false
 fn
 if
 import
@@ -24,7 +23,6 @@ loop
 main
 mut
 new
-nil
 obj
 op
 override
@@ -37,7 +35,6 @@ super
 switch
 this
 throw
-true
 try
 union
 ```
