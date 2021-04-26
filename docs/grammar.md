@@ -34,7 +34,7 @@ RBRACK ::= ']'
 RPAR ::= ')'
 
 LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
-LITINT_DEC ::= [1-9] DIGIT_DECIMAL*
+LITINT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
 LITINT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
 LITINT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
 
