@@ -22,16 +22,16 @@ _ ::= (WS)+
 
 ## Tokens
 ```txt
-COMMA ::= ','
+WS ::= (CR | LF | SPACE | TAB)+
 
+COLON ::= ':'
+COMMA ::= ','
 LBRACE ::= '{'
 LBRACK ::= '['
 LPAR ::= '('
 RBRACE ::= '}'
 RBRACK ::= ']'
 RPAR ::= ')'
-
-ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 
 FN ::= "fn"
 IN ::= "in"
@@ -42,7 +42,7 @@ RETURN ::= "return"
 
 STRING_LITERAL ::= '"' (ANY_CHAR - '"')* '"'
 
-WS ::= (CR | LF | SPACE | TAB)+
+ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 ```
 
 ## Primitives
