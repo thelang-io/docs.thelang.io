@@ -24,7 +24,11 @@ _ ::= (WS)+
 ```txt
 COMMA ::= ','
 
+LBRACE ::= '{'
+LBRACK ::= '['
 LPAR ::= '('
+RBRACE ::= '}'
+RBRACK ::= ']'
 RPAR ::= ')'
 
 ID ::= [a-zA-Z_][a-zA-Z0-9_]+
