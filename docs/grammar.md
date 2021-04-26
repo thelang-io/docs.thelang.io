@@ -6,23 +6,23 @@ The syntax is specified using Extended Backus-Naur Form (EBNF)
 
 ## Syntax
 ```txt
-Syntax ::= (_ Statement)* _
-Statement ::= WS | CallExpr
+Syntax ::= Statement*
+Statement ::= _ | CallExpr
 
-CallExpr ::= ID _ LPAR _ ArgList _ RPAR
+CallExpr ::= ID _ LPAR _ ArgList? _ RPAR
 
-ArgList ::= (Expr (_ COMMA)*)*
+ArgList ::= Expr (_ COMMA _ Expr)*
 
 Expr ::= Id | Literal
 Id ::= ID
-Literal ::= STRING_LITERAL
+Literal ::= LITSTR
 
-_ ::= (WS)+
+_ ::= WS*
 ```
 
 ## Tokens
 ```txt
-WS ::= (CR | LF | SPACE | TAB)+
+WS ::= CR | LF | SPACE | TAB
 
 COLON ::= ':'
 COMMA ::= ','
@@ -40,16 +40,22 @@ MAIN ::= "main"
 MUT ::= "mut"
 RETURN ::= "return"
 
-STRING_LITERAL ::= '"' (ANY_CHAR - '"')* '"'
+LITSTR ::= '"' (ANY_CHAR - '"')* '"'
 
-ID ::= [a-zA-Z_][a-zA-Z0-9_]+
+ID ::= ID_CHAR_START ID_CHAR*
 ```
 
 ## Primitives
 ```txt
-ANY_CHAR ::= [#x0-#x10FFFF]+
-CR ::= #xD
-LF ::= #xA
+ANY_CHAR ::= [#x000000-#x10FFFF]
+DIGIT_BINARY ::= [0-1]
+DIGIT_DECIMAL ::= [0-9]
+DIGIT_HEX ::= [0-9] | [A-F] | [a-f]
+DIGIT_OCTAL ::= [0-7]
+ID_CHAR ::= [a-zA-Z0-9_]
+ID_CHAR_START ::= [a-zA-Z_]
+CR ::= #x0D
+LF ::= #x0A
 SPACE ::= #x20
-TAB ::= #x9
+TAB ::= #x09
 ```
