@@ -50,7 +50,7 @@ interface Array<T> : Any {
   mut op += (rhs: Array<T>) this
   op [] (i: int) T
   mut op [] (i: int) mut T
-  op [] (slice: Slice<int>) Array<T>
+  op [] (slice: Slice) Array<T>
   op iter () Iterator<int, T>
   mut op iter () Iterator<int, mut T>
 
@@ -104,19 +104,18 @@ interface Object : Any {
 interface Optional<T> : Any {
 }
 
-interface Range<T> : Any {
-  end: T
-  start: T
+interface Range : Any {
+  end: int
+  start: int
 
-  op iter () Iterator<int, T>
-  mut op iter () Iterator<int, mut T>
+  op iter () Iterator<int, int>
+  mut op iter () Iterator<int, mut int>
 }
 
-interface Slice<T> : Any {
-  end: T?
-  hasEnd: bool
-  hasStart: bool
-  start: T?
+interface Slice : Any {
+  end: int?
+  start: int?
+  step: int?
 }
 
 interface String : Any {
@@ -129,7 +128,7 @@ interface String : Any {
   mut op += (rhs: str) this
   op [] (i: int) char
   mut op [] (i: int) mut char
-  op [] (slice: Slice<int>) str
+  op [] (slice: Slice) str
   op iter () Iterator<int, char>
   mut op iter () Iterator<int, mut char>
 
