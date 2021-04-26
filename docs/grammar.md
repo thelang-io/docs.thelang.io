@@ -33,20 +33,20 @@ RBRACE ::= '}'
 RBRACK ::= ']'
 RPAR ::= ')'
 
+LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
+LITINT_DEC ::= [1-9] DIGIT_DECIMAL*
+LITINT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
+LITINT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
+
+LITINT ::= LITINT_BIN | LITINT_DEC | LITINT_HEX | LITINT_OCT
+LITSTR ::= '"' (ANY_CHAR - '"')* '"'
+
 FN ::= "fn"
 IN ::= "in"
 LOOP ::= "loop"
 MAIN ::= "main"
 MUT ::= "mut"
 RETURN ::= "return"
-
-LITBIN ::= '0' ('B' | 'b') DIGIT_BINARY+
-LITDEC ::= [1-9] DIGIT_DECIMAL*
-LITHEX ::= '0' ('X' | 'x') DIGIT_HEX+
-LITOCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
-
-LITINT ::= LITBIN | LITDEC | LITHEX | LITOCT
-LITSTR ::= '"' (ANY_CHAR - '"')* '"'
 
 ID ::= ID_CHAR_START ID_CHAR*
 ```
