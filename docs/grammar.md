@@ -33,7 +33,12 @@ RPAR ::= ')'
 
 ID ::= [a-zA-Z_][a-zA-Z0-9_]+
 
+FN ::= "fn"
+IN ::= "in"
+LOOP ::= "loop"
 MAIN ::= "main"
+MUT ::= "mut"
+RETURN ::= "return"
 
 STRING_LITERAL ::= '"' (ANY_CHAR - '"')* '"'
 
