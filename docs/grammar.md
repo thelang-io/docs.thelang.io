@@ -24,16 +24,6 @@ _ ::= WS*
 ```txt
 WS ::= CR | LF | SPACE | TAB
 
-COLON ::= ':'
-COMMA ::= ','
-DOT ::= '.'
-LBRACE ::= '{'
-LBRACK ::= '['
-LPAR ::= '('
-RBRACE ::= '}'
-RBRACK ::= ']'
-RPAR ::= ')'
-
 DECIMAL_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
 LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
 LITINT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
@@ -46,6 +36,16 @@ LITFLOAT ::= "0." DIGIT_DECIMAL* DECIMAL_EXP? |
   [1-9] DIGIT_DECIMAL* DECIMAL_EXP
 LITINT ::= LITINT_BIN | LITINT_DEC | LITINT_HEX | LITINT_OCT
 LITSTR ::= '"' (ANY_CHAR - '"')* '"'
+
+COLON ::= ':'
+COMMA ::= ','
+DOT ::= '.'
+LBRACE ::= '{'
+LBRACK ::= '['
+LPAR ::= '('
+RBRACE ::= '}'
+RBRACK ::= ']'
+RPAR ::= ')'
 
 FN ::= "fn"
 IN ::= "in"
