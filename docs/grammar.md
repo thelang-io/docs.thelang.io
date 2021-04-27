@@ -22,43 +22,40 @@ _ ::= WS*
 
 ## Tokens
 ```txt
+OP_COLON ::= ':'
+OP_COMMA ::= ','
+OP_DOT ::= '.'
+OP_LBRACE ::= '{'
+OP_LBRACK ::= '['
+OP_LPAR ::= '('
+OP_RBRACE ::= '}'
+OP_RBRACK ::= ']'
+OP_RPAR ::= ')'
+
+KW_FN ::= "fn"
+KW_IN ::= "in"
+KW_LOOP ::= "loop"
+KW_MAIN ::= "main"
+KW_MUT ::= "mut"
+KW_RETURN ::= "return"
+
+LIT_FLOAT ::= "0." DIGIT_DECIMAL* LIT_FLOAT_EXP? |
+  '.' DIGIT_DECIMAL+ LIT_FLOAT_EXP? |
+  [1-9] DIGIT_DECIMAL* '.' DIGIT_DECIMAL* LIT_FLOAT_EXP? |
+  [1-9] DIGIT_DECIMAL* LIT_FLOAT_EXP
+LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
+
+LIT_ID ::= [a-zA-Z_] [a-zA-Z0-9_]*
+
+LIT_INT ::= LIT_INT_BIN | LIT_INT_DEC | LIT_INT_HEX | LIT_INT_OCT
+LIT_INT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
+LIT_INT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
+LIT_INT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
+LIT_INT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
+
+LIT_STR ::= '"' (ANY_CHAR - '"')* '"'
+
 WS ::= CR | LF | SPACE | TAB
-
-/* Literals */
-DECIMAL_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
-LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
-LITINT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
-LITINT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
-LITINT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
-
-LITFLOAT ::= "0." DIGIT_DECIMAL* DECIMAL_EXP? |
-  '.' DIGIT_DECIMAL+ DECIMAL_EXP? |
-  [1-9] DIGIT_DECIMAL* '.' DIGIT_DECIMAL* DECIMAL_EXP? |
-  [1-9] DIGIT_DECIMAL* DECIMAL_EXP
-LITINT ::= LITINT_BIN | LITINT_DEC | LITINT_HEX | LITINT_OCT
-LITSTR ::= '"' (ANY_CHAR - '"')* '"'
-
-/* Symbols */
-COLON ::= ':'
-COMMA ::= ','
-DOT ::= '.'
-LBRACE ::= '{'
-LBRACK ::= '['
-LPAR ::= '('
-RBRACE ::= '}'
-RBRACK ::= ']'
-RPAR ::= ')'
-
-/* Keywords */
-FN ::= "fn"
-IN ::= "in"
-LOOP ::= "loop"
-MAIN ::= "main"
-MUT ::= "mut"
-RETURN ::= "return"
-
-/* Identifier */
-ID ::= [a-zA-Z_] [a-zA-Z0-9_]*
 ```
 
 ## Primitives
