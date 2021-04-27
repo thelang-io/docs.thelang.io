@@ -26,6 +26,7 @@ WS ::= CR | LF | SPACE | TAB
 
 COLON ::= ':'
 COMMA ::= ','
+DOT ::= '.'
 LBRACE ::= '{'
 LBRACK ::= '['
 LPAR ::= '('
