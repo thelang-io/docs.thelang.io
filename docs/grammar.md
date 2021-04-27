@@ -24,6 +24,7 @@ _ ::= WS*
 ```txt
 WS ::= CR | LF | SPACE | TAB
 
+/* Literals */
 DECIMAL_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
 LITINT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
 LITINT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
@@ -37,6 +38,7 @@ LITFLOAT ::= "0." DIGIT_DECIMAL* DECIMAL_EXP? |
 LITINT ::= LITINT_BIN | LITINT_DEC | LITINT_HEX | LITINT_OCT
 LITSTR ::= '"' (ANY_CHAR - '"')* '"'
 
+/* Symbols */
 COLON ::= ':'
 COMMA ::= ','
 DOT ::= '.'
@@ -47,6 +49,7 @@ RBRACE ::= '}'
 RBRACK ::= ']'
 RPAR ::= ')'
 
+/* Keywords */
 FN ::= "fn"
 IN ::= "in"
 LOOP ::= "loop"
@@ -54,6 +57,7 @@ MAIN ::= "main"
 MUT ::= "mut"
 RETURN ::= "return"
 
+/* Identifier */
 ID ::= [a-zA-Z_] [a-zA-Z0-9_]*
 ```
 
