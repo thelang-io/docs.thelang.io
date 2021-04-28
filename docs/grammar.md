@@ -24,6 +24,8 @@ _ ::= WS*
 ```txt
 OP_AND ::= '&'
 OP_ANDEQ ::= "&="
+OP_ANDAND ::= "&&"
+OP_ANDANDEQ ::= "&&="
 OP_CARET ::= '^'
 OP_CARETEQ ::= "^="
 OP_COLON ::= ':'
@@ -47,11 +49,15 @@ OP_MINUS ::= '-'
 OP_MINUSEQ ::= "-="
 OP_OR ::= '|'
 OP_OREQ ::= "|="
+OP_OROR ::= "||"
+OP_OROREQ ::= "||="
 OP_PERCENT ::= '%'
 OP_PERCENTEQ ::= "%="
 OP_PLUS ::= '+'
 OP_PLUSEQ ::= "+="
 OP_QN ::= '?'
+OP_QNQN ::= "??"
+OP_QNQNEQ ::= "??="
 OP_RBRACE ::= '}'
 OP_RBRACK ::= ']'
 OP_RPAR ::= ')'
@@ -61,6 +67,8 @@ OP_SEMI ::= ';'
 OP_SLASH ::= '/'
 OP_STAR ::= '*'
 OP_STAREQ ::= "*="
+OP_STARSTAR ::= "**"
+OP_STARSTAREQ ::= "**="
 OP_TILDE ::= '~'
 
 KW_FN ::= "fn"
