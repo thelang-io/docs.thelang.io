@@ -34,12 +34,13 @@ main {
   switch val {
     case "value1": {
       print("Value is 1")
-      break
     }
     case "value2":
     case "value3":
       print("Value is 2 or 3")
-      break
+      fallthrough
+    case "value4":
+      print("Value is probably 4")
     default:
       print("Unknown value")
       break
