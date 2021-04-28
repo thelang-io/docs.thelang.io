@@ -22,15 +22,19 @@ _ ::= WS*
 
 ## Tokens
 ```txt
+OP_AND ::= '&'
 OP_COLON ::= ':'
 OP_COMMA ::= ','
 OP_DOT ::= '.'
 OP_EQ ::= '='
-OP_EQ ::= '='
+OP_EXCL ::= '!'
+OP_GT ::= '>'
 OP_LBRACE ::= '{'
 OP_LBRACK ::= '['
 OP_LPAR ::= '('
+OP_LT ::= '<'
 OP_MINUS ::= '-'
+OP_OR ::= '|'
 OP_PERCENT ::= '%'
 OP_PLUS ::= '+'
 OP_RBRACE ::= '}'
