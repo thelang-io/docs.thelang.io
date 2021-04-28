@@ -23,28 +23,44 @@ _ ::= WS*
 ## Tokens
 ```txt
 OP_AND ::= '&'
+OP_ANDEQ ::= "&="
 OP_CARET ::= '^'
+OP_CARETEQ ::= "^="
 OP_COLON ::= ':'
+OP_COLONEQ ::= ":="
 OP_COMMA ::= ','
 OP_DOT ::= '.'
 OP_EQ ::= '='
+OP_EQEQ ::= "=="
 OP_EXCL ::= '!'
+OP_EXCLEQ ::= "!="
 OP_GT ::= '>'
+OP_GTEQ ::= ">="
 OP_LBRACE ::= '{'
 OP_LBRACK ::= '['
 OP_LPAR ::= '('
+OP_LSHIFT ::= "<<"
+OP_LSHIFTEQ ::= "<<="
 OP_LT ::= '<'
+OP_LTEQ ::= "<="
 OP_MINUS ::= '-'
+OP_MINUSEQ ::= "-="
 OP_OR ::= '|'
+OP_OREQ ::= "|="
 OP_PERCENT ::= '%'
+OP_PERCENTEQ ::= "%="
 OP_PLUS ::= '+'
+OP_PLUSEQ ::= "+="
 OP_QN ::= '?'
 OP_RBRACE ::= '}'
 OP_RBRACK ::= ']'
 OP_RPAR ::= ')'
+OP_RSHIFT ::= ">>"
+OP_RSHIFTEQ ::= ">>="
 OP_SEMI ::= ';'
-OP_SLASH ::= ')'
+OP_SLASH ::= '/'
 OP_STAR ::= '*'
+OP_STAREQ ::= "*="
 OP_TILDE ::= '~'
 
 KW_FN ::= "fn"
