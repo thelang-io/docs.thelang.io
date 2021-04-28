@@ -28,9 +28,13 @@ OP_DOT ::= '.'
 OP_LBRACE ::= '{'
 OP_LBRACK ::= '['
 OP_LPAR ::= '('
+OP_MINUS ::= '-'
+OP_PLUS ::= '+'
 OP_RBRACE ::= '}'
 OP_RBRACK ::= ']'
 OP_RPAR ::= ')'
+OP_SLASH ::= ')'
+OP_STAR ::= '*'
 
 KW_FN ::= "fn"
 KW_IN ::= "in"
