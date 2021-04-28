@@ -36,6 +36,7 @@ OP_EQ ::= '='
 OP_EQEQ ::= "=="
 OP_EXCL ::= '!'
 OP_EXCLEQ ::= "!="
+OP_EXCLEXCL ::= "!!"
 OP_GT ::= '>'
 OP_GTEQ ::= ">="
 OP_LBRACE ::= '{'
@@ -47,6 +48,7 @@ OP_LT ::= '<'
 OP_LTEQ ::= "<="
 OP_MINUS ::= '-'
 OP_MINUSEQ ::= "-="
+OP_MINUSMINUS ::= "--"
 OP_OR ::= '|'
 OP_OREQ ::= "|="
 OP_OROR ::= "||"
@@ -55,6 +57,7 @@ OP_PERCENT ::= '%'
 OP_PERCENTEQ ::= "%="
 OP_PLUS ::= '+'
 OP_PLUSEQ ::= "+="
+OP_PLUSPLUS ::= "++"
 OP_QN ::= '?'
 OP_QNQN ::= "??"
 OP_QNQNEQ ::= "??="
