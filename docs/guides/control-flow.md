@@ -26,12 +26,12 @@ main {
 }
 ```
 
-## Switch
+## Match
 ```the
 main {
   val := "value"
 
-  switch val {
+  match val {
     case "value1": {
       print("Value is 1")
     }
