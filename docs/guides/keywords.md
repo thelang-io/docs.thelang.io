@@ -6,6 +6,7 @@ await
 break
 case
 catch
+class
 const
 continue
 default
@@ -14,7 +15,9 @@ elif
 else
 export
 enum
+fallthrough
 fn
+from
 if
 import
 in
@@ -23,6 +26,7 @@ interface
 is
 loop
 main
+match
 mut
 new
 obj
@@ -34,7 +38,6 @@ pub
 return
 static
 super
-switch
 this
 throw
 try
