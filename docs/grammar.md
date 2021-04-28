@@ -32,6 +32,9 @@ OP_COLON ::= ':'
 OP_COLONEQ ::= ":="
 OP_COMMA ::= ','
 OP_DOT ::= '.'
+OP_DOTDOT ::= ".."
+OP_DOTDOTDOT ::= "..."
+OP_DOTDOTEQ ::= "..="
 OP_EQ ::= '='
 OP_EQEQ ::= "=="
 OP_EXCL ::= '!'
@@ -59,6 +62,7 @@ OP_PLUS ::= '+'
 OP_PLUSEQ ::= "+="
 OP_PLUSPLUS ::= "++"
 OP_QN ::= '?'
+OP_QNDOT ::= "?."
 OP_QNQN ::= "??"
 OP_QNQNEQ ::= "??="
 OP_RBRACE ::= '}'
