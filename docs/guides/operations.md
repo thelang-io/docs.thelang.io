@@ -79,8 +79,8 @@ main {
   p1 := Person{}
 
   p2 := Person{
-    age: p1.getAge?(),
-    mainAnswer: p1.answers?[1],
+    age: p1.getAge?.(),
+    mainAnswer: p1.answers?.[1],
     name: p1.brother?.name
   }
 }
