@@ -23,9 +23,9 @@ _ ::= WS*
 ## Tokens
 ```txt
 OP_AND ::= '&'
-OP_ANDEQ ::= "&="
 OP_ANDAND ::= "&&"
 OP_ANDANDEQ ::= "&&="
+OP_ANDEQ ::= "&="
 OP_CARET ::= '^'
 OP_CARETEQ ::= "^="
 OP_COLON ::= ':'
