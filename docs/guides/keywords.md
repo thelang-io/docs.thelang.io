@@ -9,6 +9,7 @@ catch
 const
 continue
 default
+deinit
 elif
 else
 export
@@ -17,6 +18,7 @@ fn
 if
 import
 in
+init
 interface
 is
 loop
