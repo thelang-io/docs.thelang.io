@@ -9,7 +9,7 @@ high-level programming language.
 - **Helpful:** The Programming Language takes care of everything for you, so
   that you can focus on writing code
 - **Independent:** To compile your code The Programming Language doesn't use
-  any 3rd party dependency
+  any 3rd party dependencies
 - **Portable:** The Programming Language works on
   [many](#supported-operating-systems) operating systems
 
@@ -17,7 +17,7 @@ high-level programming language.
 1. Be the only programming language used across the world
 2. Support every possible scenario of development with less effort from
   developer
-3. Centralise development across The Programming Language by providing
+3. Centralize development around The Programming Language by providing
   building, deployment and testing tools
 
 ## Explanation
@@ -57,12 +57,12 @@ Language starting from 2021-03-23.
 The Programming Language is built and tested on the following operating
 systems:
 
-| Operating System | Version      | Architecture     | Support       |
-|:---------------- | ------------ | ---------------- | ------------- |
-| MacOS            | 10.10 - 11.3 | Intel x86-64     | Official      |
-|                  | -            | Apple Silicon    | Not tested    |
-| Linux            | -            | -                | Not tested    |
-| Windows          | -            | -                | Not tested    |
+| Operating System | Version       | Architecture     | Support       |
+|:---------------- | ------------- | ---------------- | ------------- |
+| MacOS            | 10.10 - 11.3  | Intel x86-64     | Official      |
+|                  | 11.0  - 11.3  | Apple Silicon    | Not tested    |
+| Linux            | -             | -                | Not tested    |
+| Windows          | -             | -                | Not tested    |
 
 ## The Author
 The Programming Language was designed and developed by [Aaron
