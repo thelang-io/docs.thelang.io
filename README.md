@@ -4,30 +4,29 @@ The Programming Language is a rapid, minimalistic, elegant, high-performance,
 high-level programming language.
 - **Unique:** The syntax was produced by a combination of best features of all
   known programming languages in the world
-- **Fast:** The speed is so fast that comparable with writing applications in
-  Assembly
+- **Fast:** Speed of programs produced by The Programming Language is so fast
+  that comparable with writing applications in Assembly
 - **Helpful:** The Programming Language takes care of everything for you, so
   that you can focus on writing code
 - **Independent:** To compile your code The Programming Language doesn't use
   any 3rd party dependency
-- **Portable:** The Programming Language works on a large number of operating
-  systems
+- **Portable:** The Programming Language works on
+  [many](#supported-operating-systems) operating systems
+
+## Goals
+1. Be the only programming language used across the world
+2. Support every possible scenario of development with less effort from
+  developer
+3. Centralise development across The Programming Language by providing
+  building, deployment and testing tools
 
 ## Explanation
 We strongly believe that in programming there should be only one programming
 language - The Programming Language and term "programming language" should
 directly refer to The Programming Language. \
-The reason for not having other programming languages is very simple: nowadays
-many languages compile to other language before being compiled to machine code
-(C programming language compiles to Assembly, Assembly compiles to object file,
-object file to machine code). It's not to say about languages such as Swift,
-Kotlin, JavaScript whom chain of compiled objects is very long. \
-The Programming Language, on the other hand, compiles directly to machine code
-removing dependencies like: `nasm`, `ld`, `clang`, `gcc`, etc \
-And now a question for you, reader, why would you use any other programming
-language if all features supported by modern programming languages are
-supported by The Programming Language which compiles directly to machine code
-without any delays?
+The reason for not having other programming languages is very simple: they are
+simply not needed, The Programming Language can do any job other programming
+languages are doing.
 
 ## How to contribute
 To contribute, please send us a [pull
@@ -41,9 +40,9 @@ In order to use The Programming Language please refer to
 [CLI](https://github.com/lang-the/cli).
 
 ## File extension
-The Programming Language don't have file extension, it's created to serve as
-main programming language. If your files don't have files extensions you have
-only 2 options:
+The Programming Language don't have file extension, The Programming Language
+created to serve as main programming language. If your files don't have files
+extensions you have only 2 options:
 
 1. shell script - The Programming Language can accomplish any task shell script
   can, in future we expect to replace shell scripts
@@ -55,8 +54,6 @@ It means that spot for having no file extension is reserved by The Programming
 Language starting from 2021-03-23.
 
 ## Supported Operating Systems
-Since the compiler is written in The Programming Language, it must be built by
-a precompiled previous version of itself. \
 The Programming Language is built and tested on the following operating
 systems:
 
