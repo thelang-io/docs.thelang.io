@@ -85,7 +85,7 @@ KW_MAIN ::= "main"
 KW_MUT ::= "mut"
 KW_RETURN ::= "return"
 
-LIT_CHAR ::= '\'' ANY_CHAR '\''
+LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
 
 LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
   ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
@@ -100,7 +100,7 @@ LIT_INT_DEC ::= '0' | [1-9] [0-9]*
 LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
 LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
 
-LIT_STR ::= '"' (ANY_CHAR - '"')* '"'
+LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\$") - '"')* '"'
 
 WS ::= CR | LF | SPACE | TAB
 ```
@@ -108,6 +108,8 @@ WS ::= CR | LF | SPACE | TAB
 ## Primitives
 ```txt
 ANY_CHAR ::= [#x00-#xFF]
+ANY_CHAR_ESCAPED ::=
+  ANY_CHAR | "\\0" | "\\t" | "\\n" | "\\r" | "\\\"" | "\\'" | "\\\\"
 CR ::= #x0D
 LF ::= #x0A
 SPACE ::= #x20
