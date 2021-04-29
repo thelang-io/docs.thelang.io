@@ -85,10 +85,9 @@ KW_MAIN ::= "main"
 KW_MUT ::= "mut"
 KW_RETURN ::= "return"
 
-LIT_FLOAT ::= "0." [0-9]* LIT_FLOAT_EXP? |
-  '.' [0-9]+ LIT_FLOAT_EXP? |
-  [1-9] [0-9]* '.' [0-9]* LIT_FLOAT_EXP? |
-  [1-9] [0-9]* LIT_FLOAT_EXP
+LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
+  ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
+  ('0' | [1-9] [0-9]*) LIT_FLOAT_EXP
 LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? [0-9]+
 
 LIT_ID ::= [A-Za-z_] [A-Za-z0-9_]*
