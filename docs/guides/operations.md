@@ -103,7 +103,7 @@ main {
 }
 ```
 
-## Null coalescing
+## Nil coalescing
 ```the
 main {
   a: int?
