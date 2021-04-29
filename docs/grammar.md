@@ -85,6 +85,8 @@ KW_MAIN ::= "main"
 KW_MUT ::= "mut"
 KW_RETURN ::= "return"
 
+LIT_CHAR ::= '\'' ANY_CHAR '\''
+
 LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
   ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
   ('0' | [1-9] [0-9]*) LIT_FLOAT_EXP
