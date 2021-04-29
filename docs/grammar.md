@@ -22,6 +22,33 @@ _ ::= WS*
 
 ## Tokens
 ```txt
+COMMENT_BLOCK ::= "/*" (ANY_CHAR - "*/")* "*/"
+COMMENT_LINE ::= "//" (ANY_CHAR - NL)*
+
+KW_FN ::= "fn"
+KW_IN ::= "in"
+KW_LOOP ::= "loop"
+KW_MAIN ::= "main"
+KW_MUT ::= "mut"
+KW_RETURN ::= "return"
+
+LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
+
+LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
+  ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
+  ('0' | [1-9] [0-9]*) LIT_FLOAT_EXP
+LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? [0-9]+
+
+LIT_ID ::= [A-Za-z_] [A-Za-z0-9_]*
+
+LIT_INT ::= LIT_INT_BIN | LIT_INT_DEC | LIT_INT_HEX | LIT_INT_OCT
+LIT_INT_BIN ::= '0' ('B' | 'b') [0-1]+
+LIT_INT_DEC ::= '0' | [1-9] [0-9]*
+LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
+LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
+
+LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\$") - '"')* '"'
+
 OP_AND ::= '&'
 OP_ANDAND ::= "&&"
 OP_ANDANDEQ ::= "&&="
@@ -77,30 +104,6 @@ OP_STAREQ ::= "*="
 OP_STARSTAR ::= "**"
 OP_STARSTAREQ ::= "**="
 OP_TILDE ::= '~'
-
-KW_FN ::= "fn"
-KW_IN ::= "in"
-KW_LOOP ::= "loop"
-KW_MAIN ::= "main"
-KW_MUT ::= "mut"
-KW_RETURN ::= "return"
-
-LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
-
-LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
-  ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
-  ('0' | [1-9] [0-9]*) LIT_FLOAT_EXP
-LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? [0-9]+
-
-LIT_ID ::= [A-Za-z_] [A-Za-z0-9_]*
-
-LIT_INT ::= LIT_INT_BIN | LIT_INT_DEC | LIT_INT_HEX | LIT_INT_OCT
-LIT_INT_BIN ::= '0' ('B' | 'b') [0-1]+
-LIT_INT_DEC ::= '0' | [1-9] [0-9]*
-LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
-LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
-
-LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\$") - '"')* '"'
 
 WS ::= CR | LF | SPACE | TAB
 ```
