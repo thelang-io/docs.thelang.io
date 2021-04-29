@@ -85,19 +85,19 @@ KW_MAIN ::= "main"
 KW_MUT ::= "mut"
 KW_RETURN ::= "return"
 
-LIT_FLOAT ::= "0." DIGIT_DECIMAL* LIT_FLOAT_EXP? |
-  '.' DIGIT_DECIMAL+ LIT_FLOAT_EXP? |
-  [1-9] DIGIT_DECIMAL* '.' DIGIT_DECIMAL* LIT_FLOAT_EXP? |
-  [1-9] DIGIT_DECIMAL* LIT_FLOAT_EXP
-LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? DIGIT_DECIMAL+
+LIT_FLOAT ::= "0." [0-9]* LIT_FLOAT_EXP? |
+  '.' [0-9]+ LIT_FLOAT_EXP? |
+  [1-9] [0-9]* '.' [0-9]* LIT_FLOAT_EXP? |
+  [1-9] [0-9]* LIT_FLOAT_EXP
+LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? [0-9]+
 
-LIT_ID ::= [a-zA-Z_] [a-zA-Z0-9_]*
+LIT_ID ::= [A-Za-z_] [A-Za-z0-9_]*
 
 LIT_INT ::= LIT_INT_BIN | LIT_INT_DEC | LIT_INT_HEX | LIT_INT_OCT
-LIT_INT_BIN ::= '0' ('B' | 'b') DIGIT_BINARY+
-LIT_INT_DEC ::= '0' | [1-9] DIGIT_DECIMAL*
-LIT_INT_HEX ::= '0' ('X' | 'x') DIGIT_HEX+
-LIT_INT_OCT ::= '0' ('O' | 'o')? DIGIT_OCTAL+
+LIT_INT_BIN ::= '0' ('B' | 'b') [0-1]+
+LIT_INT_DEC ::= '0' | [1-9] [0-9]*
+LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
+LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
 
 LIT_STR ::= '"' (ANY_CHAR - '"')* '"'
 
@@ -106,11 +106,7 @@ WS ::= CR | LF | SPACE | TAB
 
 ## Primitives
 ```txt
-ANY_CHAR ::= [#x000000-#x10FFFF]
-DIGIT_BINARY ::= [0-1]
-DIGIT_DECIMAL ::= [0-9]
-DIGIT_HEX ::= [0-9] | [A-F] | [a-f]
-DIGIT_OCTAL ::= [0-7]
+ANY_CHAR ::= [#x00-#xFF]
 CR ::= #x0D
 LF ::= #x0A
 SPACE ::= #x20
