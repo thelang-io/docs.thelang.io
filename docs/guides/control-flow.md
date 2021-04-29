@@ -35,15 +35,13 @@ main {
     case "value1": {
       print("Value is 1")
     }
-    case "value2":
-    case "value3":
-      print("Value is 2 or 3")
+    case "value2", "value3":
+      print("Value might be 2 or 3")
       fallthrough
     case "value4":
-      print("Value is probably 4")
+      print("Value might be 4")
     default:
       print("Unknown value")
-      break
   }
 }
 ```
