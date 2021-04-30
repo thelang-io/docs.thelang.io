@@ -44,8 +44,12 @@ KW_NEW ::= "new"
 KW_NIL ::= "nil"
 KW_OBJ ::= "obj"
 KW_OP ::= "op"
+KW_PRIV ::= "priv"
+KW_PROT ::= "prot"
 KW_PUB ::= "pub"
 KW_RETURN ::= "return"
+KW_THIS ::= "this"
+KW_TRUE ::= "true"
 KW_TRY ::= "try"
 
 LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
