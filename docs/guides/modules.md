@@ -3,19 +3,13 @@
 ## Import
 ```the
 import Math from math
-import Thing1, Thing2 from ./things
 ```
+> NOTE: Local files are automatically imported by module system
 
 ### Wildcard import
 ```the
 import * from math
-import * from ./things
-```
-
-### Named wildcard import
-```the
 import * as Math from math
-import * as Things from ./things
 ```
 
 ## Export
@@ -61,17 +55,14 @@ export FPS, SuperEnum, SuperObject, Thing, calc
 ### Re-export
 ```the
 export Math from math
-export Thing1, Thing2 from ./things
 ```
 
-### Wildcard re-export
+#### Wildcard re-export
 ```the
 export * from math
-export * from ./things
 ```
 
-### Named wildcard re-export
+#### Named wildcard re-export
 ```the
 export * as Math from math
-export * as Things from ./things
 ```
