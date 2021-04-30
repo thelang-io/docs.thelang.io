@@ -25,11 +25,16 @@ _ ::= WS*
 COMMENT_BLOCK ::= "/*" (ANY_CHAR - "*/")* "*/"
 COMMENT_LINE ::= "//" (ANY_CHAR - NL)*
 
+KW_AS ::= "as"
+KW_AS_SAFE ::= "as?"
 KW_FN ::= "fn"
+KW_IF ::= "if"
 KW_IN ::= "in"
+KW_IS ::= "is"
 KW_LOOP ::= "loop"
 KW_MAIN ::= "main"
 KW_MUT ::= "mut"
+KW_OP ::= "op"
 KW_RETURN ::= "return"
 
 LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
