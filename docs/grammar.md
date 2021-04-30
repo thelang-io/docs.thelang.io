@@ -34,8 +34,13 @@ KW_IS ::= "is"
 KW_LOOP ::= "loop"
 KW_MAIN ::= "main"
 KW_MUT ::= "mut"
+KW_NEW ::= "new"
+KW_NIL ::= "nil"
+KW_OBJ ::= "obj"
 KW_OP ::= "op"
+KW_PUB ::= "pub"
 KW_RETURN ::= "return"
+KW_TRY ::= "try"
 
 LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
 
