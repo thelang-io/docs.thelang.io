@@ -56,7 +56,7 @@ process () {
     fi
 
     last_line="$line"
-    ((i += 1))
+    ((i++))
   done < "$1"
 
   if [ "$i" -ne 0 ] && [ "$last_line" = "" ]; then
