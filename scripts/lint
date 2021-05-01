@@ -12,6 +12,19 @@ log_error () {
   errors+=("$loc $2")
 }
 
+main () {
+  process_dir "$(cd "$(dirname "$0")/.." && pwd -P)"
+  process_dir "$(cd "$(dirname "$0")/../.github" && pwd -P)"
+
+  if [ ${#errors[@]} -ne 0 ]; then
+    for error in "${errors[@]}"; do
+      echo "$error"
+    done
+
+    exit 1
+  fi
+}
+
 process () {
   filepath="$1"
   last_line=""
@@ -77,13 +90,4 @@ process_dir () {
   done
 }
 
-process_dir "$(cd "$(dirname "$0")/.." && pwd -P)"
-process_dir "$(cd "$(dirname "$0")/../.github" && pwd -P)"
-
-if [ ${#errors[@]} -ne 0 ]; then
-  for error in "${errors[@]}"; do
-    echo "$error"
-  done
-
-  exit 1
-fi
+main "$@"
