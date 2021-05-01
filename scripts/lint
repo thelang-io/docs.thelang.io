@@ -2,7 +2,7 @@
 
 errors=()
 
-log_error () {
+function log_error () {
   loc="$1:"
 
   if [ "$#" -gt 2 ]; then
@@ -12,7 +12,7 @@ log_error () {
   errors+=("$loc $2")
 }
 
-main () {
+function main () {
   process_dir "$(cd "$(dirname "$0")/.." && pwd -P)"
   process_dir "$(cd "$(dirname "$0")/../.github" && pwd -P)"
 
@@ -25,7 +25,7 @@ main () {
   fi
 }
 
-process () {
+function process () {
   filepath="$1"
   last_line=""
   i=0
@@ -77,7 +77,7 @@ process () {
   fi
 }
 
-process_dir () {
+function process_dir () {
   for entry in "$1"/*; do
     if [ ! -f "$entry" ]; then
       process_dir "$entry"
