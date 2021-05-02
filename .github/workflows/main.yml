@@ -12,6 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install CLI
-        run: curl -s https://cdn.jsdelivr.net/gh/langthe/cli/configure | bash
+        run: |
+          curl -o /usr/local/bin/the \
+            -s https://cdn.jsdelivr.net/gh/langthe/cli/the
+      - name: List CLI directory
+        run: ls -la /usr/local/bin
+      - name: Set needed CLI permissions
+        run: chmod +x /usr/local/bin/the
       - name: Lint
         run: scripts/lint
