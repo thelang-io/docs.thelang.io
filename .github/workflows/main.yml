@@ -6,7 +6,7 @@ on:
 
 jobs:
   ubuntu:
-    name: Lint
+    name: Main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,4 +14,6 @@ jobs:
       - name: Install CLI
         run: curl -s https://the.delasy.com/cli@latest | bash
       - name: Lint
+        env:
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: scripts/lint
