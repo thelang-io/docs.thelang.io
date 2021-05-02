@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install CLI
+        run: curl -s https://cdn.jsdelivr.net/gh/langthe/cli/configure | bash
       - name: Lint
         run: scripts/lint
