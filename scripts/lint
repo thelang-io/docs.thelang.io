@@ -41,19 +41,19 @@ function process () {
       first_char="${line:0:1}"
       last_char="${line:((line_len - 1)):1}"
 
-      if [ "$last_char" = $'\r' ]; then
+      if [ "$last_char" == $'\r' ]; then
         log_error "$filepath" "line terminator should be LF" $i
       fi
 
-      if [ "$first_char" = $'\t' ]; then
+      if [ "$first_char" == $'\t' ]; then
         log_error "$filepath" "line should not start with tab" $i
       fi
 
-      if [ "$last_char" = $'\t' ] || [ "$last_char" = " " ]; then
+      if [ "$last_char" == $'\t' ] || [ "$last_char" == " " ]; then
         log_error "$filepath" "line should not end with whitespace" $i
       fi
 
-      if [ "$first_char" = " " ]; then
+      if [ "$first_char" == " " ]; then
         j=1
 
         for (( ; j < line_len; j++ )); do
@@ -72,7 +72,7 @@ function process () {
     ((i++))
   done < "$1"
 
-  if [ "$i" -ne 0 ] && [ "$last_line" = "" ]; then
+  if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
     log_error "$filepath" "file should end with only one line break" $i
   fi
 }
@@ -82,7 +82,7 @@ function process_dir () {
     if [ ! -f "$entry" ]; then
       process_dir "$entry"
       continue
-    elif [ "$(basename "$entry")" = "LICENSE.md" ]; then
+    elif [ "$(basename "$entry")" == "LICENSE.md" ]; then
       continue
     fi
 
