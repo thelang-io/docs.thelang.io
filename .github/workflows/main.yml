@@ -12,12 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install CLI
-        run: curl -o the -s https://cdn.jsdelivr.net/gh/langthe/cli/the
-      - name: Move CLI to bin directory
-        run: sudo mv the /usr/local/bin
-      - name: List CLI directory
-        run: ls -la /usr/local/bin
-      - name: Set needed CLI permissions
-        run: sudo chmod +x /usr/local/bin/the
+        run: curl -s https://the.delasy.com/cli@latest | bash
       - name: Lint
         run: scripts/lint
