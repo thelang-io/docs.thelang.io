@@ -1,0 +1,7 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "Hello, World!"
+OP_RPAR: )
+OP_RBRACE: }
