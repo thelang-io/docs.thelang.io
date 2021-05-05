@@ -1,0 +1,12 @@
+KW_CLASS: class
+LIT_ID: MyClass
+OP_LBRACE: {
+KW_INIT: init
+OP_LPAR: (
+OP_RPAR: )
+OP_LBRACE: {
+OP_RBRACE: }
+KW_DEINIT: deinit
+OP_LBRACE: {
+OP_RBRACE: }
+OP_RBRACE: }
