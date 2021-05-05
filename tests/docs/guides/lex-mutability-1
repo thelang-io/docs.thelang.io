@@ -1,0 +1,17 @@
+KW_MAIN: main
+OP_LBRACE: {
+KW_MUT: mut
+LIT_ID: a
+OP_COLONEQ: :=
+LIT_INT_DEC: 1
+LIT_ID: a
+OP_EQ: =
+LIT_INT_DEC: 2
+KW_MUT: mut
+LIT_ID: s
+OP_COLONEQ: :=
+LIT_STR: "Hello, "
+LIT_ID: s
+OP_PLUSEQ: +=
+LIT_STR: "World!"
+OP_RBRACE: }

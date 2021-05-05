@@ -1,0 +1,13 @@
+KW_FN: fn
+LIT_ID: changeA
+OP_LPAR: (
+KW_MUT: mut
+LIT_ID: a
+OP_COLON: :
+LIT_ID: int
+OP_RPAR: )
+OP_LBRACE: {
+LIT_ID: a
+OP_EQ: =
+LIT_INT_DEC: 2
+OP_RBRACE: }
