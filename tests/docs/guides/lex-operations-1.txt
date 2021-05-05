@@ -1,0 +1,13 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: a1
+OP_COLON: :
+LIT_ID: int
+OP_EQ: =
+LIT_INT_DEC: 1
+LIT_ID: s1
+OP_COLON: :
+LIT_ID: str
+OP_EQ: =
+LIT_STR: ""
+OP_RBRACE: }
