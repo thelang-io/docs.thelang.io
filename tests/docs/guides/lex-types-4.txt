@@ -1,0 +1,12 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: greet
+OP_COLONEQ: :=
+LIT_STR: "Hello"
+LIT_ID: name
+OP_COLONEQ: :=
+LIT_STR: "Your"
+LIT_ID: greeting
+OP_COLONEQ: :=
+LIT_STR: "$greet, ${name + " Name"}!"
+OP_RBRACE: }

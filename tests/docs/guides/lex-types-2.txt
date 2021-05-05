@@ -1,0 +1,6 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: string
+OP_COLONEQ: :=
+LIT_STR: "Hello, World!"
+OP_RBRACE: }

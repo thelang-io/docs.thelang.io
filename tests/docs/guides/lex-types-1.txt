@@ -1,0 +1,6 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: ch
+OP_COLONEQ: :=
+LIT_CHAR: 'a'
+OP_RBRACE: }

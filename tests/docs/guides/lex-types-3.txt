@@ -1,0 +1,6 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: text
+OP_COLONEQ: :=
+LIT_STR: "Some \n random \" text"
+OP_RBRACE: }

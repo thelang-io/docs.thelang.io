@@ -1,0 +1,11 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: i
+OP_COLONEQ: :=
+LIT_INT_DEC: 1
+LIT_ID: j
+OP_COLONEQ: :=
+LIT_FLOAT: 1.2
+KW_AS: as
+LIT_ID: int
+OP_RBRACE: }
