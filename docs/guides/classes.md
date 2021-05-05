@@ -41,21 +41,21 @@ class MyClass {
 ## Inheritance
 ```the
 class Parent {
-  prot _locaton: str
+  prot _location: str
 
   init () {
-    this._locaton = "parent"
+    this._location = "parent"
   }
 
   pub info () {
-    print("Inside ${this._locaton}")
+    print("Inside ${this._location}")
   }
 }
 
 class Child : Parent {
   init () {
     super()
-    this._locaton = "child"
+    this._location = "child"
   }
 }
 ```
@@ -63,18 +63,18 @@ class Child : Parent {
 ## Overriding
 ```the
 class Parent {
-  prot _locaton := "parent"
+  prot _location := "parent"
 
   pub info () {
-    print("Inside ${this._locaton}")
+    print("Inside ${this._location}")
   }
 }
 
 class Child : Parent {
-  override _locaton := "Not inside parent"
+  override _location := "Not inside parent"
 
   override info () this {
-    print(this._locaton)
+    print(this._location)
     return this
   }
 }
