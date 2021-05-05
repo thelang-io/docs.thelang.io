@@ -1,0 +1,22 @@
+KW_MAIN: main
+OP_LBRACE: {
+KW_TRY: try
+OP_LBRACE: {
+KW_THROW: throw
+KW_NEW: new
+LIT_ID: Error
+OP_LPAR: (
+LIT_STR: "Error message"
+OP_RPAR: )
+OP_RBRACE: }
+KW_CATCH: catch
+LIT_ID: err
+OP_COLON: :
+LIT_ID: Error
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_ID: err
+OP_RPAR: )
+OP_RBRACE: }
+OP_RBRACE: }
