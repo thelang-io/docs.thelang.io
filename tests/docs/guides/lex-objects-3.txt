@@ -1,0 +1,27 @@
+KW_OBJ: obj
+LIT_ID: Book
+OP_LBRACE: {
+LIT_ID: title
+OP_COLON: :
+LIT_ID: str
+LIT_ID: year
+OP_COLON: :
+LIT_ID: int
+OP_RBRACE: }
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: title
+OP_COLONEQ: :=
+LIT_STR: "War and Peace"
+LIT_ID: year
+OP_COLONEQ: :=
+LIT_INT_DEC: 1869
+LIT_ID: book
+OP_COLONEQ: :=
+LIT_ID: Book
+OP_LBRACE: {
+LIT_ID: title
+OP_COMMA: ,
+LIT_ID: year
+OP_RBRACE: }
+OP_RBRACE: }

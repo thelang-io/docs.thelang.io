@@ -1,0 +1,10 @@
+KW_OBJ: obj
+LIT_ID: Book
+OP_LBRACE: {
+LIT_ID: title
+OP_COLONEQ: :=
+LIT_STR: ""
+LIT_ID: year
+OP_COLONEQ: :=
+LIT_INT_DEC: 2000
+OP_RBRACE: }
