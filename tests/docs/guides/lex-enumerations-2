@@ -1,0 +1,15 @@
+KW_ENUM: enum
+LIT_ID: Art
+OP_LBRACE: {
+LIT_ID: black_square
+OP_EQ: =
+LIT_INT_DEC: 1
+OP_COMMA: ,
+LIT_ID: mona_lisa
+OP_EQ: =
+LIT_INT_DEC: 10
+OP_COMMA: ,
+LIT_ID: the_last_supper
+OP_EQ: =
+LIT_INT_DEC: 100
+OP_RBRACE: }
