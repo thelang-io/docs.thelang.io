@@ -1,0 +1,26 @@
+KW_MAIN: main
+OP_LBRACE: {
+KW_LOOP: loop
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "I will run forever"
+OP_RPAR: )
+OP_RBRACE: }
+KW_LOOP: loop
+KW_TRUE: true
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "I will run forever"
+OP_RPAR: )
+OP_RBRACE: }
+KW_LOOP: loop
+KW_FALSE: false
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "I will never run"
+OP_RPAR: )
+OP_RBRACE: }
+OP_RBRACE: }
