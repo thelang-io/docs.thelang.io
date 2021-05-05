@@ -176,6 +176,11 @@ main {
 ```
 
 ## String
+```the
+main {
+  string := "Hello, World!"
+}
+```
 
 ### Escaping
 ```the
