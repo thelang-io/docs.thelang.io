@@ -3,7 +3,7 @@
 main {
   try {
     throw new Error("Error message")
-  } catch Error err {
+  } catch err: Error {
     print(err)
   }
 }
