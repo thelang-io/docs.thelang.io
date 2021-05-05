@@ -39,7 +39,7 @@ interface MyInterface {
 ```
 
 ## Operators
-```
+```txt
 op + (rhs: any) any
 op - (rhs: any) any
 op / (rhs: any) any

@@ -1,5 +1,5 @@
 # Slices
-```
+```txt
 start
 start:end
 start:end:step

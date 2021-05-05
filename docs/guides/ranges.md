@@ -1,5 +1,5 @@
 # Ranges
-```
+```txt
 start..end
 start..=inclusive end
 ```
