@@ -1,0 +1,10 @@
+KW_IMPORT: import
+OP_STAR: *
+KW_FROM: from
+LIT_ID: math
+KW_IMPORT: import
+OP_STAR: *
+KW_AS: as
+LIT_ID: Math
+KW_FROM: from
+LIT_ID: math

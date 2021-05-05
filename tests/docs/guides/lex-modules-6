@@ -1,0 +1,4 @@
+KW_EXPORT: export
+OP_STAR: *
+KW_FROM: from
+LIT_ID: math
