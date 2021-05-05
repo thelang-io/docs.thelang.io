@@ -1,0 +1,42 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: val
+OP_COLONEQ: :=
+LIT_STR: "value"
+KW_MATCH: match
+LIT_ID: val
+OP_LBRACE: {
+KW_CASE: case
+LIT_STR: "value1"
+OP_COLON: :
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "Value is 1"
+OP_RPAR: )
+OP_RBRACE: }
+KW_CASE: case
+LIT_STR: "value2"
+OP_COMMA: ,
+LIT_STR: "value3"
+OP_COLON: :
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "Value might be 2 or 3"
+OP_RPAR: )
+KW_FALLTHROUGH: fallthrough
+KW_CASE: case
+LIT_STR: "value4"
+OP_COLON: :
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "Value might be 4"
+OP_RPAR: )
+KW_DEFAULT: default
+OP_COLON: :
+LIT_ID: print
+OP_LPAR: (
+LIT_STR: "Unknown value"
+OP_RPAR: )
+OP_RBRACE: }
+OP_RBRACE: }

@@ -1,0 +1,19 @@
+KW_MAIN: main
+OP_LBRACE: {
+LIT_ID: print
+OP_LPAR: (
+LIT_INT_DEC: 1
+OP_LT: <
+LIT_INT_DEC: 2
+OP_QN: ?
+LIT_STR: "1 is less than 2"
+OP_COLON: :
+LIT_INT_DEC: 1
+OP_GT: >
+LIT_INT_DEC: 2
+OP_QN: ?
+LIT_STR: "1 is greater than 2"
+OP_COLON: :
+LIT_STR: "1 is equal 2"
+OP_RPAR: )
+OP_RBRACE: }
