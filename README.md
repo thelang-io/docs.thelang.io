@@ -73,4 +73,4 @@ The Programming Language is private, and it's source code is not available
 publicly. \
 This repository is licensed under the
 [CC-BY-4.0 License](http://creativecommons.org/licenses/by/4.0/), see the
-[LICENSE.md](LICENSE.md) file.
+[LICENSE.txt](LICENSE.txt) file.

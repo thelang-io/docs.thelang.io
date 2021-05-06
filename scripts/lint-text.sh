@@ -82,7 +82,7 @@ function process_dir () {
     if [ ! -f "$entry" ]; then
       process_dir "$entry"
       continue
-    elif [ "$(basename "$entry")" == "LICENSE.md" ]; then
+    elif [ "$(basename "$entry")" == "LICENSE.txt" ]; then
       continue
     fi
 
