@@ -5,7 +5,7 @@ We appreciate your help!
 
 First make sure to mount git hooks by:
 ```sh
-$ scripts/mount-git-hooks
+$ scripts/mount-git-hooks.sh
 ```
 
 ## When want to ask a question

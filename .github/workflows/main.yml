@@ -16,4 +16,4 @@ jobs:
       - name: Lint Text
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-        run: scripts/lint-text
+        run: scripts/lint-text.sh
