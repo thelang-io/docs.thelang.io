@@ -1,7 +1,7 @@
 export enum Signal {
   abrt,
   alrm,
-  break,
+  brk,
   bus,
   chld,
   cont,
