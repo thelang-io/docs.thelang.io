@@ -89,11 +89,11 @@ interface Number : Any {
   op / (rhs: Number) Number
   op * (rhs: Number) Number
   op % (rhs: Number) Number
-  op += (rhs: Number) this
-  op -= (rhs: Number) this
-  op /= (rhs: Number) this
-  op *= (rhs: Number) this
-  op %= (rhs: Number) this
+  mut op += (rhs: Number) this
+  mut op -= (rhs: Number) this
+  mut op /= (rhs: Number) this
+  mut op *= (rhs: Number) this
+  mut op %= (rhs: Number) this
 }
 
 interface Object : Any {
