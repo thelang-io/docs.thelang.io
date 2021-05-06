@@ -1,2 +1,2 @@
-export fn size<T> (T x) int
-export fn swap<T> (mut T x, mut T y) void
+export fn size<T> (x: T) int
+export fn swap<T> (mut x: T, mut y: T) void
