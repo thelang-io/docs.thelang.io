@@ -50,7 +50,7 @@ op -= (rhs: any) any
 op /= (rhs: any) any
 op *= (rhs: any) any
 op %= (rhs: any) any
-op [] (i: int) any
+op [] (i: any) any
 op iter () Iterator<any, any>
 op str () str
 ```
