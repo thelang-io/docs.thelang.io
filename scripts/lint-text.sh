@@ -79,10 +79,12 @@ function process () {
 
 function process_dir () {
   for entry in "$1"/*; do
+    filename="$(basename "$entry")"
+
     if [ ! -f "$entry" ]; then
       process_dir "$entry"
       continue
-    elif [ "$(basename "$entry")" == "LICENSE.txt" ]; then
+    elif [ "${filename##*.}" == "txt" ]; then
       continue
     fi
 
