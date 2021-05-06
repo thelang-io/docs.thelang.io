@@ -45,13 +45,15 @@ op - (rhs: any) any
 op / (rhs: any) any
 op * (rhs: any) any
 op % (rhs: any) any
-op += (rhs: any) any
-op -= (rhs: any) any
-op /= (rhs: any) any
-op *= (rhs: any) any
-op %= (rhs: any) any
+mut op += (rhs: any) this
+mut op -= (rhs: any) this
+mut op /= (rhs: any) this
+mut op *= (rhs: any) this
+mut op %= (rhs: any) this
 op [] (i: any) any
+mut op [] (i: any) mut any
 op iter () Iterator<any, any>
+mut op iter () Iterator<any, mut any>
 op str () str
 ```
 
