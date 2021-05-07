@@ -14,6 +14,8 @@ jobs:
       - name: Install CLI
         run: curl -s https://the.delasy.com/cli@latest | bash
       - name: Lint Text
+        run: scripts/lint-text.sh
+      - name: Lint Code
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-        run: scripts/lint-text.sh
+        run: scripts/lint-code.sh
