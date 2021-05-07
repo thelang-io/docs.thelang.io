@@ -73,7 +73,7 @@ function process () {
   done < "$1"
 
   if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
-    log_error "$filepath" "file should end with only one line break" $i
+    log_error "$filepath" "file should end with only one line break" "$i"
   fi
 }
 
