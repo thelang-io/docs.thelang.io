@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
 errors=()
 
 function log_error () {
@@ -13,8 +14,8 @@ function log_error () {
 }
 
 function main () {
-  process_dir "$(cd "$(dirname "$0")/.." && pwd -P)"
-  process_dir "$(cd "$(dirname "$0")/../.github" && pwd -P)"
+  process_dir "$base_dir"
+  process_dir "$(cd "$base_dir/.github" && pwd -P)"
 
   if [ ${#errors[@]} -ne 0 ]; then
     for error in "${errors[@]}"; do
