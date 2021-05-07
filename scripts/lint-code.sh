@@ -89,7 +89,7 @@ function main () {
 
   if [ ${#errors[@]} -ne 0 ]; then
     for error in "${errors[@]}"; do
-      echo "$error"
+      echo "$error" 1>&2
     done
 
     exit 1
