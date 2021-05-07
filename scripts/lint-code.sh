@@ -1,37 +1,12 @@
 #!/usr/bin/env bash
 
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
-tests_dir="$base_dir/tests"
 tmp_dir="$(mktemp -d)" || exit 1
 
 errors=()
+files=()
 
-function log_error () {
-  loc="$1:"
-
-  if [ "$#" -gt 2 ]; then
-    loc="$loc$(($3 + 1)):"
-  fi
-
-  errors+=("$loc $2")
-}
-
-function main () {
-  process_dir "$base_dir"
-  process_dir "$(cd "$base_dir/.github" && pwd -P)"
-
-  if [ ${#errors[@]} -ne 0 ]; then
-    for error in "${errors[@]}"; do
-      echo "$error"
-    done
-
-    exit 1
-  fi
-
-  rm -rf "$tmp_dir"
-}
-
-function process () {
+function collect_file () {
   file_path="$1"
   file_dir="$(dirname "${file_path:${#base_dir} + 1}")"
   file_fullname="$(basename "${file_path:${#base_dir} + 1}")"
@@ -44,18 +19,17 @@ function process () {
     return
   fi
 
-  tests_file_dir="$tests_dir"
-  tmp_file_dir="$tmp_dir"
+  file_pathname="$file_dir/$file_name"
 
-  if [ "$file_dir" != "." ]; then
-    tests_file_dir="$tests_file_dir/$file_dir"
-    tmp_file_dir="$tmp_file_dir/$file_dir"
+  if [ "$file_dir" == "." ]; then
+    file_pathname="$file_name"
+  else
+    mkdir -p "$tmp_dir/$file_dir"
   fi
 
-  mkdir -p "$tmp_file_dir"
-
   if [ "$file_ext" == "" ]; then
-    cat "$file_path" > "$tmp_file_dir/$file_name"
+    cat "$file_path" > "$tmp_dir/$file_pathname"
+    files+=("$file_pathname")
   else
     inside_block=false
     block=""
@@ -65,15 +39,9 @@ function process () {
       if [ "$line" == "\`\`\`the" ]; then
         inside_block=true
       elif [[ "$line" == "\`\`\`" && "$inside_block" == true ]]; then
-        test_lex_file_fullname="lex-$file_name-$i.txt"
-        tmp_file_fullname="$file_name-$i"
+        printf "%s" "$block" > "$tmp_dir/$file_pathname-$i"
+        files+=("$file_pathname-$i")
 
-        if [ ! -f "$tests_file_dir/$test_lex_file_fullname" ]; then
-          log_error "$tests_file_dir/$test_lex_file_fullname" \
-            "Lexer test does not exists"
-        fi
-
-        printf "%s" "$block" > "$tmp_file_dir/$tmp_file_fullname"
         inside_block=false
         block=""
         ((i++))
@@ -90,15 +58,44 @@ function process () {
   fi
 }
 
-function process_dir () {
+function collect_files () {
   for entry in "$1"/*; do
     if [ ! -f "$entry" ]; then
-      process_dir "$entry"
+      collect_files "$entry"
       continue
     fi
 
-    process "$entry"
+    collect_file "$entry"
   done
+}
+
+function log_error () {
+  loc="$1:"
+
+  if [ "$#" -gt 2 ]; then
+    loc="$loc$(($3 + 1)):"
+  fi
+
+  errors+=("$loc $2")
+}
+
+function main () {
+  collect_files "$base_dir"
+  collect_files "$(cd "$base_dir/.github" && pwd -P)"
+
+  for file in "${files[@]}"; do
+    echo "$file"
+  done
+
+  if [ ${#errors[@]} -ne 0 ]; then
+    for error in "${errors[@]}"; do
+      echo "$error"
+    done
+
+    exit 1
+  fi
+
+  rm -rf "$tmp_dir"
 }
 
 main "$@"
