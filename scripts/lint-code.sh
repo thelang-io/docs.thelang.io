@@ -19,11 +19,10 @@ function collect_file () {
     return
   fi
 
-  file_pathname="$file_dir/$file_name"
-
   if [ "$file_dir" == "." ]; then
     file_pathname="$file_name"
   else
+    file_pathname="$file_dir/$file_name"
     mkdir -p "$tmp_dir/$file_dir"
   fi
 
@@ -31,8 +30,6 @@ function collect_file () {
     cat "$file_path" > "$tmp_dir/$file_pathname"
     files+=("$file_pathname")
   else
-    inside_block=false
-    block=""
     i=1
 
     while IFS= read -r line; do
