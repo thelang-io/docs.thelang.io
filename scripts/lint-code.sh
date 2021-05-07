@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
+tests_dir="$base_dir/tests"
 tmp_dir="$(mktemp -d)" || exit 1
+
 errors=()
 
 function log_error () {
@@ -30,8 +32,9 @@ function main () {
 }
 
 function process () {
-  file_dir="$(dirname "${1:${#base_dir} + 1}")"
-  file_fullname="$(basename "${1:${#base_dir} + 1}")"
+  file_path="$1"
+  file_dir="$(dirname "${file_path:${#base_dir} + 1}")"
+  file_fullname="$(basename "${file_path:${#base_dir} + 1}")"
   file_name="${file_fullname%.*}"
   file_ext="${file_fullname##*.}"
 
@@ -41,16 +44,18 @@ function process () {
     return
   fi
 
+  tests_file_dir="$tests_dir"
   tmp_file_dir="$tmp_dir"
 
   if [ "$file_dir" != "." ]; then
+    tests_file_dir="$tests_file_dir/$file_dir"
     tmp_file_dir="$tmp_file_dir/$file_dir"
   fi
 
   mkdir -p "$tmp_file_dir"
 
   if [ "$file_ext" == "" ]; then
-    cat "$1" > "$tmp_file_dir/$file_name"
+    cat "$file_path" > "$tmp_file_dir/$file_name"
   else
     inside_block=false
     block=""
@@ -60,7 +65,15 @@ function process () {
       if [ "$line" == "\`\`\`the" ]; then
         inside_block=true
       elif [[ "$line" == "\`\`\`" && "$inside_block" == true ]]; then
-        printf "%s" "$block" > "$tmp_file_dir/$file_name-$i"
+        test_lex_file_fullname="lex-$file_name-$i.txt"
+        tmp_file_fullname="$file_name-$i"
+
+        if [ ! -f "$tests_file_dir/$test_lex_file_fullname" ]; then
+          log_error "$tests_file_dir/$test_lex_file_fullname" \
+            "Lexer test does not exists"
+        fi
+
+        printf "%s" "$block" > "$tmp_file_dir/$tmp_file_fullname"
         inside_block=false
         block=""
         ((i++))
