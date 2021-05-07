@@ -27,7 +27,7 @@ function main () {
 }
 
 function process () {
-  filepath="$1"
+  file_path="$1"
   last_line=""
   i=0
 
@@ -35,7 +35,7 @@ function process () {
     line_len="${#line}"
 
     if [ "$line_len" -ge 80 ]; then
-      log_error "$filepath" "line length should not exceed 80 characters" $i
+      log_error "$file_path" "line length should not exceed 80 characters" $i
     fi
 
     if [ "$line_len" -ge 1 ]; then
@@ -43,15 +43,15 @@ function process () {
       last_char="${line:((line_len - 1)):1}"
 
       if [ "$last_char" == $'\r' ]; then
-        log_error "$filepath" "line terminator should be LF" $i
+        log_error "$file_path" "line terminator should be LF" $i
       fi
 
       if [ "$first_char" == $'\t' ]; then
-        log_error "$filepath" "line should not start with tab" $i
+        log_error "$file_path" "line should not start with tab" $i
       fi
 
       if [ "$last_char" == $'\t' ] || [ "$last_char" == " " ]; then
-        log_error "$filepath" "line should not end with whitespace" $i
+        log_error "$file_path" "line should not end with whitespace" $i
       fi
 
       if [ "$first_char" == " " ]; then
@@ -64,7 +64,7 @@ function process () {
         done
 
         if [ $((j % 2)) -ne 0 ]; then
-          log_error "$filepath" "line indentation should be 2 spaces" $i
+          log_error "$file_path" "line indentation should be 2 spaces" $i
         fi
       fi
     fi
@@ -74,18 +74,18 @@ function process () {
   done < "$1"
 
   if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
-    log_error "$filepath" "file should end with only one line break" "$i"
+    log_error "$file_path" "file should end with only one line break" "$i"
   fi
 }
 
 function process_dir () {
   for entry in "$1"/*; do
-    filename="$(basename "$entry")"
+    file_fullname="$(basename "$entry")"
 
     if [ ! -f "$entry" ]; then
       process_dir "$entry"
       continue
-    elif [ "${filename##*.}" == "txt" ]; then
+    elif [ "${file_fullname##*.}" == "txt" ]; then
       continue
     fi
 
