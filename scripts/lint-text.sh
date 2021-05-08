@@ -3,7 +3,7 @@
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
 errors=()
 
-function log_error () {
+function log_error {
   loc="$1:"
 
   if [ "$#" -gt 2 ]; then
@@ -13,7 +13,7 @@ function log_error () {
   errors+=("$loc $2")
 }
 
-function main () {
+function main {
   process_dir "$base_dir"
   process_dir "$(cd "$base_dir/.github" && pwd -P)"
 
@@ -26,7 +26,7 @@ function main () {
   fi
 }
 
-function process () {
+function process {
   file_path="$1"
   last_line=""
   i=0
@@ -78,7 +78,7 @@ function process () {
   fi
 }
 
-function process_dir () {
+function process_dir {
   for entry in "$1"/*; do
     file_fullname="$(basename "$entry")"
 
