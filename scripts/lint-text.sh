@@ -13,7 +13,7 @@ function log_error {
   errors+=("$loc $2")
 }
 
-function process {
+function process_file {
   file_path="$1"
   last_line=""
   i=0
@@ -65,24 +65,24 @@ function process {
   fi
 }
 
-function process_dir {
+function process_files {
   for entry in "$1"/*; do
     file_fullname="$(basename "$entry")"
 
     if [ ! -f "$entry" ]; then
-      process_dir "$entry"
+      process_files "$entry"
       continue
     elif [ "${file_fullname##*.}" == "txt" ]; then
       continue
     fi
 
-    process "$entry"
+    process_file "$entry"
   done
 }
 
 function main {
-  process_dir "$base_dir"
-  process_dir "$(cd "$base_dir/.github" && pwd -P)"
+  process_files "$base_dir"
+  process_files "$(cd "$base_dir/.github" && pwd -P)"
 
   if [ ${#errors[@]} -ne 0 ]; then
     for error in "${errors[@]}"; do
