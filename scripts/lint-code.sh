@@ -6,6 +6,46 @@ tmp_dir="$(mktemp -d)" || exit 1
 errors=()
 files=()
 
+function log_error {
+  loc="$1:"
+
+  if [ "$#" -gt 2 ]; then
+    loc="$loc$(($3 + 1)):"
+  fi
+
+  errors+=("$loc $2")
+}
+
+function lex {
+  file_dir="$(dirname "$1")"
+
+#  if [ "$file_dir" == "." ]; then
+#    lex_test_dir="$base_dir/tests"
+#  else
+#    lex_test_dir="$base_dir/tests/$file_dir"
+#  fi
+#
+#  lex_test_file_path="$lex_test_dir/lex-$(basename "$1").txt"
+#
+#  if [ ! -f "$lex_test_file_path" ]; then
+#    log_error "$lex_test_file_path" "LexerError: Test does not exists"
+#    return
+#  fi
+#
+#  lex_result="$(the lex "$tmp_dir/$1" 2>&1)"
+#  lex_test="$(cat "$lex_test_file_path")"
+#
+#  if [ "$lex_result" != "$lex_test" ]; then
+#    echo "Test does not match expectation"
+#    echo
+#    echo "$lex_result"
+#    echo
+#    echo "$lex_test"
+#
+#    exit 1
+#  fi
+}
+
 function collect_file {
   file_path="$1"
   file_dir="$(dirname "${file_path:${#base_dir} + 1}")"
@@ -64,47 +104,6 @@ function collect_files {
 
     collect_file "$entry"
   done
-}
-
-function lex {
-  file_dir="$(dirname "$1")"
-
-  if [ "$file_dir" == "." ]; then
-    lex_test_dir="$base_dir/tests"
-  else
-    lex_test_dir="$base_dir/tests/$file_dir"
-  fi
-
-  lex_test_file_path="$lex_test_dir/lex-$(basename "$1").txt"
-
-  if [ ! -f "$lex_test_file_path" ]; then
-    log_error "$lex_test_file_path" "LexerError: Test does not exists"
-    return
-  fi
-
-  lex_result="$(the lex "$tmp_dir/$1" 2>&1)"
-  lex_test="$(cat "$lex_test_file_path")"
-
-  if [ "$lex_result" != "$lex_test" ]; then
-    echo "Test does not match expectation"
-    echo
-    echo "$lex_result"
-    echo
-    echo "$lex_test"
-
-    exit 1
-  fi
-  # find first line different between lex_result and "$lex_test_file_path"
-}
-
-function log_error {
-  loc="$1:"
-
-  if [ "$#" -gt 2 ]; then
-    loc="$loc$(($3 + 1)):"
-  fi
-
-  errors+=("$loc $2")
 }
 
 function main {

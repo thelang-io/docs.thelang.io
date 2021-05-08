@@ -13,19 +13,6 @@ function log_error {
   errors+=("$loc $2")
 }
 
-function main {
-  process_dir "$base_dir"
-  process_dir "$(cd "$base_dir/.github" && pwd -P)"
-
-  if [ ${#errors[@]} -ne 0 ]; then
-    for error in "${errors[@]}"; do
-      echo "$error" 1>&2
-    done
-
-    exit 1
-  fi
-}
-
 function process {
   file_path="$1"
   last_line=""
@@ -91,6 +78,19 @@ function process_dir {
 
     process "$entry"
   done
+}
+
+function main {
+  process_dir "$base_dir"
+  process_dir "$(cd "$base_dir/.github" && pwd -P)"
+
+  if [ ${#errors[@]} -ne 0 ]; then
+    for error in "${errors[@]}"; do
+      echo "$error" 1>&2
+    done
+
+    exit 1
+  fi
 }
 
 main "$@"
