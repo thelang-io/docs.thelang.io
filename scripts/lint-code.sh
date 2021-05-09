@@ -70,30 +70,31 @@ function collect_file {
   if [ "$file_ext" == "" ]; then
     cat "$file_path" > "$tmp_dir/$file_pathname"
     files+=("$file_pathname")
-  else
-    i=1
-
-    while IFS= read -r line; do
-      if [ "$line" == "\`\`\`the" ]; then
-        inside_block=true
-      elif [[ "$line" == "\`\`\`" && "$inside_block" == true ]]; then
-        printf "%s" "$block" > "$tmp_dir/$file_pathname-$i"
-        files+=("$file_pathname-$i")
-
-        inside_block=false
-        block=""
-        ((i++))
-      elif [ "$inside_block" == true ]; then
-        line_with_nl="$line"$'\n'
-
-        if [ -z "$block" ]; then
-          block="$line_with_nl"
-        else
-          block="$block$line_with_nl"
-        fi
-      fi
-    done < "$1"
+    return
   fi
+
+  i=1
+
+  while IFS= read -r line; do
+    if [ "$line" == "\`\`\`the" ]; then
+      inside_block=true
+    elif [[ "$line" == "\`\`\`" && "$inside_block" == true ]]; then
+      printf "%s" "$block" > "$tmp_dir/$file_pathname-$i"
+      files+=("$file_pathname-$i")
+
+      inside_block=false
+      block=""
+      ((i++))
+    elif [ "$inside_block" == true ]; then
+      line_with_nl="$line"$'\n'
+
+      if [ -z "$block" ]; then
+        block="$line_with_nl"
+      else
+        block="$block$line_with_nl"
+      fi
+    fi
+  done < "$1"
 }
 
 function collect_files {
