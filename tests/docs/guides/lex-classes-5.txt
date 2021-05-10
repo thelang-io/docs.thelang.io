@@ -22,7 +22,7 @@ OP_RPAR: )
 OP_LBRACE: {
 LIT_ID: print
 OP_LPAR: (
-LIT_STR: "Inside ${this._location}"
+LIT_STR: "Inside {this._location}"
 OP_RPAR: )
 OP_RBRACE: }
 OP_RBRACE: }

@@ -194,7 +194,7 @@ main {
 main {
   greet := "Hello"
   name := "Your"
-  greeting := "$greet, ${name + " Name"}!"
+  greeting := "{greet}, {name + " Name"}!"
 }
 ```
 

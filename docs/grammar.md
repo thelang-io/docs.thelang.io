@@ -87,7 +87,7 @@ LIT_INT_DEC ::= '0' | [1-9] [0-9]*
 LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
 LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
 
-LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\$") - '"')* '"'
+LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\{") - '"')* '"'
 
 OP_AND ::= '&'
 OP_ANDAND ::= "&&"

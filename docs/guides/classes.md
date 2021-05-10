@@ -48,7 +48,7 @@ class Parent {
   }
 
   pub info () {
-    print("Inside ${this._location}")
+    print("Inside {this._location}")
   }
 }
 
@@ -66,7 +66,7 @@ class Parent {
   prot _location := "parent"
 
   pub info () {
-    print("Inside ${this._location}")
+    print("Inside {this._location}")
   }
 }
 

@@ -8,5 +8,5 @@ OP_COLONEQ: :=
 LIT_STR: "Your"
 LIT_ID: greeting
 OP_COLONEQ: :=
-LIT_STR: "$greet, ${name + " Name"}!"
+LIT_STR: "{greet}, {name + " Name"}!"
 OP_RBRACE: }
