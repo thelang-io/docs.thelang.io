@@ -19,7 +19,7 @@ function process_file {
   last_line=""
   i=0
 
-  while IFS= read -r line; do
+  while IFS= read -r line || [[ -n "$line" ]]; do
     line_len="${#line}"
 
     if [ "$line_len" -ge 80 ]; then
@@ -63,6 +63,8 @@ function process_file {
 
   if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
     log_error "$file_path" "file should end with only one line break" "$i"
+  elif [ "$(tail -c 1 "$1")" != "" ]; then
+    log_error "$file_path" "file should end with a line break" "$i"
   fi
 }
 
