@@ -2,6 +2,7 @@
 set -e
 
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
+lf=$'\n'
 tmp_dir="$(mktemp -d)" || exit 1
 
 errors=()
@@ -20,31 +21,26 @@ function log_error {
 function lex {
   file_dir="$(dirname "$1")"
 
-#  if [ "$file_dir" == "." ]; then
-#    lex_test_dir="$base_dir/tests"
-#  else
-#    lex_test_dir="$base_dir/tests/$file_dir"
-#  fi
-#
-#  lex_test_file_path="$lex_test_dir/lex-$(basename "$1").txt"
-#
-#  if [ ! -f "$lex_test_file_path" ]; then
-#    log_error "$lex_test_file_path" "LexerError: Test does not exists"
-#    return
-#  fi
-#
-#  lex_result="$(the lex "$tmp_dir/$1" 2>&1)"
-#  lex_test="$(cat "$lex_test_file_path")"
-#
-#  if [ "$lex_result" != "$lex_test" ]; then
-#    echo "Test does not match expectation"
-#    echo
-#    echo "$lex_result"
-#    echo
-#    echo "$lex_test"
-#
-#    exit 1
-#  fi
+  if [ "$file_dir" == "." ]; then
+    lex_test_dir="$base_dir/tests"
+  else
+    lex_test_dir="$base_dir/tests/$file_dir"
+  fi
+
+  test_path="$lex_test_dir/lex-$(basename "$1").txt"
+
+  if [ ! -f "$test_path" ]; then
+    log_error "$test_path" "LexerError: Test does not exists"
+    return
+  fi
+
+  result_path="$tmp_dir/$1-lex.txt"
+  the lex "$tmp_dir/$1" > "$result_path"
+
+  if ! diff -u "$test_path" "$result_path" > /dev/null; then
+    txt_diff="$(diff -u "$test_path" "$result_path" | sed '1,2d')"
+    log_error "$test_path" "LexerError: Test doesn't match result$lf$txt_diff"
+  fi
 }
 
 function collect_file {
@@ -75,7 +71,7 @@ function collect_file {
 
   i=1
 
-  while IFS= read -r line; do
+  while IFS= read -r line || [ -n "$line" ]; do
     if [ "$line" == "\`\`\`the" ]; then
       inside_block=true
     elif [[ "$line" == "\`\`\`" && "$inside_block" == true ]]; then
@@ -86,12 +82,10 @@ function collect_file {
       block=""
       i=$((i + 1))
     elif [ "$inside_block" == true ]; then
-      line_with_nl="$line"$'\n'
-
       if [ -z "$block" ]; then
-        block="$line_with_nl"
+        block="$line$lf"
       else
-        block="$block$line_with_nl"
+        block="$block$line$lf"
       fi
     fi
   done < "$1"

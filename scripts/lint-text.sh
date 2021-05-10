@@ -19,7 +19,7 @@ function process_file {
   last_line=""
   i=0
 
-  while IFS= read -r line || [[ -n "$line" ]]; do
+  while IFS= read -r line || [ -n "$line" ]; do
     line_len="${#line}"
 
     if [ "$line_len" -ge 80 ]; then

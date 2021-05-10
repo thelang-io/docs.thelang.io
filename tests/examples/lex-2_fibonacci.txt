@@ -22,7 +22,6 @@ LIT_ID: i
 KW_IN: in
 LIT_INT_DEC: 2
 OP_DOTDOTEQ: ..=
-OP_EQ: =
 LIT_ID: max
 OP_LBRACE: {
 LIT_ID: result
