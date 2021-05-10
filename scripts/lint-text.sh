@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -vex
 
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
 errors=()
