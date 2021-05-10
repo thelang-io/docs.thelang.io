@@ -58,7 +58,7 @@ function process_file {
     fi
 
     last_line="$line"
-    i=$((i++))
+    i=$((i + 1))
   done < "$1"
 
   if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
