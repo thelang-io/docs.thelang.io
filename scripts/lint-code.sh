@@ -84,7 +84,7 @@ function collect_file {
 
       inside_block=false
       block=""
-      ((i++))
+      i=$((i++))
     elif [ "$inside_block" == true ]; then
       line_with_nl="$line"$'\n'
 

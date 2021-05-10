@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -vex
+set -e
 
 base_dir="$(cd "$(dirname "$0")/.." && pwd -P)"
 errors=()
@@ -58,7 +58,7 @@ function process_file {
     fi
 
     last_line="$line"
-    ((i++))
+    i=$((i++))
   done < "$1"
 
   if [ "$i" -ne 0 ] && [ "$last_line" == "" ]; then
