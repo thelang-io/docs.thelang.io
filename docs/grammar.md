@@ -17,7 +17,7 @@ Expr ::= Id | Literal
 Id ::= ID
 Literal ::= LIT_CHAR | LIT_FLOAT | LIT_INT | LIT_INT | LIT_STR
 
-_ ::= WS*
+_ ::= (COMMENT_BLOCK | COMMENT_LINE | WS)*
 ```
 
 ## Tokens
