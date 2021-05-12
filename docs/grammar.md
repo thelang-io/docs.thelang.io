@@ -15,7 +15,7 @@ ArgList ::= Expr (_ COMMA _ Expr)*
 
 Expr ::= Id | Literal
 Id ::= ID
-Literal ::= LITSTR
+Literal ::= LIT_CHAR | LIT_FLOAT | LIT_INT | LIT_INT | LIT_STR
 
 _ ::= WS*
 ```
