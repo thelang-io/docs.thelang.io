@@ -154,6 +154,7 @@ ANY_CHAR ::= [#x00-#xFF]
 ANY_CHAR_ESCAPED ::=
   ANY_CHAR | "\\0" | "\\t" | "\\n" | "\\r" | "\\\"" | "\\'" | "\\\\"
 CR ::= #x0D
+EOF ::= ''
 LF ::= #x0A
 SPACE ::= #x20
 TAB ::= #x09
