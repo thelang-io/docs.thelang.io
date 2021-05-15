@@ -98,8 +98,12 @@ function collect_file {
 
 function collect_files {
   for entry in "$1"/*; do
+    file_fullname="$(basename "$entry")"
+
     if [ ! -f "$entry" ]; then
       collect_files "$entry"
+      continue
+    elif [ "${file_fullname##*/}" == "CNAME" ]; then
       continue
     fi
 
