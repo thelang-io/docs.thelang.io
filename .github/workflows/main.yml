@@ -12,7 +12,7 @@ jobs:
         os: [macos-10.15, ubuntu-18.04, ubuntu-20.04]
     steps:
       - uses: actions/checkout@v2
-      - run: curl -s https://the.delasy.com/cli@latest | bash
+      - run: curl -s https://cdn.thelang.io/cli@latest | bash
       - run: scripts/lint-text.sh
       - env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
