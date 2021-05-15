@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+#
+# Copyright (c) 2021-present Aaron Delasy
+#
+
 set -e
 
 cat > .git/hooks/pre-commit << EOF
