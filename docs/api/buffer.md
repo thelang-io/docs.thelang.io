@@ -1,3 +1,5 @@
+# Buffer API
+```the
 export class Buffer {
   pub empty: bool
   pub len: int
@@ -17,3 +19,4 @@ export class Buffer {
   pub mut times (b: byte, x: int) this
   pub toArray () byte[]
 }
+```

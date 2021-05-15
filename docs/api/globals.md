@@ -1,3 +1,5 @@
+# Globals API
+```the
 export enum Signal {
   abrt,
   alrm,
@@ -181,3 +183,4 @@ export fn print (items: any..., separator := " ", terminator := "\n") void
 export fn sleep (ms: int) async void
 
 export program: Program
+```

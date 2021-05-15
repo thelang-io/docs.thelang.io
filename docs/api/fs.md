@@ -1,3 +1,5 @@
+# FileSystem API
+```the
 export enum AccessMode {
   execute,
   existance,
@@ -30,3 +32,4 @@ export fn chownSync (pathname: str, uid: int, gid: int) int
 export fn realpathSync (pathname: str) str
 export fn rmSync (pathname: str) int
 export fn rmdirSync (pathname: str) int
+```
