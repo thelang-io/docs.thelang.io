@@ -1,3 +1,9 @@
+---
+layout: default
+permalink: /grammar
+title: Grammar
+---
+
 # Grammar
 The syntax is specified using Extended Backus-Naur Form (EBNF)
 [edited by W3C](https://www.w3.org/TR/xml/#sec-notation).

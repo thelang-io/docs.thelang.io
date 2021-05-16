@@ -1,6 +1,7 @@
 ---
+layout: default
+permalink: /about
 title: About
-permalink: /about/
 ---
 
 TODO
