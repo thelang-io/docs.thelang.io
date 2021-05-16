@@ -80,7 +80,11 @@ function process_files {
     if [ ! -f "$entry" ]; then
       process_files "$entry"
       continue
-    elif [ "${file_fullname##*.}" == "txt" ]; then
+    elif [ "$file_fullname" == "LICENSE.txt" ]; then
+      continue
+    elif [ "$file_fullname" == "Gemfile.lock" ]; then
+      continue
+    elif git check-ignore "$entry" > /dev/null; then
       continue
     fi
 

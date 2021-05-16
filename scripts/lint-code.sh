@@ -105,6 +105,10 @@ function collect_files {
       continue
     elif [ "${file_fullname##*/}" == "CNAME" ]; then
       continue
+    elif [ "${file_fullname##*/}" == "Gemfile" ]; then
+      continue
+    elif git check-ignore "$entry" > /dev/null; then
+      continue
     fi
 
     collect_file "$entry"
