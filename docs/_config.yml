@@ -1,4 +1,2 @@
 title: The Programming Language
-email: support@thelang.io
-
-theme: jekyll-theme-cayman
+exclude: [CNAME, Gemfile, Gemfile.lock]
