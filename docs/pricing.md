@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /pricing
+permalink: /pricing.html
 title: Pricing
 ---
 
-TODO
+TODO pricing

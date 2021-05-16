@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /grammar
+permalink: /grammar.html
 title: Grammar
 ---
 

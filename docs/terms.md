@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /terms
+permalink: /terms.html
 title: Terms of Service
 ---
 
-TODO
+TODO terms

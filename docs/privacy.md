@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /privacy
+permalink: /privacy.html
 title: Privacy Policy
 ---
 
-TODO
+TODO privacy
