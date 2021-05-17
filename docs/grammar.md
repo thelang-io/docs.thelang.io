@@ -21,7 +21,7 @@ Expr ::= Id | Literal
 Id ::= litId
 Literal ::= litChar | litFloat | litInt | litStr
 
-_ ::= (commentBlock | commentLine | WS)*
+_ ::= (commentBlock | commentLine | whitespace)*
 ```
 
 ## Tokens
@@ -149,7 +149,7 @@ opStarStar ::= "**"
 opStarStarEq ::= "**="
 opTilde ::= '~'
 
-WS ::= CR | LF | SPACE | TAB
+whitespace ::= CR | LF | SPACE | TAB
 ```
 
 ## Primitives
