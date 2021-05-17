@@ -13,9 +13,9 @@ The syntax is specified using Extended Backus-Naur Form (EBNF)
 Syntax ::= Statement*
 Statement ::= _ | CallExpr
 
-CallExpr ::= Id _ LPAR _ ArgList? _ RPAR
+CallExpr ::= Id _ opLPar _ ArgList? _ opRPar
 
-ArgList ::= Expr (_ COMMA _ Expr)*
+ArgList ::= Expr (_ opComma _ Expr)*
 
 Expr ::= Id | Literal
 Id ::= litId
@@ -94,58 +94,58 @@ litIntOct ::= '0' ('O' | 'o')? [0-7]+
 litStr ::= '"' ((ANY_CHAR_ESCAPED | "\\{") - '"')* '"'
 
 opAnd ::= '&'
-OP_ANDAND ::= "&&"
+opAndAnd ::= "&&"
 OP_ANDANDEQ ::= "&&="
-OP_ANDEQ ::= "&="
+opAndEq ::= "&="
 opCaret ::= '^'
-OP_CARETEQ ::= "^="
+opCaretEq ::= "^="
 opColon ::= ':'
-OP_COLONEQ ::= ":="
+opColonEq ::= ":="
 opComma ::= ','
 opDot ::= '.'
-OP_DOTDOT ::= ".."
+opDotDot ::= ".."
 OP_DOTDOTDOT ::= "..."
 OP_DOTDOTEQ ::= "..="
 opEq ::= '='
-OP_EQEQ ::= "=="
+opEqEq ::= "=="
 opExcl ::= '!'
-OP_EXCLEQ ::= "!="
-OP_EXCLEXCL ::= "!!"
+opExclEq ::= "!="
+opExclExcl ::= "!!"
 opGt ::= '>'
-OP_GTEQ ::= ">="
+opGtEq ::= ">="
 opLBrace ::= '{'
 opLBrack ::= '['
 opLPar ::= '('
-OP_LSHIFT ::= "<<"
+opLShift ::= "<<"
 OP_LSHIFTEQ ::= "<<="
 opLt ::= '<'
-OP_LTEQ ::= "<="
+opLtEq ::= "<="
 opMinus ::= '-'
-OP_MINUSEQ ::= "-="
-OP_MINUSMINUS ::= "--"
+opMinusEq ::= "-="
+opMinusMinus ::= "--"
 opOr ::= '|'
-OP_OREQ ::= "|="
-OP_OROR ::= "||"
+opOrEq ::= "|="
+opOrOr ::= "||"
 OP_OROREQ ::= "||="
 opPercent ::= '%'
-OP_PERCENTEQ ::= "%="
-OP_PLUS ::= '+'
-OP_PLUSEQ ::= "+="
-OP_PLUSPLUS ::= "++"
+opPercentEq ::= "%="
+opPlus ::= '+'
+opPlusEq ::= "+="
+opPlusPlus ::= "++"
 opQn ::= '?'
-OP_QNDOT ::= "?."
-OP_QNQN ::= "??"
+opQnDot ::= "?."
+opQnQn ::= "??"
 OP_QNQNEQ ::= "??="
 opRBrace ::= '}'
 opRBrack ::= ']'
 opRPar ::= ')'
-OP_RSHIFT ::= ">>"
+opRShift ::= ">>"
 OP_RSHIFTEQ ::= ">>="
 opSemi ::= ';'
 opSlash ::= '/'
 opStar ::= '*'
-OP_STAREQ ::= "*="
-OP_STARSTAR ::= "**"
+opStarEq ::= "*="
+opStarStar ::= "**"
 OP_STARSTAREQ ::= "**="
 opTilde ::= '~'
 
