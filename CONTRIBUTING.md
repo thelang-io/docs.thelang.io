@@ -17,6 +17,7 @@ $ scripts/mount-git-hooks.sh
 
 ## When sending a pull request
 - [Search](https://github.com/lang-the/the/pulls?q=is%3Apr) for duplicates
+- Make sure to have related tests
 - Use the same coding style as the rest of the codebase
 
 ## Code of Conduct
