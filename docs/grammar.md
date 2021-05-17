@@ -26,8 +26,8 @@ _ ::= (COMMENT_BLOCK | COMMENT_LINE | WS)*
 
 ## Tokens
 ```txt
-COMMENT_BLOCK ::= "/*" (ANY_CHAR - "*/")* "*/"
-COMMENT_LINE ::= "//" (ANY_CHAR - NL)*
+commentBlock ::= "/*" (ANY_CHAR - "*/")* "*/"
+commentLine ::= "//" (ANY_CHAR - NL)*
 
 KW_AS ::= "as"
 KW_AS_SAFE ::= "as?"
