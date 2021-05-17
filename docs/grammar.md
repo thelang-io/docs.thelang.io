@@ -13,15 +13,15 @@ The syntax is specified using Extended Backus-Naur Form (EBNF)
 Syntax ::= Statement*
 Statement ::= _ | CallExpr
 
-CallExpr ::= ID _ LPAR _ ArgList? _ RPAR
+CallExpr ::= Id _ LPAR _ ArgList? _ RPAR
 
 ArgList ::= Expr (_ COMMA _ Expr)*
 
 Expr ::= Id | Literal
-Id ::= ID
-Literal ::= LIT_CHAR | LIT_FLOAT | LIT_INT | LIT_INT | LIT_STR
+Id ::= litId
+Literal ::= litChar | litFloat | litInt | litStr
 
-_ ::= (COMMENT_BLOCK | COMMENT_LINE | WS)*
+_ ::= (commentBlock | commentLine | WS)*
 ```
 
 ## Tokens
@@ -76,22 +76,22 @@ kwTrue ::= "true"
 kwTry ::= "try"
 kwUnion ::= "union"
 
-LIT_CHAR ::= '\'' ANY_CHAR_ESCAPED '\''
+litChar ::= '\'' ANY_CHAR_ESCAPED '\''
 
-LIT_FLOAT ::= '.' [0-9]+ LIT_FLOAT_EXP? |
-  ('0' | [1-9] [0-9]*) '.' [0-9]* LIT_FLOAT_EXP? |
-  ('0' | [1-9] [0-9]*) LIT_FLOAT_EXP
-LIT_FLOAT_EXP ::= ('E' | 'e') ('+' | '-')? [0-9]+
+litFloat ::= '.' [0-9]+ litFloatExp? |
+  ('0' | [1-9] [0-9]*) '.' [0-9]* litFloatExp? |
+  ('0' | [1-9] [0-9]*) litFloatExp
+litFloatExp ::= ('E' | 'e') ('+' | '-')? [0-9]+
 
-LIT_ID ::= [A-Za-z_] [A-Za-z0-9_]*
+litId ::= [A-Za-z_] [A-Za-z0-9_]*
 
-LIT_INT ::= LIT_INT_BIN | LIT_INT_DEC | LIT_INT_HEX | LIT_INT_OCT
-LIT_INT_BIN ::= '0' ('B' | 'b') [0-1]+
-LIT_INT_DEC ::= '0' | [1-9] [0-9]*
-LIT_INT_HEX ::= '0' ('X' | 'x') [A-Fa-f0-9]+
-LIT_INT_OCT ::= '0' ('O' | 'o')? [0-7]+
+litInt ::= litIntBin | litIntDec | litIntHex | litIntOct
+litIntBin ::= '0' ('B' | 'b') [0-1]+
+litIntDec ::= '0' | [1-9] [0-9]*
+litIntHex ::= '0' ('X' | 'x') [A-Fa-f0-9]+
+litIntOct ::= '0' ('O' | 'o')? [0-7]+
 
-LIT_STR ::= '"' ((ANY_CHAR_ESCAPED | "\\{") - '"')* '"'
+litStr ::= '"' ((ANY_CHAR_ESCAPED | "\\{") - '"')* '"'
 
 OP_AND ::= '&'
 OP_ANDAND ::= "&&"
