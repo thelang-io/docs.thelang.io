@@ -1,3 +1,9 @@
+---
+layout: default
+permalink: /api/globals.html
+title: Globals API
+---
+
 # Globals API
 ```the
 export enum Signal {
