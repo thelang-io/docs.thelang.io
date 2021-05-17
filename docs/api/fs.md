@@ -1,3 +1,9 @@
+---
+layout: default
+permalink: /api/fs.html
+title: FileSystem API
+---
+
 # FileSystem API
 ```the
 export enum AccessMode {
