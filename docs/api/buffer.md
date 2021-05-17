@@ -1,3 +1,9 @@
+---
+layout: default
+permalink: /api/buffer.html
+title: Buffer API
+---
+
 # Buffer API
 ```the
 export class Buffer {
