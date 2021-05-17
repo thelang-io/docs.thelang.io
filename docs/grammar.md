@@ -95,7 +95,7 @@ litStr ::= '"' ((ANY_CHAR_ESCAPED | "\\{") - '"')* '"'
 
 opAnd ::= '&'
 opAndAnd ::= "&&"
-OP_ANDANDEQ ::= "&&="
+opAndAndEq ::= "&&="
 opAndEq ::= "&="
 opCaret ::= '^'
 opCaretEq ::= "^="
@@ -104,8 +104,8 @@ opColonEq ::= ":="
 opComma ::= ','
 opDot ::= '.'
 opDotDot ::= ".."
-OP_DOTDOTDOT ::= "..."
-OP_DOTDOTEQ ::= "..="
+opDotDotDot ::= "..."
+opDotDotEq ::= "..="
 opEq ::= '='
 opEqEq ::= "=="
 opExcl ::= '!'
@@ -117,7 +117,7 @@ opLBrace ::= '{'
 opLBrack ::= '['
 opLPar ::= '('
 opLShift ::= "<<"
-OP_LSHIFTEQ ::= "<<="
+opLShiftEq ::= "<<="
 opLt ::= '<'
 opLtEq ::= "<="
 opMinus ::= '-'
@@ -126,7 +126,7 @@ opMinusMinus ::= "--"
 opOr ::= '|'
 opOrEq ::= "|="
 opOrOr ::= "||"
-OP_OROREQ ::= "||="
+opOrOrEq ::= "||="
 opPercent ::= '%'
 opPercentEq ::= "%="
 opPlus ::= '+'
@@ -135,18 +135,18 @@ opPlusPlus ::= "++"
 opQn ::= '?'
 opQnDot ::= "?."
 opQnQn ::= "??"
-OP_QNQNEQ ::= "??="
+opQnQnEq ::= "??="
 opRBrace ::= '}'
 opRBrack ::= ']'
 opRPar ::= ')'
 opRShift ::= ">>"
-OP_RSHIFTEQ ::= ">>="
+opRShiftEq ::= ">>="
 opSemi ::= ';'
 opSlash ::= '/'
 opStar ::= '*'
 opStarEq ::= "*="
 opStarStar ::= "**"
-OP_STARSTAREQ ::= "**="
+opStarStarEq ::= "**="
 opTilde ::= '~'
 
 WS ::= CR | LF | SPACE | TAB
