@@ -78,8 +78,7 @@ kwUnion ::= "union"
 
 litChar ::= '\'' ANY_CHAR_ESCAPED '\''
 
-litFloat ::= '.' [0-9]+ litFloatExp? |
-  ('0' | [1-9] [0-9]*) '.' [0-9]* litFloatExp? |
+litFloat ::= ('0' | [1-9] [0-9]*) '.' [0-9]* litFloatExp? |
   ('0' | [1-9] [0-9]*) litFloatExp
 litFloatExp ::= ('E' | 'e') ('+' | '-')? [0-9]+
 
