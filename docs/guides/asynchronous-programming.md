@@ -25,6 +25,13 @@ main {
 }
 ```
 
+## Interfaces
+```the
+interface MyInterface {
+  async fn sleep () void
+}
+```
+
 ## Objects
 ```the
 obj MyObj {
