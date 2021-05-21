@@ -2,7 +2,7 @@
 
 ## Functions
 ```the
-fn myFunc () async {
+async fn myFunc () {
   await sleep(1000)
 }
 
@@ -14,7 +14,7 @@ main {
 ## Classes
 ```the
 class MyClass {
-  pub fn sleep () async {
+  pub async fn sleep () {
     await sleep(1000)
   }
 }
@@ -28,14 +28,14 @@ main {
 ## Interfaces
 ```the
 interface MyInterface {
-  fn sleep () async void
+  async fn sleep () void
 }
 ```
 
 ## Objects
 ```the
 obj MyObj {
-  sleep: fn () async {
+  sleep: async fn () {
     await sleep(1000)
   }
 }

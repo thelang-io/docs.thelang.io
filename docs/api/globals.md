@@ -186,7 +186,7 @@ export class Map<T, U> {
 export fn exit (code: int) void
 export fn kill (pid: int, sig := Signal.term) void
 export fn print (items: any..., separator := " ", terminator := "\n") void
-export fn sleep (ms: int) async void
+export async fn sleep (ms: int) void
 
 export program: Program
 ```
