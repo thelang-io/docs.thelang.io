@@ -11,12 +11,12 @@ class Tree {
     this._nodes = nodes
   }
 
-  mut add (node: Node) this {
+  pub mut add (node: Node) this {
     this._nodes.push(node)
     return this
   }
 
-  mut remove (at: int) this {
+  pub mut remove (at: int) this {
     this._nodes.remove(at)
     return this
   }
@@ -32,7 +32,7 @@ main {
   mut tree := new Tree(node3, node4)
 
   tree.add(node5)
-  tree.add({ val: 6 })
+  tree.add(Node{val: 6})
   tree.remove(1)
   tree.remove(2)
 }
