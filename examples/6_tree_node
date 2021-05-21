@@ -11,12 +11,12 @@ class Tree {
     this._nodes = nodes
   }
 
-  pub mut add (node: Node) this {
+  pub mut fn add (node: Node) this {
     this._nodes.push(node)
     return this
   }
 
-  pub mut remove (at: int) this {
+  pub mut fn remove (at: int) this {
     this._nodes.remove(at)
     return this
   }

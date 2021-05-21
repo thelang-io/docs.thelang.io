@@ -11,7 +11,7 @@ class MyClass {
   pub prop3: str
   pub prop4 := ""
 
-  pub method () {}
+  pub fn method () {}
 }
 ```
 
@@ -23,10 +23,10 @@ class MyClass {
   prot protectedProp: str
   pub publicProp: str
 
-  static staticMethod () {}
-  priv privateMethod () {}
-  prot protectedMethod () {}
-  pub publicMethod () {}
+  static fn staticMethod () {}
+  priv fn privateMethod () {}
+  prot fn protectedMethod () {}
+  pub fn publicMethod () {}
 }
 ```
 
@@ -47,7 +47,7 @@ class Parent {
     this._location = "parent"
   }
 
-  pub info () {
+  pub fn info () {
     print("Inside {this._location}")
   }
 }
@@ -65,7 +65,7 @@ class Child : Parent {
 class Parent {
   prot _location := "parent"
 
-  pub info () {
+  pub fn info () {
     print("Inside {this._location}")
   }
 }
@@ -73,7 +73,7 @@ class Parent {
 class Child : Parent {
   override _location := "Not inside parent"
 
-  override info () this {
+  override fn info () this {
     print(this._location)
     return this
   }
@@ -83,11 +83,11 @@ class Child : Parent {
 ## Polymorphic `this`
 ```the
 class MyClass {
-  pub method1 () this {
+  pub fn method1 () this {
     return this
   }
 
-  pub method2 () this {
+  pub fn method2 () this {
     return this
   }
 }

@@ -14,7 +14,7 @@ main {
 ## Classes
 ```the
 class MyClass {
-  pub sleep () async {
+  pub fn sleep () async {
     await sleep(1000)
   }
 }
@@ -28,7 +28,7 @@ main {
 ## Interfaces
 ```the
 interface MyInterface {
-  async fn sleep () void
+  fn sleep () async void
 }
 ```
 

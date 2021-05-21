@@ -24,12 +24,12 @@ export class File {
   pub pos: int
   pub size: int
 
-  static open (pathname: str, mode := FileMode.read) File
-  pub mut close () this
-  pub mut read () byte[]
-  pub mut read (n: int) byte[]
-  pub mut seek (pos: int) this
-  pub mut write (data: byte[]) this
+  static fn open (pathname: str, mode := FileMode.read) File
+  pub mut fn close () this
+  pub mut fn read () byte[]
+  pub mut fn read (n: int) byte[]
+  pub mut fn seek (pos: int) this
+  pub mut fn write (data: byte[]) this
 }
 
 export fn accessSync (pathname: str, mode := AccessMode.existance) int

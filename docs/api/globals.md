@@ -164,9 +164,9 @@ export class Error {
 export class Iterator<T, U> {
   pub cursor: T
 
-  pub hasNext () bool
-  pub next () U
-  pub mut next () mut U
+  pub fn hasNext () bool
+  pub fn next () U
+  pub mut fn next () mut U
 }
 
 export class Map<T, U> {
@@ -176,11 +176,11 @@ export class Map<T, U> {
   mut op iter () Iterator<T, mut U>
   op str () str
 
-  pub mut delete (key: T) this
-  pub get (key: T) U?
-  pub mut get (key: T) mut U?
-  pub has (key: T) bool
-  pub mut set (key: T, val: U) this
+  pub mut fn delete (key: T) this
+  pub fn get (key: T) U?
+  pub mut fn get (key: T) mut U?
+  pub fn has (key: T) bool
+  pub mut fn set (key: T, val: U) this
 }
 
 export fn exit (code: int) void

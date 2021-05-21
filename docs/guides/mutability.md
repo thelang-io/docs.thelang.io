@@ -29,7 +29,7 @@ class MyClass {
     this._c = 2
   }
 
-  pub mut changeA () {
+  pub mut fn changeA () {
     this._a = 2
   }
 }

@@ -18,7 +18,7 @@ class MyClass<T, U> {
     this._u = u
   }
 
-  pub castRead<V = T, W = U> () V, W {
+  pub fn castRead<V = T, W = U> () V, W {
     return this._t as V, this._u as W
   }
 }

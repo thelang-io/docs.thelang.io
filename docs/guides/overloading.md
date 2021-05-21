@@ -16,12 +16,12 @@ fn sum (a: float, b: float) float {
 class MyClass {
   priv mut _sum: float
 
-  pub mut add (x: int) this {
+  pub mut fn add (x: int) this {
     this._sum += x
     return this
   }
 
-  pub mut add (x: float) this {
+  pub mut fn add (x: float) this {
     this._sum += x
     return this
   }
@@ -33,8 +33,8 @@ class MyClass {
 interface MyInterface {
   mut sum: float
 
-  mut add (x: int) this
-  mut add (x: float) this
+  mut fn add (x: int) this
+  mut fn add (x: float) this
 }
 ```
 

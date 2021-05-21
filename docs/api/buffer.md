@@ -22,7 +22,7 @@ export class Buffer {
   op [] (i: int) byte
   mut op [] (i: int) mut byte
 
-  pub mut times (b: byte, x: int) this
-  pub toArray () byte[]
+  pub mut fn times (b: byte, x: int) this
+  pub fn toArray () byte[]
 }
 ```
