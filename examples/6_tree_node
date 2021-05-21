@@ -23,11 +23,17 @@ class Tree {
 }
 
 main {
-  node1 := Node{ val: 1 }
-  node2 := Node{ val: 2 }
-  node3 := Node{ left: node1, right: node2, val: 3 }
-  node4 := Node{ val: 4 }
-  node5 := Node{ val: 5 }
+  node1 := Node{val: 1}
+  node2 := Node{val: 2}
+
+  node3 := Node {
+    left: node1,
+    right: node2,
+    val: 3
+  }
+
+  node4 := Node{val: 4}
+  node5 := Node{val: 5}
 
   mut tree := new Tree(node3, node4)
 
