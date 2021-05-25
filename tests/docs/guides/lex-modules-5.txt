@@ -1,4 +1,4 @@
-KW_EXPORT: export
-LIT_ID: Math
-KW_FROM: from
-LIT_ID: math
+kwExport(1:1-1:7): export
+litId(1:8-1:12): Math
+kwFrom(1:13-1:17): from
+litId(1:18-1:22): math

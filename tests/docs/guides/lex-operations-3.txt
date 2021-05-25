@@ -1,17 +1,17 @@
-KW_MAIN: main
-OP_LBRACE: {
-KW_MUT: mut
-LIT_ID: a1
-OP_COLONEQ: :=
-LIT_INT_DEC: 1
-KW_MUT: mut
-LIT_ID: s1
-OP_COLONEQ: :=
-LIT_STR: "Hello, World!"
-LIT_ID: a1
-OP_EQ: =
-LIT_INT_DEC: 2
-LIT_ID: s1
-OP_EQ: =
-LIT_STR: "Hello, User!"
-OP_RBRACE: }
+kwMain(1:1-1:5): main
+opLBrace(1:6-1:7): {
+kwMut(2:3-2:6): mut
+litId(2:7-2:9): a1
+opColonEq(2:10-2:12): :=
+litIntDec(2:13-2:14): 1
+kwMut(3:3-3:6): mut
+litId(3:7-3:9): s1
+opColonEq(3:10-3:12): :=
+litStr(3:13-3:28): "Hello, World!"
+litId(5:3-5:5): a1
+opEq(5:6-5:7): =
+litIntDec(5:8-5:9): 2
+litId(6:3-6:5): s1
+opEq(6:6-6:7): =
+litStr(6:8-6:22): "Hello, User!"
+opRBrace(7:1-7:2): }

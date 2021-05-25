@@ -1,6 +1,6 @@
-KW_EXPORT: export
-OP_STAR: *
-KW_AS: as
-LIT_ID: Math
-KW_FROM: from
-LIT_ID: math
+kwExport(1:1-1:7): export
+opStar(1:8-1:9): *
+kwAs(1:10-1:12): as
+litId(1:13-1:17): Math
+kwFrom(1:18-1:22): from
+litId(1:23-1:27): math

@@ -1,6 +1,6 @@
-KW_MAIN: main
-OP_LBRACE: {
-LIT_ID: ch
-OP_COLONEQ: :=
-LIT_CHAR: 'a'
-OP_RBRACE: }
+kwMain(1:1-1:5): main
+opLBrace(1:6-1:7): {
+litId(2:3-2:5): ch
+opColonEq(2:6-2:8): :=
+litChar(2:9-2:12): 'a'
+opRBrace(3:1-3:2): }

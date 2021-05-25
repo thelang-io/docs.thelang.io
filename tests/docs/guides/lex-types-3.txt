@@ -1,6 +1,6 @@
-KW_MAIN: main
-OP_LBRACE: {
-LIT_ID: text
-OP_COLONEQ: :=
-LIT_STR: "Some \n random \" text"
-OP_RBRACE: }
+kwMain(1:1-1:5): main
+opLBrace(1:6-1:7): {
+litId(2:3-2:7): text
+opColonEq(2:8-2:10): :=
+litStr(2:11-2:35): "Some \\n random \" text"
+opRBrace(3:1-3:2): }

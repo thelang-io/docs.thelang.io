@@ -1,16 +1,16 @@
-KW_MAIN: main
-OP_LBRACE: {
-LIT_ID: greet
-OP_COLONEQ: :=
-LIT_STR: "Hello, "
-LIT_ID: name
-OP_COLONEQ: :=
-LIT_STR: "World"
-LIT_ID: greeting
-OP_COLONEQ: :=
-LIT_ID: greet
-OP_PLUS: +
-LIT_ID: name
-OP_PLUS: +
-LIT_STR: "!"
-OP_RBRACE: }
+kwMain(1:1-1:5): main
+opLBrace(1:6-1:7): {
+litId(2:3-2:8): greet
+opColonEq(2:9-2:11): :=
+litStr(2:12-2:21): "Hello, "
+litId(3:3-3:7): name
+opColonEq(3:8-3:10): :=
+litStr(3:11-3:18): "World"
+litId(4:3-4:11): greeting
+opColonEq(4:12-4:14): :=
+litId(4:15-4:20): greet
+opPlus(4:21-4:22): +
+litId(4:23-4:27): name
+opPlus(4:28-4:29): +
+litStr(4:30-4:33): "!"
+opRBrace(5:1-5:2): }

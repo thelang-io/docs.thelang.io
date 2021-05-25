@@ -1,19 +1,19 @@
-KW_MAIN: main
-OP_LBRACE: {
-LIT_ID: print
-OP_LPAR: (
-LIT_INT_DEC: 1
-OP_LT: <
-LIT_INT_DEC: 2
-OP_QN: ?
-LIT_STR: "1 is less than 2"
-OP_COLON: :
-LIT_INT_DEC: 1
-OP_GT: >
-LIT_INT_DEC: 2
-OP_QN: ?
-LIT_STR: "1 is greater than 2"
-OP_COLON: :
-LIT_STR: "1 is equal 2"
-OP_RPAR: )
-OP_RBRACE: }
+kwMain(1:1-1:5): main
+opLBrace(1:6-1:7): {
+litId(2:3-2:8): print
+opLPar(2:8-2:9): (
+litIntDec(3:5-3:6): 1
+opLt(3:7-3:8): <
+litIntDec(3:9-3:10): 2
+opQn(4:7-4:8): ?
+litStr(4:9-4:27): "1 is less than 2"
+opColon(5:7-5:8): :
+litIntDec(5:9-5:10): 1
+opGt(5:11-5:12): >
+litIntDec(5:13-5:14): 2
+opQn(6:9-6:10): ?
+litStr(6:11-6:32): "1 is greater than 2"
+opColon(7:9-7:10): :
+litStr(7:11-7:25): "1 is equal 2"
+opRPar(8:3-8:4): )
+opRBrace(9:1-9:2): }
