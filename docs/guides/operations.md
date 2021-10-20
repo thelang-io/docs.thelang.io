@@ -1,6 +1,6 @@
 # Operations
 
-## Assignment
+## Variable Declaration
 ```the
 main {
   a1: int = 1
@@ -8,7 +8,7 @@ main {
 }
 ```
 
-## Infer assignment
+## Short Variable Declaration
 ```the
 main {
   a1 := 1
@@ -16,7 +16,7 @@ main {
 }
 ```
 
-## Reassignment
+## Assignment
 ```the
 main {
   mut a1 := 1
