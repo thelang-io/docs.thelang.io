@@ -8,6 +8,7 @@ byte
 char
 float = f64
 int = i32
+str
 void
 ```
 
