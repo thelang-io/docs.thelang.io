@@ -13,14 +13,6 @@ main {
 }
 ```
 
-## Default values
-```the
-obj Book {
-  title := ""
-  year := 2000
-}
-```
-
 ## Property shorthand
 ```the
 obj Book {
@@ -31,6 +23,6 @@ obj Book {
 main {
   title := "War and Peace"
   year := 1869
-  book := Book{ title, year }
+  book := Book{title, year}
 }
 ```
