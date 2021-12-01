@@ -11,27 +11,6 @@ main {
 }
 ```
 
-## Classes
-```the
-class MyClass {
-  pub async fn sleep () {
-    await sleep(1000)
-  }
-}
-
-main {
-  c := new MyClass()
-  await c.sleep()
-}
-```
-
-## Interfaces
-```the
-interface MyInterface {
-  async fn sleep () void
-}
-```
-
 ## Objects
 ```the
 obj MyObj {
