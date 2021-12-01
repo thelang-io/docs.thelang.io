@@ -189,15 +189,6 @@ main {
 }
 ```
 
-### Interpolation
-```the
-main {
-  greet := "Hello"
-  name := "Your"
-  greeting := "{greet}, {name + " Name"}!"
-}
-```
-
 ### Concatenation
 ```the
 main {
