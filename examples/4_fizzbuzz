@@ -1,5 +1,5 @@
 fn fizzbuzz (num: int) {
-  loop i in 0 ..= num {
+  loop i := 0; i < num; i++ {
     if i % 15 == 0 {
       print("FizzBuzz")
     } elif i % 3 == 0 {
