@@ -7,7 +7,7 @@ fn quicksort (mut arr: int[], begin := 0, end := arr.len) {
 
   mut i := begin
 
-  loop j in begin + 1 .. end + 1 {
+  loop j := begin + 1; j < end + 1; j++ {
     if arr[j] <= arr[begin] {
       i++
       swap(arr[i], arr[j])

@@ -1,4 +1,0 @@
-kwClass(1:1-1:6): class
-litId(1:7-1:14): MyClass
-opLBrace(1:15-1:16): {
-opRBrace(1:16-1:17): }

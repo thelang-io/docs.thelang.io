@@ -6,36 +6,34 @@ title: FileSystem API
 
 # FileSystem API
 ```the
-export enum AccessMode {
+enum AccessMode {
   execute,
-  existance,
+  existence,
   read,
   write
 }
 
-export enum FileMode {
+enum FileMode {
   execute,
   read,
   write
 }
 
-export class File {
-  pub eof: bool
-  pub pos: int
-  pub size: int
-
-  static fn open (pathname: str, mode := FileMode.read) File
-  pub mut fn close () this
-  pub mut fn read () byte[]
-  pub mut fn read (n: int) byte[]
-  pub mut fn seek (pos: int) this
-  pub mut fn write (data: byte[]) this
+obj File {
+  eof: bool
+  pos: int
+  size: int
 }
 
-export fn accessSync (pathname: str, mode := AccessMode.existance) int
-export fn chmodSync (pathname: str, mode: int) int
-export fn chownSync (pathname: str, uid: int, gid: int) int
-export fn realpathSync (pathname: str) str
-export fn rmSync (pathname: str) int
-export fn rmdirSync (pathname: str) int
+fn accessSync (pathname: str, mode := AccessMode.existence) int
+fn chmodSync (pathname: str, mode: int) int
+fn chownSync (pathname: str, uid: int, gid: int) int
+fn fcloseSync (mut file: File) void
+fn fopenSync (pathname: str, mode := FileMode.read) File
+fn freadSync (mut file: File, n := file.size) byte[]
+fn fseekSync (mut file: File, pos: int) void
+fn fwriteSync (mut file: File, data: byte[]) void
+fn realpathSync (pathname: str) str
+fn rmSync (pathname: str) int
+fn rmdirSync (pathname: str) int
 ```

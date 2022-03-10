@@ -6,7 +6,81 @@ title: Globals API
 
 # Globals API
 ```the
-export enum Signal {
+
+obj any {
+  str: fn () str
+}
+
+obj bool {
+  str: fn () str
+}
+
+obj byte {
+  str: fn () str
+}
+
+obj char {
+  str: fn () str
+}
+
+obj float {
+  str: fn () str
+}
+
+obj f32 {
+  str: fn () str
+}
+
+obj f64 {
+  str: fn () str
+}
+
+obj int {
+  str: fn () str
+}
+
+obj i8 {
+  str: fn () str
+}
+
+obj i16 {
+  str: fn () str
+}
+
+obj i32 {
+  str: fn () str
+}
+
+obj i64 {
+  str: fn () str
+}
+
+obj str {
+  len: int
+
+  concat: fn (src: str) str
+}
+
+obj u8 {
+  str: fn () str
+}
+
+obj u16 {
+  str: fn () str
+}
+
+obj u32 {
+  str: fn () str
+}
+
+obj u64 {
+  str: fn () str
+}
+
+obj void {
+}
+
+enum Signal {
   abrt,
   alrm,
   brk,
@@ -42,151 +116,20 @@ export enum Signal {
   xfsz
 }
 
-interface Any {
-  op str () str
-}
-
-interface Array<T> : Any {
-  empty: bool
-  len: int
-
-  op + (rhs: T) Array<T>
-  op + (rhs: Array<T>) Array<T>
-  mut op += (rhs: T) this
-  mut op += (rhs: Array<T>) this
-  op [] (i: int) T
-  mut op [] (i: int) mut T
-  op [] (slice: Slice) Array<T>
-  op iter () Iterator<int, T>
-  mut op iter () Iterator<int, mut T>
-
-  includes (x: T) bool
-  index (x: T) int?
-  mut pop () T?
-  mut push (n: T) this
-  mut remove (at: int) T
-  mut reverse () this
-  mut shift () T?
-  mut unshift (n: T) this
-}
-
-interface Boolean : Any {
-}
-
-interface Byte : Any {
-  op + (rhs: byte) byte
-}
-
-interface Char : Any {
-  digit: bool
-
-  op + (rhs: char) str
-  op + (rhs: str) str
-
-  times (n: int) str
-}
-
-interface Function : Any {
-}
-
-interface Number : Any {
-  op + (rhs: Number) Number
-  op + (rhs: char) str
-  op + (rhs: str) str
-  op - (rhs: Number) Number
-  op / (rhs: Number) Number
-  op * (rhs: Number) Number
-  op % (rhs: Number) Number
-  mut op += (rhs: Number) this
-  mut op -= (rhs: Number) this
-  mut op /= (rhs: Number) this
-  mut op *= (rhs: Number) this
-  mut op %= (rhs: Number) this
-}
-
-interface Object : Any {
-}
-
-interface Optional<T> : Any {
-}
-
-interface Range : Any {
-  end: int
-  start: int
-
-  op iter () Iterator<int, int>
-  mut op iter () Iterator<int, mut int>
-}
-
-interface Slice : Any {
-  end: int?
-  start: int?
-  step: int?
-}
-
-interface String : Any {
-  empty: bool
-  len: int
-
-  op + (rhs: char) str
-  op + (rhs: str) str
-  mut op += (rhs: char) this
-  mut op += (rhs: str) this
-  op [] (i: int) char
-  mut op [] (i: int) mut char
-  op [] (slice: Slice) str
-  op iter () Iterator<int, char>
-  mut op iter () Iterator<int, mut char>
-
-  mut clear () this
-  includes (x: char) bool
-  includes (x: str) bool
-  index (x: char) int?
-  index (x: str) int?
-  mut reverse () this
-  times (n: int) str
+obj Error {
+  message: str
 }
 
 obj Program {
   args: str[]
   cwd: str
-  env: Map<str, str>
   pid: int
 }
 
-export class Error {
-  pub message: str
-  pub name: str
+fn exit (code: int) void
+fn kill (pid: int, sig := Signal.term) void
+fn print (items: any..., separator := " ", terminator := "\n") void
+async fn sleep (ms: int) void
 
-  init (message: str) this
-}
-
-export class Iterator<T, U> {
-  pub cursor: T
-
-  pub fn hasNext () bool
-  pub fn next () U
-  pub mut fn next () mut U
-}
-
-export class Map<T, U> {
-  pub size: int
-
-  op iter () Iterator<T, U>
-  mut op iter () Iterator<T, mut U>
-  op str () str
-
-  pub mut fn delete (key: T) this
-  pub fn get (key: T) U?
-  pub mut fn get (key: T) mut U?
-  pub fn has (key: T) bool
-  pub mut fn set (key: T, val: U) this
-}
-
-export fn exit (code: int) void
-export fn kill (pid: int, sig := Signal.term) void
-export fn print (items: any..., separator := " ", terminator := "\n") void
-export async fn sleep (ms: int) void
-
-export program: Program
+program: Program
 ```

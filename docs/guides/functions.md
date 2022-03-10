@@ -2,7 +2,8 @@
 
 ## Main
 ```the
-main {}
+main {
+}
 ```
 
 ## Default parameters

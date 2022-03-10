@@ -2,7 +2,7 @@
 ```the
 main {
   try {
-    throw new Error("Error message")
+    throw Error{"Error message"}
   } catch err: Error {
     print(err)
   }
@@ -11,10 +11,17 @@ main {
 
 ## Custom error
 ```the
-class MyError : Error {
-  init (message: str, fatal := false) {
-    super(message)
-    this.name = fatal ? "FatalError" : "MyError"
+obj MyError {
+  message: str
+  fatal: bool
+}
+
+main {
+  try {
+    throw MyError{"Fatal message", true}
+    throw MyError{"Non-fatal message", false}
+  } catch err: MyError {
+    print(err.message, err.fatal)
   }
 }
 ```

@@ -2,9 +2,8 @@
 
 ## Import
 ```the
-import Math from math
+import PI from math
 ```
-> NOTE: Local files are automatically imported by module system
 
 ### Wildcard import
 ```the
@@ -28,7 +27,6 @@ export enum SuperEnum {
   two
 }
 
-export class Thing {}
 export fn calc () {}
 ```
 
@@ -46,23 +44,7 @@ enum SuperEnum {
   two
 }
 
-class Thing {}
 fn calc () {}
 
-export FPS, SuperEnum, SuperObject, Thing, calc
-```
-
-### Re-export
-```the
-export Math from math
-```
-
-#### Wildcard re-export
-```the
-export * from math
-```
-
-#### Named wildcard re-export
-```the
-export * as Math from math
+export FPS, SuperEnum, SuperObject, calc
 ```

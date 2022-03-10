@@ -1,9 +1,0 @@
-kwMain(1:1-1:5): main
-opLBrace(1:6-1:7): {
-litId(2:3-2:5): a1
-opColonEq(2:6-2:8): :=
-litIntDec(2:9-2:10): 1
-litId(3:3-3:5): s1
-opColonEq(3:6-3:8): :=
-litStr(3:9-3:11): ""
-opRBrace(4:1-4:2): }

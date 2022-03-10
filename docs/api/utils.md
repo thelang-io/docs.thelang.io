@@ -6,6 +6,6 @@ title: Utilities API
 
 # Utilities API
 ```the
-export fn size<T> (x: T) int
-export fn swap<T> (mut x: T, mut y: T) void
+fn size (x: any) int
+fn swap (mut x: any, mut y: any) void
 ```

@@ -1,4 +1,0 @@
-kwExport(1:1-1:7): export
-opStar(1:8-1:9): *
-kwFrom(1:10-1:14): from
-litId(1:15-1:19): math

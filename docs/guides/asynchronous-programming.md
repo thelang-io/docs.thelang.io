@@ -14,13 +14,16 @@ main {
 ## Objects
 ```the
 obj MyObj {
-  sleep: async fn () {
-    await sleep(1000)
-  }
+  sleep: async fn () void
 }
 
 main {
-  o := MyObj{}
+  o := MyObj{
+    sleep: async fn () void {
+      await sleep(1000)
+    }
+  }
+
   await o.sleep()
 }
 ```
