@@ -6,7 +6,6 @@ title: Globals API
 
 # Globals API
 ```the
-
 obj any {
   str: fn () str
 }
@@ -56,9 +55,8 @@ obj i64 {
 }
 
 obj str {
-  len: int
-
   concat: fn (src: str) str
+  len: int
 }
 
 obj u8 {
@@ -80,56 +78,5 @@ obj u64 {
 obj void {
 }
 
-enum Signal {
-  abrt,
-  alrm,
-  brk,
-  bus,
-  chld,
-  cont,
-  fpe,
-  hup,
-  ill,
-  int,
-  io,
-  kill,
-  lost,
-  pipe,
-  prof,
-  pwr,
-  quit,
-  segv,
-  stkflt,
-  stop,
-  sys,
-  term,
-  trap,
-  tstp,
-  ttin,
-  ttou,
-  urg,
-  usr1,
-  usr2,
-  vtalrm,
-  winch,
-  xcpu,
-  xfsz
-}
-
-obj Error {
-  message: str
-}
-
-obj Program {
-  args: str[]
-  cwd: str
-  pid: int
-}
-
-fn exit (code: int) void
-fn kill (pid: int, sig := Signal.term) void
 fn print (items: any..., separator := " ", terminator := "\n") void
-async fn sleep (ms: int) void
-
-program: Program
 ```

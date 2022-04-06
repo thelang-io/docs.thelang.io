@@ -3,6 +3,7 @@
 ## Import
 ```the
 import PI from math
+import E, PI from math
 ```
 
 ### Wildcard import
@@ -15,8 +16,6 @@ import * as Math from math
 
 ### Direct
 ```the
-export const FPS := 24
-
 export obj SuperObject {
   field1: int
   field2: str
@@ -27,13 +26,12 @@ export enum SuperEnum {
   two
 }
 
-export fn calc () {}
+export fn calc () {
+}
 ```
 
 ### Indirect
 ```the
-const FPS := 24
-
 obj SuperObject {
   field1: int
   field2: str
@@ -44,7 +42,8 @@ enum SuperEnum {
   two
 }
 
-fn calc () {}
+fn calc () {
+}
 
-export FPS, SuperEnum, SuperObject, calc
+export SuperEnum, SuperObject, calc
 ```
