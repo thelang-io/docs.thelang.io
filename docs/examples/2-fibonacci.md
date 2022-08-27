@@ -1,3 +1,10 @@
+---
+layout: default
+title: Fibonacci Example
+---
+
+# {{ page.title }}
+```the
 fn fibonacci (max: int) int[] {
   mut result := [0, 1]
 
@@ -9,5 +16,6 @@ fn fibonacci (max: int) int[] {
 }
 
 main {
-  print("Fibonacci sequence:", fibonacci(50))
+  print("Fibonacci sequence:", fibonacci(40))
 }
+```

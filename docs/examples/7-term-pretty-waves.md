@@ -1,3 +1,10 @@
+---
+layout: default
+title: Terminal Pretty Waves Example
+---
+
+# {{ page.title }}
+```the
 obj Point {
   x: int
   y: int
@@ -18,7 +25,11 @@ main {
   mut prevColorIdx := 0
   mut curColorIdx := 1
   mut circleRadius := 1
-  mut centerPoint := Point{x: WIDTH_DIV2 - circleRadius, y: HEIGHT_DIV2 - circleRadius}
+
+  mut centerPoint := Point{
+    x: WIDTH_DIV2 - circleRadius,
+    y: HEIGHT_DIV2 - circleRadius
+  }
 
   loop frame := 0;; frame++ {
     if circleRadius == HEIGHT + HEIGHT / 2 {
@@ -60,3 +71,4 @@ main {
     sleep(SLEEP_INTERVAL)
   }
 }
+```

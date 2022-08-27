@@ -1,3 +1,10 @@
+---
+layout: default
+title: Quicksort Algorithm Example
+---
+
+# {{ page.title }}
+```the
 import swap from utils
 
 fn quicksort (mut arr: int[], begin := 0, end := arr.len) {
@@ -26,3 +33,4 @@ main {
   quicksort(arr)
   print("Array after quicksort:", arr)
 }
+```

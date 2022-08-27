@@ -1,3 +1,10 @@
+---
+layout: default
+title: Factorial Example
+---
+
+# {{ page.title }}
+```the
 fn factorial (num: int) int {
   return num < 2 ? 1 : factorial(num - 1) * num
 }
@@ -5,3 +12,4 @@ fn factorial (num: int) int {
 main {
   print("Factorial of 10:", factorial(10))
 }
+```

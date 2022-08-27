@@ -1,3 +1,10 @@
+---
+layout: default
+title: FizzBuzz Example
+---
+
+# {{ page.title }}
+```the
 fn fizzbuzz (num: int) {
   loop i := 0; i < num; i++ {
     if i % 15 == 0 {
@@ -15,3 +22,4 @@ fn fizzbuzz (num: int) {
 main {
   fizzbuzz(100)
 }
+```

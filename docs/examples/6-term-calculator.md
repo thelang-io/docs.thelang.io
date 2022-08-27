@@ -1,3 +1,10 @@
+---
+layout: default
+title: Terminal Calculator Example
+---
+
+# {{ page.title }}
+```the
 main {
   mut buf: int?
   mut op: char?
@@ -24,7 +31,7 @@ main {
 
   fn printOpLine (leadingText: str, displayOp: char, trailingText: str) {
     if op == displayOp {
-      print(leadingText + "\e[1m" + displayOp + "\e[0m" + trailingText)
+      print(leadingText + "\033[1m" + displayOp + "\033[0m" + trailingText)
     } else {
       print(leadingText + displayOp + trailingText)
     }
@@ -94,6 +101,7 @@ main {
       }
     }
 
-    print("\e[11A")
+    print("\033[11A")
   }
 }
+```
