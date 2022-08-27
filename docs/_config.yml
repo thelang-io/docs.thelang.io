@@ -1,2 +1,16 @@
-title: The Programming Language
+title: The Programming Language Documentation
+description: Documentation for the only programming language you need
+
+author:
+  name: Aaron Delasy
+  email: aaron@thelang.io
+  twitter: aarondelasy
+
+twitter:
+  username: thelang_io
+  card: summary_large_image
+
 exclude: [CNAME, Gemfile, Gemfile.lock]
+
+plugins:
+  - jekyll-seo-tag
