@@ -2,6 +2,8 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 {%- include head.liquid -%}
   <body>
+    {%- include header.liquid -%}
     {{ content }}
+    <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+$color-light-bg: #F7F8FA;
+$color-light-fg: #111111;
+$color-dark-bg: #111111;
+$color-dark-fg: #FFFFFF;
+$color-link-bg: #FFFFFF;
+$color-success-bg: #0CA678;
+$color-success-fg: #255035;
+
+$color-accent1: #A25AFF;
+$color-accent1-dark: desaturate(darken($color-accent1, 28%), 56%);
+$color-accent2: #30D5C8;
+$color-border: #ECECEC;
+$color-link: #0969DA;
+
+$color-accent-gradient: linear-gradient(
+  90deg,
+  $color-accent1,
+  $color-accent1-dark
+);
