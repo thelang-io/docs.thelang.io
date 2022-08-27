@@ -1,4 +1,9 @@
-# Comments
+---
+layout: default
+title: Comments
+---
+
+# {{ page.title }}
 
 ## Inline
 ```the

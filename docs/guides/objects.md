@@ -1,4 +1,9 @@
-# Objects
+---
+layout: default
+title: Objects
+---
+
+# {{ page.title }}
 ```the
 obj Book {
   title: str
@@ -10,19 +15,5 @@ main {
     title: "Harry Potter and the Sorcerer's Stone",
     year: 1997
   }
-}
-```
-
-## Property shorthand
-```the
-obj Book {
-  title: str
-  year: int
-}
-
-main {
-  title := "War and Peace"
-  year := 1869
-  book := Book{title, year}
 }
 ```

@@ -1,4 +1,9 @@
-# Modules
+---
+layout: default
+title: Modules
+---
+
+# {{ page.title }}
 
 ## Import
 ```the

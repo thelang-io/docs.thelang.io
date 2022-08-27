@@ -1,8 +1,12 @@
-# Types
+---
+layout: default
+title: Types
+---
+
+# {{ page.title }}
 
 ## Basic types
 ```txt
-any
 bool
 byte
 char
@@ -176,6 +180,16 @@ main {
 }
 ```
 
+### Escaping
+// todo explain what values can be escaped and how
+```the
+main {
+  ch1 := '\n'
+  ch2 := '\r'
+  ch3 := '\t'
+}
+```
+
 ## String
 ```the
 main {
@@ -184,6 +198,7 @@ main {
 ```
 
 ### Escaping
+// todo explain what values can be escaped and how
 ```the
 main {
   text := "Some \n random \" text"
@@ -206,32 +221,14 @@ main {
 }
 ```
 
-## Type casting
-
-### Safe
+## Optional
 ```the
 main {
-  i := 1
-  j := 1.2 as? int
+  mut a: int?
+  mut b: int? = nil
+  mut c: int? = 1
 }
 ```
 
-### Unsafe
-```the
-main {
-  i := 1
-  j := 1.2 as int
-}
-```
-
-## Type checking
-```the
-main {
-  i: int?
-  mut j := 0
-
-  if i is int {
-    j = i
-  }
-}
-```
+## Any
+> NOTE: Be careful with it. In most cases you don't need it.

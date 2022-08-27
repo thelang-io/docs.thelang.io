@@ -1,6 +1,11 @@
-# Iteration
+---
+layout: default
+title: Iteration
+---
 
-## While-style loop
+# {{ page.title }}
+
+## Conditional-style loop
 ```the
 main {
   loop {

@@ -1,4 +1,9 @@
-# Enumerations
+---
+layout: default
+title: Enumerations
+---
+
+# {{ page.title }}
 ```the
 enum MovieSeries {
   fast_and_furious,

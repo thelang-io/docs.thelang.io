@@ -1,6 +1,9 @@
-# Variadics
+---
+layout: default
+title: Variadics
+---
 
-## Functions
+# {{ page.title }}
 ```the
 fn myPrint (a: int, b: int, items: str...) {
   print(a + b, items)

@@ -1,6 +1,12 @@
-# Functions
+---
+layout: default
+title: Functions
+---
+
+# {{ page.title }}
 
 ## Main
+// todo explain what it does
 ```the
 main {
 }

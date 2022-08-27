@@ -1,4 +1,9 @@
-# Mutability
+---
+layout: default
+title: Mutability
+---
+
+# {{ page.title }}
 
 ## Variables
 ```the

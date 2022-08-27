@@ -1,4 +1,9 @@
-# Control Flow
+---
+layout: default
+title: Control Flow
+---
+
+# {{ page.title }}
 
 ## If, elif, else
 ```the

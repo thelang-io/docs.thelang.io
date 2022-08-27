@@ -1,4 +1,9 @@
-# Operations
+---
+layout: default
+title: Operations
+---
+
+# {{ page.title }}
 
 ## Variable Declaration
 ```the
@@ -45,7 +50,6 @@ main {
   k := !!14
   l := 15 && 16
   m := 17 || 18
-  n := nil ?? 19
   o := 20 ** 21
   p := 22 != 23
   q := 24 << 2
@@ -71,47 +75,11 @@ main {
 
   z &&= 9
   z ||= 10
-  z ??= 11
   z **= 12
 
   z--
   --z
   z++
   ++z
-}
-```
-
-## Optional chaining
-```the
-obj Person {
-  age: int?
-  answers: bool[]?
-  brother: Person?
-  mainAnswer: bool?
-  name: str?
-  getAge: (fn () int)?
-}
-
-main {
-  p1 := Person{}
-
-  p2 := Person{
-    age: p1.getAge?.(),
-    mainAnswer: p1.answers?.[1],
-    name: p1.brother?.name
-  }
-}
-```
-
-## Nil coalescing
-```the
-main {
-  a: int?
-  b := ""
-  c := 0
-
-  valA := a ?? 1
-  valB := b ?? ""
-  valC := c ?? 1
 }
 ```

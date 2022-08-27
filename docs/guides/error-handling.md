@@ -1,8 +1,13 @@
-# Error Handling
+---
+layout: default
+title: Error Handling
+---
+
+# {{ page.title }}
 ```the
 main {
   try {
-    throw Error{"Error message"}
+    throw NewError("Error message")
   } catch err: Error {
     print(err)
   }
@@ -18,8 +23,8 @@ obj MyError {
 
 main {
   try {
-    throw MyError{"Fatal message", true}
-    throw MyError{"Non-fatal message", false}
+    throw MyError{message: "Fatal message", fatal: true}
+    throw MyError{message: "Non-fatal message", fatal: false}
   } catch err: MyError {
     print(err.message, err.fatal)
   }
