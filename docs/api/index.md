@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /api/
 title: API
 ---
 
-TODO api index
+# {{ page.title }}
+- [Globals](/api/globals.html)

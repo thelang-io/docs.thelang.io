@@ -1,11 +1,32 @@
 ---
 layout: default
-permalink: /api/globals.html
 title: Globals API
 ---
 
-# Globals API
+# {{ page.title }}
 ```the
+obj Array {
+  len: int
+  join: fn (separator := ",") str
+  pop: fn () void
+  push: fn (elements: ArrayElement...) void
+  reverse: fn () Array
+  slice: fn (start: i64 = 0, end: i64 = self.len) Array
+  str: fn () str
+}
+
+obj Function {
+  str: fn () str
+}
+
+obj Object {
+  str: fn () str
+}
+
+obj Optional {
+  str: fn () str
+}
+
 obj any {
   str: fn () str
 }
@@ -55,8 +76,8 @@ obj i64 {
 }
 
 obj str {
-  concat: fn (src: str) str
   len: int
+  slice: fn (start: i64 = 0, end: i64 = self.len) str
 }
 
 obj u8 {
@@ -78,5 +99,14 @@ obj u64 {
 obj void {
 }
 
-fn print (items: any..., separator := " ", terminator := "\n") void
+fn exit (status := 0) void
+
+fn print (
+  items: any...,
+  separator := " ",
+  terminator := "\n",
+  to := "stdout"
+) void
+
+fn sleep (milliseconds: u64) void
 ```
