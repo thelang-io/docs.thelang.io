@@ -8,7 +8,7 @@ author:
 
 twitter:
   username: thelang_io
-  card: summary_large_image
+  card: summary
 
 exclude: [CNAME, Gemfile, Gemfile.lock]
 
