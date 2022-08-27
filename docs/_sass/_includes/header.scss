@@ -2,6 +2,7 @@
 
 .header {
   align-items: center;
+  background-color: $color-white-bg;
   border-bottom: 1px solid $color-border;
   display: flex;
   height: 70px;
@@ -22,16 +23,13 @@
   }
 
   &__link-brand {
+    color: $color-white-fg;
     display: flex;
+    font-size: 30px;
 
     &:hover {
       opacity: 0.7;
       transition: ease-in-out 150ms;
-    }
-
-    & > img {
-      height: 30px;
-      width: 30px;
     }
   }
 
@@ -52,7 +50,7 @@
     }
 
     &__text {
-      color: $color-light-fg;
+      color: $color-white-fg;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -92,7 +90,7 @@
       }
 
       &-link {
-        color: $color-light-fg;
+        color: $color-white-fg;
         font-size: 16px;
         font-style: normal;
         font-weight: normal;
