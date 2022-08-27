@@ -108,5 +108,5 @@ fn print (
   to := "stdout"
 ) void
 
-fn sleep (milliseconds: u64) void
+fn sleepSync (milliseconds: u64) void
 ```
