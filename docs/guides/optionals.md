@@ -22,15 +22,3 @@ obj Book {
   year: int?
 }
 ```
-
-## Type checking
-```the
-main {
-  i: int?
-  mut j := 0
-
-  if i is int {
-    j = i
-  }
-}
-```

@@ -16,6 +16,7 @@ main {
 ```
 
 ## Functions
+// todo explain how mutable arrays and objects work
 ```the
 fn changeA (mut a: int) {
   a = 2
@@ -30,10 +31,12 @@ main {
 ```
 
 ## Objects
+By default if object is mutable then all it's fields are mutable and vice-versa
+This behavior will change in 0.12
 ```the
 obj MyObj {
-  mut prop1: str
-  mut prop2: int
-  mut prop3: fn (int) void
+  prop1: str
+  prop2: int
+  prop3: fn (int) void
 }
 ```
