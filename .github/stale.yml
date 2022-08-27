@@ -3,7 +3,7 @@
 exemptAssignees: true
 exemptMilestones: true
 exemptProjects: true
-staleLabel: false
+staleLabel: wontfix
 
 issues:
   daysUntilStale: 14

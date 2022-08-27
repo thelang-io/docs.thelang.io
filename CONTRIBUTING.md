@@ -1,26 +1,27 @@
 # Contributing
-We want to say "Welcome!" if you here at first and "We are glad to meet you
-again!" if you are our contributor yet. \
+We want to say "Welcome 👋!" if you are here at first and
+"We are glad to meet you again!" if you are already our contributor. \
 We appreciate your help!
 
-First make sure to mount git hooks by:
-```sh
-$ scripts/mount-git-hooks.sh
-```
+## Code of Conduct
+All interactions for this project are covered by the
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). \
+By participating in this project you agree to abide by its terms.
 
-## When want to ask a question
-- https://github.com/lang-the/the/discussions/categories/q-a
+## If you just want to ask a question
+- Ask it on our forum [forum][the-forum]
+- Or talk directly to founder on [Discord][the-discord] or
+  [Telegram][the-telegram]
 
 ## When opening an issue
-- [Search](https://github.com/lang-the/the/issues?q=is%3Aissue) for
-  duplicates
+- [Search][the-issues] for duplicates
 
 ## When sending a pull request
-- [Search](https://github.com/lang-the/the/pulls?q=is%3Apr) for duplicates
-- Make sure to have related tests
+- [Search][the-prs] for duplicates
 - Use the same coding style as the rest of the codebase
 
-## Code of Conduct
-All interactions for this project are covered by the [Contributor Code of
-Conduct](CODE_OF_CONDUCT.md). \
-By participating in this project you agree to abide by its terms.
+[the-discord]: https://discord.gg/CTMM583G7V
+[the-forum]: https://forum.thelang.io/
+[the-issues]: https://github.com/thelang-io/docs.thelang.io/issues?q=is%3Aissue
+[the-prs]: https://github.com/thelang-io/docs.thelang.io/pulls?q=is%3Apr
+[the-telegram]: https://t.me/thelang_io
