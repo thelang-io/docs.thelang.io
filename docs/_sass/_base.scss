@@ -14,5 +14,6 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+@import '_includes/footer';
 @import '_includes/header';
 @import 'layout';
