@@ -4,7 +4,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: max(calc((100vh - 268px) / 2 / 6 * 5), 64px) 15px max(calc((100vh - 268px) / 2 / 6 * 7), 64px);
+  padding: max(calc((100vh - 270px) / 2 / 6 * 5), 64px) 15px max(calc((100vh - 270px) / 2 / 6 * 7), 64px);
   row-gap: 30px;
 
   &__content {
@@ -20,7 +20,7 @@
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0.025em;
-    line-height: normal;
+    line-height: 1.2;
   }
 
   & > h1 {
@@ -30,8 +30,8 @@
 
 @media (max-width: 575.98px) {
   .error-layout {
-    padding-bottom: max(calc((100vh - 232px) / 2 / 6 * 7), 64px);
-    padding-top: max(calc((100vh - 232px) / 2 / 6 * 5), 64px);
+    padding-bottom: max(calc((100vh - 234px) / 2 / 6 * 7), 64px);
+    padding-top: max(calc((100vh - 234px) / 2 / 6 * 5), 64px);
 
     &__subtitle {
       font-size: 16px;

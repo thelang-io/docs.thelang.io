@@ -28,7 +28,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    line-height: normal;
+    line-height: 1.2;
     opacity: 0.7;
   }
 
@@ -68,7 +68,7 @@
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
-      line-height: normal;
+      line-height: 1.2;
     }
 
     &__items {
@@ -87,7 +87,7 @@
         font-size: 16px;
         font-style: normal;
         font-weight: normal;
-        line-height: normal;
+        line-height: 1.2;
         text-decoration: none;
 
         &:hover {
@@ -134,6 +134,11 @@
     &__top, &__bottom {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    &__bottom {
+      padding-bottom: 48px;
+      padding-top: 48px;
     }
 
     &__copyright {
