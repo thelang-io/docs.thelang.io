@@ -3,7 +3,12 @@
 {%- include head.liquid -%}
   <body>
     {%- include header.liquid -%}
-    {{ content }}
+    <div class="error-layout">
+      <div class="error-layout__content">
+        {{ content }}
+        <p class="error-layout__subtitle">Try searching for what you need<p>
+      </div>
+    </div>
     {%- include footer.liquid -%}
     <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
   </body>

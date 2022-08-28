@@ -1,0 +1,25 @@
+@import '../_vars';
+
+.error-layout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0;
+  row-gap: 30px;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__subtitle {
+    color: $color-white-fg;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.025em;
+    line-height: normal;
+  }
+}

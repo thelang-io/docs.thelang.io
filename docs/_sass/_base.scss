@@ -1,3 +1,5 @@
+@import '_vars';
+
 html, body {
   height: 100%;
   width: 100%;
@@ -14,6 +16,15 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.025em;
+  color: $color-white-fg;
+}
+
 @import '_includes/footer';
 @import '_includes/header';
-@import 'layout';
+@import '_layouts/error';
