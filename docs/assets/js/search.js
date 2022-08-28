@@ -110,11 +110,11 @@
   }
 
   async function searchDocs (query) {
-    if (!isNil(query)) {
+    if (!isNil(query) && query !== '') {
       searchQuery = query
     }
 
-    if (searching) {
+    if (searching || searchQuery === null) {
       return
     }
 
@@ -124,7 +124,7 @@
     await performDocsSearch()
 
     const endTime = Date.now()
-    const deltaTime = 1000 - (endTime + startTime)
+    const deltaTime = 2000 - (endTime + startTime)
 
     if (deltaTime > 0) {
       await new Promise((resolve) => {
@@ -140,8 +140,13 @@
   }
 
   if (!isNil(searchModalCancelEl)) {
-    searchModalCancelEl.addEventListener('click', function (e) {
-      e.preventDefault()
+    document.addEventListener('keyup', function (e) {
+      if (e.key === 'Escape') {
+        hideSearchModal()
+      }
+    })
+
+    searchModalCancelEl.addEventListener('click', function () {
       hideSearchModal()
     })
   }

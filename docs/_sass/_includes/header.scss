@@ -18,6 +18,7 @@
 
   &__right {
     align-items: center;
+    column-gap: 32px;
     display: flex;
     height: 100%;
   }
@@ -31,6 +32,14 @@
       opacity: 0.7;
       transition: ease-in-out 150ms;
     }
+  }
+
+  &__toggle {
+    background: transparent;
+    border: none;
+    display: none;
+    font-size: 30px;
+    padding: 0;
   }
 
   &-brand {
@@ -102,6 +111,111 @@
           opacity: 0.7;
           transition: ease-in-out 150ms;
         }
+      }
+    }
+  }
+
+  &-mobile {
+    background: $gradient-accent;
+    border-radius: 10px;
+    bottom: 15px;
+    display: none;
+    flex-direction: column;
+    left: 15px;
+    padding: 32px;
+    position: fixed;
+    right: 15px;
+    row-gap: 20px;
+    top: 15px;
+    z-index: 899;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__headline {
+      color: $color-dark-fg;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      line-height: normal;
+    }
+
+    &__close {
+      align-items: center;
+      background: transparent;
+      border: none;
+      color: $color-dark-fg;
+      display: flex;
+      font-size: 30px;
+      padding: 0;
+
+      &:hover {
+        opacity: 0.7;
+        transition: ease-in-out 150ms;
+      }
+    }
+
+    &__body {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    &__toggle {
+      display: flex;
+    }
+
+    &-nav {
+      column-gap: 0;
+      flex-direction: column;
+      row-gap: 10px;
+
+      &__item-link {
+        color: rgba($color-dark-fg, 0.8);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:hover {
+          color: $color-dark-fg;
+        }
+      }
+    }
+
+    & .header-nav {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &-nav {
+      row-gap: 10px;
+
+      &__item-link {
+        font-size: 16px;
+      }
+    }
+
+    &-mobile {
+      padding: 20px 15px;
+
+      &__headline {
+        font-size: 20px;
+      }
+
+      &__close {
+        align-items: flex-start;
       }
     }
   }

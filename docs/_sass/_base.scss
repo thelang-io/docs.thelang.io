@@ -21,7 +21,6 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 }
 
 h1 {
-  color: $color-white-fg;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
@@ -29,9 +28,9 @@ h1 {
   line-height: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 24px;
   }
 }
 
