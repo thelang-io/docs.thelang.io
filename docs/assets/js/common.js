@@ -2,8 +2,7 @@
 
 (function (document, window) {
   const windowUrl = window.location.href
-  const headerNavItemLinkElements =
-    document.querySelectorAll('.header-nav__item-link')
+  const headerNavItemLinkElements = document.querySelectorAll('.header-nav__item-link')
 
   for (let i = 0; i < headerNavItemLinkElements.length; i++) {
     const headerNavItemLinkElement = headerNavItemLinkElements[i]

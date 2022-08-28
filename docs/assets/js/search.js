@@ -62,8 +62,7 @@
   }
 
   async function performDocsSearch () {
-    searchModalItemsEl.innerHTML =
-      '<div class="search-modal__body-text">Loading...</div>'
+    searchModalItemsEl.innerHTML = '<div class="search-modal__body-text">Loading...</div>'
 
     const q = encodeURIComponent(
       searchQuery +
@@ -84,8 +83,7 @@
     const data = await res.json()
 
     if (data.items.length === 0) {
-      searchModalItemsEl.innerHTML =
-        '<div class="search-modal__body-text">No results for this query</div>'
+      searchModalItemsEl.innerHTML = '<div class="search-modal__body-text">No results for this query</div>'
     } else {
       const html = await Promise.all(
         data.items.slice(0, 10).map(async (item) => {
@@ -95,12 +93,9 @@
             return null
           }
 
-          return '<a class="search-modal__item" href="' +
-            itemInfo.url + '.html">' +
-            '<div class="search-modal__item-headline">' +
-            itemInfo.title + '</div>' +
-            '<p class="search-modal__item-subtitle">' +
-            itemInfo.description + '</p>' +
+          return '<a class="search-modal__item" href="' + itemInfo.url + '.html">' +
+            '<div class="search-modal__item-headline">' + itemInfo.title + '</div>' +
+            '<p class="search-modal__item-subtitle">' + itemInfo.description + '</p>' +
             '</a>'
         })
       )
