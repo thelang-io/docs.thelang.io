@@ -38,7 +38,7 @@
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
-    padding: 32px 96px;
+    padding: 0 96px 32px;
     row-gap: 10px;
 
     &-text {
@@ -60,7 +60,7 @@
     letter-spacing: 0.025em;
     line-height: 1.2;
     outline: none;
-    padding: 32px 10px 40px 80px;
+    padding: 0 10px 40px 80px;
     width: 100%;
     z-index: 1;
 
@@ -71,7 +71,7 @@
     &-wrapper {
       color: $color-dark-fg;
       display: flex;
-      font-size: 50px;
+      font-size: 52px;
       position: relative;
       width: 100%;
 
@@ -89,7 +89,7 @@
       & > svg {
         left: 12px;
         position: absolute;
-        top: 33px;
+        top: 0;
         z-index: 0;
       }
     }
@@ -135,6 +135,77 @@
       font-style: normal;
       font-weight: normal;
       line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .search-modal {
+    &__body {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+
+    &__input {
+      font-size: 36px;
+      padding-left: 66px;
+
+      &-wrapper {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .search-modal {
+    &__header {
+      padding: 20px 32px;
+    }
+
+    &__body {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    &__input {
+      font-size: 24px;
+      padding-left: 54px;
+
+      &-wrapper {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .search-modal {
+    &__header {
+      padding: 20px 15px;
+    }
+
+    &__body {
+      padding-left: 15px;
+      padding-right: 15px;
+      row-gap: 0;
+    }
+
+    &__input {
+      font-size: 16px;
+      padding-left: 46px;
+
+      &-wrapper {
+        font-size: 16px;
+      }
+    }
+
+    &__item {
+      padding: 8px 0;
+
+      &-headline {
+        font-size: 22px;
+      }
     }
   }
 }
