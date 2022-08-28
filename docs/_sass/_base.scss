@@ -1,5 +1,9 @@
 @import '_vars';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -17,14 +21,22 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 }
 
 h1 {
+  color: $color-white-fg;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.025em;
-  color: $color-white-fg;
+  line-height: normal;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 @import '_includes/footer';
 @import '_includes/header';
+@import '_includes/search';
+@import '_includes/search-modal';
 @import '_layouts/error';

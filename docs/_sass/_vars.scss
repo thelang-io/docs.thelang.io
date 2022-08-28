@@ -13,8 +13,8 @@ $color-accent2: #30D5C8;
 $color-border: #ECECEC;
 $color-link: #0969DA;
 
-$color-accent-gradient: linear-gradient(
+$gradient-accent: linear-gradient(
   90deg,
-  $color-accent1,
-  $color-accent1-dark
+  rgba($color-accent1, 0.9),
+  rgba($color-accent1-dark, 0.9)
 );

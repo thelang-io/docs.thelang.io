@@ -4,5 +4,7 @@
   <body>
     {{ content }}
     <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
+    <script>var defaultSearchDescription = '{{ site.description }}';</script>
+    <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
   </body>
 </html>

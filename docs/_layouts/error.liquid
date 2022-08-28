@@ -6,10 +6,14 @@
     <div class="error-layout">
       <div class="error-layout__content">
         {{ content }}
-        <p class="error-layout__subtitle">Try searching for what you need<p>
+        <p class="error-layout__subtitle">Try searching for what you need</p>
       </div>
+      {%- include search.liquid -%}
     </div>
     {%- include footer.liquid -%}
+    {%- include search-modal.liquid -%}
     <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
+    <script>var defaultSearchDescription = '{{ site.description }}';</script>
+    <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
   </body>
 </html>
