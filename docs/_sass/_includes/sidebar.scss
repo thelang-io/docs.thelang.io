@@ -1,0 +1,65 @@
+@import '../_vars';
+
+.sidebar {
+  border-right: 1px solid $color-border;
+  width: 320px;
+
+  &__header {
+    padding: 15px 20px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    row-gap: 10px;
+  }
+
+  &__section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    row-gap: 4px;
+
+    &-headline {
+      background: transparent;
+      border: none;
+      color: $color-white-fg;
+      column-gap: 4px;
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      padding: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 4px 12px;
+    row-gap: 6px;
+  }
+
+  &__item {
+    &-link {
+      color: rgba($color-white-fg, 0.7);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.2;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-white-fg;
+        transition: ease-in-out 150ms;
+      }
+    }
+  }
+}

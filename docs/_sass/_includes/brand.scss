@@ -1,0 +1,28 @@
+@import '../_vars';
+
+.brand {
+  align-items: center;
+  column-gap: 4px;
+  display: flex;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+    transition: ease-in-out 150ms;
+  }
+
+  &__logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__text {
+    color: $color-white-fg;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}

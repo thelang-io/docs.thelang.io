@@ -1,24 +1,34 @@
 <header class="header">
   <div class="header__left">
-    <a class="header-brand" href="/">
-      <img alt="The Programming Language Documentation" class="header-brand__logo" src="/assets/logo-color.svg" />
-      <span class="header-brand__text">Docs</span>
-    </a>
+    {%- if include.logo != false -%}
+      <a class="brand" href="/">
+        <img alt="The Programming Language Documentation" class="brand__logo" src="/assets/logo-color.svg" />
+        <span class="brand__text">Docs</span>
+      </a>
+    {%- endif -%}
     <ul class="header-nav">
       <li class="header-nav__item"><a class="header-nav__item-link" href="/guides/">Guides</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="/api/">API</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="/examples/">Examples</a></li>
     </ul>
+    {%- if include.search != false -%}
+      <form class="header-search">
+        <label class="header-search__wrapper">
+          <input id="search" class="header-search__input" name="q" placeholder="Search documentation" />
+          <span class="header-search__button"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </label>
+      </form>
+    {%- endif -%}
   </div>
   <div class="header__right">
     <a class="header__link-brand" href="https://github.com/thelang-io/the" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
     <button id="headerToggle" class="header__toggle" type="button"><i class="fa-solid fa-bars"></i></button>
   </div>
 </header>
-<aside id="headerMobile" class="header-mobile">
+<div id="headerMobile" class="header-mobile">
   <div class="header-mobile__header">
     <div class="header-mobile__headline">The Programming Language</div>
     <button id="headerMobileClose" class="header-mobile__close" type="button"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <div id="headerMobileBody" class="header-mobile__body"></div>
-</aside>
+</div>

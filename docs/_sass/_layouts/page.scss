@@ -1,0 +1,13 @@
+@import '../_vars';
+
+.page-layout {
+  display: flex;
+
+  &__body {
+    flex: 1 0 0;
+  }
+
+  &__content {
+    padding: 32px;
+  }
+}

@@ -2,7 +2,17 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.liquid -%}
   <body>
-    {{ content }}
+    <div class="page-layout">
+      {%- include sidebar.liquid -%}
+      <div class="page-layout__body">
+        {%- include header.liquid logo=false -%}
+        <div class="page-layout__content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    {%- include footer.liquid -%}
+    {%- include search-modal.liquid -%}
     <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
     <script>var defaultSearchDescription = '{{ site.description }}';</script>
     <script src="{{ "/assets/js/search.js" | relative_url }}"></script>

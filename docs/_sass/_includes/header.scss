@@ -43,33 +43,6 @@
     padding: 0;
   }
 
-  &-brand {
-    align-items: center;
-    column-gap: 4px;
-    display: flex;
-    text-decoration: none;
-
-    &:hover {
-      opacity: 0.7;
-      transition: ease-in-out 150ms;
-    }
-
-    &__logo {
-      height: 40px;
-      width: 40px;
-    }
-
-    &__text {
-      color: $color-white-fg;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-  }
-
   &-nav {
     align-items: stretch;
     column-gap: 30px;
@@ -112,6 +85,48 @@
           color: rgba($color-white-fg, 0.7);
           transition: ease-in-out 150ms;
         }
+      }
+    }
+  }
+
+  &-search {
+    width: 290px;
+
+    &__wrapper {
+      display: flex;
+      position: relative;
+    }
+
+    &__button {
+      align-items: center;
+      background: $gradient-accent-90;
+      border: none;
+      border-radius: 4px;
+      color: $color-dark-fg;
+      display: flex;
+      font-size: 12px;
+      height: calc(100% - 2px);
+      padding: 0 14px;
+      pointer-events: none;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+    }
+
+    &__input {
+      background: $color-light-bg;
+      border: 1px solid $color-border;
+      border-radius: 4px;
+      padding: 10px 50px 10px 12px;
+      width: 290px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $color-light-fg;
+
+      &::placeholder {
+        color: rgba($color-light-fg, 0.7);
       }
     }
   }

@@ -33,8 +33,11 @@ h1 {
   }
 }
 
+@import '_includes/brand';
 @import '_includes/footer';
 @import '_includes/header';
 @import '_includes/search';
 @import '_includes/search-modal';
+@import '_includes/sidebar';
 @import '_layouts/error';
+@import '_layouts/page';
