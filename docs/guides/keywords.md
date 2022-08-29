@@ -25,6 +25,7 @@ main
 mut
 nil
 obj
+ref
 return
 throw
 true

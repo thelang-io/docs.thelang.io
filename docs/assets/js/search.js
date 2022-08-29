@@ -1,5 +1,3 @@
-/* global defaultSearchDescription */
-
 'use strict';
 
 (function (document, window) {
@@ -42,7 +40,7 @@
     const frontMatterParsed = frontMatter.split('\n').filter(it => it !== '')
 
     let title = null
-    let description = defaultSearchDescription
+    let description = 'This page has no description'
 
     for (let i = 0; i < frontMatterParsed.length; i++) {
       const parts = frontMatterParsed[i].split(':')

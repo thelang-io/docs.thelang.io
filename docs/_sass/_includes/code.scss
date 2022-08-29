@@ -1,0 +1,33 @@
+@import '../_vars';
+
+.code {
+  &__line {
+    min-height: 22.4px;
+  }
+
+  &__type {
+    &-char {
+      color: #50A14F;
+    }
+
+    &-comment {
+      color: #A0A1A7;
+    }
+
+    &-id {
+      color: #0184BC;
+    }
+
+    &-keyword {
+      color: #A626A4;
+    }
+
+    &-number {
+      color: #B76B01;
+    }
+
+    &-string {
+      color: #50A14F;
+    }
+  }
+}

@@ -4,7 +4,8 @@ title: Terminal Calculator Example
 ---
 
 # {{ page.title }}
-> NOTE: This example doesn't compile
+> ### NOTE:
+> This example doesn't compile
 
 ```the
 main {

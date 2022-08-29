@@ -4,7 +4,8 @@ title: Quicksort Algorithm Example
 ---
 
 # {{ page.title }}
-> NOTE: This example doesn't compile
+> ### NOTE:
+> This example doesn't compile
 
 ```the
 import swap from utils
