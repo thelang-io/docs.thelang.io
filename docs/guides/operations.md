@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Operations
+layout: page
+title: Operations Guide
 ---
 
 # {{ page.title }}

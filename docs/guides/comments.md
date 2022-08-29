@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Comments
+layout: page
+title: Comments Guide
 ---
 
 # {{ page.title }}

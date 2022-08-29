@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Functions
+layout: page
+title: Functions Guide
 ---
 
 # {{ page.title }}

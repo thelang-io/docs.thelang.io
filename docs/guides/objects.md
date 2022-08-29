@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Objects
+layout: page
+title: Objects Guide
 ---
 
 # {{ page.title }}

@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Mutability
+layout: page
+title: Mutability Guide
 ---
 
 # {{ page.title }}

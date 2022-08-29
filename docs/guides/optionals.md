@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Optionals
+layout: page
+title: Optionals Guide
 ---
 
 # {{ page.title }}

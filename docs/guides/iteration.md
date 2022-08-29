@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Iteration
+layout: page
+title: Iteration Guide
 ---
 
 # {{ page.title }}

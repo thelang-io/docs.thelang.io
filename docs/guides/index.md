@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: page
 title: Guides
 ---
 
 # {{ page.title }}
+// todo order
 - [Comments](/guides/comments.html)
 - [Control Flow](/guides/control-flow.html)
 - [Functions](/guides/functions.html)
