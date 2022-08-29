@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Comments Guide
+title: Comments
 ---
 
 # {{ page.title }}

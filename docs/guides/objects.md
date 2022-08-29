@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Objects Guide
+title: Objects
 ---
 
 # {{ page.title }}

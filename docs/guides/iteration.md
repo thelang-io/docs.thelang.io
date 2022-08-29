@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Iteration Guide
+title: Iteration
 ---
 
 # {{ page.title }}

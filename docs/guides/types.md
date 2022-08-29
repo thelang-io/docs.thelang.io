@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Types Guide
+title: Types
 ---
 
 # {{ page.title }}

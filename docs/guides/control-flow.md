@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Control Flow Guide
+title: Control Flow
 ---
 
 # {{ page.title }}
