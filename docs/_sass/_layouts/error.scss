@@ -11,7 +11,6 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
   }
 
   &__subtitle {
@@ -24,7 +23,7 @@
   }
 
   & > h1 {
-    color: $color-white-fg;
+    margin-bottom: 16px;
   }
 }
 

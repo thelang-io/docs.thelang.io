@@ -4,7 +4,7 @@ title: Keywords
 ---
 
 # {{ page.title }}
-```txt
+```
 async
 await
 break

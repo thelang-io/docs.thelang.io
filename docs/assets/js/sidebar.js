@@ -6,6 +6,7 @@
 
   for (let i = 0; i < sidebarSectionElements.length; i++) {
     const sidebarSectionEl = sidebarSectionElements[i]
+    const sidebarSectionHeadlineEl = sidebarSectionEl.querySelector('.sidebar__section-headline')
     const sidebarSectionItemLinkElements = sidebarSectionEl.querySelectorAll('.sidebar__item-link')
 
     for (let j = 0; j < sidebarSectionItemLinkElements.length; j++) {
@@ -17,16 +18,18 @@
       }
     }
 
-    sidebarSectionEl.addEventListener('click', function (e) {
-      if (e.currentTarget.classList.contains('sidebar__section--expanded')) {
-        e.currentTarget.classList.remove('sidebar__section--expanded')
-      } else {
-        for (let i = 0; i < sidebarSectionElements.length; i++) {
-          sidebarSectionElements[i].classList.remove('sidebar__section--expanded')
-        }
+    if (sidebarSectionHeadlineEl !== null) {
+      sidebarSectionHeadlineEl.addEventListener('click', function (e) {
+        if (e.currentTarget.parentNode.classList.contains('sidebar__section--expanded')) {
+          e.currentTarget.parentNode.classList.remove('sidebar__section--expanded')
+        } else {
+          for (let i = 0; i < sidebarSectionElements.length; i++) {
+            sidebarSectionElements[i].classList.remove('sidebar__section--expanded')
+          }
 
-        e.currentTarget.classList.add('sidebar__section--expanded')
-      }
-    })
+          e.currentTarget.parentNode.classList.add('sidebar__section--expanded')
+        }
+      })
+    }
   }
 })(document, window)

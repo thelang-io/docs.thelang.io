@@ -6,7 +6,7 @@ title: Functions Guide
 # {{ page.title }}
 
 ## Main
-// todo explain what it does
+todo: explain what it does
 ```the
 main {
 }

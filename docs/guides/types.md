@@ -6,7 +6,7 @@ title: Types Guide
 # {{ page.title }}
 
 ## Basic types
-```txt
+```
 bool
 byte
 char
@@ -17,7 +17,7 @@ void
 ```
 
 ## Scientific types
-```txt
+```
 i8  u8
 i16 u16
 i32 u32
@@ -181,7 +181,7 @@ main {
 ```
 
 ### Escaping
-// todo explain what values can be escaped and how
+todo: explain what values can be escaped and how
 ```the
 main {
   ch1 := '\n'
@@ -198,7 +198,7 @@ main {
 ```
 
 ### Escaping
-// todo explain what values can be escaped and how
+todo: explain what values can be escaped and how
 ```the
 main {
   text := "Some \n random \" text"
@@ -231,4 +231,7 @@ main {
 ```
 
 ## Any
-> NOTE: Be careful with it. In most cases you don't need it.
+> ### NOTE:
+> Be careful with it. In most cases you don't need it.
+
+todo: example of any usage

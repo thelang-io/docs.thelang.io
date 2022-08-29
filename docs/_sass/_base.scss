@@ -20,11 +20,87 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 }
 
 h1 {
+  color: $color-light-fg;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.025em;
   line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: $color-light-fg;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  color: $color-light-fg;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  color: $color-light-fg;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  color: $color-light-fg;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+blockquote {
+  background-color: rgba($color-success-bg, 0.2);
+  border-left: 8px solid rgba($color-success-bg, 0.8);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 12px 24px;
+
+  & * {
+    color: $color-success-fg;
+  }
+}
+
+code {
+  background-color: $color-white-bg;
+  border: 1px solid $color-border;
+  border-radius: 24px;
+  color: $color-white-fg;
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 24px;
+}
+
+code:not([class^='language-']) {
+  background-color: $color-light-bg;
+  color: $color-light-fg;
 }
 
 @media (max-width: 575.98px) {

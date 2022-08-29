@@ -33,7 +33,7 @@ main {
 ```
 
 ## Basic operations
-// todo split into sections
+todo: split into sections
 ```the
 main {
   a := 1 + 2

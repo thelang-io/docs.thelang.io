@@ -16,7 +16,7 @@ main {
 ```
 
 ## Functions
-// todo explain how mutable arrays and objects work
+todo: explain how mutable arrays and objects work
 ```the
 fn changeA (mut a: int) {
   a = 2

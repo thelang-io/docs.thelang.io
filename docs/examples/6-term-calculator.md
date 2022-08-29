@@ -5,6 +5,7 @@ title: Terminal Calculator Example
 
 # {{ page.title }}
 > NOTE: This example doesn't compile
+
 ```the
 main {
   mut buf: int?
