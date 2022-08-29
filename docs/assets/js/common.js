@@ -5,11 +5,11 @@
   const headerNavItemLinkElements = document.querySelectorAll('.header-nav__item-link')
 
   for (let i = 0; i < headerNavItemLinkElements.length; i++) {
-    const headerNavItemLinkElement = headerNavItemLinkElements[i]
+    const headerNavItemLinkEl = headerNavItemLinkElements[i]
 
-    if (windowUrl.startsWith(headerNavItemLinkElement.href)) {
-      const parent = headerNavItemLinkElement.parentNode
-      parent.classList.add(parent.className + '--active')
+    if (windowUrl.startsWith(headerNavItemLinkEl.href)) {
+      const headerNavItemEl = headerNavItemLinkEl.parentNode
+      headerNavItemEl.classList.add(headerNavItemEl.className + '--active')
     }
   }
 
