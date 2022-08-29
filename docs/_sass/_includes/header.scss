@@ -29,7 +29,7 @@
     font-size: 30px;
 
     &:hover {
-      opacity: 0.7;
+      color: rgba($color-white-fg, 0.7);
       transition: ease-in-out 150ms;
     }
   }
@@ -109,7 +109,7 @@
         text-decoration: none;
 
         &:hover {
-          opacity: 0.7;
+          color: rgba($color-white-fg, 0.7);
           transition: ease-in-out 150ms;
         }
       }
@@ -154,7 +154,7 @@
       padding: 0;
 
       &:hover {
-        opacity: 0.7;
+        color: rgba($color-dark-fg, 0.7);
         transition: ease-in-out 150ms;
       }
     }
