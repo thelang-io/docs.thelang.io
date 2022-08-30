@@ -11,6 +11,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+
+    & > h1 {
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
   }
 
   &__subtitle {
@@ -20,10 +25,7 @@
     font-weight: normal;
     letter-spacing: 0.025em;
     line-height: 1.2;
-  }
-
-  & > h1 {
-    margin-bottom: 16px;
+    margin: 0;
   }
 }
 

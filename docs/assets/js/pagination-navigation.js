@@ -14,6 +14,10 @@
   }
 
   function toTitleCase (str) {
+    if (str === 'API') {
+      return str
+    }
+
     return str.replace(/\w\S*/g, (s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase())
   }
 
