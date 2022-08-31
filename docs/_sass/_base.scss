@@ -20,7 +20,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 }
 
 h1 {
-  color: $color-light-fg;
+  color: $color-white-fg;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  color: $color-light-fg;
+  color: $color-white-fg;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-  color: $color-light-fg;
+  color: $color-white-fg;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -51,7 +51,7 @@ h3 {
 }
 
 h4 {
-  color: $color-light-fg;
+  color: $color-white-fg;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -61,7 +61,7 @@ h4 {
 }
 
 p {
-  color: $color-light-fg;
+  color: $color-white-fg;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -161,5 +161,6 @@ table {
 @import '_includes/search';
 @import '_includes/search-modal';
 @import '_includes/sidebar';
+@import '_includes/table-of-contents';
 @import '_layouts/error';
 @import '_layouts/page';
