@@ -30,6 +30,7 @@
 
     &:hover {
       color: rgba($color-white-fg, 0.7);
+      text-decoration: none;
       transition: ease-in-out 150ms;
     }
   }
@@ -49,6 +50,7 @@
     display: flex;
     height: 100%;
     list-style-type: none;
+    padding: 0;
 
     &__item {
       align-items: center;
@@ -83,6 +85,7 @@
 
         &:hover {
           color: rgba($color-white-fg, 0.7);
+          text-decoration: none;
           transition: ease-in-out 150ms;
         }
       }
@@ -117,13 +120,13 @@
       background: $color-light-bg;
       border: 1px solid $color-border;
       border-radius: 4px;
-      padding: 10px 50px 10px 12px;
-      width: 290px;
+      color: $color-light-fg;
+      font-size: 16px;
       font-style: normal;
       font-weight: normal;
-      font-size: 16px;
       line-height: 1.2;
-      color: $color-light-fg;
+      padding: 10px 50px 10px 12px;
+      width: 290px;
 
       &::placeholder {
         color: rgba($color-light-fg, 0.7);
@@ -170,6 +173,7 @@
 
       &:hover {
         color: rgba($color-dark-fg, 0.7);
+        text-decoration: none;
         transition: ease-in-out 150ms;
       }
     }
@@ -200,6 +204,7 @@
 
         &:hover {
           color: $color-dark-fg;
+          text-decoration: none;
         }
       }
     }

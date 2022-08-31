@@ -84,7 +84,7 @@ blockquote {
   }
 }
 
-code {
+pre code {
   background-color: $color-white-bg;
   border: 1px solid $color-border;
   border-radius: 24px;
@@ -98,9 +98,53 @@ code {
   padding: 24px;
 }
 
-code:not([class^='language-']) {
+pre code:not([class^='language-']) {
   background-color: $color-light-bg;
   color: $color-light-fg;
+}
+
+p code {
+  background-color: rgba($color-success-bg, 0.3);
+  color: $color-white-fg;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625;
+  padding: 2px 5px;
+}
+
+ul {
+  padding-inline-start: 24px;
+
+  & > li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    transition: ease-in-out 150ms;
+  }
+
+  & code {
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-accent1;
+      transition: ease-in-out 150ms;
+    }
+  }
+}
+
+table {
+  border-spacing: 10px;
 }
 
 @media (max-width: 575.98px) {

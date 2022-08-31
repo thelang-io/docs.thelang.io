@@ -45,6 +45,7 @@
 
       &:hover {
         color: rgba($color-light-fg, 0.7);
+        text-decoration: none;
         transition: ease-in-out 150ms;
       }
     }
@@ -74,6 +75,7 @@
       display: flex;
       flex-direction: column;
       list-style: none;
+      padding: 0;
       row-gap: 16px;
     }
 
@@ -91,6 +93,7 @@
 
         &:hover {
           color: rgba($color-white-fg, 0.7);
+          text-decoration: none;
           transition: ease-in-out 150ms;
         }
       }

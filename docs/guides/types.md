@@ -6,6 +6,9 @@ title: Types
 # {{ page.title }}
 
 ## Basic types
+
+Note, that `void` type can only be used with function return type.
+
 ```
 bool
 byte
@@ -222,6 +225,8 @@ main {
 ```
 
 ## Optional
+You can find more information about optional type in [this guide](/guides/optionals.html).
+
 ```the
 main {
   mut a: int?
