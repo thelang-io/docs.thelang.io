@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.liquid -%}
   <body>
+    {% include banner.liquid %}
     {%- include header.liquid search=false -%}
     <div class="error-layout">
       <div class="error-layout__content">

@@ -80,8 +80,8 @@
 
 @media (max-width: 575.98px) {
   .pagination-navigation {
-    row-gap: 16px;
-    margin-top: 32px;
     flex-direction: column;
+    margin-top: 32px;
+    row-gap: 16px;
   }
 }

@@ -1,0 +1,16 @@
+@import '../_vars';
+
+.banner {
+  background-color: $color-dark-bg;
+  color: $color-dark-fg;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  padding: 12px;
+  text-align: center;
+
+  & a {
+    color: $color-accent1;
+  }
+}
