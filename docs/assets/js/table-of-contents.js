@@ -1,6 +1,6 @@
 'use strict';
 
-(function (document, window) {
+(function (document) {
   const pageLayoutContentEl = document.querySelector('.page-layout__content')
 
   if (pageLayoutContentEl === null) {
@@ -43,4 +43,4 @@
   }
 
   tableOfContents(data)
-})(document, window)
+})(document)

@@ -1,10 +1,6 @@
 'use strict';
 
-(function (document, window) {
-  function isNil (test) {
-    return typeof test === 'undefined' || test === null
-  }
-
+(function (document) {
   function base64Decode (str) {
     return decodeURIComponent(atob(str).split('').map((c) => {
       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
@@ -175,4 +171,4 @@
       return searchDocs(e.currentTarget.value)
     })
   }
-})(document, window)
+})(document)

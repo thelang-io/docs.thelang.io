@@ -1,6 +1,6 @@
 'use strict';
 
-(function (document, window) {
+(function (document) {
   const codeElements = document.querySelectorAll('code.language-the')
 
   const TOKEN = {
@@ -186,4 +186,4 @@
     codeEl.classList.add('code')
     codeEl.innerHTML = parse(codeEl.innerHTML)
   }
-})(document, window)
+})(document)
