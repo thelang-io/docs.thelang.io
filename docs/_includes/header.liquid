@@ -1,29 +1,29 @@
 <header class="header">
   <div class="header__left">
-    {%- if include.brand != false -%}
+    {% if include.brand != false %}
       <a class="brand{% if include.brand == "mobile" %} brand--mobile{% endif %}" href="/">
         <img alt="The Programming Language Documentation" class="brand__logo" src="/assets/logo-color.svg" />
         <span class="brand__text">Docs</span>
       </a>
-    {%- endif -%}
+    {% endif %}
     <ul class="header-nav">
       <li class="header-nav__item"><a class="header-nav__item-link" href="/guides/">Guides</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="/api/">API</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="/examples/">Examples</a></li>
     </ul>
-    {%- if include.search != false -%}
+    {% if include.search != false %}
       <form class="header-search">
         <label class="header-search__wrapper">
           <input id="search" class="header-search__input" name="q" placeholder="Search documentation" />
           <span class="header-search__button"><i class="fa-solid fa-magnifying-glass"></i></span>
         </label>
       </form>
-    {%- endif -%}
+    {% endif %}
   </div>
   <div class="header__right">
-    {%- if include.search != false -%}
+    {% if include.search != false %}
       <button id="headerSearchToggle" class="header-search__toggle" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-    {%- endif -%}
+    {% endif %}
     <a class="header__link-brand" href="https://github.com/thelang-io/the" rel="nofollow noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
     <button id="headerToggle" class="header__toggle" type="button"><i class="fa-solid fa-bars"></i></button>
   </div>

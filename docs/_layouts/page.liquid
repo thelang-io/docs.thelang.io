@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {%- include head.liquid -%}
+  {% include head.liquid %}
   <body>
-  {% include banner.liquid %}
+    {% include banner.liquid %}
     <div class="page-layout">
-      {%- include sidebar.liquid -%}
+      {% include sidebar.liquid %}
       <div class="page-layout__body">
-        {%- include header.liquid brand="mobile" -%}
+        {% include header.liquid brand="mobile" %}
         <div class="page-layout__content">
           {{ content }}
         </div>
       </div>
     </div>
-    {%- include footer.liquid -%}
-    {%- include search-modal.liquid -%}
+    {% include footer.liquid %}
+    {% include search-modal.liquid %}
     <script src="{{ "/assets/js/header.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/pagination-navigation.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/parser.js" | relative_url }}"></script>
