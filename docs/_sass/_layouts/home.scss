@@ -1,0 +1,144 @@
+@import '../_vars';
+
+.home-layout {
+  &__help {
+    padding: max(calc((100vh - 244px) / 2 / 6 * 5), 64px) 15px max(calc((100vh - 244px) / 2 / 6 * 7), 64px);
+    width: 400px;
+
+    &-container {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-headline {
+      color: $color-white-fg;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  &__learn {
+    column-gap: 20px;
+    display: flex;
+
+    &-container {
+      padding: 0 15px 100px;
+    }
+
+    &-section {
+      column-gap: 20px;
+      display: flex;
+      flex: 1 0 0;
+    }
+
+    &-step {
+      align-items: center;
+      color: $color-white-fg;
+      display: flex;
+      flex: 0 0 70px;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 300;
+      height: 70px;
+      justify-content: center;
+      line-height: 1.2;
+      width: 70px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    &-headline {
+      color: $color-white-fg;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    &-body {
+      color: $color-white-fg;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+
+    &-container {
+      background-color: $color-light-bg;
+      padding: 64px 0;
+    }
+
+    &-section {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &-headline {
+      color: rgba($color-light-fg, 0.7);
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      row-gap: 12px;
+    }
+
+    &-item {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .home-layout {
+    &__learn {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__links {
+      flex-wrap: wrap;
+
+      &-section {
+        flex-basis: calc(50% - 10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-layout {
+    &__learn {
+      &-step {
+        flex: 0 0 50px;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}

@@ -1,8 +1,81 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {%- include head.liquid home_title=true -%}
+  {% include head.liquid home_title=true %}
   <body>
-    {{ content }}
+    {% include banner.liquid %}
+    {% include header.liquid search=false %}
+    <main class="home-layout__page">
+      <section class="home-layout__help-container">
+        <div class="home-layout__help">
+          <h1 class="home-layout__help-headline">How can we help?</h1>
+          {% include search.liquid %}
+        </div>
+      </section>
+      <section class="home-layout__learn-container">
+        <div class="home-layout__learn">
+          <div class="home-layout__learn-section">
+            <div class="home-layout__learn-step">1</div>
+            <div class="home-layout__learn-info">
+              <div class="home-layout__learn-headline">Get Started</div>
+              <div class="home-layout__learn-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+          </div>
+          <div class="home-layout__learn-section">
+            <div class="home-layout__learn-step">2</div>
+            <div class="home-layout__learn-info">
+              <div class="home-layout__learn-headline">Install CLI</div>
+              <div class="home-layout__learn-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+          </div>
+          <div class="home-layout__learn-section">
+            <div class="home-layout__learn-step">3</div>
+            <div class="home-layout__learn-info">
+              <div class="home-layout__learn-headline">Follow guides</div>
+              <div class="home-layout__learn-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-layout__links-container">
+        <div class="home-layout__links container">
+          <div class="home-layout__links-section">
+            <div class="home-layout__links-headline">Guides</div>
+            <ul class="home-layout__links-items">
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/types.html">Types</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/comments.html">Comments</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/operations.html">Operations</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/control-flow.html">Control Flow</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/iteration.html">Iteration</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/objects.html">Objects</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/functions.html">Functions</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/mutability.html">Mutability</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/optionals.html">Optionals</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/guides/keywords.html">Keywords</a></li>
+            </ul>
+          </div>
+          <div class="home-layout__links-section">
+            <div class="home-layout__links-headline">API</div>
+            <ul class="home-layout__links-items">
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/api/globals.html">Globals</a></li>
+            </ul>
+          </div>
+          <div class="home-layout__links-section">
+            <div class="home-layout__links-headline">Examples</div>
+            <ul class="home-layout__links-items">
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/1-hello-world.html">Hello World</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/2-fibonacci.html">Fibonacci</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/3-quicksort.html">Quicksort Algorithm</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/4-fizzbuzz.html">FizzBuzz</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/5-factorial.html">Factorial</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/6-term-calculator.html">Terminal Calculator</a></li>
+              <li class="home-layout__links-item"><a class="home-layout__links-link" href="/examples/7-term-pretty-waves.html">Terminal Pretty Waves</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include footer.liquid %}
+    {% include search-modal.liquid %}
     <script src="{{ "/assets/js/header.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
   </body>

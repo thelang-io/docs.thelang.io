@@ -30,6 +30,12 @@ h1 {
   margin-top: 1.5rem;
 }
 
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
 h2 {
   color: $color-white-fg;
   font-size: 22px;
@@ -152,9 +158,33 @@ table {
   -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 575.98px) {
-  h1 {
-    font-size: 24px;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
 
@@ -169,4 +199,5 @@ table {
 @import '_includes/sidebar';
 @import '_includes/table-of-contents';
 @import '_layouts/error';
+@import '_layouts/home';
 @import '_layouts/page';
