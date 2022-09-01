@@ -183,7 +183,7 @@
   for (let i = 0; i < codeElements.length; i++) {
     const codeEl = codeElements[i]
 
-    codeEl.classList.add('code')
-    codeEl.innerHTML = parse(codeEl.innerHTML)
+    codeEl.classList.add('code__wrapper')
+    codeEl.innerHTML = '<div class="code">' + parse(codeEl.innerHTML) + '</div>'
   }
 })(document)

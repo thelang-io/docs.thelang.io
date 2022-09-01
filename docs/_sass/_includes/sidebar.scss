@@ -2,8 +2,9 @@
 
 .sidebar {
   border-right: 1px solid $color-border;
+  flex: 0 0 auto;
   padding-bottom: 96px;
-  width: 320px;
+  width: 240px;
 
   &__header {
     padding: 15px 20px;
@@ -12,8 +13,11 @@
   &__body {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     row-gap: 20px;
+
+    &-wrapper {
+      padding: 20px;
+    }
   }
 
   &__section {
@@ -23,7 +27,7 @@
     font-size: 12px;
     row-gap: 4px;
 
-    &--expanded {
+    &--always-expanded, &--expanded {
       & > .sidebar {
         &__section-headline {
           & > svg:nth-child(1) {
@@ -66,7 +70,7 @@
     display: none;
     flex-direction: column;
     list-style: none;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     row-gap: 10px;
     width: 100%;
   }
@@ -91,5 +95,11 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    display: none;
   }
 }

@@ -147,6 +147,11 @@ table {
   border-spacing: 10px;
 }
 
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 575.98px) {
   h1 {
     font-size: 24px;

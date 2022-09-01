@@ -5,7 +5,7 @@
     <div class="page-layout">
       {%- include sidebar.liquid -%}
       <div class="page-layout__body">
-        {%- include header.liquid logo=false -%}
+        {%- include header.liquid brand="mobile" -%}
         <div class="page-layout__content">
           {{ content }}
         </div>
@@ -13,7 +13,7 @@
     </div>
     {%- include footer.liquid -%}
     {%- include search-modal.liquid -%}
-    <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/header.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/pagination-navigation.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/parser.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/search.js" | relative_url }}"></script>

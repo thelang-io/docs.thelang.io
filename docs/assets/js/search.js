@@ -7,6 +7,7 @@
     }).join(''))
   }
 
+  const headerSearchToggleEl = document.getElementById('headerSearchToggle')
   const searchEl = document.getElementById('search')
   const searchModalEl = document.querySelector('.search-modal')
   const searchModalInputEl = document.getElementById('searchModalInput')
@@ -99,7 +100,7 @@
   }
 
   async function searchDocs (query) {
-    if (!isNil(query) && query !== '') {
+    if (typeof query !== 'undefined' && query !== '') {
       searchQuery = query
     }
 
@@ -128,24 +129,25 @@
     }
   }
 
-  if (!isNil(searchModalCancelEl)) {
+  if (searchModalCancelEl !== null) {
+    searchModalCancelEl.addEventListener('click', function () {
+      hideSearchModal()
+    })
+  }
+
+  if (headerSearchToggleEl !== null) {
+    headerSearchToggleEl.addEventListener('click', function () {
+      showSearchModal()
+    })
+  }
+
+  if (searchEl !== null && searchModalEl !== null && searchModalItemsEl !== null && searchModalInputEl !== null) {
     document.addEventListener('keyup', function (e) {
       if (e.key === 'Escape') {
         hideSearchModal()
       }
     })
 
-    searchModalCancelEl.addEventListener('click', function () {
-      hideSearchModal()
-    })
-  }
-
-  if (
-    !isNil(searchEl) &&
-    !isNil(searchModalEl) &&
-    !isNil(searchModalItemsEl) &&
-    !isNil(searchModalInputEl)
-  ) {
     searchEl.form.addEventListener('submit', function (e) {
       e.preventDefault()
     })

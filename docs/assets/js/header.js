@@ -15,17 +15,10 @@
 
   const headerNavEl = document.querySelector('.header-nav')
   const headerMobileEl = document.getElementById('headerMobile')
-  const headerMobileBodyEl = document.getElementById('headerMobileBody')
   const headerMobileCloseEl = document.getElementById('headerMobileClose')
   const headerToggleEl = document.getElementById('headerToggle')
 
-  if (
-    headerNavEl !== null &&
-    headerMobileEl !== null &&
-    headerMobileBodyEl !== null &&
-    headerMobileCloseEl !== null &&
-    headerToggleEl !== null
-  ) {
+  if (headerNavEl !== null && headerMobileEl !== null && headerMobileCloseEl !== null && headerToggleEl !== null) {
     headerToggleEl.addEventListener('click', function () {
       headerMobileEl.style.display = 'flex'
       document.body.style.overflow = 'hidden'
@@ -35,7 +28,5 @@
       headerMobileEl.style.display = ''
       document.body.style.overflow = ''
     })
-
-    headerMobileBodyEl.appendChild(headerNavEl.cloneNode(true))
   }
 })(document, window)

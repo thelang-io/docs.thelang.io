@@ -2,12 +2,26 @@
 
 .page-layout {
   display: flex;
+  width: 100%;
 
   &__body {
     flex: 1 0 0;
+    width: 100%;
   }
 
   &__content {
-    padding: 0 32px 32px;
+    padding: 0 15px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    &__body {
+      width: calc(100% - 240px);
+    }
+
+    &__content {
+      padding: 0 32px 32px;
+    }
   }
 }

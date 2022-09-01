@@ -9,10 +9,6 @@
     return
   }
 
-  function isNil (test) {
-    return typeof test === 'undefined' || test === null
-  }
-
   function toTitleCase (str) {
     if (str === 'API') {
       return str
@@ -22,7 +18,7 @@
   }
 
   function paginationNavigation (prevHref, prevTitle, nextHref, nextTitle) {
-    const prevHTML = isNil(prevHref) ? '' : (
+    const prevHTML = prevHref === null ? '' : (
       '<a class="pagination-navigation__button pagination-navigation__button--left" href="' + prevHref + '">' +
       '<i class="pagination-navigation__arrow fa-solid fa-caret-left"></i>' +
       '<div class="pagination-navigation__body">' +
@@ -32,7 +28,7 @@
       '</a>'
     )
 
-    const nextHTML = isNil(nextHref) ? '' : (
+    const nextHTML = nextHref === null ? '' : (
       '<a class="pagination-navigation__button pagination-navigation__button--right" href="' + nextHref + '">' +
       '<div class="pagination-navigation__body">' +
       '<div class="pagination-navigation__headline">Next</div>' +

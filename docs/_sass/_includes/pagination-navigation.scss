@@ -39,8 +39,14 @@
     &--right {
       justify-content: flex-end;
 
-      & > .pagination-navigation__body {
-        align-items: flex-end;
+      & .pagination-navigation {
+        &__body {
+          align-items: flex-end;
+        }
+
+        &__subtitle {
+          text-align: right;
+        }
       }
     }
   }
@@ -69,5 +75,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pagination-navigation {
+    row-gap: 16px;
+    margin-top: 32px;
+    flex-direction: column;
   }
 }
