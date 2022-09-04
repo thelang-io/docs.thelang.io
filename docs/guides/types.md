@@ -6,8 +6,7 @@ title: Types
 # {{ page.title }}
 
 ## Basic types
-
-Note, that `void` type can only be used with function return type.
+These are basic types that can be used to declare a variable.
 
 ```
 bool
@@ -16,10 +15,12 @@ char
 float = f64
 int = i32
 str
-void
 ```
 
 ## Scientific types
+Scientific types are usually used within programs dedicated to science, e.g.
+Math projects, Machine Learning projects, etc.
+
 ```
 i8  u8
 i16 u16
@@ -30,10 +31,26 @@ f32 f64
 ```
 
 ## Number promotion
+The Programming Language can automatically promote types. For example:
+
+```the
+fn expectI64 (num: i64) {
+}
+
+main {
+  intNum: int = 1
+  expectI64(intNum)
+}
+```
+
+In this example variable `intNum` will get automatically promoted to `i64`
+type, when passed to `expectI64` function. \
+There's a table of all possible type promotions:
+
 <div class="table-responsive">
   <table>
     <tr>
-      <th></th>
+      <th>To</th>
       <th>i8</th>
       <th>i16</th>
       <th>i32</th>
@@ -179,14 +196,16 @@ f32 f64
 </div>
 
 ## Char
+This type can hold only one character.
 ```the
 main {
   ch := 'a'
 }
 ```
 
-### Escaping
-todo: explain what values can be escaped and how
+### Char Escaping
+Characters that can be escaped `\n`, `\f`, `\r`, `\t`, `\v`, `\e`, `\0`, `\'`, `\"`.
+
 ```the
 main {
   ch1 := '\n'
@@ -196,21 +215,28 @@ main {
 ```
 
 ## String
+This type can hold collection of characters.
+
 ```the
 main {
   string := "Hello, World!"
 }
 ```
 
-### Escaping
-todo: explain what values can be escaped and how
+### String Escaping
+Characters that can be escaped `\n`, `\f`, `\r`, `\t`, `\v`, `\e`, `\0`, `\'`,
+`\"`.
+
 ```the
 main {
   text := "Some \n random \" text"
 }
 ```
 
-### Concatenation
+### String Concatenation
+There are situation when you want to join two strings. To do this you need to
+use `+` operator.
+
 ```the
 main {
   greet := "Hello, "
@@ -220,6 +246,8 @@ main {
 ```
 
 ## Array
+You can find out more in [arrays guide](/guides/arrays.html).
+
 ```the
 main {
   arr := [1, 2, 3]
@@ -227,7 +255,7 @@ main {
 ```
 
 ## Optional
-You can find more information about optional type in [this guide](/guides/optionals.html).
+You can find out more in [optionals guide](/guides/optionals.html).
 
 ```the
 main {
@@ -238,7 +266,31 @@ main {
 ```
 
 ## Any
-> ### NOTE:
-> Be careful with it. In most cases you don't need it.
+You can use this type to store any type.
 
-todo: example of any usage
+```the
+main {
+  mut myVar: any
+
+  myVar = 1
+  myVar = 3.14
+  myVar = 'a'
+  myVar = "string"
+}
+```
+
+> ### NOTE:
+> Programs using `any` type use more RAM, in most cases you don't need it.
+
+## Void
+This type can only be used as function return type
+
+```the
+fn printNumber (num: int) void {
+  print(num)
+}
+
+main {
+  printNumber(1)
+}
+```
