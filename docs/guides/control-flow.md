@@ -5,28 +5,44 @@ title: Control Flow
 
 # {{ page.title }}
 
-## If, elif, else
+## if..else
+The `if` statement executes `statement1` if `condition` is `true`. Otherwise
+it executes optional `else` clause `statement2`.
+
 ```the
 main {
-  if 1 < 2 {
-    print("1 is less than 2")
-  } elif 1 > 2 {
-    print("1 is greater than 2")
+  if condition {
+    statement1
   } else {
-    print("1 is equal 2")
+    statement2
   }
 }
 ```
 
-## Ternary
+## elif
+You can add more conditions to `if` statement with `elif` statements.
+
 ```the
 main {
-  print(
-    1 < 2
-      ? "1 is less than 2"
-      : 1 > 2
-        ? "1 is greater than 2"
-        : "1 is equal 2"
-  )
+  if condition1 {
+    statement1
+  } elif condition2 {
+    statement2
+  } elif condition3 {
+    statement3
+  } else {
+    statement4
+  }
+}
+```
+
+## Ternary Operation
+The ternary operation is the only operation that takes three operands. This
+operation is frequently used as an alternative to an [if...else](#ifelse)
+statement.
+
+```the
+main {
+  condition ? statement1 : statement2
 }
 ```
