@@ -76,6 +76,7 @@
     for (let i = 0; i < text.length; i++) {
       const startPos = i
       let type = TOKEN.UNKNOWN
+      let val = null
 
       if (text[i] === '\n') {
         type = TOKEN.EOL
@@ -125,6 +126,15 @@
         }
 
         type = TOKEN.COMMENT
+
+        val = text.slice(startPos, i + 1)
+          .split('\n')
+          .map((item) => {
+            return item.replace(/\s+/g, (s) => {
+              return Array(s.split('').length + 1).join('&nbsp;')
+            })
+          })
+          .join('<br>')
       } else if (tokIsOp(text[i])) {
         while (tokIsOp(text[i + 1])) i++
         type = TOKEN.OP
@@ -134,7 +144,7 @@
         type: type,
         start: startPos,
         end: i + 1,
-        value: text.slice(startPos, i + 1)
+        value: val === null ? text.slice(startPos, i + 1) : val
       })
     }
 
