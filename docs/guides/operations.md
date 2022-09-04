@@ -6,6 +6,22 @@ title: Operations
 # {{ page.title }}
 
 ## Variable Declaration
+To declare a variable start with variable name, continue with `:`, then enter type of variable.
+
+```the
+main {
+  a1: int
+  s1: str
+}
+```
+
+This way variable will be declared with it's default value. \
+Default values: numeric type - `0`, `char` type - `'\0'`, `str` type - `""`,
+array type - `[]`, optional type - `nil`.
+
+To declare a variable with initializer enter `=` and continue with variable
+value:
+
 ```the
 main {
   a1: int = 1
@@ -14,6 +30,11 @@ main {
 ```
 
 ## Short Variable Declaration
+This is special type of variable declaration in which The Programming Language
+will guess what type you want. \
+Guessing is done in a straightforward way: decimal number value - `int` type,
+character value - `char` type, string value - `str` type.
+
 ```the
 main {
   a1 := 1
@@ -21,7 +42,14 @@ main {
 }
 ```
 
-## Assignment
+## Assignment Operation
+All variable in The Programming Language are immutable by default. To declare a
+mutable variable you need to start variable declaration with `mut` keyword.
+For immutable variables you can't change value afterwards, think of it as a
+constant that gets declared once and never changed during program execution.
+
+Mutable variables, on the other hand, can be changed after they got declared.
+
 ```the
 main {
   mut a1 := 1
@@ -33,7 +61,9 @@ main {
 ```
 
 ## Basic operations
-todo: split into sections
+The Programming Language supports these basic operations: addition,
+subtraction, multiplication, division and remainder.
+
 ```the
 main {
   a := 1 + 2
@@ -41,46 +71,93 @@ main {
   c := 2 * 2
   d := 4 / 2
   e := 5 % 2
+}
+```
 
-  f := 0x6 & 0o7
-  g := ~0b1000
-  h := 9 | 10
-  i := 11 ^ 12
+## Exponentiation operation
+To raise first operand to the power of second operand use exponentiation
+operation.
 
-  j := !13
-  k := !!14
-  l := 15 && 16
-  m := 17 || 18
-  o := 20 ** 21
-  p := 22 != 23
-  q := 24 << 2
-  r := 25 >> 2
-  s := 26 > 27
-  t := 28 < 29
-  u := 30 >= 31
-  v := 32 <= 33
+```the
+main {
+  a := 20 ** 21
+}
+```
 
-  mut z := 0
+## Logical operations
+```the
+main {
+  a := !13
+  b := !!14
+  c := 15 && 16
+  d := 17 || 18
+}
+```
 
-  z += 1
-  z -= 2
-  z *= 3
-  z /= 4
-  z %= 5
+## Comparison operations
+```the
+main {
+  a := 22 == 23
+  b := 22 != 23
+  c := 26 > 27
+  d := 28 < 29
+  e := 30 >= 31
+  f := 32 <= 33
+}
+```
 
-  z &= 6
-  z |= 7
-  z ^= 8
-  z <<= 2
-  z >>= 2
+## Bitwise operations
+If you want to perform operations on binary representation of a number you can
+use these bitwise operations:
 
-  z &&= 9
-  z ||= 10
-  z **= 12
+```the
+main {
+  a := 0x6 & 0o7
+  b := ~0b1000
+  c := 9 | 10
+  d := 11 ^ 12
+  e := 24 << 2
+  f := 25 >> 2
+}
+```
+
+## Increment/decrement operations
+Increment operation increases value of variable by one. On the other hand,
+decrement decreases value by one.
+
+```the
+main {
+  mut z = 0
 
   z--
   --z
   z++
   ++z
+}
+```
+
+## Compound assignment operations
+Compound assignment operations are shorthand of assignment operations with
+another binary operations.
+
+```the
+main {
+  mut a := 0
+
+  a += 1     // a = a + 1
+  a -= 2     // a = a - 2
+  a *= 3     // a = a * 3
+  a /= 4     // a = a / 4
+  a %= 5     // a = a % 5
+  a **= 6    // a = a ** 6
+
+  a &&= 7    // a = a && 7
+  a ||= 8    // a = a || 8
+
+  a &= 9     // a = a & 9
+  a |= 10    // a = a | 10
+  a ^= 11    // a = a ^ 11
+  a <<= 12   // a = a << 12
+  a >>= 13   // a = a >> 13
 }
 ```
