@@ -4,31 +4,21 @@ title: Keywords
 ---
 
 # {{ page.title }}
+This is the list of reserved keywords, you can't define variable, function or
+object with any of this names.
+
 ```
-async
-await
-break
-catch
-continue
-elif
-else
-enum
-export
-false
-fn
-from
-if
-import
-is
-loop
-main
-mut
-nil
-obj
-ref
-return
-throw
-true
-try
-union
+async       import
+await       is
+break       loop
+catch       main
+continue    mut
+elif        nil
+else        obj
+enum        ref
+export      return
+false       throw
+fn          true
+from        try
+if          union
 ```
