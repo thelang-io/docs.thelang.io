@@ -280,7 +280,7 @@ main {
 ```
 
 > ### NOTE:
-> Programs using `any` type use more RAM, in most cases you don't need it.
+  Programs using `any` type use more RAM, in most cases you don't need it.
 
 ## Void
 This type can only be used as function return type

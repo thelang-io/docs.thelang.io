@@ -80,8 +80,8 @@ main {
 ```
 
 > ### NOTE:
-> Variables declared inside `initializer` are mutable by default. You don't
-need to explicitly define them mutable with `mut` keyword.
+  Variables declared inside `initializer` are mutable by default. You don't
+  need to explicitly define them mutable with `mut` keyword.
 
 For example:
 
