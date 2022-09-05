@@ -5,7 +5,7 @@ title: Iteration
 
 # {{ page.title }}
 
-## Forever running loop
+## Forever Running Loop
 This type of loop will run loop body forever unless you explicitly tell it to
 stop with `break` statement.
 
@@ -34,7 +34,7 @@ main {
 }
 ```
 
-## Conditional loop
+## Conditional Loop
 This type of loop will run loop body until loop expression stay `true`.
 
 ```the
@@ -58,7 +58,7 @@ main {
 }
 ```
 
-## C-style loop
+## C-style Loop
 This type of loop is identical to the one that most programming languages
 support. It consists of `initializer`, `condition`, `update` and `body`. \
 Loop execution starts with `initializer`. You can define any variable here just

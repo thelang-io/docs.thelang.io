@@ -60,7 +60,7 @@ main {
 }
 ```
 
-## Basic operations
+## Basic Operations
 The Programming Language supports these basic operations: addition,
 subtraction, multiplication, division and remainder.
 
@@ -74,7 +74,7 @@ main {
 }
 ```
 
-## Exponentiation operation
+## Exponentiation Operation
 To raise first operand to the power of second operand use exponentiation
 operation.
 
@@ -84,7 +84,7 @@ main {
 }
 ```
 
-## Logical operations
+## Logical Operations
 ```the
 main {
   a := !13
@@ -94,7 +94,7 @@ main {
 }
 ```
 
-## Comparison operations
+## Comparison Operations
 ```the
 main {
   a := 22 == 23
@@ -106,7 +106,7 @@ main {
 }
 ```
 
-## Bitwise operations
+## Bitwise Operations
 If you want to perform operations on binary representation of a number you can
 use these bitwise operations:
 
@@ -121,7 +121,7 @@ main {
 }
 ```
 
-## Increment/decrement operations
+## Increment/Decrement Operations
 Increment operation increases value of variable by one. On the other hand,
 decrement decreases value by one.
 
@@ -136,7 +136,7 @@ main {
 }
 ```
 
-## Compound assignment operations
+## Compound Assignment Operations
 Compound assignment operations are shorthand of assignment operations with
 another binary operations.
 

@@ -5,7 +5,7 @@ title: Types
 
 # {{ page.title }}
 
-## Basic types
+## Basic Types
 These are basic types that can be used to declare a variable.
 
 ```
@@ -17,7 +17,7 @@ int = i32
 str
 ```
 
-## Scientific types
+## Scientific Types
 Scientific types are usually used within programs dedicated to science, e.g.
 Math projects, Machine Learning projects, etc.
 
@@ -30,7 +30,7 @@ i64 u64
 f32 f64
 ```
 
-## Number promotion
+## Number Promotion
 The Programming Language can automatically promote types. For example:
 
 ```the
