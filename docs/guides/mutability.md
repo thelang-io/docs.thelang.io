@@ -28,9 +28,8 @@ main {
 ```
 
 ## Function Parameters
-When passing a variable to mutable parameter it will pass reference to this
-variable (it means if you can parameter inside this function, these changes
-will apply to upper scope variable), for example:
+By default all function parameters are immutable, to declare parameter mutable
+you need to prefix parameter declaration with `mut` keyword, for example:
 
 ```the
 fn change (mut a: int) {
