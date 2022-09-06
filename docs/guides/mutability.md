@@ -6,33 +6,50 @@ title: Mutability
 # {{ page.title }}
 
 ## Variables
+By default all variables are immutable, think of it as a constant variable (it
+means you can't change value of variable after it got declared). \
+In many cases it's required to change value of a variable, to achieve this you
+need to declare variable mutable with `mut` keyword, for example:
+
 ```the
 main {
   mut a := 1
   a = 2
-  mut s := "Hello, "
-  s += "World!"
 }
 ```
 
-## Functions
-todo: explain how mutable arrays and objects work
+Or another example with `str` type variable:
+
 ```the
-fn changeA (mut a: int) {
+main {
+  mut s := "string1"
+  s = "string2"
+}
+```
+
+## Function Parameters
+When passing a variable to mutable parameter it will pass reference to this
+variable (it means if you can parameter inside this function, these changes
+will apply to upper scope variable), for example:
+
+```the
+fn change (mut a: int) {
   a = 2
 }
 
 main {
-  a := 1
+  mut a := 1
   print("a before:", a)
-  changeA(mut a)
+
+  change(a)
   print("a after:", a)
 }
 ```
 
-## Objects
-By default if object is mutable then all it's fields are mutable and vice-versa
-This behavior will change in 0.12
+## Object Members
+By default if object is mutable, then all it's members are mutable and
+vice-versa.
+
 ```the
 obj MyObj {
   prop1: str
@@ -40,3 +57,7 @@ obj MyObj {
   prop3: fn (int) void
 }
 ```
+
+> ### NOTE:
+  Behavior of all object members being mutable if object is mutable will
+  change in v0.12
