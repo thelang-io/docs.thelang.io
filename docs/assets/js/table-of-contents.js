@@ -45,6 +45,10 @@
 
     document.addEventListener('scroll', tableOfContentsScroll, true)
     parentEl.insertBefore(rootEl, h1El.nextSibling)
+
+    const rootRect = rootEl.getBoundingClientRect()
+    rootEl.style.maxHeight = Math.ceil(rootRect.height) + 'px'
+
     tableOfContentsScroll()
   }
 

@@ -5,20 +5,47 @@ title: Optionals
 
 # {{ page.title }}
 
-## Variables
+## Optional Type
+To declare an optional type you need first enter type you want to make optional
+and after place a question mark `?`. \
+
 ```the
 main {
-  mut sell: (fn (int) void)?
-  mut title: str?
-  mut year: int?
+  a: int?
 }
 ```
 
-## Objects
+In The Programming Language you can make any type (except `void`) being optional:
+
 ```the
-obj Book {
-  sell: (fn (int) void)?
-  title: str?
-  year: int?
+main {
+  a: any?
+  b: bool?
+  c: byte?
+  d: char?
+  e: float?
+  f: int?
+  g: str?
+}
+```
+
+## Default Value
+Default value of optional type is `nil`, below declaration are identical:
+
+```the
+main {
+  a: int?
+  b: int? = nil
+}
+```
+
+## Optional Function
+To declare a function optional you need to place it within parenthesis,
+otherwise optional type will be applied to return type of function, not to
+function itself:
+
+```the
+main {
+  optionalFunction: (fn () int)?
 }
 ```
