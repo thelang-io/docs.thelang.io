@@ -90,6 +90,11 @@ blockquote {
   }
 }
 
+pre {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 pre code {
   background-color: $color-white-bg;
   border: 1px solid $color-border;
