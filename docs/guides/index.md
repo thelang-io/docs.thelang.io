@@ -16,4 +16,5 @@ title: Guides
 - [Functions](/guides/functions.html)
 - [Mutability](/guides/mutability.html)
 - [Optionals](/guides/optionals.html)
+- [References](/guides/references.html)
 - [Keywords](/guides/keywords.html)
