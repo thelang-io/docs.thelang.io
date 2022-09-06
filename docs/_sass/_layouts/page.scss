@@ -25,3 +25,11 @@
     }
   }
 }
+
+@media (min-width: 992px) {
+  .page-layout {
+    &__content {
+      padding-right: 275px;
+    }
+  }
+}

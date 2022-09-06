@@ -28,7 +28,24 @@
       sectionsHTML.join('') +
       '</ul>' +
       '</div>'
-    h1El.parentNode.insertBefore(wrapperEl.children[0], h1El.nextSibling)
+
+    const rootEl = wrapperEl.children[0]
+    const parentEl = h1El.parentNode
+
+    function tableOfContentsScroll () {
+      const parentRect = parentEl.getBoundingClientRect()
+      const bottom = Math.floor(parentRect.bottom) > window.innerHeight
+        ? 24
+        : window.innerHeight + 32 - Math.floor(parentRect.bottom)
+      const top = Math.floor(parentRect.top) < 24 ? 24 : Math.floor(parentRect.top)
+
+      rootEl.style.bottom = bottom + 'px'
+      rootEl.style.top = top + 'px'
+    }
+
+    document.addEventListener('scroll', tableOfContentsScroll, true)
+    parentEl.insertBefore(rootEl, h1El.nextSibling)
+    tableOfContentsScroll()
   }
 
   const data = []
