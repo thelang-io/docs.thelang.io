@@ -96,6 +96,14 @@
           text-decoration: none;
           transition: ease-in-out 150ms;
         }
+
+        &--highlighted {
+          color: $color-accent1;
+
+          &:hover {
+            color: rgba($color-accent1, 0.7);
+          }
+        }
       }
     }
   }
