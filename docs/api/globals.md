@@ -15,7 +15,7 @@ fn print (items: any..., separator := " ", terminator := "\n", to := "stdout") v
 ```
 
 ```the
-fn sleepSync (milliseconds: u64) void
+fn sleepSync (milliseconds: u32) void
 ```
 
 ## Array
