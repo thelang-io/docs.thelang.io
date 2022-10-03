@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include head.liquid %}
+  <body>
+    {% if jekyll.environment == "production" %}
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC8549V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {% endif %}
+    {% include banner.liquid %}
+    {% include header.liquid %}
+    <main class="post-layout">
+      {{ content }}
+    </main>
+    {% include footer.liquid %}
+    {% include search-modal.liquid %}
+    <script src="{{ "/assets/js/header.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+@import '../_vars';
+
+.post-layout {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px 32px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .post-layout {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .post-layout {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .post-layout {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .post-layout {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .post-layout {
+    max-width: 1320px;
+  }
+}
