@@ -108,7 +108,7 @@
     await performDocsSearch()
 
     const endTime = Date.now()
-    const deltaTime = 2000 - (endTime + startTime)
+    const deltaTime = 1000 - (endTime - startTime)
 
     if (deltaTime > 0) {
       await new Promise((resolve) => {
@@ -118,7 +118,7 @@
 
     searching = false
 
-    while (searchQuery !== null) {
+    if (searchQuery !== null) {
       await searchDocs()
     }
   }
