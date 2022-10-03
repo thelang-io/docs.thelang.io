@@ -3,7 +3,6 @@
 .home-layout {
   &__help {
     padding: max(calc((100vh - 244px) / 2 / 6 * 5), 64px) 15px max(calc((100vh - 244px) / 2 / 6 * 7), 64px);
-    width: 400px;
 
     &-container {
       align-items: center;
@@ -133,6 +132,15 @@
 
 @media (max-width: 575.98px) {
   .home-layout {
+    &__help {
+      padding-top: max(calc((100vh - 270px) / 2 / 6 * 5), 64px);
+      padding-bottom: max(calc((100vh - 270px) / 2 / 6 * 7), 64px);
+
+      &-headline {
+        font-size: 30px;
+      }
+    }
+
     &__learn {
       &-step {
         flex: 0 0 50px;
