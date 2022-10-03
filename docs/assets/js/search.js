@@ -71,11 +71,11 @@
     const res = await fetch(url)
     const data = await res.json()
 
-    if (data.items.length === 0) {
+    if (data.length === 0) {
       searchModalItemsEl.innerHTML = '<div class="search-modal__body-text">No results for this query</div>'
     } else {
       const html = await Promise.all(
-        data.items.slice(0, 10).map(async (item) => {
+        data.map(async (item) => {
           const itemInfo = await extractDocMarkdownInfo(item)
 
           if (itemInfo === null) {
