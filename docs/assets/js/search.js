@@ -49,8 +49,14 @@
       }
     }
 
+    let url = searchItem.path.slice(4, -3)
+
+    if (url.startsWith('/_posts/')) {
+      url = '/blog/' + url.slice(8).replace(/^(\d+)-(\d+)-(\d+)-/g, '$1/$2/$3/')
+    }
+
     return title === null ? null : {
-      url: searchItem.path.slice(4, -3),
+      url: url,
       title: title,
       description: description
     }
@@ -59,22 +65,10 @@
   async function performDocsSearch () {
     searchModalItemsEl.innerHTML = '<div class="search-modal__body-text">Loading...</div>'
 
-    const q = encodeURIComponent(
-      searchQuery +
-      ' language:markdown' +
-      ' path:/docs/' +
-      ' repo:thelang-io/docs.thelang.io'
-    )
-
-    const url = 'https://api.github.com/search/code?per_page=20&q=' + q
+    const url = 'https://api.thelang.io/search-docs?q=' + encodeURIComponent(searchQuery)
     searchQuery = null
 
-    const res = await fetch(url, {
-      headers: {
-        accept: 'application/vnd.github.text-match+json'
-      }
-    })
-
+    const res = await fetch(url)
     const data = await res.json()
 
     if (data.items.length === 0) {
