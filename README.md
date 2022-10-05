@@ -13,10 +13,10 @@ by [Aaron Delasy][founder-github].
 ## License
 The Programming Language documentation and other content in this repository is
 licensed under the [Creative Commons Attribution 4.0 International Public
-License][creative-commons-license], see the [LICENSE](LICENSE) file, and any
+License][creative-commons-license], see the [LICENSE.txt](LICENSE.txt) file, and any
 code in this repository licensed under the
 [Apache 2.0 License][apache2-license], see the
-[LICENSE-CODE](LICENSE-CODE) file.
+[LICENSE-CODE.txt](LICENSE-CODE.txt) file.
 
 [apache2-license]: http://opensource.org/licenses/Apache-2.0
 [creative-commons-license]: http://creativecommons.org/licenses/by/4.0/
