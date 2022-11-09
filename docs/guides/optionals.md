@@ -46,6 +46,6 @@ function itself:
 
 ```the
 main {
-  optionalFunction: (fn () int)?
+  optionalFunction: (() -> int)?
 }
 ```

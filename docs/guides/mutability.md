@@ -53,7 +53,7 @@ vice-versa.
 obj MyObj {
   prop1: str
   prop2: int
-  prop3: fn (int) void
+  prop3: (int) -> void
 }
 ```
 

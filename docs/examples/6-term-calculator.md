@@ -86,7 +86,7 @@ main {
     }
 
     if isBackspace {
-      val = val.str().substring(0, val.str().len - 1).asInt()
+      val = val.str().slice(0, -1).asInt()
     } elif isEnter {
       calcVal()
     } elif isEsc {

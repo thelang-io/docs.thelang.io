@@ -22,117 +22,117 @@ fn sleepSync (milliseconds: u32) void
 ```the
 obj Array {
   len: int
-  join: fn (separator := ",") str
-  pop: fn () void
-  push: fn (elements: ArrayElement...) void
-  reverse: fn () Array
-  slice: fn (start: i64 = 0, end: i64 = self.len) Array
-  str: fn () str
+  join: (separator := ",") -> str
+  pop: () -> ArrayElement
+  push: (elements: ArrayElement...) -> void
+  reverse: () -> Array
+  slice: (start: i64 = 0, end: i64 = self.len) -> Array
+  str: () -> str
 }
 ```
 
 ## Function
 ```the
 obj Function {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## Object
 ```the
 obj Object {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## Optional
 ```the
 obj Optional {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## any
 ```the
 obj any {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## bool
 ```the
 obj bool {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## byte
 ```the
 obj byte {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## char
 ```the
 obj char {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## float
 ```the
 obj float {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## f32
 ```the
 obj f32 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## f64
 ```the
 obj f64 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## int
 ```the
 obj int {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## i8
 ```the
 obj i8 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## i16
 ```the
 obj i16 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## i32
 ```the
 obj i32 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## i64
 ```the
 obj i64 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
@@ -140,35 +140,35 @@ obj i64 {
 ```the
 obj str {
   len: int
-  slice: fn (start: i64 = 0, end: i64 = self.len) str
+  slice: (start: i64 = 0, end: i64 = self.len) -> str
 }
 ```
 
 ## u8
 ```the
 obj u8 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## u16
 ```the
 obj u16 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## u32
 ```the
 obj u32 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
 ## u64
 ```the
 obj u64 {
-  str: fn () str
+  str: () -> str
 }
 ```
 
