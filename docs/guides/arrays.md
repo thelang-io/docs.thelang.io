@@ -42,4 +42,4 @@ main {
   element type.
 
 ## API Reference
-For complete list of built-in methods [visit API](/api/globals.html#array).
+For complete list of built-in methods [visit API](/api/primitives.html#array).

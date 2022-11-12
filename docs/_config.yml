@@ -10,7 +10,7 @@ twitter:
   username: thelang_io
   card: summary
 
-exclude: [CNAME, Gemfile, Gemfile.lock]
+exclude: [vendor, CNAME, Gemfile, Gemfile.lock]
 
 plugins:
   - jekyll-seo-tag
