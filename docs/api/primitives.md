@@ -10,218 +10,529 @@ title: Primitives API
 ```the
 obj Array {
   len: int
-  join: (separator := ",") -> str
-  pop: () -> ArrayElement
-  push: (elements: ArrayElement...) -> void
-  reverse: () -> Array
-  slice: (start: i64 = 0, end: i64 = self.len) -> Array
-  str: () -> str
 }
 ```
 
-TODO add .at()
+TODO
+
+## Array.[]
+
+```the
+Array.[idx: int] ref ArrayElement
+```
+
+TODO
+
+## Array.empty()
+
+```the
+fn Array.empty () bool
+```
+
+TODO
+
+## Array.join()
+
+```the
+fn Array.join (separator := ",") str
+```
+
+TODO
+
+## Array.pop()
+
+```the
+fn Array.pop () ArrayElement
+```
+
+TODO
+
+## Array.push()
+
+```the
+fn Array.push (elements: ArrayElement...) void
+```
+
+TODO
+
+## Array.reverse()
+
+```the
+fn Array.reverse () Array
+```
+
+TODO
+
+## Array.slice()
+
+```the
+fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
+```
+
+TODO
+
+## Array.str()
+
+```the
+fn Array.str () str
+```
+
+TODO
 
 ## Function
 
 ```the
-obj Function {
-  str: () -> str
-}
+obj Function {}
 ```
+
+TODO
+
+## Function.str()
+
+```the
+fn Function.str () str
+```
+
+TODO
 
 ## Object
 
 ```the
-obj Object {
-  str: () -> str
-}
+obj Object {}
 ```
+
+TODO
+
+## Object.str()
+
+```the
+fn Object.str () str
+```
+
+TODO
 
 ## Optional
 
 ```the
-obj Optional {
-  str: () -> str
-}
+obj Optional {}
 ```
+
+TODO
+
+## Optional.str()
+
+```the
+fn Optional.str () str
+```
+
+TODO
+
+## Reference
+
+```the
+obj Reference {}
+```
+
+TODO
 
 ## any
 
 ```the
-obj any {
-  str: () -> str
-}
+obj any {}
 ```
+
+TODO
+
+## any.str()
+
+```the
+fn any.str () str
+```
+
+TODO
 
 ## bool
 
 ```the
-obj bool {
-  str: () -> str
-}
+obj bool {}
 ```
+
+TODO
+
+## bool.str()
+
+```the
+fn bool.str () str
+```
+
+TODO
 
 ## byte
 
 ```the
-obj byte {
-  str: () -> str
-}
+obj byte {}
 ```
+
+TODO
+
+## byte.str()
+
+```the
+obj byte {}
+```
+
+TODO
 
 ## char
 
 ```the
-obj char {
-  str: () -> str
-}
-
-this->_items.push_back(std::make_unique<Type>(Type{"char.isAlpha", "@char.isAlpha", TypeFn{boolType}, {}, true}));
-charType->fields.push_back(TypeField{"isAlpha", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"char.isAlphaNum", "@char.isAlphaNum", TypeFn{boolType}, {}, true}));
-charType->fields.push_back(TypeField{"isAlphaNum", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"char.isDigit", "@char.isDigit", TypeFn{boolType}, {}, true}));
-charType->fields.push_back(TypeField{"isDigit", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"char.isSpace", "@char.isSpace", TypeFn{boolType}, {}, true}));
-charType->fields.push_back(TypeField{"isSpace", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"char.repeat", "@char.repeat", repeatCharTypeFn, {}, true}));
-charType->fields.push_back(TypeField{"repeat", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"char.str", "@char.str", TypeFn{strType}, {}, true}));
-charType->fields.push_back(TypeField{"str", this->_items.back().get(), false, true});
+obj char {}
 ```
+
+TODO
+
+## char.isAlpha()
+
+```the
+fn char.isAlpha () bool
+```
+
+TODO
+
+## char.isAlphaNum()
+
+```the
+fn char.isAlphaNum () bool
+```
+
+TODO
+
+## char.isDigit()
+
+```the
+fn char.isDigit () bool
+```
+
+TODO
+
+## char.isSpace()
+
+```the
+fn char.isSpace () bool
+```
+
+TODO
+
+## char.repeat()
+
+```the
+fn char.repeat (times: u32) str
+```
+
+TODO
+
+## char.str()
+
+```the
+fn char.str () str
+```
+
+TODO
 
 ## float
 
 ```the
-obj float {
-  str: () -> str
-}
+obj float {}
 ```
+
+TODO
+
+## float.str()
+
+```the
+fn float.str () str
+```
+
+TODO
 
 ## f32
 
 ```the
-obj f32 {
-  str: () -> str
-}
+obj f32 {}
 ```
+
+TODO
+
+## f32.str()
+
+```the
+fn f32.str () str
+```
+
+TODO
 
 ## f64
 
 ```the
-obj f64 {
-  str: () -> str
-}
+obj f64 {}
 ```
+
+TODO
+
+## f64.str()
+
+```the
+fn f64.str () str
+```
+
+TODO
 
 ## int
 
 ```the
-obj int {
-  str: () -> str
-}
+obj int {}
 ```
+
+TODO
+
+## int.str()
+
+```the
+fn int.str () str
+```
+
+TODO
 
 ## i8
 
 ```the
-obj i8 {
-  str: () -> str
-}
+obj i8 {}
 ```
+
+TODO
+
+## i8.str()
+
+```the
+fn i8.str () str
+```
+
+TODO
 
 ## i16
 
 ```the
-obj i16 {
-  str: () -> str
-}
+obj i16 {}
 ```
+
+TODO
+
+## i16.str()
+
+```the
+fn i16.str () str
+```
+
+TODO
 
 ## i32
 
 ```the
-obj i32 {
-  str: () -> str
-}
+obj i32 {}
 ```
+
+TODO
+
+## i32.str()
+
+```the
+fn i32.str () str
+```
+
+TODO
 
 ## i64
 
 ```the
-obj i64 {
-  str: () -> str
-}
+obj i64 {}
 ```
+
+TODO
+
+## i64.str()
+
+```the
+fn i64.str () str
+```
+
+TODO
 
 ## str
 
 ```the
 obj str {
   len: int
-  slice: (start: i64 = 0, end: i64 = self.len) -> str
 }
-
-
-this->_items.push_back(std::make_unique<Type>(Type{"str.empty", "@str.empty", TypeFn{boolType}, {}, true}));
-strType->fields.push_back(TypeField{"empty", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.find", "@str.find", findStrTypeFn, {}, true}));
-strType->fields.push_back(TypeField{"find", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.lines", "@str.lines", linesStrTypeFn, {}, true}));
-strType->fields.push_back(TypeField{"lines", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.toLower", "@str.lower", TypeFn{strType}, {}, true}));
-strType->fields.push_back(TypeField{"lower", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.toLowerFirst", "@str.lowerFirst", TypeFn{strType}, {}, true}));
-strType->fields.push_back(TypeField{"lowerFirst", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.slice", "@str.slice", sliceStrTypeFn, {}, true}));
-strType->fields.push_back(TypeField{"slice", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.toBuffer", "@str.toBuffer", TypeFn{bufferBufferType}, {}, true}));
-strType->fields.push_back(TypeField{"toBuffer", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.trim", "@str.trim", TypeFn{strType}, {}, true}));
-strType->fields.push_back(TypeField{"trim", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.upper", "@str.upper", TypeFn{strType}, {}, true}));
-strType->fields.push_back(TypeField{"upper", this->_items.back().get(), false, true});
-this->_items.push_back(std::make_unique<Type>(Type{"str.upperFirst", "@str.upperFirst", TypeFn{strType}, {}, true}));
-strType->fields.push_back(TypeField{"upperFirst", this->_items.back().get(), false, true});
 ```
 
-TODO add .at()
+TODO
+
+## str.[]
+
+```the
+str.[idx: int] ref char
+```
+
+TODO
+
+## str.empty()
+
+```the
+fn str.empty () bool
+```
+
+TODO
+
+## str.find()
+
+```the
+fn str.find (search: str) int
+```
+
+TODO
+
+## str.lines()
+
+```the
+fn str.lines (keepLineBreaks := false) str[]
+```
+
+TODO
+
+## str.lower()
+
+```the
+fn str.lower () str
+```
+
+TODO
+
+## str.lowerFirst()
+
+```the
+fn str.lowerFirst () str
+```
+
+TODO
+
+## str.slice()
+
+```the
+fn str.slice (start: i64 = 0, end: i64 = self.len) str
+```
+
+TODO
+
+## str.toBuffer()
+
+```the
+fn str.toBuffer () buffer_Buffer
+```
+
+TODO
+
+## str.trim()
+
+```the
+fn str.trim () str
+```
+
+TODO
+
+## str.upper()
+
+```the
+fn str.upper () str
+```
+
+TODO
+
+## str.upperFirst()
+
+```the
+fn str.upperFirst () str
+```
+
+TODO
 
 ## u8
 
 ```the
-obj u8 {
-  str: () -> str
-}
+obj u8 {}
 ```
+
+TODO
+
+## u8.str()
+
+```the
+fn u8.str () str
+```
+
+TODO
 
 ## u16
 
 ```the
-obj u16 {
-  str: () -> str
-}
+obj u16 {}
 ```
+
+TODO
+
+## u16.str()
+
+```the
+fn u16.str () str
+```
+
+TODO
 
 ## u32
 
 ```the
-obj u32 {
-  str: () -> str
-}
+obj u32 {}
 ```
+
+TODO
+
+## u32.str()
+
+```the
+fn u32.str () str
+```
+
+TODO
 
 ## u64
 
 ```the
-obj u64 {
-  str: () -> str
-}
+obj u64 {}
 ```
+
+TODO
+
+## u64.str()
+
+```the
+fn u64.str () str
+```
+
+TODO
 
 ## void
 
 ```the
-obj void {
-}
+obj void {}
 ```
+
+TODO
