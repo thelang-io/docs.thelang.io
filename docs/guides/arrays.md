@@ -11,7 +11,7 @@ type. \
 To declare type you need to start with array elements type and follow
 with empty brackets `[]`.
 
-```
+```the
 char[]
 int[]
 str[]
@@ -37,9 +37,9 @@ main {
 ```
 
 > ### NOTE:
-  It's not always possible to determine value, in situation where you pass empty
-  brackets `a := []`, The Programming Language will not be able to understand array
-  element type.
+  It's not always possible to determine value, in situation where you pass
+  empty brackets `a := []`, The Programming Language will not be able to
+  understand array element type.
 
 ## API Reference
 For complete list of built-in methods [visit API](/api/primitives.html#array).

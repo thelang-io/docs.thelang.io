@@ -13,8 +13,8 @@ by [Aaron Delasy][founder-github].
 ## License
 The Programming Language documentation and other content in this repository is
 licensed under the [Creative Commons Attribution 4.0 International Public
-License][creative-commons-license], see the [LICENSE.txt](LICENSE.txt) file, and any
-code in this repository licensed under the
+License][creative-commons-license], see the [LICENSE.txt](LICENSE.txt) file,
+and any code in this repository licensed under the
 [Apache 2.0 License][apache2-license], see the
 [LICENSE-CODE.txt](LICENSE-CODE.txt) file.
 

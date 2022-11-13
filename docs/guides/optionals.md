@@ -15,7 +15,8 @@ main {
 }
 ```
 
-In The Programming Language you can make any type (except `void`) being optional:
+In The Programming Language you can make any type (except `void`) being
+optional:
 
 ```the
 main {

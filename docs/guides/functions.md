@@ -6,11 +6,13 @@ title: Functions
 # {{ page.title }}
 
 ## Main Function
-`main` function should always be present in the app, because of that it has special syntax. \
+`main` function should always be present in the app, because of that it has
+special syntax. \
 This function is used as entry point for your program.
 
 ```the
 main {
+  statement
 }
 ```
 

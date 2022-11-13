@@ -6,7 +6,8 @@ title: Operations
 # {{ page.title }}
 
 ## Variable Declaration
-To declare a variable start with variable name, continue with `:`, then enter type of variable.
+To declare a variable start with variable name, continue with `:`, then enter
+type of variable.
 
 ```the
 main {

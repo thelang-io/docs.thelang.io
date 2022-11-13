@@ -27,8 +27,7 @@ TODO
 ## request_Request
 
 ```the
-obj request_Request {
-}
+obj request_Request {}
 ```
 
 TODO

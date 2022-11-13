@@ -13,7 +13,7 @@ CLI, here's how to do it:
 $ curl -o- https://cdn.thelang.io/cli | bash
 ```
 
-Yes! It's just one command, we take all the hassle on us and let developer
+Yes! It's just one command, we take all the hassle on us and let developers
 focus on writing code. \
 Verify installation by running:
 

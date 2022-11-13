@@ -7,7 +7,7 @@ title: Operating System API
 
 ## os_EOL
 
-```
+```the
 os_EOL: str
 ```
 
@@ -15,7 +15,7 @@ TODO
 
 ## os_name()
 
-```
+```the
 fn os_name () str
 ```
 

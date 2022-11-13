@@ -8,8 +8,7 @@ title: Buffer API
 ## buffer_Buffer
 
 ```the
-obj buffer_Buffer {
-}
+obj buffer_Buffer {}
 ```
 
 TODO
