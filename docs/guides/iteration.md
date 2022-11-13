@@ -6,8 +6,8 @@ title: Iteration
 # {{ page.title }}
 
 ## Forever Running Loop
-This type of loop will run loop body forever unless you explicitly tell it to
-stop with `break` statement.
+This type of loop will run loop `body` forever unless you explicitly tell it
+to stop with `break` statement.
 
 ```the
 main {
@@ -28,14 +28,13 @@ main {
       break
     }
 
-    print(i)
-    i++
+    print(i++)
   }
 }
 ```
 
 ## Conditional Loop
-This type of loop will run loop body until loop expression stay `true`.
+This type of loop will run loop `body` while loop `condition` stays `true`.
 
 ```the
 main {
@@ -65,11 +64,11 @@ Loop execution starts with `initializer`. You can define any variable here just
 like you would with
 [variable declaration](/guides/operations.html#variable-declaration). \
 Next, loop execution continues with `condition` expression. If `condition` is
-`true` execution continue, otherwise it stops. \
+`true` execution continues, otherwise it stops. \
 Next, loop execution continues with `body`, and then it executes `update`
 expression. \
 Finally, it continues execution with `condition` expression and repeats
-process until `condition` expression returns `false`.
+process while `condition` expression doesn't return `false`.
 
 ```the
 main {
@@ -89,6 +88,38 @@ For example:
 main {
   loop i := 0; i < 10; i++ {
     print(i)
+  }
+}
+```
+
+## Parenthesized/Multiline
+Same as regular loop you can surround loop components with parenthesis
+if they are multiline. \
+This way it would be more self-describing to other people what is going on in
+this block of code.
+
+```the
+main {
+  loop (
+    condition1 &&
+    condition2 &&
+    condition3
+  ) {
+    statement
+  }
+}
+```
+
+Or
+
+```the
+main {
+  loop (
+    initializer;
+    condition;
+    update
+  ) {
+    statement
   }
 }
 ```

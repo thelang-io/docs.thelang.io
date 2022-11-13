@@ -29,6 +29,10 @@ obj Book {
 }
 ```
 
+## Mutable Fields
+To learn how you can declare mutable object fields please refer to
+[mutability guide](/guides/mutability.html#object-fields).
+
 ## Object Literal
 Once you declared an object you need a way to use it, this is solved with
 object literal expression.
@@ -47,15 +51,10 @@ main {
 }
 ```
 
-> ### NOTE
-  All object fields are mutable by default. In next release there will be
-  [`mut`](/guides/mutability.html) keyword required in order to make field
-  mutable.
-
 ## Default Field Values
 As you might already guessed, if you skip some fields when initializing object
 literal expression they will receive default values. \
-Default values are: for `bool` - `false`, `char` - `'\0'`, `int` - `0`,
+Default values are: `bool` - `false`, `char` - `'\0'`, `int` - `0`,
 `float` - `0.0`, `str` - `""`.
 
 For example:

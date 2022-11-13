@@ -5,6 +5,38 @@ title: References
 
 # {{ page.title }}
 
+## Reference Type
+Reference type is a reference to a variable. When changing reference, changes
+apply to referenced variable. \
+If referenced variable is out of scope, accessing it through reference will
+cause undefined behavior. \
+To declare reference to a variable use `ref` keyword.
+
+For example:
+
+```the
+main {
+  a := 1
+  refA := ref a
+  refA = 2 // now a is 2
+}
+```
+
+References act as one more address holder of address that variables points to,
+it means that you can access any variable method on reference same as you
+would on variable itself.
+
+For example:
+
+```the
+main {
+  a := 1
+  refA := ref a
+
+  b := refA.str()
+}
+```
+
 ## Reference Usage
 In The Programming Language when passing variable as function parameter or
 object member, variable's value gets copied (it means if you change function

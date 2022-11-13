@@ -197,6 +197,7 @@ There's a table of all possible type promotions:
 
 ## Char
 This type can hold only one character.
+
 ```the
 main {
   ch := 'a'
@@ -204,7 +205,8 @@ main {
 ```
 
 ### Char Escaping
-Characters that can be escaped `\n`, `\f`, `\r`, `\t`, `\v`, `\e`, `\0`, `\'`, `\"`.
+Characters that can be escaped `\n`, `\f`, `\r`, `\t`, `\v`, `\e`, `\0`, `\'`,
+`\"`.
 
 ```the
 main {
@@ -254,6 +256,16 @@ main {
 }
 ```
 
+## Function
+You can find out more in
+[functions guide](/guides/functions.html#function-type).
+
+```the
+main {
+  sum: (int, int) -> int
+}
+```
+
 ## Optional
 You can find out more in [optionals guide](/guides/optionals.html).
 
@@ -266,7 +278,7 @@ main {
 ```
 
 ## Any
-You can use this type to store any type.
+You can use this type to store anything.
 
 ```the
 main {
@@ -283,7 +295,7 @@ main {
   Programs using `any` type use more RAM, in most cases you don't need it.
 
 ## Void
-This type can only be used as function return type
+This type can only be used as function return type.
 
 ```the
 fn printNumber (num: int) void {

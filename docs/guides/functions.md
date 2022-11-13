@@ -21,8 +21,8 @@ main {
 
 ## Function Declaration
 Functions act as a re-usable piece of code, you write it once and re-use it
-many times. Function can have parameters (values passed to it) and return type
-(value returned from function). \
+many times. Functions can have parameters (values passed to it) and return
+type (value returned from function). \
 You can declare a function this way:
 
 ```the
@@ -39,8 +39,43 @@ fn sum (a: int, b: int) int {
 }
 ```
 
+## Function Type
+Function type has special construction. To declare a function type you start
+with parameters list followed by arrow operator (`->`), followed by function
+return type. \
+Function parameter names are not required, you can just use parameter type.
+
+For example:
+
+```the
+main {
+  noop: () -> void
+  sum: (int, int) -> int
+  mul: (a: int, b: int) -> int
+  div: (mut a: int, mut b: int) -> int
+}
+```
+
+## Empty Return Type
+You can find some functions that don't return any type. This is because by
+default if you omit function return type, `void` type will be used. \
+For functions returning `void` type you can just omit function return type. To
+return from such function just use `return` statement without any value.
+
+For example:
+
+```the
+fn runOnUnix () {
+  if os_name() == "Windows" {
+    return
+  }
+
+  print("I'm running on Unix!")
+}
+```
+
 ## Call Expression
-This is type of expression that let's you use declared function. \
+This is type of expression that lets you use declared function. \
 You can use this expression this way:
 
 ```the
@@ -64,6 +99,10 @@ main {
 > ### NOTE:
   If function returns `void` type, it can't be assigned to a variable.
 
+## Mutable Parameters
+To learn how you can declare mutable function parameters please refer to
+[mutability guide](/guides/mutability.html#function-parameters).
+
 ## Default Parameters
 Same as variable declaration initializers, function declaration parameters
 can have default values, The Programming Language will determine type from
@@ -85,6 +124,8 @@ main {
 Sometimes you don't want to provide value for one parameter, but you want to
 provide value for parameter after it.
 
+For example:
+
 ```the
 fn sum (a: int, b := 0, c := 0) int {
   return a + b + c
@@ -98,8 +139,8 @@ main {
 
 **It works like this:**
 - First, check if there are any non-named arguments in call expression. If
-  there are, it tries to match them to function parameters by argument index.
-- Second, check if there are any named arguments. If there are, it tries to
+  there are, try to match them to function parameters by argument index.
+- Second, check if there are any named arguments. If there are, try to
   match them by parameter name.
 - Third, check if there are any arguments that doesn't have default value and
-  was not passed in call expression. If so, it raises an error.
+  were not passed in call expression. If so, raise an error.

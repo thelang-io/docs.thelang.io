@@ -7,7 +7,9 @@ title: Optionals
 
 ## Optional Type
 To declare an optional type you need first enter type you want to make optional
-and after place a question mark `?`. \
+and after place a question mark `?`.
+
+For example:
 
 ```the
 main {
@@ -15,8 +17,7 @@ main {
 }
 ```
 
-In The Programming Language you can make any type (except `void`) being
-optional:
+In The Programming Language you can make any type (except `void`) optional:
 
 ```the
 main {
@@ -31,7 +32,7 @@ main {
 ```
 
 ## Default Value
-Default value of optional type is `nil`, below declaration are identical:
+Default value of optional type is `nil`, below declarations are identical:
 
 ```the
 main {

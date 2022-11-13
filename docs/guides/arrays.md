@@ -28,7 +28,7 @@ main {
 
 ## Array Short Declaration
 The Programming Language can infer type of array literal, it uses array
-elements value and tries to determine type of array element. \
+elements value and tries to determine type of array element.
 
 ```the
 main {
@@ -37,9 +37,9 @@ main {
 ```
 
 > ### NOTE:
-  It's not always possible to determine value, in situation where you pass
-  empty brackets `a := []`, The Programming Language will not be able to
-  understand array element type.
+  It's not always possible to infer array type, in situations where you pass
+  empty brackets `a := []`, The Programming Language will not be able to be
+  able to infer array type.
 
 ## API Reference
 For complete list of built-in methods [visit API](/api/primitives.html#array).

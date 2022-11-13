@@ -5,7 +5,7 @@ title: Keywords
 
 # {{ page.title }}
 This is the list of reserved keywords, you can't define variable, function or
-object with any of this names.
+object with any of these names.
 
 ```
 async       import

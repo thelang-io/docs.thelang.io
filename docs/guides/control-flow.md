@@ -6,8 +6,18 @@ title: Control Flow
 # {{ page.title }}
 
 ## if..else
-The `if` statement executes `statement1` if `condition` is `true`. Otherwise
-it executes optional `else` clause `statement2`.
+The `if` statement executes `statement` if `condition` is `true`.
+
+```the
+main {
+  if condition {
+    statement
+  }
+}
+```
+
+In this example, `if` statement executes `statement1` if `condition` is `true`.
+Otherwise it executes optional `else` clause `statement2`.
 
 ```the
 main {
@@ -44,5 +54,23 @@ statement.
 ```the
 main {
   condition ? statement1 : statement2
+}
+```
+
+## Parenthesized/Multiline
+Same as regular control flow you can surround if `condition` with parenthesis
+if your condition is multiline. \
+This way it would be more self-describing to other people what is going on in
+this block of code.
+
+```the
+main {
+  if (
+    condition1 &&
+    condition2 &&
+    condition3
+  ) {
+    statement
+  }
 }
 ```

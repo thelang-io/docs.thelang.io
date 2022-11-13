@@ -29,34 +29,45 @@ main {
 
 ## Function Parameters
 By default all function parameters are immutable, to declare parameter mutable
-you need to prefix parameter declaration with `mut` keyword, for example:
+you need to prefix parameter declaration with `mut` keyword.
+
+All arguments in The Programming Language are passed by copy. If you declare a
+parameter mutable you will be able to change it, but beware that these changes
+won't be propagated back to the original argument.
+
+Consider this example:
 
 ```the
 fn change (mut a: int) {
+  // a = 0
   a = 2
+  // a = 2
 }
 
 main {
-  mut a := 1
-  print("a before:", a)
-
+  mut a := 0
+  print("before:", a) // before: 0
   change(a)
-  print("a after:", a)
+  print("after:", a)  // after: 0
 }
 ```
 
-## Object Members
-By default if object is mutable, then all it's members are mutable and
-vice-versa.
+Function `change` will not change `a` because it changes local copy of `a`
+accessible only inside `change` function. \
+If you need to change value passed as argument you can do this with
+references. Follow [references guide](/guides/references.html) for more
+information.
+
+## Object Fields
+By default all object fields are immutable, which means you can't change them
+after declaration. \
+To declare a field mutable, simply use `mut` keyword in front of field name.
+
+For example:
 
 ```the
-obj MyObj {
-  prop1: str
-  prop2: int
-  prop3: (int) -> void
+obj Book {
+  mut title: str
+  mut year: int
 }
 ```
-
-> ### NOTE:
-  Behavior of all object members being mutable if object is mutable will
-  change in v0.12
