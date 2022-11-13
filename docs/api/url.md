@@ -6,7 +6,6 @@ title: URL API
 # {{ page.title }}
 
 ## url_URL
-
 ```the
 obj url_URL {
   origin: str
@@ -27,7 +26,6 @@ TODO
   URLs containing authorization information are not supported
 
 ## url_URL.str()
-
 ```the
 fn url_URL.str () str
 ```
@@ -35,7 +33,6 @@ fn url_URL.str () str
 TODO
 
 ## url_parse()
-
 ```the
 fn url_parse (url: str) url_URL
 ```

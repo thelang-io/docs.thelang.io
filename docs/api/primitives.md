@@ -6,7 +6,6 @@ title: Primitives API
 # {{ page.title }}
 
 ## Array
-
 ```the
 obj Array {
   len: int
@@ -16,7 +15,6 @@ obj Array {
 TODO
 
 ## Array.[]
-
 ```the
 Array.[idx: int] ref ArrayElement
 ```
@@ -24,7 +22,6 @@ Array.[idx: int] ref ArrayElement
 TODO
 
 ## Array.empty()
-
 ```the
 fn Array.empty () bool
 ```
@@ -32,7 +29,6 @@ fn Array.empty () bool
 TODO
 
 ## Array.join()
-
 ```the
 fn Array.join (separator := ",") str
 ```
@@ -40,7 +36,6 @@ fn Array.join (separator := ",") str
 TODO
 
 ## Array.pop()
-
 ```the
 fn Array.pop () ArrayElement
 ```
@@ -48,7 +43,6 @@ fn Array.pop () ArrayElement
 TODO
 
 ## Array.push()
-
 ```the
 fn Array.push (elements: ArrayElement...) void
 ```
@@ -56,7 +50,6 @@ fn Array.push (elements: ArrayElement...) void
 TODO
 
 ## Array.reverse()
-
 ```the
 fn Array.reverse () Array
 ```
@@ -64,7 +57,6 @@ fn Array.reverse () Array
 TODO
 
 ## Array.slice()
-
 ```the
 fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 ```
@@ -72,7 +64,6 @@ fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 TODO
 
 ## Array.str()
-
 ```the
 fn Array.str () str
 ```
@@ -80,7 +71,6 @@ fn Array.str () str
 TODO
 
 ## Function
-
 ```the
 obj Function {}
 ```
@@ -88,7 +78,6 @@ obj Function {}
 TODO
 
 ## Function.str()
-
 ```the
 fn Function.str () str
 ```
@@ -96,7 +85,6 @@ fn Function.str () str
 TODO
 
 ## Object
-
 ```the
 obj Object {}
 ```
@@ -104,7 +92,6 @@ obj Object {}
 TODO
 
 ## Object.str()
-
 ```the
 fn Object.str () str
 ```
@@ -112,7 +99,6 @@ fn Object.str () str
 TODO
 
 ## Optional
-
 ```the
 obj Optional {}
 ```
@@ -120,7 +106,6 @@ obj Optional {}
 TODO
 
 ## Optional.str()
-
 ```the
 fn Optional.str () str
 ```
@@ -128,7 +113,6 @@ fn Optional.str () str
 TODO
 
 ## Reference
-
 ```the
 obj Reference {}
 ```
@@ -136,7 +120,6 @@ obj Reference {}
 TODO
 
 ## any
-
 ```the
 obj any {}
 ```
@@ -144,7 +127,6 @@ obj any {}
 TODO
 
 ## any.str()
-
 ```the
 fn any.str () str
 ```
@@ -152,7 +134,6 @@ fn any.str () str
 TODO
 
 ## bool
-
 ```the
 obj bool {}
 ```
@@ -160,7 +141,6 @@ obj bool {}
 TODO
 
 ## bool.str()
-
 ```the
 fn bool.str () str
 ```
@@ -168,7 +148,6 @@ fn bool.str () str
 TODO
 
 ## byte
-
 ```the
 obj byte {}
 ```
@@ -176,7 +155,6 @@ obj byte {}
 TODO
 
 ## byte.str()
-
 ```the
 obj byte {}
 ```
@@ -184,7 +162,6 @@ obj byte {}
 TODO
 
 ## char
-
 ```the
 obj char {}
 ```
@@ -192,7 +169,6 @@ obj char {}
 TODO
 
 ## char.isAlpha()
-
 ```the
 fn char.isAlpha () bool
 ```
@@ -200,7 +176,6 @@ fn char.isAlpha () bool
 TODO
 
 ## char.isAlphaNum()
-
 ```the
 fn char.isAlphaNum () bool
 ```
@@ -208,7 +183,6 @@ fn char.isAlphaNum () bool
 TODO
 
 ## char.isDigit()
-
 ```the
 fn char.isDigit () bool
 ```
@@ -216,7 +190,6 @@ fn char.isDigit () bool
 TODO
 
 ## char.isSpace()
-
 ```the
 fn char.isSpace () bool
 ```
@@ -224,7 +197,6 @@ fn char.isSpace () bool
 TODO
 
 ## char.repeat()
-
 ```the
 fn char.repeat (times: u32) str
 ```
@@ -232,7 +204,6 @@ fn char.repeat (times: u32) str
 TODO
 
 ## char.str()
-
 ```the
 fn char.str () str
 ```
@@ -240,7 +211,6 @@ fn char.str () str
 TODO
 
 ## float
-
 ```the
 obj float {}
 ```
@@ -248,7 +218,6 @@ obj float {}
 TODO
 
 ## float.str()
-
 ```the
 fn float.str () str
 ```
@@ -256,7 +225,6 @@ fn float.str () str
 TODO
 
 ## f32
-
 ```the
 obj f32 {}
 ```
@@ -264,7 +232,6 @@ obj f32 {}
 TODO
 
 ## f32.str()
-
 ```the
 fn f32.str () str
 ```
@@ -272,7 +239,6 @@ fn f32.str () str
 TODO
 
 ## f64
-
 ```the
 obj f64 {}
 ```
@@ -280,7 +246,6 @@ obj f64 {}
 TODO
 
 ## f64.str()
-
 ```the
 fn f64.str () str
 ```
@@ -288,7 +253,6 @@ fn f64.str () str
 TODO
 
 ## int
-
 ```the
 obj int {}
 ```
@@ -296,7 +260,6 @@ obj int {}
 TODO
 
 ## int.str()
-
 ```the
 fn int.str () str
 ```
@@ -304,7 +267,6 @@ fn int.str () str
 TODO
 
 ## i8
-
 ```the
 obj i8 {}
 ```
@@ -312,7 +274,6 @@ obj i8 {}
 TODO
 
 ## i8.str()
-
 ```the
 fn i8.str () str
 ```
@@ -320,7 +281,6 @@ fn i8.str () str
 TODO
 
 ## i16
-
 ```the
 obj i16 {}
 ```
@@ -328,7 +288,6 @@ obj i16 {}
 TODO
 
 ## i16.str()
-
 ```the
 fn i16.str () str
 ```
@@ -336,7 +295,6 @@ fn i16.str () str
 TODO
 
 ## i32
-
 ```the
 obj i32 {}
 ```
@@ -344,7 +302,6 @@ obj i32 {}
 TODO
 
 ## i32.str()
-
 ```the
 fn i32.str () str
 ```
@@ -352,7 +309,6 @@ fn i32.str () str
 TODO
 
 ## i64
-
 ```the
 obj i64 {}
 ```
@@ -360,7 +316,6 @@ obj i64 {}
 TODO
 
 ## i64.str()
-
 ```the
 fn i64.str () str
 ```
@@ -368,7 +323,6 @@ fn i64.str () str
 TODO
 
 ## str
-
 ```the
 obj str {
   len: int
@@ -378,7 +332,6 @@ obj str {
 TODO
 
 ## str.[]
-
 ```the
 str.[idx: int] ref char
 ```
@@ -386,7 +339,6 @@ str.[idx: int] ref char
 TODO
 
 ## str.empty()
-
 ```the
 fn str.empty () bool
 ```
@@ -394,7 +346,6 @@ fn str.empty () bool
 TODO
 
 ## str.find()
-
 ```the
 fn str.find (search: str) int
 ```
@@ -402,7 +353,6 @@ fn str.find (search: str) int
 TODO
 
 ## str.lines()
-
 ```the
 fn str.lines (keepLineBreaks := false) str[]
 ```
@@ -410,7 +360,6 @@ fn str.lines (keepLineBreaks := false) str[]
 TODO
 
 ## str.lower()
-
 ```the
 fn str.lower () str
 ```
@@ -418,7 +367,6 @@ fn str.lower () str
 TODO
 
 ## str.lowerFirst()
-
 ```the
 fn str.lowerFirst () str
 ```
@@ -426,7 +374,6 @@ fn str.lowerFirst () str
 TODO
 
 ## str.slice()
-
 ```the
 fn str.slice (start: i64 = 0, end: i64 = self.len) str
 ```
@@ -434,7 +381,6 @@ fn str.slice (start: i64 = 0, end: i64 = self.len) str
 TODO
 
 ## str.toBuffer()
-
 ```the
 fn str.toBuffer () buffer_Buffer
 ```
@@ -442,7 +388,6 @@ fn str.toBuffer () buffer_Buffer
 TODO
 
 ## str.trim()
-
 ```the
 fn str.trim () str
 ```
@@ -450,7 +395,6 @@ fn str.trim () str
 TODO
 
 ## str.upper()
-
 ```the
 fn str.upper () str
 ```
@@ -458,7 +402,6 @@ fn str.upper () str
 TODO
 
 ## str.upperFirst()
-
 ```the
 fn str.upperFirst () str
 ```
@@ -466,7 +409,6 @@ fn str.upperFirst () str
 TODO
 
 ## u8
-
 ```the
 obj u8 {}
 ```
@@ -474,7 +416,6 @@ obj u8 {}
 TODO
 
 ## u8.str()
-
 ```the
 fn u8.str () str
 ```
@@ -482,7 +423,6 @@ fn u8.str () str
 TODO
 
 ## u16
-
 ```the
 obj u16 {}
 ```
@@ -490,7 +430,6 @@ obj u16 {}
 TODO
 
 ## u16.str()
-
 ```the
 fn u16.str () str
 ```
@@ -498,7 +437,6 @@ fn u16.str () str
 TODO
 
 ## u32
-
 ```the
 obj u32 {}
 ```
@@ -506,7 +444,6 @@ obj u32 {}
 TODO
 
 ## u32.str()
-
 ```the
 fn u32.str () str
 ```
@@ -514,7 +451,6 @@ fn u32.str () str
 TODO
 
 ## u64
-
 ```the
 obj u64 {}
 ```
@@ -522,7 +458,6 @@ obj u64 {}
 TODO
 
 ## u64.str()
-
 ```the
 fn u64.str () str
 ```
@@ -530,7 +465,6 @@ fn u64.str () str
 TODO
 
 ## void
-
 ```the
 obj void {}
 ```
