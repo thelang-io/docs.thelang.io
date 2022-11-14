@@ -5,7 +5,9 @@ title: URL API
 
 # {{ page.title }}
 
-## url_URL
+## `url_URL`
+URL object followed by implementing WHATWG URL Standard.
+
 ```the
 obj url_URL {
   origin: str
@@ -20,21 +22,24 @@ obj url_URL {
 }
 ```
 
-TODO
+![url_URL explanation](/assets/images/url-explanation.png)
 
 > ### NOTE:
   URLs containing authorization information are not supported
 
-## url_URL.str()
+## `url_URL.str()`
+Generates a string representing the object.
+
 ```the
 fn url_URL.str () str
 ```
 
-TODO
+## `url_parse()`
+Parse URL string into `url_URL` object.
 
-## url_parse()
 ```the
 fn url_parse (url: str) url_URL
 ```
 
-TODO
+### Parameters
+**url** - URL string to parse.
