@@ -32,11 +32,11 @@ obj fs_Stats {
 TODO
 
 ## fs_Stats.str()
+Generates a string representing the object.
+
 ```the
 fn fs_Stats.str () str
 ```
-
-TODO
 
 ## fs_chmodSync()
 ```the

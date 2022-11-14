@@ -64,11 +64,11 @@ fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 TODO
 
 ## Array.str()
+Generates a string representing the object.
+
 ```the
 fn Array.str () str
 ```
-
-TODO
 
 ## Function
 ```the
@@ -78,11 +78,11 @@ obj Function {}
 TODO
 
 ## Function.str()
+Generates a string representing the object.
+
 ```the
 fn Function.str () str
 ```
-
-TODO
 
 ## Object
 ```the
@@ -92,11 +92,11 @@ obj Object {}
 TODO
 
 ## Object.str()
+Generates a string representing the object.
+
 ```the
 fn Object.str () str
 ```
-
-TODO
 
 ## Optional
 ```the
@@ -106,11 +106,11 @@ obj Optional {}
 TODO
 
 ## Optional.str()
+Generates a string representing the object.
+
 ```the
 fn Optional.str () str
 ```
-
-TODO
 
 ## Reference
 ```the
@@ -127,11 +127,11 @@ obj any {}
 TODO
 
 ## any.str()
+Generates a string representing the object.
+
 ```the
 fn any.str () str
 ```
-
-TODO
 
 ## bool
 ```the
@@ -141,11 +141,11 @@ obj bool {}
 TODO
 
 ## bool.str()
+Generates a string representing the object.
+
 ```the
 fn bool.str () str
 ```
-
-TODO
 
 ## byte
 ```the
@@ -155,11 +155,11 @@ obj byte {}
 TODO
 
 ## byte.str()
+Generates a string representing the object.
+
 ```the
 obj byte {}
 ```
-
-TODO
 
 ## char
 ```the
@@ -204,11 +204,11 @@ fn char.repeat (times: u32) str
 TODO
 
 ## char.str()
+Generates a string representing the object.
+
 ```the
 fn char.str () str
 ```
-
-TODO
 
 ## float
 ```the
@@ -218,11 +218,11 @@ obj float {}
 TODO
 
 ## float.str()
+Generates a string representing the object.
+
 ```the
 fn float.str () str
 ```
-
-TODO
 
 ## f32
 ```the
@@ -232,11 +232,11 @@ obj f32 {}
 TODO
 
 ## f32.str()
+Generates a string representing the object.
+
 ```the
 fn f32.str () str
 ```
-
-TODO
 
 ## f64
 ```the
@@ -246,11 +246,11 @@ obj f64 {}
 TODO
 
 ## f64.str()
+Generates a string representing the object.
+
 ```the
 fn f64.str () str
 ```
-
-TODO
 
 ## int
 ```the
@@ -260,11 +260,11 @@ obj int {}
 TODO
 
 ## int.str()
+Generates a string representing the object.
+
 ```the
 fn int.str () str
 ```
-
-TODO
 
 ## i8
 ```the
@@ -274,11 +274,11 @@ obj i8 {}
 TODO
 
 ## i8.str()
+Generates a string representing the object.
+
 ```the
 fn i8.str () str
 ```
-
-TODO
 
 ## i16
 ```the
@@ -288,11 +288,11 @@ obj i16 {}
 TODO
 
 ## i16.str()
+Generates a string representing the object.
+
 ```the
 fn i16.str () str
 ```
-
-TODO
 
 ## i32
 ```the
@@ -302,11 +302,11 @@ obj i32 {}
 TODO
 
 ## i32.str()
+Generates a string representing the object.
+
 ```the
 fn i32.str () str
 ```
-
-TODO
 
 ## i64
 ```the
@@ -316,11 +316,11 @@ obj i64 {}
 TODO
 
 ## i64.str()
+Generates a string representing the object.
+
 ```the
 fn i64.str () str
 ```
-
-TODO
 
 ## str
 ```the
@@ -416,11 +416,11 @@ obj u8 {}
 TODO
 
 ## u8.str()
+Generates a string representing the object.
+
 ```the
 fn u8.str () str
 ```
-
-TODO
 
 ## u16
 ```the
@@ -430,11 +430,11 @@ obj u16 {}
 TODO
 
 ## u16.str()
+Generates a string representing the object.
+
 ```the
 fn u16.str () str
 ```
-
-TODO
 
 ## u32
 ```the
@@ -444,11 +444,11 @@ obj u32 {}
 TODO
 
 ## u32.str()
+Generates a string representing the object.
+
 ```the
 fn u32.str () str
 ```
-
-TODO
 
 ## u64
 ```the
@@ -458,11 +458,11 @@ obj u64 {}
 TODO
 
 ## u64.str()
+Generates a string representing the object.
+
 ```the
 fn u64.str () str
 ```
-
-TODO
 
 ## void
 ```the

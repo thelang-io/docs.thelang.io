@@ -16,11 +16,11 @@ obj request_Header {
 TODO
 
 ## request_Header.str()
+Generates a string representing the object.
+
 ```the
 fn request_Header.str () str
 ```
-
-TODO
 
 ## request_Request
 ```the
@@ -30,11 +30,11 @@ obj request_Request {}
 TODO
 
 ## request_Request.str()
+Generates a string representing the object.
+
 ```the
 fn request_Request.str () str
 ```
-
-TODO
 
 ## request_Response
 ```the
@@ -48,11 +48,11 @@ obj request_Response {
 TODO
 
 ## request_Response.str()
+Generates a string representing the object.
+
 ```the
 fn request_Response.str () str
 ```
-
-TODO
 
 ## request_close()
 ```the

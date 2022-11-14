@@ -13,8 +13,8 @@ obj buffer_Buffer {}
 TODO
 
 ## buffer_Buffer.str()
+Generates a string representing the object.
+
 ```the
 fn buffer_Buffer.str () str
 ```
-
-TODO
