@@ -5,14 +5,14 @@ title: Buffer API
 
 # {{ page.title }}
 
-## buffer_Buffer
+## `buffer_Buffer`
+Used to represent a fixed-length sequence of bytes.
+
 ```the
 obj buffer_Buffer {}
 ```
 
-TODO
-
-## buffer_Buffer.str()
+## `buffer_Buffer.str()`
 Generates a string representing the object.
 
 ```the

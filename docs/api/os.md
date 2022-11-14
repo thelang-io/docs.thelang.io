@@ -5,16 +5,16 @@ title: Operating System API
 
 # {{ page.title }}
 
-## os_EOL
+## `os_EOL`
+Operating system-specific end-of-line marker. `\r\n` on Windows, `\n` on POSIX.
+
 ```the
 os_EOL: str
 ```
 
-TODO
+## `os_name()`
+Retrieves operating system name. Possible values are `Linux`, `Windows`, and `macOS`.
 
-## os_name()
 ```the
 fn os_name () str
 ```
-
-TODO
