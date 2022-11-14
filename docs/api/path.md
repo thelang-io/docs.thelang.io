@@ -5,23 +5,29 @@ title: Path API
 
 # {{ page.title }}
 
-## path_SEP
+## `path_SEP`
+Platform-specific pathname components separator. `\` on Windows, `/` on POSIX.
+
 ```the
 path_SEP: str
 ```
 
-TODO
+## `path_basename()`
+Retrieves last portion of pathname.
 
-## path_basename()
 ```the
 fn path_basename (path: str) str
 ```
 
-TODO
+### Parameters
+**path** - pathname.
 
-## path_dirname()
+## `path_dirname()`
+Retrieves directory name of pathname.
+
 ```the
 fn path_dirname (path: str) str
 ```
 
-TODO
+### Parameters
+**path** - pathname.

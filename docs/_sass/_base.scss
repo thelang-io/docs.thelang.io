@@ -120,6 +120,16 @@ pre code:not([class^='language-']) {
   color: $color-light-fg;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  & code {
+    background-color: rgba($color-success-bg, 0.3);
+    color: $color-white-fg;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-style: normal;
+    padding: 2px 5px;
+  }
+}
+
 p code {
   background-color: rgba($color-success-bg, 0.3);
   color: $color-white-fg;
