@@ -13,7 +13,7 @@ obj buffer_Buffer {}
 ```
 
 ## `buffer_Buffer.str()`
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn buffer_Buffer.str () str

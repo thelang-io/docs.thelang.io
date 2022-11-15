@@ -5,37 +5,44 @@ title: Process API
 
 # {{ page.title }}
 
-## process_args
+## `process_args`
+String array containing the command-line arguments passed when the process
+was launched.
+
 ```the
 process_args: str[]
 ```
 
-TODO
+## `process_cwd()`
+Returns the current working directory of the process.
 
-## process_cwd()
 ```the
 fn process_cwd () str
 ```
 
-TODO
+## `process_getgid()`
+Returns the numeric group identity of the process. On Windows always returns
+`0`.
 
-## process_getgid()
 ```the
 fn process_getgid () int
 ```
 
-TODO
+## `process_getuid()`
+Returns the numeric user identity of the process. On Windows always returns
+`0`.
 
-## process_getuid()
 ```the
 fn process_getuid () int
 ```
 
-TODO
+## `process_runSync()`
+Runs the command, waits for command to complete, then returns stdout of the
+completed process.
 
-## process_runSync()
 ```the
 fn process_runSync (command: str) buffer_Buffer
 ```
 
-TODO
+### Parameters
+**command** - command to run.

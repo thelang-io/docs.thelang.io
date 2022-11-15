@@ -32,7 +32,7 @@ obj fs_Stats {
 TODO
 
 ## fs_Stats.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn fs_Stats.str () str

@@ -64,7 +64,7 @@ fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 TODO
 
 ## Array.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn Array.str () str
@@ -78,7 +78,7 @@ obj Function {}
 TODO
 
 ## Function.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn Function.str () str
@@ -92,7 +92,7 @@ obj Object {}
 TODO
 
 ## Object.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn Object.str () str
@@ -106,7 +106,7 @@ obj Optional {}
 TODO
 
 ## Optional.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn Optional.str () str
@@ -127,7 +127,7 @@ obj any {}
 TODO
 
 ## any.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn any.str () str
@@ -141,7 +141,7 @@ obj bool {}
 TODO
 
 ## bool.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn bool.str () str
@@ -155,7 +155,7 @@ obj byte {}
 TODO
 
 ## byte.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 obj byte {}
@@ -204,7 +204,7 @@ fn char.repeat (times: u32) str
 TODO
 
 ## char.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn char.str () str
@@ -218,7 +218,7 @@ obj float {}
 TODO
 
 ## float.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn float.str () str
@@ -232,7 +232,7 @@ obj f32 {}
 TODO
 
 ## f32.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn f32.str () str
@@ -246,7 +246,7 @@ obj f64 {}
 TODO
 
 ## f64.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn f64.str () str
@@ -260,7 +260,7 @@ obj int {}
 TODO
 
 ## int.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn int.str () str
@@ -274,7 +274,7 @@ obj i8 {}
 TODO
 
 ## i8.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn i8.str () str
@@ -288,7 +288,7 @@ obj i16 {}
 TODO
 
 ## i16.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn i16.str () str
@@ -302,7 +302,7 @@ obj i32 {}
 TODO
 
 ## i32.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn i32.str () str
@@ -316,7 +316,7 @@ obj i64 {}
 TODO
 
 ## i64.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn i64.str () str
@@ -416,7 +416,7 @@ obj u8 {}
 TODO
 
 ## u8.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn u8.str () str
@@ -430,7 +430,7 @@ obj u16 {}
 TODO
 
 ## u16.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn u16.str () str
@@ -444,7 +444,7 @@ obj u32 {}
 TODO
 
 ## u32.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn u32.str () str
@@ -458,7 +458,7 @@ obj u64 {}
 TODO
 
 ## u64.str()
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn u64.str () str

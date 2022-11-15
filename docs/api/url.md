@@ -28,7 +28,7 @@ obj url_URL {
   URLs containing authorization information are not supported
 
 ## `url_URL.str()`
-Generates a string representing the object.
+Returns a string representing the object.
 
 ```the
 fn url_URL.str () str
