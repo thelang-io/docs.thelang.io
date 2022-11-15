@@ -8,8 +8,8 @@ title: References
 ## Reference Type
 Reference type is a reference to a variable. When changing reference, changes
 apply to referenced variable. \
-If referenced variable is out of scope, accessing it through reference will
-cause undefined behavior. \
+If referenced variable is out of scope, accessing it through reference has
+undefined behavior. \
 To declare reference to a variable use `ref` keyword.
 
 For example:
