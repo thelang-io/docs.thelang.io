@@ -13,7 +13,8 @@ os_EOL: str
 ```
 
 ## `os_name()`
-Retrieves operating system name. Possible values are `Linux`, `Windows`, and `macOS`.
+Retrieves operating system name. Possible values are `Linux`, `Windows`, and
+`macOS`.
 
 ```the
 fn os_name () str
