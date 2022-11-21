@@ -73,5 +73,45 @@ main {
 }
 ```
 
+## Object Methods
+Object methods allows you to declare function object property which has access
+to object itself and is declared ones and for all object instances. \
+Declaring a method is as easy as declaring a function inside object
+declaration. The only difference is that method could have first argument as
+`Self` type or reference to `Self` type. You may declare or may not declare \
+first parameter as `Self` type. Compiler will automatically \
+`Self` type is special type available only during object method declaration.
+
+For example:
+
+```the
+obj Human {
+  mut steps: int
+
+  fn walk (mut self: ref Self) ref Self {
+    self.steps += 1
+    return self
+  }
+
+  fn stepsCount (self: Self) int {
+    return self.steps
+  }
+}
+
+main {
+  mut human := Human{}
+
+  print("Current number of steps:", human.stepsCount())
+  human.walk()
+  print("Current number of steps:", human.stepsCount())
+  human.walk().walk().walk().walk().walk()
+  print("Current number of steps:", human.stepsCount())
+}
+```
+
+> ### NOTE:
+  Notice that `Self` type is not required to be a reference. If you don't
+  declare it as a reference then you will get a copy of it.
+
 ## Object Reference
 For complete list of built-in methods [visit API](/api/primitives.html#object).
