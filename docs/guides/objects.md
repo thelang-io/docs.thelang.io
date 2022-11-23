@@ -78,8 +78,9 @@ Object methods allows you to declare function object property which has access
 to object itself and is declared ones and for all object instances. \
 Declaring a method is as easy as declaring a function inside object
 declaration. The only difference is that method could have first argument as
-`Self` type or reference to `Self` type. You may declare or may not declare \
-first parameter as `Self` type. Compiler will automatically \
+`Self` type or reference to `Self` type. You may declare or may not declare
+first parameter as `Self` type. Compiler will understand that and pass either
+reference or copy of object to method as first argument. \
 `Self` type is special type available only during object method declaration.
 
 For example:
@@ -112,6 +113,26 @@ main {
 > ### NOTE:
   Notice that `Self` type is not required to be a reference. If you don't
   declare it as a reference then you will get a copy of it.
+
+## Forward Declaration
+In The Programming Language you can declare cyclic objects referencing each
+other, you don't need any kind of special syntax for this. \
+All objects declared in same scope can reference each other, it doesn't
+matter in what order you declare them.
+
+For example:
+
+```the
+obj Point {
+  x: int
+  y: int
+}
+
+obj Vector {
+  start: Point
+  end: Point
+}
+```
 
 ## Object Reference
 For complete list of built-in methods [visit API](/api/primitives.html#object).

@@ -144,3 +144,21 @@ main {
   match them by parameter name.
 - Third, check if there are any arguments that doesn't have default value and
   were not passed in call expression. If so, raise an error.
+
+## Forward Declaration
+In The Programming Language you can declare functions referencing each
+other, you don't need any kind of special syntax for this. \
+All functions declared in same scope can reference each other, it doesn't
+matter in what order you declare them.
+
+For example:
+
+```the
+fn job1 (doJob2 := false) int {
+  return doJob2 ? job2() : 1
+}
+
+fn job2 (doJob1 := false) {
+  return doJob1 ? job1() : 2
+}
+```

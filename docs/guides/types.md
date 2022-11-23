@@ -31,7 +31,9 @@ f32 f64
 ```
 
 ## Number Promotion
-The Programming Language can automatically promote types. For example:
+The Programming Language can automatically promote types.
+
+For example:
 
 ```the
 fn expectI64 (num: i64) {
