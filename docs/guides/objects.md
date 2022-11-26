@@ -135,4 +135,4 @@ obj Vector {
 ```
 
 ## Object Reference
-For complete list of built-in methods [visit API](/api/primitives.html#object).
+For complete list of built-in methods [visit API](/api/primitives/object.html).
