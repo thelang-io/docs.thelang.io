@@ -6,7 +6,7 @@ title: Any API
 # {{ page.title }}
 
 ## any
-TODO
+Allows storing any variable of any type.
 
 ```the
 obj any {}

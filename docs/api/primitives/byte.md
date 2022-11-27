@@ -6,7 +6,7 @@ title: Byte API
 # {{ page.title }}
 
 ## byte
-TODO
+Allows storing a single byte with value of 0x00 - 0xFF.
 
 ```the
 obj byte {}

@@ -6,7 +6,7 @@ title: Reference API
 # {{ page.title }}
 
 ## Reference
-TODO
+Allows storing a reference to existing variable in the same scope.
 
 ```the
 obj Reference {}

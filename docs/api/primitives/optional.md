@@ -6,7 +6,7 @@ title: Optional API
 # {{ page.title }}
 
 ## Optional
-TODO
+Allows storing optional value that could be `nil` or actual value.
 
 ```the
 obj Optional {}

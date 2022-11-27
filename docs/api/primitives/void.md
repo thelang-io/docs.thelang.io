@@ -6,7 +6,7 @@ title: Void API
 # {{ page.title }}
 
 ## void
-TODO
+Used when there is no data.
 
 ```the
 obj void {}

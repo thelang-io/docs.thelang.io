@@ -6,7 +6,7 @@ title: Bool API
 # {{ page.title }}
 
 ## bool
-TODO
+Logical data type that can have only the values `true` or `false`.
 
 ```the
 obj bool {}
