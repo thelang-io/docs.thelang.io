@@ -6,87 +6,87 @@ title: String API
 # {{ page.title }}
 
 ## `str`
+TODO
+
 ```the
 obj str {
   len: int
 }
 ```
 
+## `str.[]`
 TODO
 
-## `str.[]`
 ```the
 str.[idx: int] ref char
 ```
 
+## `str.empty()`
 TODO
 
-## `str.empty()`
 ```the
 fn str.empty () bool
 ```
 
+## `str.find()`
 TODO
 
-## `str.find()`
 ```the
 fn str.find (search: str) int
 ```
 
+## `str.lines()`
 TODO
 
-## `str.lines()`
 ```the
 fn str.lines (keepLineBreaks := false) str[]
 ```
 
+## `str.lower()`
 TODO
 
-## `str.lower()`
 ```the
 fn str.lower () str
 ```
 
+## `str.lowerFirst()`
 TODO
 
-## `str.lowerFirst()`
 ```the
 fn str.lowerFirst () str
 ```
 
+## `str.slice()`
 TODO
 
-## `str.slice()`
 ```the
 fn str.slice (start: i64 = 0, end: i64 = self.len) str
 ```
 
+## `str.toBuffer()`
 TODO
 
-## `str.toBuffer()`
 ```the
 fn str.toBuffer () buffer_Buffer
 ```
 
+## `str.trim()`
 TODO
 
-## `str.trim()`
 ```the
 fn str.trim () str
 ```
 
+## `str.upper()`
 TODO
 
-## `str.upper()`
 ```the
 fn str.upper () str
 ```
 
+## `str.upperFirst()`
 TODO
 
-## `str.upperFirst()`
 ```the
 fn str.upperFirst () str
 ```
-
-TODO
