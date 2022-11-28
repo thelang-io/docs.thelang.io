@@ -74,12 +74,12 @@ fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 
 ### Parameters
 **start** - index at which to start extraction. The default is zero.
-- if value is negative then array length is added.
+- if value is negative then array length is added to it.
 - if value is less than array length then `0` value is used.
 - if value is greater than array length then nothing is extracted.
 
 **end** - index at which to end extraction. The default is array length.
-- if value is negative then array length is added.
+- if value is negative then array length is added to it.
 - if value is less than array length then `0` value is used.
 - if value is greater than array length then array length is used.
 - if value positioned before or it equals **start** then nothing is extracted.
