@@ -6,7 +6,7 @@ title: Float, F32, F64 API
 # {{ page.title }}
 
 ## `float`
-TODO
+Allow storing 64-bit floating point numbers.
 
 ```the
 obj float {}
@@ -20,7 +20,7 @@ fn float.str () str
 ```
 
 ## `f32`
-TODO
+Allow storing 32-bit scientific floating point numbers.
 
 ```the
 obj f32 {}
@@ -34,7 +34,7 @@ fn f32.str () str
 ```
 
 ## `f64`
-TODO
+Allow storing 64-bit scientific floating point numbers.
 
 ```the
 obj f64 {}
