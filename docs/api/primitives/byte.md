@@ -5,14 +5,14 @@ title: Byte API
 
 # {{ page.title }}
 
-## byte
+## `byte`
 Allows storing a single byte with value of 0x00 - 0xFF.
 
 ```the
 obj byte {}
 ```
 
-## byte.str()
+## `byte.str()`
 Returns a string representing the object.
 
 ```the

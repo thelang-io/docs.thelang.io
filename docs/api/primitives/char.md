@@ -5,49 +5,49 @@ title: Char API
 
 # {{ page.title }}
 
-## char
+## `char`
 ```the
 obj char {}
 ```
 
 TODO
 
-## char.isAlpha()
+## `char.isAlpha()`
 ```the
 fn char.isAlpha () bool
 ```
 
 TODO
 
-## char.isAlphaNum()
+## `char.isAlphaNum()`
 ```the
 fn char.isAlphaNum () bool
 ```
 
 TODO
 
-## char.isDigit()
+## `char.isDigit()`
 ```the
 fn char.isDigit () bool
 ```
 
 TODO
 
-## char.isSpace()
+## `char.isSpace()`
 ```the
 fn char.isSpace () bool
 ```
 
 TODO
 
-## char.repeat()
+## `char.repeat()`
 ```the
 fn char.repeat (times: u32) str
 ```
 
 TODO
 
-## char.str()
+## `char.str()`
 Returns a string representing the object.
 
 ```the

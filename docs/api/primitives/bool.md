@@ -5,14 +5,14 @@ title: Bool API
 
 # {{ page.title }}
 
-## bool
+## `bool`
 Logical data type that can have only the values `true` or `false`.
 
 ```the
 obj bool {}
 ```
 
-## bool.str()
+## `bool.str()`
 Returns a string representing the object.
 
 ```the
