@@ -17,5 +17,6 @@ title: Guides
 - [Mutability](/guides/mutability.html)
 - [Optionals](/guides/optionals.html)
 - [References](/guides/references.html)
+- [Variadic Parameters](/guides/variadics.html)
 - [Modules](/guides/modules.html)
 - [Keywords](/guides/keywords.html)
