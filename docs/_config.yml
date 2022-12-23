@@ -13,4 +13,5 @@ twitter:
 exclude: [vendor, CNAME, Gemfile, Gemfile.lock]
 
 plugins:
+  - jekyll-redirect-from
   - jekyll-seo-tag
