@@ -43,7 +43,8 @@ fn str.find (search: str) int
 **search** - substring to search for.
 
 ## `str.lines()`
-Splits string into lines (array of strings). Delimited by any of: `\r`, `\n`, `\r\n`.
+Splits string into lines (array of strings). Delimited by any of: `\r`, `\n`,
+`\r\n`.
 
 ```the
 fn str.lines (keepLineBreaks := false) str[]
