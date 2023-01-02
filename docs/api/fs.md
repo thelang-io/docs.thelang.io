@@ -10,24 +10,24 @@ Represents the status of specified path.
 
 ```the
 obj fs_Stats {
-  dev: i32
-  mode: u16
-  nlink: u16
+  dev: u64
+  mode: u32
+  nlink: i64
   ino: u64
-  uid: int
-  gid: int
-  rdev: i32
-  atime: i32
-  atimeNs: i32
-  mtime: i32
-  mtimeNs: i32
-  ctime: i32
-  ctimeNs: i32
-  birthtime: i32
-  birthtimeNs: i32
+  uid: i32
+  gid: i32
+  rdev: u64
+  atime: i64
+  atimeNs: i64
+  mtime: i64
+  mtimeNs: i64
+  ctime: i64
+  ctimeNs: i64
+  btime: i64
+  btimeNs: i64
   size: i64
   blocks: i64
-  blksize: i32
+  blockSize: i64
 }
 ```
 
@@ -49,11 +49,11 @@ nanoseconds. \
 on Windows expressed in seconds. \
 **ctimeNs** - time of the most recent metadata change on Unix and creation time
 on Windows expressed in nanoseconds. \
-**birthtime** - time of file creation expressed in seconds. \
-**birthtimeNs** - time of file creation expressed in nanoseconds. \
+**btime** - time of file creation expressed in seconds. \
+**btimeNs** - time of file creation expressed in nanoseconds. \
 **size** - size of the file in bytes. \
 **blocks** - number of 512-byte blocks allocated for file. \
-**blksize** - preferred block size for efficient file system I/O.
+**blockSize** - preferred block size for efficient file system I/O.
 
 ## `fs_Stats.str()`
 Returns a string representing the object.
