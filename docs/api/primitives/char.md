@@ -44,7 +44,7 @@ fn char.isSpace () bool
 Repeats character specific number of `times`.
 
 ```the
-fn char.repeat (times: u32) str
+fn char.repeat (times: int) str
 ```
 
 ### Parameters

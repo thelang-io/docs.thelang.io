@@ -39,7 +39,7 @@ default is `"stdout"`.
 Sleeps the thread for a given time interval.
 
 ```the
-fn sleepSync (milliseconds: u32) void
+fn sleepSync (milliseconds: int) void
 ```
 
 ### Parameters
