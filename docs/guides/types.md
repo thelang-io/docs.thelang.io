@@ -258,6 +258,21 @@ main {
 }
 ```
 
+## Enumeration
+You can find out more in [enumerations guide](/guides/enumerations.html).
+
+```the
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+
+main {
+  color := Color.Red
+}
+```
+
 ## Function
 You can find out more in
 [functions guide](/guides/functions.html#function-type).

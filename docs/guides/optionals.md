@@ -7,9 +7,7 @@ title: Optionals
 
 ## Optional Type
 To declare an optional type you need first enter type you want to make optional
-and after place a question mark `?`.
-
-For example:
+and after place a question mark `?`. You can define optional type like this:
 
 ```the
 main {

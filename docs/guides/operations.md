@@ -18,7 +18,7 @@ main {
 
 This way variable will be declared with it's default value. \
 Default values: numeric type - `0`, `char` type - `'\0'`, `str` type - `""`,
-array type - `[]`, optional type - `nil`.
+array type - `[]`, enumeration type - `0`, optional type - `nil`.
 
 To declare a variable with initializer enter `=` and continue with variable
 value:

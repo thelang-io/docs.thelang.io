@@ -12,6 +12,7 @@ title: Guides
 - [Control Flow](/guides/control-flow.html)
 - [Iteration](/guides/iteration.html)
 - [Arrays](/guides/arrays.html)
+- [Enumerations](/guides/enumerations.html)
 - [Objects](/guides/objects.html)
 - [Functions](/guides/functions.html)
 - [Mutability](/guides/mutability.html)

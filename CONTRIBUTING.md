@@ -8,8 +8,15 @@ All interactions for this project are covered by the
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). \
 By participating in this project you agree to abide by its terms.
 
+## Setting Up
+```sh
+cd docs
+bundle install
+bundle exec jekyll serve
+```
+
 ## If you just want to ask a question
-- Ask it on our forum [forum][the-forum]
+- Ask it on our [forum][the-forum]
 - Or talk directly to founder on [Discord][the-discord] or
   [Telegram][the-telegram]
 

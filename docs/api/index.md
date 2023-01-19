@@ -11,6 +11,7 @@ title: API
 - [Bool](/api/primitives/bool.html)
 - [Byte](/api/primitives/byte.html)
 - [Char](/api/primitives/char.html)
+- [Enumeration](/api/primitives/enumeration.html)
 - [Float](/api/primitives/float.html)
 - [Function](/api/primitives/function.html)
 - [Integer](/api/primitives/integer.html)
