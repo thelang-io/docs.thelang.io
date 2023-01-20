@@ -65,8 +65,8 @@ main {
 ```
 
 Difference between `Color.Red` and `.Red` is that first explicitly tells
-compiler that `.Red` belongs to enumeration `Color`. While second
-in cases like this: 
+compiler that `.Red` belongs to enumeration `Color`. While second tells
+nothing about enumeration it belongs to. Consider this code:
 
 ```the
 enum EyeColor {
