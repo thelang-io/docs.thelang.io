@@ -9,7 +9,7 @@ All interactions for this project are covered by the
 By participating in this project you agree to abide by its terms.
 
 ## Setting Up
-```sh
+```shell
 cd docs
 bundle install
 bundle exec jekyll serve

@@ -10,7 +10,7 @@ compilation is performed on cloud servers. Instead, we recommend installing
 CLI, here's how to do it:
 
 **Unix**
-```bash
+```shell
 curl -fsSL https://cdn.thelang.io/cli | bash
 ```
 
@@ -23,12 +23,12 @@ Yes! It's just one command, we take all the hassle on us and let developers
 focus on writing code. \
 Verify installation by running:
 
-```bash
+```shell
 the -v
 ```
 
 To learn better what commands you can use, run next command:
 
-```bash
+```shell
 the -h
 ```
