@@ -6,20 +6,20 @@ title: Terminal Pretty Waves Example
 # {{ page.title }}
 ```the
 obj Point {
-  x: int
-  y: int
+  mut x: int
+  mut y: int
 }
 
-HEIGHT := 47
-WIDTH := 97
-HEIGHT_DIV2 := HEIGHT / 2
-WIDTH_DIV2 := WIDTH / 2
-REFRESH_RATE := 30
-SLEEP_INTERVAL: u64 = 1000 / REFRESH_RATE
+const HEIGHT := 47
+const WIDTH := 97
+const HEIGHT_DIV2: int = HEIGHT / 2
+const WIDTH_DIV2: int = WIDTH / 2
+const REFRESH_RATE := 30
+const SLEEP_INTERVAL: int = 1000 / REFRESH_RATE
 
-COLOR_CODES := [40, 41, 42, 43, 44, 45, 46, 47]
-CLEAR_SCREEN_CODE := "\033[" + HEIGHT.str() + "A"
-RESET_CODE := "\033[0m"
+const COLOR_CODES := [40, 41, 42, 43, 44, 45, 46, 47]
+const CLEAR_SCREEN_CODE := "\033[" + HEIGHT.str() + "A"
+const RESET_CODE := "\033[0m"
 
 main {
   mut prevColorIdx := 0
@@ -68,7 +68,7 @@ main {
     }
 
     print(result, terminator: "")
-    sleep(SLEEP_INTERVAL)
+    thread_sleep(SLEEP_INTERVAL)
   }
 }
 ```

@@ -5,7 +5,7 @@ title: Terminal Calculator Example
 
 # {{ page.title }}
 > ### NOTE:
-  This example doesn't compile
+  This example doesn't compile.
 
 ```the
 main {
@@ -60,7 +60,7 @@ main {
     print()
 
     key := read(1)[0]
-    keyCode := key.code()
+    keyCode := key.byte()
 
     mut isBackspace := false
     mut isEnter := false
@@ -86,7 +86,7 @@ main {
     }
 
     if isBackspace {
-      val = val.str().slice(0, -1).asInt()
+      val = val.str().slice(0, -1).int()
     } elif isEnter {
       calcVal()
     } elif isEsc {
@@ -100,7 +100,7 @@ main {
       }
 
       if val.str().len != 13 {
-        val = (val.str() + key).asInt()
+        val = (val.str() + key).int()
       }
     }
 
