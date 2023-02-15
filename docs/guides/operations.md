@@ -16,9 +16,12 @@ main {
 }
 ```
 
-This way variable will be declared with it's default value. \
-Default values: numeric type - `0`, `char` type - `'\0'`, `str` type - `""`,
-array type - `[]`, enumeration type - `0`, optional type - `nil`.
+This way variable will be declared with its default value. \
+Default values: numeric - `0`, character - `'\0'`, string - `""`,
+array - `[]`, enumeration - `0`, optional - `nil`.
+
+> ### NOTE:
+  Types that doesn't have default values: functions, references, and unions.
 
 To declare a variable with initializer enter `=` and continue with variable
 value:

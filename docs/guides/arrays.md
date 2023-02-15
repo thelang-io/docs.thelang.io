@@ -42,4 +42,4 @@ main {
   able to infer array type.
 
 ## API Reference
-For complete list of built-in methods [visit API](/api/primitives/array.html).
+For complete list of built-in features see [API](/api/primitives/array.html).

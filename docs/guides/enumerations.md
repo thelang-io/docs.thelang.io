@@ -103,5 +103,5 @@ main {
 ```
 
 ## API Reference
-For complete list of built-in methods
-[visit API](/api/primitives/enumeration.html).
+For complete list of built-in features see
+[API](/api/primitives/enumeration.html).

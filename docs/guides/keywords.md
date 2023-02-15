@@ -12,13 +12,14 @@ async       import
 await       is
 break       loop
 catch       main
-continue    mut
-elif        nil
-else        obj
-enum        ref
-export      return
-false       throw
-fn          true
-from        try
-if          union
+const       mut
+continue    nil
+elif        obj
+else        ref
+enum        return
+export      throw
+false       true
+fn          try
+from        type
+if
 ```

@@ -33,7 +33,7 @@ obj Book {
 To learn how you can declare mutable object fields please refer to
 [mutability guide](/guides/mutability.html#object-fields).
 
-## Object Literal
+## Object Expression
 Once you declared an object you need a way to use it, this is solved with
 object literal expression.
 
@@ -52,10 +52,9 @@ main {
 ```
 
 ## Default Field Values
-As you might already guessed, if you skip some fields when initializing object
-literal expression they will receive default values. \
-Default values are: `bool` - `false`, `char` - `'\0'`, `int` - `0`,
-`float` - `0.0`, `str` - `""`.
+As you might have already guessed, if you skip some fields when initializing
+object expression they will receive default values (as described in
+[Operations Guide](/guides/operations.html#variable-declaration)).
 
 For example:
 
@@ -135,4 +134,4 @@ obj Vector {
 ```
 
 ## Object Reference
-For complete list of built-in methods [visit API](/api/primitives/object.html).
+For complete list of built-in features see [API](/api/primitives/object.html).

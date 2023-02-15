@@ -6,7 +6,7 @@ title: Mutability
 # {{ page.title }}
 
 ## Variables
-By default all variables are immutable, think of it as a constant variable (it
+By default, all variables are immutable, think of it as a constant variable (it
 means you can't change value of variable after it got declared). \
 In many cases it's required to change value of a variable, to achieve this you
 need to declare variable mutable with `mut` keyword.

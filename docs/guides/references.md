@@ -22,6 +22,10 @@ main {
 }
 ```
 
+> ### NOTE:
+  Remember, reference type should always have a value, it doesn't have it by
+  default.
+
 References act as one more address holder of address that variables points to,
 it means that you can access any variable method on reference same as you
 would on variable itself.

@@ -21,6 +21,7 @@
       val === 'await' ||
       val === 'break' ||
       val === 'catch' ||
+      val === 'const' ||
       val === 'continue' ||
       val === 'elif' ||
       val === 'else' ||
@@ -42,7 +43,7 @@
       val === 'throw' ||
       val === 'true' ||
       val === 'try' ||
-      val === 'union'
+      val === 'type'
   }
 
   function tokIsDigit (ch) {
