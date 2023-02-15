@@ -19,6 +19,7 @@ title: API
 - [Optional](/api/primitives/optional.html)
 - [Reference](/api/primitives/reference.html)
 - [String](/api/primitives/string.html)
+- [Union](/api/primitives/union.html)
 - [Void](/api/primitives/void.html)
 
 ### Modules

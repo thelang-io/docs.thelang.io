@@ -294,8 +294,18 @@ main {
 }
 ```
 
+## Union
+You can find out more in [unions guide](/guides/unions.html).
+
+```the
+main {
+  mut a: int | str = 1
+  mut b: int | str = "test"
+}
+```
+
 ## Any
-You can use this type to store anything.
+You can find out more in [any guide](/guides/any.html).
 
 ```the
 main {
@@ -307,9 +317,6 @@ main {
   myVar = "string"
 }
 ```
-
-> ### NOTE:
-  Programs using `any` type use more RAM, in most cases you don't need it.
 
 ## Void
 This type can only be used as function return type.
