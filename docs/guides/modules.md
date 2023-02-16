@@ -7,7 +7,7 @@ title: Modules
 
 ## Status
 Support for modules in The Programming Language is planned for `v0.14`,
-follow [GitHub](https://github.com/thelang-io/the) to stay tuned.
+follow our [GitHub](https://github.com/thelang-io/the) to stay tuned.
 
 ## What Works Now
 You can use builtin modules by prefix of module name and then function name.
