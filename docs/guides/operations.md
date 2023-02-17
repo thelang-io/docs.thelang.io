@@ -33,6 +33,37 @@ main {
 }
 ```
 
+## Global Constant Declaration
+There's a special type of variables, called "constants". These are the
+variables that you assign a value once and can't change later. \
+By default, all variables in The Programming Language are constants, unless
+you declare them with `mut` (mutable). The problem is that you can't declare 
+constants in global scope (outside of `main` or any function declaration).
+
+For example:
+
+```the
+a: int = 7
+
+main {
+  b: str = a.str()
+}
+```
+
+Example above is not going to compile. To fix it you need to tell compiler
+that `a` is a global constant. To do this we will use `const` keyword and
+afterwards declare variable as you normally would.
+
+For example:
+
+```the
+const a: int = 7
+
+main {
+  b: str = a.str()
+}
+```
+
 ## Short Variable Declaration
 This is special type of variable declaration in which The Programming Language
 will guess what type you want. \
