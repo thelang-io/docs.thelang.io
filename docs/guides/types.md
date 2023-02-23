@@ -283,6 +283,17 @@ main {
 }
 ```
 
+## Map
+You can find out more in [maps guide](/guides/maps.html).
+
+```the
+main {
+  mut a: str[str]
+  mut b: str[str] = {}
+  mut c := { "key": "value" }
+}
+```
+
 ## Optional
 You can find out more in [optionals guide](/guides/optionals.html).
 

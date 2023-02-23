@@ -14,6 +14,7 @@ title: Guides
 - [Arrays](/guides/arrays.html)
 - [Enumerations](/guides/enumerations.html)
 - [Objects](/guides/objects.html)
+- [Maps](/guides/maps.html)
 - [Unions](/guides/unions.html)
 - [Functions](/guides/functions.html)
 - [Variadic Parameters](/guides/variadics.html)

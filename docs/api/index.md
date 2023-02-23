@@ -15,6 +15,7 @@ title: API
 - [Float](/api/primitives/float.html)
 - [Function](/api/primitives/function.html)
 - [Integer](/api/primitives/integer.html)
+- [Map](/api/primitives/map.html)
 - [Object](/api/primitives/object.html)
 - [Optional](/api/primitives/optional.html)
 - [Reference](/api/primitives/reference.html)

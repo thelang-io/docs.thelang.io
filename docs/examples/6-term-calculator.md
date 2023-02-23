@@ -4,8 +4,6 @@ title: Terminal Calculator Example
 ---
 
 # {{ page.title }}
-> ### NOTE:
-  This example doesn't compile.
 
 ```the
 main {
@@ -59,7 +57,7 @@ main {
     print("|---------------|")
     print()
 
-    key := read(1)[0]
+    key := io_read().str()[0]
     keyCode := key.byte()
 
     mut isBackspace := false
