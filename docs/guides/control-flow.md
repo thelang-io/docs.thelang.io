@@ -17,7 +17,7 @@ main {
 ```
 
 In this example, `if` statement executes `statement1` if `condition` is `true`.
-Otherwise it executes optional `else` clause `statement2`.
+Otherwise, it executes optional `else` clause `statement2`.
 
 ```the
 main {

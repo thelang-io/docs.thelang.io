@@ -30,7 +30,7 @@ main {
 ```
 
 ## Function Parameters
-By default all function parameters are immutable, to declare parameter mutable
+By default, all function parameters are immutable, to declare parameter mutable
 you need to prefix parameter declaration with `mut` keyword.
 
 All arguments in The Programming Language are passed by copy. If you declare a
@@ -61,7 +61,7 @@ references. Follow [references guide](/guides/references.html) for more
 information.
 
 ## Object Fields
-By default all object fields are immutable, which means you can't change them
+By default, all object fields are immutable, which means you can't change them
 after declaration. \
 To declare a field mutable, simply use `mut` keyword in front of field name.
 

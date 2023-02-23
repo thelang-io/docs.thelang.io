@@ -86,7 +86,7 @@ fn str.slice (start: i64 = 0, end: i64 = self.len) str
 - if value is negative then string length is added to it.
 - if value is less than string length then `0` value is used.
 - if value is greater than string length then string length is used.
-- if value positioned before or it equals **start** then nothing is extracted.
+- if value positioned before or equals **start** then nothing is extracted.
 
 ## `str.toBuffer()`
 Converts a string to `buffer_Buffer` object.

@@ -20,7 +20,7 @@ fn char.isAlpha () bool
 ```
 
 ## `char.isAlphaNum()`
-Checks whether character is one of alpha numeric characters.
+Checks whether character is one of alphanumeric characters.
 
 ```the
 fn char.isAlphaNum () bool

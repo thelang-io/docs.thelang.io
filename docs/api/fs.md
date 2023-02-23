@@ -95,7 +95,7 @@ fn fs_chownSync (path: str, uid: int, gid: int) void
 **gid** - new file owner group id.
 
 ## `fs_existsSync()`
-Tests whether or not the given path exists.
+Tests whether the given path exists.
 
 ```the
 fn fs_existsSync (path: str) bool
@@ -105,7 +105,7 @@ fn fs_existsSync (path: str) bool
 **path** - pathname to test.
 
 ## `fs_isAbsoluteSync()`
-Tests whether or not the given path is absolute.
+Tests whether the given path is absolute.
 
 ```the
 fn fs_isAbsoluteSync (path: str) bool
@@ -115,7 +115,7 @@ fn fs_isAbsoluteSync (path: str) bool
 **path** - pathname to test.
 
 ## `fs_isFileSync()`
-Tests whether or not the given path is regular file.
+Tests whether the given path is regular file.
 
 ```the
 fn fs_isFileSync (path: str) bool
@@ -125,7 +125,7 @@ fn fs_isFileSync (path: str) bool
 **path** - pathname to test.
 
 ## `fs_isDirectorySync()`
-Tests whether or not the given path is directory.
+Tests whether the given path is directory.
 
 ```the
 fn fs_isDirectorySync (path: str) bool
@@ -135,7 +135,7 @@ fn fs_isDirectorySync (path: str) bool
 **path** - pathname to test.
 
 ## `fs_isSymbolicLinkSync()`
-Tests whether or not the given path is symbolic link.
+Tests whether the given path is symbolic link.
 
 ```the
 fn fs_isSymbolicLinkSync (path: str) bool
@@ -216,7 +216,7 @@ fn fs_scandirSync (path: str) str[]
 **path** - pathname to read contents of.
 
 ## `fs_statSync()`
-Retrieves status of a the specified path.
+Retrieves status of the specified path.
 
 ```the
 fn fs_statSync (path: str) fs_Stats

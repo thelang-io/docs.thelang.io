@@ -34,7 +34,7 @@ obj request_Request {}
 ```
 
 ### Fields
-Currently has no exposed fields that you can use.
+Currently, has no exposed fields that you can use.
 
 ## `request_Request.str()`
 Returns a string representing the object.
@@ -90,7 +90,7 @@ fn request_open (
 ```
 
 ### Parameters
-**method** - string containing a HTTP request method. \
+**method** - string containing an HTTP request method. \
 **url** - string containing a valid URL. \
 **data** - buffer containing additional data. The default is empty buffer. \
 **headers** - array of `request_Header` objects. The default is empty array.

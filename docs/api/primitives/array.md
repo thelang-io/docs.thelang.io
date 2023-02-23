@@ -82,7 +82,7 @@ fn Array.slice (start: i64 = 0, end: i64 = self.len) Array
 - if value is negative then array length is added to it.
 - if value is less than array length then `0` value is used.
 - if value is greater than array length then array length is used.
-- if value positioned before or it equals **start** then nothing is extracted.
+- if value positioned before or equals **start** then nothing is extracted.
 
 ## `Array.str()`
 Returns a string representing the object.

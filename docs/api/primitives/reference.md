@@ -13,7 +13,7 @@ obj Reference {}
 ```
 
 > ### NOTE:
-  Reference inherit all fields and methods from variable it refers to,
+  Reference inherits all fields and methods from variable it refers to,
   therefore it has no own properties. \
   The only difference between original variable and reference, is when you
   print reference it will print memory address of variable it refers to.
