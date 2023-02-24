@@ -37,7 +37,7 @@ main {
 There's a special type of variables, called "constants". These are the
 variables that you assign a value once and can't change later. \
 By default, all variables in The Programming Language are constants, unless
-you declare them with `mut` (mutable). The problem is that you can't declare 
+you declare them with `mut` (mutable). The problem is that you can't declare
 constants in global scope (outside of `main` or any function declaration).
 
 For example:
