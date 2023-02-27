@@ -63,4 +63,4 @@ main {
 ```
 
 ## API Reference
-For complete list of built-in features see [API](/api/primitives/map.html).
+For complete list of built-in features see [API](/api/map.html).

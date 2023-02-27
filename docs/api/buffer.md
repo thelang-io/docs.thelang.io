@@ -9,14 +9,15 @@ title: Buffer API
 Used to represent a fixed-length sequence of bytes.
 
 ```the
-obj buffer_Buffer {}
+obj buffer_Buffer {
+}
 ```
 
-### Fields
-Currently, has no exposed fields that you can use.
+> ### NOTE:
+  Currently, has no exposed fields that you can use.
 
 ## `buffer_Buffer.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn buffer_Buffer.str () str

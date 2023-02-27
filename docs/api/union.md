@@ -9,11 +9,12 @@ title: Union API
 Allows storing a combination of several types under a single variable.
 
 ```the
-obj Union {}
+obj Union {
+}
 ```
 
 ## `Union.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn Union.str () str

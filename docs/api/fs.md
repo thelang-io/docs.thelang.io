@@ -32,31 +32,27 @@ obj fs_Stats {
 ```
 
 ### Fields
-**dev** - identifier of the device containing this file. \
-**mode** - file type and file mode bits. \
-**nlink** - number of hard links. \
-**ino** - inode number on Unix and the file index on Windows platform. \
-**uid** - user identifier of the file owner. \
-**gid** - group identifier of the file owner. \
-**rdev** - type of device, if an inode device. \
-**atime** - time of the most recent access expressed in seconds. \
-**atimeNs** - time of the most recent access expressed in nanoseconds. \
-**mtime** - time of the most recent content modification expressed in
-seconds. \
-**mtimeNs** - time of the most recent content modification expressed in
-nanoseconds. \
-**ctime** - time of the most recent metadata change on Unix and creation time
-on Windows expressed in seconds. \
-**ctimeNs** - time of the most recent metadata change on Unix and creation time
-on Windows expressed in nanoseconds. \
-**btime** - time of file creation expressed in seconds. \
-**btimeNs** - time of file creation expressed in nanoseconds. \
-**size** - size of the file in bytes. \
-**blocks** - number of 512-byte blocks allocated for file. \
-**blockSize** - preferred block size for efficient file system I/O.
+**dev** - Identifier of the device containing this file. \
+**mode** - File type and file mode bits. \
+**nlink** - Number of hard links. \
+**ino** - INode number on Unix and the file index on Windows platform. \
+**uid** - User identifier of the file owner. \
+**gid** - Group identifier of the file owner. \
+**rdev** - Type of device, if an inode device. \
+**atime** - Time of the most recent access expressed in seconds. \
+**atimeNs** - Time of the most recent access expressed in nanoseconds. \
+**mtime** - Time of the most recent content modification expressed in seconds. \
+**mtimeNs** - Time of the most recent content modification expressed in nanoseconds. \
+**ctime** - Time of the most recent metadata change on Unix and creation time on Windows expressed in seconds. \
+**ctimeNs** - Time of the most recent metadata change on Unix and creation time on Windows expressed in nanoseconds. \
+**btime** - Time of file creation expressed in seconds. \
+**btimeNs** - Time of file creation expressed in nanoseconds. \
+**size** - Size of the file in bytes. \
+**blocks** - Number of 512-byte blocks allocated for file. \
+**blockSize** - Preferred block size for efficient file system I/O.
 
 ## `fs_Stats.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn fs_Stats.str () str
@@ -70,8 +66,8 @@ fn fs_chmodSync (path: str, mode: int) void
 ```
 
 ### Parameters
-**path** - pathname to change permissions of. \
-**mode** - numeric bitmask created by ORing following octal numbers:
+**path** - Pathname to change permissions of. \
+**mode** - Numeric bitmask created by ORing following octal numbers:
   - **0o400** - read by owner
   - **0o200** - write by owner
   - **0o100** - execute/search by owner
@@ -90,9 +86,9 @@ fn fs_chownSync (path: str, uid: int, gid: int) void
 ```
 
 ### Parameters
-**path** - pathname to change owner and group id of. \
-**uid** - new file owner user id. \
-**gid** - new file owner group id.
+**path** - Pathname to change owner and group id of. \
+**uid** - New file owner user id. \
+**gid** - New file owner group id.
 
 ## `fs_existsSync()`
 Tests whether the given path exists.
@@ -102,7 +98,7 @@ fn fs_existsSync (path: str) bool
 ```
 
 ### Parameters
-**path** - pathname to test.
+**path** - Pathname to test.
 
 ## `fs_isAbsoluteSync()`
 Tests whether the given path is absolute.
@@ -112,7 +108,7 @@ fn fs_isAbsoluteSync (path: str) bool
 ```
 
 ### Parameters
-**path** - pathname to test.
+**path** - Pathname to test.
 
 ## `fs_isFileSync()`
 Tests whether the given path is regular file.
@@ -122,7 +118,7 @@ fn fs_isFileSync (path: str) bool
 ```
 
 ### Parameters
-**path** - pathname to test.
+**path** - Pathname to test.
 
 ## `fs_isDirectorySync()`
 Tests whether the given path is directory.
@@ -132,7 +128,7 @@ fn fs_isDirectorySync (path: str) bool
 ```
 
 ### Parameters
-**path** - pathname to test.
+**path** - Pathname to test.
 
 ## `fs_isSymbolicLinkSync()`
 Tests whether the given path is symbolic link.
@@ -142,18 +138,18 @@ fn fs_isSymbolicLinkSync (path: str) bool
 ```
 
 ### Parameters
-**path** - pathname to test.
+**path** - Pathname to test.
 
 ## `fs_linkSync()`
-Create a symbolic link.
+Creates a symbolic link.
 
 ```the
 fn fs_linkSync (sourcePath: str, linkPath: str) void
 ```
 
 ### Parameters
-**sourcePath** - source pathname. \
-**linkPath** - destination pathname.
+**sourcePath** - Source pathname. \
+**linkPath** - Destination pathname.
 
 ## `fs_mkdirSync()`
 Creates a directory.
@@ -163,7 +159,7 @@ fn fs_mkdirSync (path: str) void
 ```
 
 ### Parameters
-**path** - pathname to create directory at.
+**path** - Pathname to create directory at.
 
 ## `fs_readFileSync()`
 Reads the entire contents of path.
@@ -173,7 +169,7 @@ fn fs_readFileSync (path: str) buffer_Buffer
 ```
 
 ### Parameters
-**path** - pathname to read.
+**path** - Pathname to read.
 
 ## `fs_realpathSync()`
 Computes canonical path of the specified path.
@@ -183,7 +179,7 @@ fn fs_realpathSync (path: str) str
 ```
 
 ### Parameters
-**path** - pathname to compute canonical path for.
+**path** - Pathname to compute canonical path for.
 
 ## `fs_rmSync()`
 Removes the file at path.
@@ -193,7 +189,7 @@ fn fs_rmSync (path: str) void
 ```
 
 ### Parameters
-**path** - pathname to remove.
+**path** - Pathname to remove.
 
 ## `fs_rmdirSync()`
 Removes the directory at path.
@@ -203,17 +199,17 @@ fn fs_rmdirSync (path: str) void
 ```
 
 ### Parameters
-**path** - pathname to remove.
+**path** - Pathname to remove.
 
 ## `fs_scandirSync()`
-Reads the contents of a directory excluding `'.'` and `'..'`.
+Reads the contents of a directory excluding `.` and `..`.
 
 ```the
 fn fs_scandirSync (path: str) str[]
 ```
 
 ### Parameters
-**path** - pathname to read contents of.
+**path** - Pathname to read contents of.
 
 ## `fs_statSync()`
 Retrieves status of the specified path.
@@ -223,7 +219,7 @@ fn fs_statSync (path: str) fs_Stats
 ```
 
 ### Parameters
-**path** - pathname to retrieve status of.
+**path** - Pathname to retrieve status of.
 
 ## `fs_unlinkSync()`
 Removes link without affecting the file or directory to which that link refers.
@@ -233,7 +229,7 @@ fn fs_unlinkSync (path: str) void
 ```
 
 ### Parameters
-**path** - pathname to remove.
+**path** - Pathname to remove.
 
 ## `fs_writeFileSync()`
 Writes data to a path, replacing the file if it already exists.
@@ -243,5 +239,5 @@ fn fs_writeFileSync (path: str, data: buffer_Buffer) void
 ```
 
 ### Parameters
-**path** - pathname to write. \
-**data** - data to write.
+**path** - Pathname to write. \
+**data** - Data to write.

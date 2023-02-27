@@ -22,4 +22,4 @@ Type checking in details is explained in
 [Type Checking guide](/guides/type-checking.html).
 
 ## API Reference
-For complete list of built-in features see [API](/api/primitives/any.html).
+For complete list of built-in features see [API](/api/any.html).

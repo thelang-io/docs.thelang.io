@@ -16,11 +16,11 @@ obj request_Header {
 ```
 
 ### Fields
-**name** - header name. \
-**value** - header value.
+**name** - Header name. \
+**value** - Header value.
 
 ## `request_Header.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn request_Header.str () str
@@ -30,14 +30,29 @@ fn request_Header.str () str
 Contains all the information about the request.
 
 ```the
-obj request_Request {}
+obj request_Request {
+}
 ```
 
-### Fields
-Currently, has no exposed fields that you can use.
+> ### NOTE:
+  Currently, has no exposed fields that you can use.
+
+## `request_Request.close()`
+Closes the request. Using request afterwards has undefined behavior.
+
+```the
+fn request_Request.close () void
+```
+
+## `request_Request.read()`
+Reads response data from the request and constructs returned `request_Response` object.
+
+```the
+fn request_Request.read () request_Response
+```
 
 ## `request_Request.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn request_Request.str () str
@@ -55,30 +70,19 @@ obj request_Response {
 ```
 
 ### Fields
-**data** - additional data returned by server. \
-**status** - status code returned by server. \
-**headers** - headers returned by server.
+**data** - Additional data returned by server. \
+**status** - Status code returned by server. \
+**headers** - Headers returned by server.
 
 ## `request_Response.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn request_Response.str () str
 ```
 
-## `request_close()`
-Closes the request. Using request afterwards has undefined behavior.
-
-```the
-fn request_close (mut request: ref request_Request) void
-```
-
-### Parameters
-**request** - `request_Request` object reference.
-
 ## `request_open()`
-Initiates request to the given URL and constructs returned `request_Request`
-object.
+Initiates request to the given URL and constructs returned `request_Request` object.
 
 ```the
 fn request_open (
@@ -90,20 +94,7 @@ fn request_open (
 ```
 
 ### Parameters
-**method** - string containing an HTTP request method. \
-**url** - string containing a valid URL. \
-**data** - buffer containing additional data. The default is empty buffer. \
-**headers** - array of `request_Header` objects. The default is empty array.
-
-## `request_read()`
-Reads response data from the request and constructs returned
-`request_Response` object.
-
-```the
-fn request_read (
-  mut request: ref request_Request
-) request_Response
-```
-
-### Parameters
-**request** - `request_Request` object reference.
+**method** - String containing an HTTP request method. \
+**url** - String containing a valid URL. \
+**data** - `buffer_Buffer` containing additional data. The default is empty buffer. \
+**headers** - Array of `request_Header` objects. The default is empty array.

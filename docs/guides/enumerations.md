@@ -104,4 +104,4 @@ main {
 
 ## API Reference
 For complete list of built-in features see
-[API](/api/primitives/enumeration.html).
+[API](/api/enum.html).

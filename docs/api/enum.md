@@ -15,10 +15,10 @@ obj Enumeration {
 ```
 
 ### Fields
-**rawValue** - enumeration string representation.
+**rawValue** - Enumerator string representation.
 
 ## `Enumeration.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn Enumeration.str () str

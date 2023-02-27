@@ -9,11 +9,12 @@ title: Optional API
 Allows storing optional value that could be `nil` or actual value.
 
 ```the
-obj Optional {}
+obj Optional {
+}
 ```
 
 ## `Optional.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn Optional.str () str

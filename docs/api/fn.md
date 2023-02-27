@@ -9,14 +9,15 @@ title: Function API
 Object representation of function variable.
 
 ```the
-obj Function {}
+obj Function {
+}
 ```
 
 > ### NOTE:
-  Later there will be `name` property available.
+  In v1.0 `name` property is going to be added.
 
 ## `Function.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn Function.str () str

@@ -9,7 +9,7 @@ title: Path API
 Platform-specific pathname components separator. `\` on Windows, `/` on POSIX.
 
 ```the
-path_SEP: str
+const path_SEP: str
 ```
 
 ## `path_basename()`
@@ -20,7 +20,7 @@ fn path_basename (path: str) str
 ```
 
 ### Parameters
-**path** - pathname to retrieve last portion from.
+**path** - Pathname to retrieve last portion from.
 
 ## `path_dirname()`
 Retrieves directory name of pathname.
@@ -30,4 +30,4 @@ fn path_dirname (path: str) str
 ```
 
 ### Parameters
-**path** - pathname to retrieve directory name from.
+**path** - Pathname to retrieve directory name from.

@@ -5,44 +5,47 @@ title: Float, F32, F64 API
 
 # {{ page.title }}
 
-## `float`
+## `Float`
 Allow storing 64-bit floating point numbers.
 
 ```the
-obj float {}
+obj Float {
+}
 ```
 
-## `float.str()`
-Returns a string representing the object.
+## `Float.str()`
+Returns a string representation.
 
 ```the
-fn float.str () str
+fn Float.str () str
 ```
 
-## `f32`
+## `F32`
 Allow storing 32-bit scientific floating point numbers.
 
 ```the
-obj f32 {}
+obj F32 {
+}
 ```
 
-## `f32.str()`
-Returns a string representing the object.
+## `F32.str()`
+Returns a string representation.
 
 ```the
-fn f32.str () str
+fn F32.str () str
 ```
 
-## `f64`
+## `F64`
 Allow storing 64-bit scientific floating point numbers.
 
 ```the
-obj f64 {}
+obj F64 {
+}
 ```
 
-## `f64.str()`
-Returns a string representing the object.
+## `F64.str()`
+Returns a string representation.
 
 ```the
-fn f64.str () str
+fn F64.str () str
 ```

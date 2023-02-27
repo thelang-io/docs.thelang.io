@@ -47,4 +47,4 @@ Type checking in details is explained in
 
 ## API Reference
 For complete list of built-in features see
-[API](/api/primitives/union.html).
+[API](/api/union.html).

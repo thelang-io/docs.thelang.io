@@ -25,10 +25,10 @@ obj url_URL {
 ![url_URL explanation](/assets/images/url-explanation.png)
 
 > ### NOTE:
-  URLs containing authorization information are not supported
+  URLs containing authorization information are not supported.
 
 ## `url_URL.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn url_URL.str () str

@@ -134,4 +134,4 @@ obj Vector {
 ```
 
 ## Object Reference
-For complete list of built-in features see [API](/api/primitives/object.html).
+For complete list of built-in features see [API](/api/obj.html).

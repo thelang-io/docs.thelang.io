@@ -9,11 +9,12 @@ title: Object API
 Allows storing various keyed collections and more complex entities.
 
 ```the
-obj Object {}
+obj Object {
+}
 ```
 
 ## `Object.str()`
-Returns a string representing the object.
+Returns a string representation.
 
 ```the
 fn Object.str () str

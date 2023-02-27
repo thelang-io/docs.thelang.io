@@ -5,16 +5,17 @@ title: Any API
 
 # {{ page.title }}
 
-## `any`
+## `Any`
 Allows storing any variable of any type.
 
 ```the
-obj any {}
+obj Any {
+}
 ```
 
-## `any.str()`
-Returns a string representing the object.
+## `Any.str()`
+Returns a string representation.
 
 ```the
-fn any.str () str
+fn Any.str () str
 ```

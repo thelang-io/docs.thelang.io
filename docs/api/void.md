@@ -5,9 +5,10 @@ title: Void API
 
 # {{ page.title }}
 
-## `void`
+## `Void`
 Used when there is no data.
 
 ```the
-obj void {}
+obj Void {
+}
 ```
