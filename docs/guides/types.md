@@ -229,7 +229,7 @@ main {
 
 ### String Escaping
 Characters that can be escaped `\n`, `\f`, `\r`, `\t`, `\v`, `\e`, `\0`, `\'`,
-`\"`.
+`\"`, `\{`.
 
 ```the
 main {
@@ -294,6 +294,22 @@ main {
 }
 ```
 
+## Object
+You can find out more in [objects guide](/guides/objects.html).
+
+```the
+obj Object {
+  a: int
+  b: str
+}
+
+main {
+  a: Object
+  b: Object = Object{}
+  c := Object{a: 1, b: "string"}
+}
+```
+
 ## Optional
 You can find out more in [optionals guide](/guides/optionals.html).
 
@@ -302,6 +318,19 @@ main {
   mut a: int?
   mut b: int? = nil
   mut c: int? = 1
+}
+```
+
+## Reference
+You can find out more in [references guide](/guides/references.html).
+
+```the
+main {
+  a := 1
+  b := str
+  
+  c: ref int = ref a
+  d := ref b
 }
 ```
 

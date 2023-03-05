@@ -100,17 +100,23 @@ this block of code.
 
 ```the
 main {
+  loop (condition) {
+    body
+  }
+}
+```
+
+```the
+main {
   loop (
     condition1 &&
     condition2 &&
     condition3
   ) {
-    statement
+    body
   }
 }
 ```
-
-Or
 
 ```the
 main {
@@ -119,7 +125,7 @@ main {
     condition;
     update
   ) {
-    statement
+    body
   }
 }
 ```
