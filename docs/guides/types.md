@@ -328,7 +328,7 @@ You can find out more in [references guide](/guides/references.html).
 main {
   a := 1
   b := str
-  
+
   c: ref int = ref a
   d := ref b
 }
