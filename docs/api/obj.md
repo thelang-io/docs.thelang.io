@@ -5,17 +5,17 @@ title: Object API
 
 # {{ page.title }}
 
-## `Object`
+## `Obj`
 Allows storing various keyed collections and more complex entities.
 
 ```the
-obj Object {
+obj Obj {
 }
 ```
 
-## `Object.str()`
+## `Obj.str()`
 Returns a string representation.
 
 ```the
-fn Object.str () str
+fn Obj.str () str
 ```

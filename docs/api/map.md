@@ -5,7 +5,8 @@ title: Map API
 
 # {{ page.title }}
 
- of multiple key-value pairs and remembers the original insertion order of the keys.
+## `Map`
+Allows storing a collection of multiple key-value pairs and remembers the original insertion order of the keys.
 
 ```the
 obj Map {

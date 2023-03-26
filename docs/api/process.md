@@ -12,25 +12,49 @@ String array containing the command-line arguments passed when the process was l
 const process_args: str[]
 ```
 
-## `process_cwd`
-Current working directory of the process.
+## `process_env`
+Process environment variables.
 
 ```the
-const process_cwd: str
+const process_env: str[str]
 ```
 
-## `process_gid`
-Numeric group identity of the process. On Windows always returns `0`.
+## `process_home`
+Home directory for the current user.
 
 ```the
-const process_gid: int
+const process_home: str
 ```
 
-## `process_uid`
-Numeric user identity of the process. On Windows always returns `0`.
+## `process_cwd()`
+Returns the current working directory of the process.
 
 ```the
-const process_uid: int
+fn process_cwd () str
+```
+
+## `process_exit()`
+Terminates the current process.
+
+```the
+fn process_exit (status := 0) void
+```
+
+### Parameters
+**status** - Status code returned to the parent process. The default is zero.
+
+## `process_getgid()`
+Returns the numeric group identity of the process. On Windows always returns `0`.
+
+```the
+fn process_getgid () int
+```
+
+## `process_getuid()`
+Returns the numeric user identity of the process. On Windows always returns `0`.
+
+```the
+fn process_getuid () int
 ```
 
 ## `process_runSync()`

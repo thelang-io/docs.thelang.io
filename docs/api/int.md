@@ -5,19 +5,19 @@ title: Int, I8, I16, I32, I64, U8, U16, U32, U64 API
 
 # {{ page.title }}
 
-## `Integer`
+## `Int`
 Allows storing a number in range from `-2147483648` to `2147483647`.
 
 ```the
-obj Integer {
+obj Int {
 }
 ```
 
-## `Integer.str()`
+## `Int.str()`
 Returns a string representation.
 
 ```the
-fn Integer.str () str
+fn Int.str () str
 ```
 
 ## `I8`

@@ -34,10 +34,11 @@
 
     function tableOfContentsScroll () {
       const parentRect = parentEl.getBoundingClientRect()
-      const bottom = Math.floor(parentRect.bottom) > window.innerHeight
+      const parentOfParentRect = parentEl.parentNode.getBoundingClientRect()
+      const bottom = parentOfParentRect.bottom > window.innerHeight
         ? 24
-        : window.innerHeight + 32 - Math.floor(parentRect.bottom)
-      const top = Math.floor(parentRect.top) < 24 ? 24 : Math.floor(parentRect.top)
+        : window.innerHeight + 32 - Math.floor(parentOfParentRect.bottom)
+      const top = parentRect.top < 24 ? 24 : Math.floor(parentRect.top)
 
       rootEl.style.bottom = bottom + 'px'
       rootEl.style.top = top + 'px'

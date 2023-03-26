@@ -5,7 +5,8 @@ title: Array API
 
 # {{ page.title }}
 
-storing a collection of multiple elements under a single variable.
+## `Array`
+Allows storing a collection of multiple elements under a single variable.
 
 ```the
 obj Array {
@@ -36,6 +37,16 @@ Removes all elements and changes length to zero.
 fn Array.clear () ref Self
 ```
 
+## `Array.concat()`
+Concatenates two arrays and returns resulting array.
+
+```the
+fn Array.concat (other: Self) Self
+```
+
+### Parameters
+**other** - Another arrays you want to concatenate.
+
 ## `Array.contains()`
 Checks whether certain element exists.
 
@@ -56,6 +67,16 @@ fn Array.filter (predicate: (it: Element) -> bool) Self
 ### Parameters
 **predicate** - Function to execute on each element of the array. Should return a truthy value to keep the element in the resulting array.
 
+## `Array.forEach()`
+Calls `iterator` on every element.
+
+```the
+fn Array.forEach (iterator: (it: Element, idx: int) -> void) void
+```
+
+### Parameters
+**iterator** - Function to execute on each element of the array.
+
 ## `Array.join()`
 Calls `str` method on every element and joins result with separator.
 
@@ -66,25 +87,15 @@ fn Array.join (separator := ",") str
 ### Parameters
 **separator** - Elements separator. The default is comma string.
 
-## `Array.map()`
-Calls `transform` on every element and constructs array out of return values of the `transform` function.
-
-```the
-fn Array.map (transform: (it: Element) -> any) any[]
-```
-
-### Parameters
-**transform** - A function to execute for each element of the array.
-
 ## `Array.merge()`
-Merges other array's data into calling array.
+Merges other array's elements into calling array.
 
 ```the
 fn Array.merge (other: Self) ref Self
 ```
 
 ### Parameters
-**other** - Other array you want to merge.
+**other** - Another array you want to merge.
 
 ## `Array.pop()`
 Removes last element and returns it.
@@ -97,7 +108,7 @@ fn Array.pop () Element
 Adds new elements.
 
 ```the
-fn Array.push (elements: Element) void
+fn Array.push (elements: Element...) void
 ```
 
 ### Parameters
@@ -107,11 +118,11 @@ fn Array.push (elements: Element) void
 Removes elements corresponding to specific indexes from array.
 
 ```the
-fn Array.remove (indexes: int) ref Self
+fn Array.remove (index: int) ref Self
 ```
 
 ### Parameters
-**indexes** - Indexes of elements to remove.
+**index** - Element index to remove.
 
 ## `Array.reverse()`
 Returns reversed array copy.

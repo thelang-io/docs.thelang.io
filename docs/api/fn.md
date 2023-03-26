@@ -5,20 +5,20 @@ title: Function API
 
 # {{ page.title }}
 
-## `Function`
+## `Fn`
 Object representation of function variable.
 
 ```the
-obj Function {
+obj Fn {
 }
 ```
 
 > ### NOTE:
   In v1.0 `name` property is going to be added.
 
-## `Function.str()`
+## `Fn.str()`
 Returns a string representation.
 
 ```the
-fn Function.str () str
+fn Fn.str () str
 ```

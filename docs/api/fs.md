@@ -58,6 +58,17 @@ Returns a string representation.
 fn fs_Stats.str () str
 ```
 
+## `fs_appendFileSync()`
+Appends data to a path, creating the file if it doesn't exists.
+
+```the
+fn fs_appendFileSync (path: str, data: buffer_Buffer) void
+```
+
+### Parameters
+**path** - Pathname to append to. \
+**data** - Data to append.
+
 ## `fs_chmodSync()`
 Changes the mode (permissions) of path.
 
@@ -90,6 +101,28 @@ fn fs_chownSync (path: str, uid: int, gid: int) void
 **uid** - New file owner user id. \
 **gid** - New file owner group id.
 
+## `fs_copyDirectorySync()`
+Copies directory from source to destination.
+
+```the
+fn fs_copyDirectorySync (source: str, destination: str) void
+```
+
+### Parameters
+**source** - Source path to copy from. \
+**destination** - Destination path to copy to.
+
+## `fs_copyFileSync()`
+Copies file from source to destination.
+
+```the
+fn fs_copyFileSync (source: str, destination: str) void
+```
+
+### Parameters
+**source** - Source path to copy from. \
+**destination** - Destination path to copy to.
+
 ## `fs_existsSync()`
 Tests whether the given path exists.
 
@@ -110,21 +143,21 @@ fn fs_isAbsoluteSync (path: str) bool
 ### Parameters
 **path** - Pathname to test.
 
-## `fs_isFileSync()`
-Tests whether the given path is regular file.
-
-```the
-fn fs_isFileSync (path: str) bool
-```
-
-### Parameters
-**path** - Pathname to test.
-
 ## `fs_isDirectorySync()`
 Tests whether the given path is directory.
 
 ```the
 fn fs_isDirectorySync (path: str) bool
+```
+
+### Parameters
+**path** - Pathname to test.
+
+## `fs_isFileSync()`
+Tests whether the given path is regular file.
+
+```the
+fn fs_isFileSync (path: str) bool
 ```
 
 ### Parameters
@@ -180,6 +213,17 @@ fn fs_realpathSync (path: str) str
 
 ### Parameters
 **path** - Pathname to compute canonical path for.
+
+## `fs_renameSync()`
+Renames source path to destination path.
+
+```the
+fn fs_renameSync (source: str, destination: str) void
+```
+
+### Parameters
+**source** - Source path to rename from. \
+**destination** - Destination path to rename to.
 
 ## `fs_rmSync()`
 Removes the file at path.

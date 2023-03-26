@@ -5,11 +5,11 @@ title: Enumeration API
 
 # {{ page.title }}
 
-## `Enumeration`
+## `Enum`
 Allows storing a group of related values under a single variable.
 
 ```the
-obj Enumeration {
+obj Enum {
   rawValue: str
 }
 ```
@@ -17,9 +17,9 @@ obj Enumeration {
 ### Fields
 **rawValue** - Enumerator string representation.
 
-## `Enumeration.str()`
+## `Enum.str()`
 Returns a string representation.
 
 ```the
-fn Enumeration.str () str
+fn Enum.str () str
 ```

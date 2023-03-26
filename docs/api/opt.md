@@ -5,17 +5,17 @@ title: Optional API
 
 # {{ page.title }}
 
-## `Optional`
+## `Opt`
 Allows storing optional value that could be `nil` or actual value.
 
 ```the
-obj Optional {
+obj Opt {
 }
 ```
 
-## `Optional.str()`
+## `Opt.str()`
 Returns a string representation.
 
 ```the
-fn Optional.str () str
+fn Opt.str () str
 ```

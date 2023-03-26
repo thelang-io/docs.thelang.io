@@ -31,3 +31,17 @@ fn path_dirname (path: str) str
 
 ### Parameters
 **path** - Pathname to retrieve directory name from.
+
+## `path_tempDirectory()`
+Returns temporary directory for the current user.
+
+```the
+fn path_tempDirectory () str
+```
+
+## `path_tempFile()`
+Returns temporary file for the current user.
+
+```the
+fn path_tempFile () str
+```
