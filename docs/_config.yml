@@ -16,4 +16,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
 
-highlighter: none
+kramdown:
+  syntax_highlighter_opts:
+    disable: true

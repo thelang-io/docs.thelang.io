@@ -115,7 +115,7 @@ pre code {
   padding: 24px;
 }
 
-pre code:not([class^='language-the']) {
+pre code:not([class^="language-the"]) {
   background-color: $color-light-bg;
   color: $color-light-fg;
 }
