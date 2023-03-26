@@ -2,6 +2,7 @@
 
 (function (document) {
   const codeElements = document.querySelectorAll('code.language-the')
+  const shellCodeElements = document.querySelectorAll('code.language-shell, code.language-powershell')
 
   const TOKEN = {
     UNKNOWN: 0,
@@ -193,8 +194,13 @@
 
   for (let i = 0; i < codeElements.length; i++) {
     const codeEl = codeElements[i]
-
     codeEl.classList.add('code__wrapper')
     codeEl.innerHTML = '<div class="code">' + parse(codeEl.innerHTML) + '</div>'
+  }
+
+  for (let i = 0; i < shellCodeElements.length; i++) {
+    const codeEl = shellCodeElements[i]
+    codeEl.classList.add('code__wrapper')
+    codeEl.innerHTML = '<div class="code">' + codeEl.innerHTML + '</div>'
   }
 })(document)
