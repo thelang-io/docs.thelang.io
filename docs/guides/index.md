@@ -6,6 +6,7 @@ title: Guides
 # {{ page.title }}
 - [The Programming Language](/guides/the-programming-language.html)
 - [Installation](/guides/installation.html)
+- [CLI](/guides/cli.html)
 - [Comments](/guides/comments.html)
 - [Operations](/guides/operations.html)
 - [Types](/guides/types.html)
