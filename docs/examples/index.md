@@ -11,3 +11,4 @@ title: Examples
 - [Factorial](/examples/5-factorial.html)
 - [Terminal Calculator](/examples/6-term-calculator.html)
 - [Terminal Pretty Waves](/examples/7-term-pretty-waves.html)
+- [Terminal Tetris](/examples/8-term-tetris.html)
