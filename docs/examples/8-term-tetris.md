@@ -284,11 +284,11 @@ obj Game {
         tile := self._tileAt(j, i)
 
         if tile != nil {
-          result += tile.color + "  \033[0m"
+          result += tile.color + " " + " \033[0m"
         } elif self._ghostTileHas(j, i) {
-          result += self._ghostTetromino.ghostColor + "░░\033[0m"
+          result += self._ghostTetromino.ghostColor + "░" + "░\033[0m"
         } else {
-          result += "  "
+          result += " " + " "
         }
       }
 
