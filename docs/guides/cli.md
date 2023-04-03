@@ -66,7 +66,7 @@ the install the/error@1.0.0
 `the uninstall package` \
 Uninstalls specified package from the project and removes it from `package.yml`.
 
-```the
+```bash
 the uninstall the/error
 ```
 
