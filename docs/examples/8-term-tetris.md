@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Terminal Tetris
+title: Terminal Tetris Example
 ---
 
 # {{ page.title }}
