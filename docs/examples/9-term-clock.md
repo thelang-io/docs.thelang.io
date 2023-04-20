@@ -4,6 +4,7 @@ title: Terminal Clock Example
 ---
 
 # {{ page.title }}
+![Terminal Clock Example Visualization](/assets/images/example-9.png)
 
 ```the
 const DISPLAY_NUMBERS := [

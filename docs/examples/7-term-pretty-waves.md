@@ -4,6 +4,8 @@ title: Terminal Pretty Waves Example
 ---
 
 # {{ page.title }}
+![Terminal Pretty Waves Example](/assets/images/example-7.png)
+
 ```the
 obj Point {
   mut x: int
