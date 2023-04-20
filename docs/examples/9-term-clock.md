@@ -229,7 +229,7 @@ fn render (date: str) {
     loop i := 0; i < appendBufLen; i++ {
       loop j := 0; j < lineLen; j++ {
         buf[BUF_LINE_LEN * i + offset + j] =
-          appendBuf[i][j] == 1 ? "\033[1;42m  \033[0m" : "  "
+          appendBuf[i][j] == 1 ? ("\033[1;42m " + " \033[0m") : (" " + " ")
       }
     }
 
