@@ -81,13 +81,15 @@ obj App {
 
         if dataItem == .Head {
           val = "\033[0;37m" + bufItem + "\033[0m"
-        } elif dataItem == .Body {
+        } elif dataItem == .Body || dataItem == .Tail {
           val = "\033[0;32m" + bufItem + "\033[0m"
         } else {
           val = " "
         }
+
         result.push(val)
       }
+
       result.push(os_EOL)
     }
 
@@ -144,7 +146,7 @@ fn App_init () App {
     h: terminalSize[0].toInt() - 1,
     w: terminalSize[1].toInt(),
     moveSpeed: 25,
-    refreshRate: 33
+    refreshRate: 1000 / 30
   }
 
   app.hideCursor()
