@@ -6,6 +6,16 @@ title: Terminal Clock Example
 # {{ page.title }}
 ![Terminal Clock Example Visualization](/assets/images/example-9.png)
 
+### How to use this example
+1.&nbsp;[Install The CLI](/guides/installation.html) \
+2.&nbsp;Copy code below to file named "main" \
+3.&nbsp;Run this script in your command-line:
+
+```bash
+the compile main && ./a.out
+```
+
+### Code
 ```the
 const DISPLAY_NUMBERS := [
   [

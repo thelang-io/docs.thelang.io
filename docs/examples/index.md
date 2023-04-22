@@ -13,3 +13,4 @@ title: Examples
 - [Terminal Pretty Waves](/examples/7-term-pretty-waves.html)
 - [Terminal Tetris](/examples/8-term-tetris.html)
 - [Terminal Clock](/examples/9-term-clock.html)
+- [Terminal Matrix](/examples/10-term-matrix.html)
