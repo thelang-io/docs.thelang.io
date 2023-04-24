@@ -8,6 +8,7 @@ This is the list of reserved keywords, you can't define variable, function or
 object with any of these names.
 
 ```
+as          if
 async       import
 await       is
 break       loop
@@ -19,7 +20,7 @@ else        ref
 enum        return
 export      throw
 false       true
-fn          try
-from        type
-if
+finally     try
+fn          type
+from
 ```
