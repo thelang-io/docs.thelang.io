@@ -14,3 +14,4 @@ title: Examples
 - [Terminal Tetris](/examples/8-term-tetris.html)
 - [Terminal Clock](/examples/9-term-clock.html)
 - [Terminal Matrix](/examples/10-term-matrix.html)
+- [Terminal Formula Calculator](/examples/11-term-formula-calculator.html)
