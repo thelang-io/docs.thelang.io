@@ -38,7 +38,7 @@ fn Array.clear () ref Self
 ```
 
 ## `Array.concat()`
-Concatenates two arrays and returns resulting array.
+Concatenates two arrays into one and returns resulting array.
 
 ```the
 fn Array.concat (other: Self) Self

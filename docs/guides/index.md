@@ -25,5 +25,6 @@ title: Guides
 - [Any](/guides/any.html)
 - [Type Aliasing](/guides/type-aliasing.html)
 - [Type Checking](/guides/type-checking.html)
+- [Error Handling](/guides/error-handling.html)
 - [Modules](/guides/modules.html)
 - [Keywords](/guides/keywords.html)

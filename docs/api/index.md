@@ -12,6 +12,7 @@ title: API
 - [Byte](/api/byte.html)
 - [Char](/api/char.html)
 - [Enumeration](/api/enum.html)
+- [Error](/api/error.html)
 - [Float](/api/float.html)
 - [Function](/api/fn.html)
 - [Integer](/api/int.html)
