@@ -27,4 +27,5 @@ title: Guides
 - [Type Checking](/guides/type-checking.html)
 - [Error Handling](/guides/error-handling.html)
 - [Modules](/guides/modules.html)
+- [Shebang Usage](/guides/shebang-usage.html)
 - [Keywords](/guides/keywords.html)

@@ -116,6 +116,9 @@
         }
 
         type = TOKEN.STR
+      } else if (text[i] === '#' && text[i + 1] === '!') {
+        while (i < text.length && text[i + 1] !== '\n') i++
+        type = TOKEN.COMMENT
       } else if (text[i] === '/' && text[i + 1] === '/') {
         while (i < text.length && text[i + 1] !== '\n') i++
         type = TOKEN.COMMENT
