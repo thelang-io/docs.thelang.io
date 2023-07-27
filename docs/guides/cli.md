@@ -53,7 +53,8 @@ the lex path/to/file
 
 ## Package Management
 `the install [package]` \
-Installs specified package and add it to `package.yml`, if package name is omitted installs all packages from `package.yml`. \
+Installs specified package and add it to `package.yml`, if package name is omitted installs all packages from
+`package.yml`. \
 As package you can either specify package name or package name and version delimited by `@` sign.
 
 ```bash
@@ -71,7 +72,8 @@ the uninstall the/error
 ```
 
 `the update [package]` \
-Updates specified package and changes version in `package.yml`, if package name is omitted updates all packages from `package.yml`. \
+Updates specified package and changes version in `package.yml`, if package name is omitted updates all packages
+from `package.yml`. \
 As package you can either specify package name or package name and version delimited by `@` sign.
 
 ```bash

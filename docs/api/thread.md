@@ -5,6 +5,13 @@ title: Thread API
 
 # {{ page.title }}
 
+## `thread_id()`
+Returns caller's unique thread id.
+
+```the
+fn thread_id () int
+```
+
 ## `thread_sleep()`
 Sleeps the thread for a given time interval.
 

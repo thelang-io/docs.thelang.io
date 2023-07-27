@@ -18,7 +18,8 @@
   }
 
   function isKeyword (val) {
-    return val === 'async' ||
+    return val === 'as' ||
+      val === 'async' ||
       val === 'await' ||
       val === 'break' ||
       val === 'catch' ||

@@ -7,7 +7,8 @@ title: Error Handling
 
 ## Error Handling
 Error handling is a powerful mechanism that allows you to "teleport" from one place of code to another.
-While being so powerful it slows down your program a bit, but modern computers will not feel the difference between code with and without error handling.
+While being so powerful it slows down your program a bit, but modern computers will not feel the difference between
+code with and without error handling.
 
 This pseudocode demonstrates use of error handling:
 
@@ -36,7 +37,8 @@ main {
 ## Throwing Error
 In example above we already tried throwing an error with function `error_NewError`.
 Under the hood this function creates an instance of `error_Error` object with the message that you specified.
-Error throwing is essentially throwing an object conforming to error object requirements. One of objects like this is `error_Error`.
+Error throwing is essentially throwing an object conforming to error object requirements. One of objects like this
+is `error_Error`.
 
 For example:
 
@@ -47,10 +49,12 @@ main {
 ```
 
 > ### NOTE:
-  When throwing an error you don't need to specify `stack` property. In fact, it will be cleared and populated with actual error stack value.
+  When throwing an error you don't need to specify `stack` property. In fact, it will be cleared and populated with
+  actual error stack value.
 
 ## Error Stack
-Property `stack` of error object is a backtrace of function where error was thrown. It's used to trace back an error location and possibly fix it.
+Property `stack` of error object is a backtrace of function where error was thrown. It's used to trace back an error
+location and possibly fix it.
 
 > ### NOTE:
   Release builds of your program will not contain column numbers in backtrace.
@@ -75,7 +79,8 @@ try {
 ```
 
 > ### NOTE:
-  Catch parameters can't be nor reference, nor mutable. They should be exactly non-mutable with a type conforming to error object requirements.
+  Catch parameters can't be nor reference, nor mutable. They should be exactly non-mutable with a type conforming to
+  error object requirements.
 
 ## Rethrowing Error
 When you caught an error, and you have instance of this error object - you can simply rethrow it again.
@@ -95,7 +100,8 @@ main {
 ```
 
 ## Custom Error
-You can throw any object, but it's required that it has 1st property with name "message", and 2nd property with name "stack" both of type `str`.
+You can throw any object, but it's required that it has 1st property with name "message", and 2nd property with name
+"stack" both of type `str`.
 
 For example:
 

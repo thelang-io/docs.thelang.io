@@ -5,7 +5,8 @@ title: Terminal Tetris Example
 
 # {{ page.title }}
 It works like this: after launch it will immediately start the game. \
-The controls are: `a` left, `d` right, `q` rotate left, `e` rotate right, `space` hard drop, `r` restart game, `esc` close game. \
+The controls are: `a` left, `d` right, `q` rotate left, `e` rotate right, `space` hard drop, `r` restart game, `esc`
+close game. \
 The game auto-stops on game over. There's no soft drop, no score, no levels, no lock down, no piece preview.
 
 ![Terminal Tetris Example](/assets/images/example-8.png)
