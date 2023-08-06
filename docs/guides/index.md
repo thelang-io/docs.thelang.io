@@ -19,6 +19,7 @@ title: Guides
 - [Maps](/guides/maps.html)
 - [Unions](/guides/unions.html)
 - [Functions](/guides/functions.html)
+- [Anonymous Functions](/guides/anonymous-functions.html)
 - [Variadic Parameters](/guides/variadics.html)
 - [Optionals](/guides/optionals.html)
 - [References](/guides/references.html)
