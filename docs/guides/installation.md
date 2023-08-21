@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Installation
+redirect_from: [/install]
 ---
 
 # {{ page.title }}
