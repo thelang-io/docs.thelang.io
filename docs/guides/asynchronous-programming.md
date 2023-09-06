@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Asynchronous Programming
-redirect_from: [/async]
+redirect_from: /async
 ---
 
 # {{ page.title }}

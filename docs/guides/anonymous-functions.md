@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Anonymous Functions (Closures)
-redirect_from: [/closures]
+redirect_from: /closures
 ---
 
 # {{ page.title }}

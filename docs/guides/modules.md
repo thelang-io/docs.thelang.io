@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Modules
-redirect_from: [/modules]
+redirect_from: /modules
 ---
 
 # {{ page.title }}
