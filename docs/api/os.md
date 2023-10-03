@@ -5,6 +5,13 @@ title: Operating System API
 
 # {{ page.title }}
 
+## `os_ARCH`
+Operating system processor architecture. Possible values are `arm64`, `x86_64`, etc.
+
+```the
+const os_ARCH: str
+```
+
 ## `os_EOL`
 Operating system-specific end-of-line marker. `\r\n` on Windows, `\n` on POSIX.
 
