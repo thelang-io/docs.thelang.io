@@ -5,6 +5,7 @@
   background-color: $color-white-bg;
   border-bottom: 1px solid $color-border;
   display: flex;
+  flex-shrink: 0;
   height: 70px;
   justify-content: space-between;
   padding: 0 32px;
