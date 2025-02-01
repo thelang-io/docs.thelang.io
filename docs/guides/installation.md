@@ -12,12 +12,12 @@ CLI, here's how to do it:
 
 **Unix**
 ```shell
-curl -fsSL https://cdn.thelang.io/cli | bash
+curl -fsSL sh.thelang.io | bash
 ```
 
 **Windows**
 ```powershell
-(New-Object System.Net.WebClient).DownloadString('https://cdn.thelang.io/cli-win') | iex
+irm ps1.thelang.io | iex
 ```
 
 Yes! It's just one command, we take all the hassle on us and let developers
